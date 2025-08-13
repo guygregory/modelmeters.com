@@ -1,3 +1,20 @@
+export function exportToCsv(filename, rows, headerOrder) {
+  if (!rows.length) return;
+  const headers = headerOrder || Object.keys(rows[0]);
+  const escape = v => {
+    if (v == null) return '';
+    const s = String(v).replace(/"/g,'""');
+    return /[",\n]/.test(s) ? `"${s}"` : s;
+  };
+  const lines = [headers.map(escape).join(',')];
+  for (const r of rows) lines.push(headers.map(h=>escape(r[h])).join(','));
+  const blob = new Blob([lines.join('\n')], {type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 2000);
+}
 export function exportToCsv(filename, rows, headerOrder, metaComment) {
   if (!rows || !rows.length) return;
   const keys = headerOrder || Object.keys(rows[0]);

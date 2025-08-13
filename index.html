@@ -1,4 +1,93 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Azure Meter Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://prices.azure.com" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Azure Meter Explorer <span class="badge">Preview</span></h1>
+    <nav>
+      <button id="themeToggle" class="btn-secondary" type="button">Theme</button>
+      <a class="link" href="https://learn.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices" target="_blank" rel="noopener">Docs ↗</a>
+      <a class="link" href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section aria-labelledby="filtersHeading" class="panel">
+      <div class="panel-head">
+        <h2 id="filtersHeading">Filters</h2>
+        <p class="hint">Add one or more AND clauses. Values are case-sensitive on preview API versions. Functions are substring based.</p>
+      </div>
+      <div class="actions-row">
+        <button id="addClauseBtn" class="btn-primary" type="button">Add Clause</button>
+        <button id="clearClausesBtn" class="btn-tertiary" type="button">Clear</button>
+      </div>
+      <div id="clauses" class="clauses" aria-live="polite"></div>
+      <details class="adv">
+        <summary>Advanced Options</summary>
+        <div class="adv-grid">
+          <label>Currency Code
+            <input id="currencyCodeInput" class="form-input" maxlength="3" placeholder="USD" />
+          </label>
+          <label>API Version
+            <select id="apiVersionSelect" class="form-input">
+              <option value="">Default (stable)</option>
+              <option value="2023-01-01-preview" selected>2023-01-01-preview</option>
+            </select>
+          </label>
+          <label><input id="primaryRegionToggle" type="checkbox" /> Primary meter region only</label>
+          <label>Row Limit
+            <input id="rowLimitInput" class="form-input" type="number" placeholder="2000" />
+          </label>
+          <label>Timeout (ms)
+            <input id="timeoutInput" class="form-input" type="number" placeholder="15000" />
+          </label>
+        </div>
+      </details>
+      <div class="actions-row gap">
+        <button id="runBtn" class="btn-accent" type="button">Run Search</button>
+        <button id="cancelBtn" class="btn-warning hide" type="button">Cancel</button>
+        <button id="exportBtn" class="btn-secondary" type="button" disabled>Export CSV</button>
+        <button id="copyUrlBtn" class="btn-secondary" type="button" disabled>Copy API URL</button>
+      </div>
+      <div id="statusBar" class="status" aria-live="polite">Idle</div>
+      <div class="examples">
+        <strong>Examples:</strong>
+        <button class="pill ex" data-example='[{"field":"serviceName","op":"eq","value":"Virtual Machines"}]'>serviceName eq "Virtual Machines"</button>
+        <button class="pill ex" data-example='[{"field":"meterName","op":"contains","value":"Standard_D2as_v5"}]'>meterName contains "Standard_D2as_v5"</button>
+      </div>
+    </section>
+    <section aria-labelledby="resultsHeading" class="panel">
+      <div class="panel-head results-head">
+        <h2 id="resultsHeading">Results</h2>
+        <div class="filter-visible">
+          <label>Filter visible rows
+            <input id="visibleFilterInput" class="form-input" placeholder="text..." />
+          </label>
+          <span class="mini" id="rowCount">No rows</span>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="resultsTable" class="data-table">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="actions-row center">
+        <button id="loadMoreBtn" class="btn-primary" type="button" disabled>Load More</button>
+      </div>
+    </section>
+  </main>
+  <footer class="app-footer">Built client-side against Azure Retail Prices API • <span id="year"></span></footer>
+  <script type="module" src="utils/csv.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
 <html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8" />
