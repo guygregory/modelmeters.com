@@ -1,199 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Azure Retail Prices Explorer</title>
-  <meta name="description" content="Search and explore Azure Retail Prices (prices.azure.com) with an elegant, highly functional UI." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' stroke='%230096ff' stroke-width='4' fill='none'/%3E%3Cpath d='M18 60 L42 30 L62 48 L82 22' stroke='%230096ff' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://prices.azure.com">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Retail Prices Explorer</title>
+    <!--
+      This page provides an interactive interface for querying the Azure Retail
+      Prices API.  Users can build complex filter expressions using any of the
+      supported fields and operators (equals, not equals, contains, starts with
+      and ends with) and view the results in a sortable, searchable table.
+
+      The design uses Bootstrap 5 for layout and styling, Bootswatch's Cosmo
+      theme for a polished look and DataTables for rich table functionality and
+      CSV export.  No build step is required – everything is served from
+      public CDNs.
+    -->
+    <!-- Bootswatch (Cosmo) provides a modern theme for Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/cosmo/bootstrap.min.css">
+    <!-- DataTables styles -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
+    <style>
+        /* Custom styles for the filter builder */
+        .filter-row {
+            margin-bottom: 0.5rem;
+        }
+        .filter-row .form-select,
+        .filter-row .form-control {
+            min-width: 150px;
+        }
+        .filter-row .connector-select {
+            width: 80px;
+        }
+        #resultsTable_wrapper .dt-buttons {
+            float: right;
+        }
+    </style>
 </head>
 <body>
-  <header class="app-header">
-    <div class="brand">
-      <span class="logo" aria-hidden="true">◯</span>
-      <h1>Azure Retail Prices Explorer</h1>
-    </div>
-    <div class="header-actions">
-      <button id="aboutBtn" class="ghost">About</button>
-      <a id="repoLink" class="ghost" href="#" target="_blank" rel="noopener">Docs</a>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="card query-builder" aria-labelledby="searchTitle">
-      <div class="card-header">
-        <h2 id="searchTitle">Build a query</h2>
-        <div class="inline-actions">
-          <button id="addConditionBtn" class="secondary">+ Add condition</button>
-          <label class="switch">
-            <input type="checkbox" id="advancedToggle" />
-            <span>Advanced mode</span>
-          </label>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Azure Retail Prices Explorer</span>
         </div>
-      </div>
+    </nav>
 
-      <div class="card-body">
-        <form id="searchForm">
-          <div class="row">
-            <div class="col">
-              <label for="logic">Combine conditions with</label>
-              <select id="logic" name="logic">
-                <option value="and" selected>AND</option>
-                <option value="or">OR</option>
-              </select>
-            </div>
-            <div class="col">
-              <label for="currency">Currency (optional)</label>
-              <select id="currency" name="currency">
-                <option value="">Default (USD)</option>
-                <option value="AUD">AUD</option>
-                <option value="BRL">BRL</option>
-                <option value="GBP">GBP</option>
-                <option value="CAD">CAD</option>
-                <option value="CNY">CNY</option>
-                <option value="DKK">DKK</option>
-                <option value="EUR">EUR</option>
-                <option value="INR">INR</option>
-                <option value="JPY">JPY</option>
-                <option value="KRW">KRW</option>
-                <option value="NZD">NZD</option>
-                <option value="NOK">NOK</option>
-                <option value="RUB">RUB</option>
-                <option value="SEK">SEK</option>
-                <option value="CHF">CHF</option>
-                <option value="TWD">TWD</option>
-              </select>
-            </div>
-            <div class="col">
-              <label for="apiVersion">API Version</label>
-              <select id="apiVersion" name="apiVersion">
-                <option value="">Default</option>
-                <option value="2023-01-01-preview" selected>2023-01-01-preview</option>
-              </select>
-            </div>
-            <div class="col checkbox-col">
-              <label class="checkbox">
-                <input type="checkbox" id="primaryOnly" name="primaryOnly">
-                <span>Primary meters only</span>
-              </label>
-            </div>
-          </div>
-
-          <div id="conditions" class="conditions" aria-live="polite"></div>
-
-          <div id="advancedArea" class="advanced hidden">
-            <label for="rawFilter">$filter (raw OData)</label>
-            <input id="rawFilter" name="rawFilter" type="text" placeholder="e.g. serviceName eq 'Cognitive Services' and contains(meterName,'Tokens')" />
-            <small>Tip: Values are case-sensitive on preview API versions. Wrap string values in single quotes. Use <code>and</code>/<code>or</code> to chain.</small>
-          </div>
-
-          <div class="actions">
-            <button id="runSearchBtn" class="primary" type="submit">Search</button>
-            <button id="resetBtn" type="button" class="ghost">Reset</button>
-            <button id="copyLinkBtn" type="button" class="ghost">Copy sharable link</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="card-footer examples">
-        <details>
-          <summary>Try examples</summary>
-          <div class="examples-grid">
-            <button class="example" data-filter="serviceName eq 'Cognitive Services'">serviceName is &ldquo;Cognitive Services&rdquo;</button>
-            <button class="example" data-filter="meterName eq 'o3 0416 Inp glbl Tokens'">meterName eq &ldquo;o3 0416 Inp glbl Tokens&rdquo;</button>
-            <button class="example" data-filter="meterName eq 'o3 0416 Outp glbl Tokens'">meterName eq &ldquo;o3 0416 Outp glbl Tokens&rdquo;</button>
-            <button class="example" data-filter="meterName eq 'o3-pro Inp glbl Tokens'">meterName eq &ldquo;o3-pro Inp glbl Tokens&rdquo;</button>
-            <button class="example" data-filter="meterName eq 'o3-pro Outp glbl Tokens'">meterName eq &ldquo;o3-pro Outp glbl Tokens&rdquo;</button>
-            <button class="example" data-filter="contains(meterName,'gpt-oss')">meterName contains &ldquo;gpt-oss&rdquo;</button>
-            <button class="example" data-filter="serviceFamily eq 'Compute'">serviceFamily eq &ldquo;Compute&rdquo;</button>
-            <button class="example" data-filter="serviceName eq 'Virtual Machines' and priceType eq 'Reservation'">VM reservations</button>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="card results" aria-labelledby="resultsTitle">
-      <div class="card-header">
-        <h2 id="resultsTitle">Results</h2>
-        <div class="inline-actions">
-          <button id="exportCsvBtn" class="secondary" disabled>Export CSV (this page)</button>
-          <button id="exportAllCsvBtn" class="secondary" disabled title="Fetch all pages then export">Export CSV (all)</button>
+    <div class="container">
+        <!-- Intro -->
+        <div class="mb-4">
+            <p>
+                Use the form below to search the <a href="https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices" target="_blank">Azure Retail Prices API</a>.
+                You can add multiple filter conditions and combine them with <code>and</code> or <code>or</code>.  In the most recent API versions the filter values are case‑sensitive, so make sure to match the casing exactly.  Each search returns up to 1,000 records per page; if more results are available a “Load more” button will appear.
+            </p>
         </div>
-      </div>
-
-      <div class="card-body">
-        <div id="status" class="status">Use the form above to search Azure meters. Tip: many fields support <code>contains</code>, <code>startswith</code>, <code>endswith</code>, and <code>eq</code>.</div>
-        <div class="url-preview"><code id="urlPreview"></code></div>
-        <div class="table-wrap" id="tableWrap" tabindex="0" aria-label="Results table container"></div>
-      </div>
-
-      <div class="card-footer pager">
-        <div class="pager-left">
-          <button id="prevPageBtn" class="ghost" disabled>← Prev</button>
-          <button id="nextPageBtn" class="ghost" disabled>Next →</button>
+        <!-- Filter builder -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Build your query</h5>
+                <div id="filterContainer"></div>
+                <div class="d-flex align-items-center mt-2">
+                    <button id="addFilterBtn" class="btn btn-secondary btn-sm me-2">Add Condition</button>
+                    <button id="searchBtn" class="btn btn-primary btn-sm">Search</button>
+                    <div id="loadingSpinner" class="ms-3" style="display:none;">
+                        <div class="spinner-border text-primary spinner-border-sm" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span class="ms-2">Fetching data…</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row g-2">
+                    <div class="col-sm-4">
+                        <label class="form-label" for="apiVersionSelect">API version</label>
+                        <select id="apiVersionSelect" class="form-select form-select-sm">
+                            <option value="2023-01-01-preview">2023-01-01-preview (latest)</option>
+                            <option value="2021-10-01-preview">2021-10-01-preview</option>
+                            <option value="">Default</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label" for="currencySelect">Currency</label>
+                        <select id="currencySelect" class="form-select form-select-sm">
+                            <option value="">USD (default)</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="JPY">JPY</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 d-flex align-items-end">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="primaryOnlyCheck">
+                            <label class="form-check-label" for="primaryOnlyCheck">Primary meters only</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="pager-right">
-          <span id="countBadge" class="badge">0</span>
-          <span id="timing" class="muted"></span>
+        <!-- Results area -->
+        <div class="mb-4" id="resultsSection" style="display:none;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="mb-0">Results</h5>
+                <button id="loadMoreBtn" class="btn btn-outline-primary btn-sm" style="display:none;">Load more</button>
+            </div>
+            <table id="resultsTable" class="display nowrap table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Retail Price</th>
+                        <th>Unit Price</th>
+                        <th>Region</th>
+                        <th>Location</th>
+                        <th>Effective Start</th>
+                        <th>Meter ID</th>
+                        <th>Meter Name</th>
+                        <th>Product ID</th>
+                        <th>SKU ID</th>
+                        <th>Product Name</th>
+                        <th>SKU Name</th>
+                        <th>Service Name</th>
+                        <th>Service Family</th>
+                        <th>Unit of Measure</th>
+                        <th>Type</th>
+                        <th>Primary?</th>
+                        <th>ARM SKU Name</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
-      </div>
-    </section>
-
-    <section class="card" id="aboutCard" hidden>
-      <div class="card-header">
-        <h2>About</h2>
-      </div>
-      <div class="card-body">
-        <p><strong>Azure Retail Prices Explorer</strong> is a static, client-side UI for the official Azure Retail Prices API at <code>https://prices.azure.com/api/retail/prices</code>.</p>
-        <ul>
-          <li>No authentication required; requests go straight from your browser to Microsoft.</li>
-          <li>Supports the preview API version (<code>2023-01-01-preview</code>) for savings plan data.</li>
-          <li>Filter on documented fields; use OData functions: <code>contains</code>, <code>startswith</code>, <code>endswith</code>, and equality with <code>eq</code>.</li>
-          <li>Pagination follows the API's <code>NextPageLink</code> (maximum 1000 rows per page).</li>
-        </ul>
-        <p class="muted small">Prices are list (retail) prices and may differ from your bill. Non‑USD currencies are converted for reference only.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="app-footer">
-    <div>Built for Azure by you ✨</div>
-    <div class="foot-links">
-      <a href="https://learn.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices" target="_blank" rel="noopener">Retail API Docs</a>
-      <a href="https://learn.microsoft.com/azure/cost-management-billing/microsoft-customer-agreement/microsoft-customer-agreement-faq" target="_blank" rel="noopener">Currencies & FAQ</a>
     </div>
-  </footer>
 
-  <template id="conditionRowTemplate">
-    <div class="condition-row" data-row>
-      <select data-field>
-        <option value="serviceName">serviceName</option>
-        <option value="serviceFamily">serviceFamily</option>
-        <option value="serviceId">serviceId</option>
-        <option value="productName">productName</option>
-        <option value="productId">productId</option>
-        <option value="skuName">skuName</option>
-        <option value="skuId">skuId</option>
-        <option value="meterName">meterName</option>
-        <option value="meterId">meterId</option>
-        <option value="armSkuName">armSkuName</option>
-        <option value="armRegionName">armRegionName</option>
-        <option value="location">location</option>
-        <option value="priceType">priceType</option>
-      </select>
-      <select data-operator>
-        <option value="eq">is equal to</option>
-        <option value="contains">contains</option>
-        <option value="startswith">starts with</option>
-        <option value="endswith">ends with</option>
-      </select>
-      <input type="text" data-value placeholder="Value" />
-      <button type="button" class="icon-btn" data-remove title="Remove condition">✕</button>
-    </div>
-  </template>
-
-  <script src="assets/js/app.js" defer></script>
+    <!-- Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.colVis.min.js"></script>
+    <!-- Our custom script -->
+    <script src="script.js"></script>
 </body>
 </html>
