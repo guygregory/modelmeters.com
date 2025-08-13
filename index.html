@@ -3,6 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Azure Meter Explorer (Preview)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="light dark" />
+</head>
+<body>
+  <header class="top-bar">
+    <h1>Azure Meter Explorer <span class="pill">Preview</span></h1>
+    <nav class="nav-actions">
+      <button id="themeToggle" class="btn ghost" title="Toggle theme">Theme</button>
+      <a href="https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices" target="_blank" class="link">Docs ↗</a>
+      <a href="https://github.com/guygregory/meter-explorer" target="_blank" class="link">GitHub ↗</a>
+    </nav>
+  </header>
+  <main class="layout">
+    <section class="panel" id="filtersPanel">
+      <h2>Filters</h2>
+      <div id="clauses"></div>
+      <div class="actions-row">
+        <button id="addClauseBtn" class="btn">Add Clause</button>
+        <button id="clearClausesBtn" class="btn subtle">Clear</button>
+      </div>
+      <details class="advanced">
+        <summary>Advanced Options</summary>
+        <div class="grid-2">
+          <label>Currency
+            <input id="currencyInput" placeholder="USD" />
+          </label>
+          <label>API Version
+            <input id="apiVersionInput" placeholder="2023-01-01-preview" />
+          </label>
+          <label>Row Limit
+            <input id="rowLimitInput" type="number" min="1" max="10000" value="2000" />
+          </label>
+          <label>Timeout (s)
+            <input id="timeoutInput" type="number" min="5" max="120" value="30" />
+          </label>
+          <label class="checkbox"><input type="checkbox" id="primaryRegionOnlyChk" /> Primary meter region only</label>
+        </div>
+      </details>
+      <div class="actions-row mt">
+        <button id="runSearchBtn" class="btn primary">Run Search</button>
+        <button id="cancelBtn" class="btn warn" hidden>Cancel</button>
+        <button id="exportCsvBtn" class="btn" disabled>Export CSV</button>
+        <button id="copyUrlBtn" class="btn subtle" disabled>Copy API URL</button>
+      </div>
+      <div class="examples" id="examples"></div>
+      <div class="status-bar" id="statusBar">Idle</div>
+    </section>
+    <section class="panel" id="resultsPanel">
+      <div class="results-head">
+        <h2>Results</h2>
+        <input id="quickFilterInput" placeholder="Quick filter" class="quick-filter" />
+      </div>
+      <div class="table-wrapper">
+        <table id="resultsTable" class="results-table"></table>
+      </div>
+      <div class="actions-row end">
+        <button id="loadMoreBtn" class="btn" disabled>Load More</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">Built client-side against Azure Retail Prices API</footer>
+  <script type="module" src="utils/csv.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Azure Meter Explorer</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://prices.azure.com" />
