@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Azure Retail Prices – Explorer</title>
+	<style>
+		:root {
+			--bg: #0b0c10; --panel: #14161a; --panel-2: #1b1f24; --text: #e8eef3; --muted: #a8b3bd; --accent: #3da9fc; --border: #2a2f36; --ring: #7cc4ff80;
+		}
+		html, body { height: 100%; }
+		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,#0b0c10 0%,#0e1116 100%); color: var(--text); overflow:hidden; }
+		/* Full-height flex layout so only the table region scrolls (single scrollbar) */
+		.container { height:100%; display:flex; flex-direction:column; padding:12px 12px 16px; box-sizing:border-box; }
+		.card { background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow:0 10px 24px rgba(0,0,0,.35); flex:1; display:flex; flex-direction:column; min-height:0; }
+		.card-hd { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+		.title { font-size:18px; font-weight:650; letter-spacing:.2px; }
+		.toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+		button, select, input[type="text"] { background:var(--panel-2); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:8px 10px; font-size:14px; line-height:1; outline:none; }
+		button { cursor:pointer; }
+		button:hover { border-color:#374151; }
+		button:focus, select:focus, input:focus { box-shadow:0 0 0 4px var(--ring); border-color:var(--accent); }
+		.table-wrap { flex:1; min-height:0; overflow:auto; border-radius:0 0 16px 16px; }
+		table { width:100%; border-collapse:collapse; font-size:13px; }
+		thead th { position:sticky; top:0; background:#12151a; z-index:2; text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); }
+		tbody td { padding:6px 10px; border-top:1px solid var(--border); white-space:nowrap; }
+		tbody tr:hover { background:#121822; }
+		.th-inner { display:inline-flex; gap:6px; align-items:center; }
+		.icon { font-style:normal; opacity:.8; }
+		.menu { position:absolute; background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:8px; display:none; min-width:260px; box-shadow:0 24px 48px rgba(0,0,0,.5); }
+		.menu.open { display:block; }
+		.menu .row { display:grid; grid-template-columns:1fr; gap:8px; }
+		.menu .row-inline { display:flex; gap:8px; }
+		.menu .muted { color:var(--muted); font-size:12px; }
+		.menu .list { max-height:260px; overflow:auto; border:1px solid var(--border); border-radius:10px; }
+		.menu label { display:flex; gap:10px; align-items:center; padding:6px 10px; border-bottom:1px solid var(--border); font-size:12px; }
+		.menu label:last-child { border-bottom:0; }
+		.menu .actions { display:flex; justify-content:flex-end; gap:8px; }
+		.chip { background:#0f1720; border:1px solid var(--border); border-radius:999px; padding:3px 8px; font-size:11px; color:var(--muted); max-width:180px; overflow:hidden; text-overflow:ellipsis; }
+		.kbd { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:11px; padding:2px 6px; border-radius:6px; border:1px solid var(--border); background:#0f1318; color:var(--muted); }
+		.empty { color:var(--muted); padding:24px; text-align:center; }
+		.pagination { display:flex; gap:6px; align-items:center; font-size:12px; }
+		.pagination button { padding:6px 8px; font-size:12px; }
+		.loading { font-size:12px; color: var(--muted); display:flex; align-items:center; gap:6px; }
+		.spinner { width:12px; height:12px; border:2px solid var(--border); border-top-color: var(--accent); border-radius:50%; animation: spin 0.8s linear infinite; }
+		@keyframes spin { to { transform: rotate(360deg); } }
+		.count-chip { font-size:11px; opacity:.75; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="card" id="card">
+			<div class="card-hd">
+				<div class="title">Azure Retail Prices <span id="row-count" class="count-chip"></span></div>
+				<div class="toolbar">
+					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
+					<div class="pagination" id="pagination" style="display:none">
+						<button id="btn-first" title="First page">⏮</button>
+						<button id="btn-prev" title="Previous page">◀</button>
+						<span id="page-info">Page 1 / 1</span>
+						<button id="btn-next" title="Next page">▶</button>
+						<button id="btn-last" title="Last page">⏭</button>
+						<select id="page-size" title="Rows per page">
+							<option value="20" selected>20</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+						</select>
+					</div>
+					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
+				</div>
+			</div>
+			<div class="table-wrap">
+				<table id="grid" aria-describedby="grid-caption">
+					<caption id="grid-caption" style="display:none">Filterable, paginated table built from Azure retail prices (local file)</caption>
+					<thead id="thead"></thead>
+					<tbody id="tbody"></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- Filter menu -->
+	<div class="menu" id="menu-filter" role="menu" aria-hidden="true">
+		<div class="row">
+			<div class="muted">Filter <span id="filter-col-name" class="chip"></span></div>
+			<div class="row-inline">
+				<select id="op-select" aria-label="Operator">
+					<option value="contains">Contains</option>
+					<option value="notcontains">Not contains</option>
+					<option value="equals">Equals</option>
+					<option value="notequal">Not equal</option>
+					<option value="startswith">Starts with</option>
+					<option value="endswith">Ends with</option>
+				</select>
+				<input id="op-value" type="text" placeholder="Value" />
+			</div>
+			<div class="actions">
+				<button id="btn-clear-filter">Clear</button>
+				<button id="btn-apply-filter">Apply</button>
+			</div>
+			<div class="muted" style="margin-top:8px">or pick specific values</div>
+			<input id="value-search" type="text" placeholder="Filter values…" />
+			<div id="value-list" class="list" role="group" aria-label="Distinct values"></div>
+			<div class="actions">
+				<button id="btn-value-show-all">Show all</button>
+				<button id="btn-value-hide-all">Hide all</button>
+			</div>
+			<div class="muted">Enter to apply</div>
+		</div>
+	</div>
+
+	<!-- Column visibility menu -->
+	<div class="menu" id="menu-columns" role="menu" aria-hidden="true">
+		<div class="row">
+			<input id="col-search" type="text" placeholder="Filter…" />
+			<div id="col-list" class="list" role="group" aria-label="Columns"></div>
+			<div class="actions">
+				<button id="btn-show-all">Show all</button>
+				<button id="btn-hide-all">Hide all</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Data & columns
+		let data = []; // filled asynchronously
+		const columns = [
+			{ key: 'currencyCode', name: 'Currency' },
+			{ key: 'retailPrice', name: 'Retail Price', format: n => formatNumber(n) },
+			{ key: 'unitPrice', name: 'Unit Price', format: n => formatNumber(n) },
+			{ key: 'tierMinimumUnits', name: 'Tier Min Units', format: n => formatNumber(n) },
+			{ key: 'reservationTerm', name: 'Reservation', },
+			{ key: 'armRegionName', name: 'ARM Region' },
+			{ key: 'location', name: 'Location' },
+			{ key: 'effectiveStartDate', name: 'Start Date', format: d => d ? d.split('T')[0] : '' },
+			{ key: 'meterName', name: 'Meter' },
+			{ key: 'meterId', name: 'Meter Id' },
+			{ key: 'productName', name: 'Product' },
+			{ key: 'skuName', name: 'SKU Name' },
+			{ key: 'serviceName', name: 'Service' },
+			{ key: 'serviceFamily', name: 'Family' },
+			{ key: 'unitOfMeasure', name: 'Unit' },
+			{ key: 'type', name: 'Type' },
+			{ key: 'isPrimaryMeterRegion', name: 'Primary Region', format: v => v ? 'Yes' : 'No' },
+			{ key: 'armSkuName', name: 'ARM SKU' }
+		];
+
+		// State
+		const state = {
+			visible: Object.fromEntries(columns.map(c=>[c.key, true])),
+			filters: {},
+			valueSelections: {},
+			page: 1,
+			pageSize: 20,
+			filteredRows: [],
+		};
+
+		// Elements
+		const thead = document.getElementById('thead');
+		const tbody = document.getElementById('tbody');
+		const rowCount = document.getElementById('row-count');
+		const paginationEl = document.getElementById('pagination');
+		const pageInfo = document.getElementById('page-info');
+		const pageSizeSel = document.getElementById('page-size');
+		const loadingEl = document.getElementById('loading');
+
+		function formatNumber(n) {
+			if (n === null || n === undefined || n === '') return '';
+			if (typeof n === 'string') n = Number(n);
+			if (isNaN(n)) return '' + n;
+			if (Math.abs(n) > 1000) return n.toLocaleString(undefined, { maximumFractionDigits: 4 });
+			return n.toLocaleString(undefined, { maximumFractionDigits: 6 });
+		}
+
+		// Header
+		function renderHeader() {
+			thead.innerHTML = '';
+			const tr = document.createElement('tr');
+			for (const col of columns) {
+				if (!state.visible[col.key]) continue;
+				const th = document.createElement('th');
+				const wrap = document.createElement('span'); wrap.className = 'th-inner';
+				wrap.innerHTML = `<span>${col.name}</span>`;
+				const btn = document.createElement('button');
+				btn.type = 'button'; btn.className = 'btn-filter'; btn.innerHTML = '<i class="icon">⛃</i>'; btn.title = 'Filter ' + col.name;
+				btn.addEventListener('click', e => openFilterMenu(e.currentTarget, col));
+				wrap.appendChild(btn);
+				// active chips
+				const f = state.filters[col.key];
+				const s = state.valueSelections[col.key];
+				if ((f && f.value) || (s && s.size && s.size !== getDistinctValues(col.key).length)) {
+					const chip = document.createElement('span'); chip.className = 'chip';
+						let piece=[]; if (f && f.value) piece.push(`${f.op} "${f.value}"`); if (s) piece.push(`${s.size} sel`);
+						chip.textContent = piece.join(' · '); wrap.appendChild(chip);
+				}
+				th.appendChild(wrap); tr.appendChild(th);
+			}
+			thead.appendChild(tr);
+		}
+
+		function applyOp(cell, op, val) {
+			const c = (cell ?? '').toString().toLowerCase();
+			const v = (val ?? '').toString().toLowerCase();
+			switch (op) {
+				case 'contains': return c.includes(v);
+				case 'notcontains': return !c.includes(v);
+				case 'equals': return c === v;
+				case 'notequal': return c !== v;
+				case 'startswith': return c.startsWith(v);
+				case 'endswith': return c.endsWith(v);
+				default: return true;
+			}
+		}
+
+		function rowPassesFilters(row) {
+			for (const [key, f] of Object.entries(state.filters)) {
+				if (!f || f.value === '' || f.value == null) continue;
+				if (!applyOp(row[key], f.op, f.value)) return false;
+			}
+			for (const [key, set] of Object.entries(state.valueSelections)) {
+				if (!set) continue; const val = (row[key] ?? '').toString(); if (!set.has(val)) return false;
+			}
+			return true;
+		}
+
+		function computeFiltered() {
+			state.filteredRows = data.filter(rowPassesFilters);
+			state.page = 1; // reset on any re-compute
+			updateCounts();
+		}
+
+		function updateCounts() {
+			rowCount.textContent = data.length ? `(${state.filteredRows.length.toLocaleString()} / ${data.length.toLocaleString()})` : '';
+		}
+
+		function renderRows() {
+			if (!state.filteredRows.length) {
+				tbody.innerHTML = `<tr><td class="empty" colspan="${Object.values(state.visible).filter(Boolean).length||1}">No rows match filters</td></tr>`;
+				pageInfo.textContent = 'Page 0 / 0';
+				return;
+			}
+			const totalPages = Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize));
+			if (state.page > totalPages) state.page = totalPages;
+			const start = (state.page - 1) * state.pageSize;
+			const slice = state.filteredRows.slice(start, start + state.pageSize);
+			tbody.innerHTML = '';
+			for (const row of slice) {
+				const tr = document.createElement('tr');
+				for (const col of columns) {
+					if (!state.visible[col.key]) continue;
+					const td = document.createElement('td');
+					const v = row[col.key];
+					td.textContent = col.format ? col.format(v) : (v ?? '').toString();
+					tr.appendChild(td);
+				}
+				tbody.appendChild(tr);
+			}
+			pageInfo.textContent = `Page ${state.page} / ${totalPages}`;
+		}
+
+		// Distinct
+		function getDistinctValues(key) {
+			const set = new Set();
+			for (const r of data) set.add((r[key] ?? '').toString());
+			return Array.from(set).sort((a,b)=>a.localeCompare(b));
+		}
+
+		// Filter menu logic
+		const menuFilter = document.getElementById('menu-filter');
+		const opSelect = document.getElementById('op-select');
+		const opValue = document.getElementById('op-value');
+		const filterColName = document.getElementById('filter-col-name');
+		const valueSearch = document.getElementById('value-search');
+		const valueList = document.getElementById('value-list');
+		const btnValueShowAll = document.getElementById('btn-value-show-all');
+		const btnValueHideAll = document.getElementById('btn-value-hide-all');
+		let currentFilterCol = null;
+
+		function openFilterMenu(anchor, col) {
+			currentFilterCol = col; filterColName.textContent = col.name;
+			const f = state.filters[col.key] || { op: 'contains', value: '' };
+			opSelect.value = f.op; opValue.value = f.value ?? '';
+			positionMenu(anchor, menuFilter); openMenu(menuFilter);
+			setTimeout(()=> opValue.focus(), 0); buildValueList(col, valueSearch.value||'');
+		}
+		function openMenu(menu) { menu.classList.add('open'); menu.setAttribute('aria-hidden', 'false'); }
+		function closeMenus() { document.querySelectorAll('.menu').forEach(m=>{m.classList.remove('open'); m.setAttribute('aria-hidden','true');}); }
+
+		document.getElementById('btn-apply-filter').addEventListener('click', () => {
+			if (!currentFilterCol) return;
+			state.filters[currentFilterCol.key] = { op: opSelect.value, value: opValue.value };
+			computeFiltered(); renderHeader(); renderRows(); closeMenus();
+		});
+		document.getElementById('btn-clear-filter').addEventListener('click', () => {
+			if (!currentFilterCol) return; delete state.filters[currentFilterCol.key]; delete state.valueSelections[currentFilterCol.key];
+			opValue.value=''; computeFiltered(); renderHeader(); renderRows(); closeMenus();
+		});
+		opValue.addEventListener('keydown', e => { if (e.key==='Enter') document.getElementById('btn-apply-filter').click(); });
+
+		function buildValueList(col, query='') {
+			valueList.innerHTML='';
+			const values = getDistinctValues(col.key);
+			const q = (query||'').toLowerCase();
+			const selected = state.valueSelections[col.key] ?? new Set(values);
+			for (const v of values) {
+				if (q && !v.toLowerCase().includes(q)) continue;
+				const label = document.createElement('label');
+				const cb = document.createElement('input'); cb.type='checkbox'; cb.value=v; cb.checked=selected.has(v);
+				cb.addEventListener('change', ()=> { const set = state.valueSelections[col.key] ?? new Set(values); if (cb.checked) set.add(v); else set.delete(v); state.valueSelections[col.key]=set; computeFiltered(); renderHeader(); renderRows(); });
+				const span=document.createElement('span'); span.textContent = v || '(empty)';
+				label.append(cb, span); valueList.appendChild(label);
+			}
+			valueSearch.oninput = e => buildValueList(col, e.target.value);
+			btnValueShowAll.onclick = () => { state.valueSelections[col.key] = new Set(getDistinctValues(col.key)); computeFiltered(); buildValueList(col, valueSearch.value||''); renderHeader(); renderRows(); };
+			btnValueHideAll.onclick = () => { state.valueSelections[col.key] = new Set(); computeFiltered(); buildValueList(col, valueSearch.value||''); renderHeader(); renderRows(); };
+		}
+
+		// Column visibility menu
+		const btnColumns = document.getElementById('btn-columns');
+		const menuColumns = document.getElementById('menu-columns');
+		const colSearch = document.getElementById('col-search');
+		const colList = document.getElementById('col-list');
+		btnColumns.addEventListener('click', e => { buildColumnList(); positionMenu(e.currentTarget, menuColumns); openMenu(menuColumns); setTimeout(()=>colSearch.focus(),0); });
+		function buildColumnList(filter='') {
+			colList.innerHTML=''; const q = filter.toLowerCase();
+			for (const col of columns) {
+				if (q && !col.name.toLowerCase().includes(q)) continue;
+				const label = document.createElement('label');
+				const cb = document.createElement('input'); cb.type='checkbox'; cb.checked=!!state.visible[col.key];
+				cb.addEventListener('change', ()=> { state.visible[col.key] = cb.checked; renderHeader(); renderRows(); });
+				const span = document.createElement('span'); span.textContent = col.name; label.append(cb, span); colList.appendChild(label);
+			}
+		}
+		colSearch.addEventListener('input', e => buildColumnList(e.target.value));
+		document.getElementById('btn-show-all').addEventListener('click', ()=> { for (const c of columns) state.visible[c.key]=true; renderHeader(); renderRows(); });
+		document.getElementById('btn-hide-all').addEventListener('click', ()=> { for (const c of columns) state.visible[c.key]=false; renderHeader(); renderRows(); });
+
+		// Pagination controls
+		document.getElementById('btn-prev').addEventListener('click', ()=> { if (state.page>1){state.page--; renderRows();} });
+		document.getElementById('btn-next').addEventListener('click', ()=> { const totalPages = Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize)); if (state.page<totalPages){state.page++; renderRows();} });
+		document.getElementById('btn-first').addEventListener('click', ()=> { state.page=1; renderRows(); });
+		document.getElementById('btn-last').addEventListener('click', ()=> { state.page=Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize)); renderRows(); });
+		pageSizeSel.addEventListener('change', ()=> { state.pageSize = parseInt(pageSizeSel.value,10)||20; state.page=1; renderRows(); });
+
+		// Utilities
+		function positionMenu(anchor, menu) {
+			const rect = anchor.getBoundingClientRect(); const bodyRect = document.body.getBoundingClientRect();
+			const top = rect.bottom + window.scrollY + 6; const left = Math.min(rect.left + window.scrollX, bodyRect.width - menu.offsetWidth - 12);
+			menu.style.top = top + 'px'; menu.style.left = left + 'px';
+		}
+		document.addEventListener('click', e => { const anyMenu = e.target.closest('.menu'); const anyBtn = e.target.closest('button'); if (!anyMenu && !anyBtn) closeMenus(); });
+
+		// Data loading from NDJSON (prices.ndjson)
+		async function loadData() {
+			try {
+				const res = await fetch('prices.ndjson');
+				if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+				const text = await res.text();
+				// Parse NDJSON: one JSON object per non-empty line
+				const lines = text.split(/\r?\n/);
+				const rows = [];
+				for (let i=0;i<lines.length;i++) {
+					const line = lines[i].trim();
+					if (!line) continue;
+					try { rows.push(JSON.parse(line)); }
+					catch (e) { console.warn('Skipping invalid NDJSON line', i+1, e); }
+				}
+				if (!rows.length) throw new Error('No valid NDJSON rows found');
+				data = rows;
+				computeFiltered();
+				renderHeader();
+				renderRows();
+				paginationEl.style.display = 'flex';
+			} catch (err) {
+				tbody.innerHTML = `<tr><td class="empty">Error loading NDJSON: ${err.message}</td></tr>`;
+			} finally {
+				loadingEl.style.display = 'none';
+			}
+		}
+
+		// Initial static header (while loading)
+		renderHeader();
+		tbody.innerHTML = '<tr><td class="empty">Loading price data…</td></tr>';
+		loadData();
+
+		// Basic smoke tests (console)
+		(function tests(){
+			console.assert(applyOp('abc','contains','b')===true,'contains');
+			console.assert(applyOp('abc','equals','ABC')===true,'equals case');
+		})();
+	</script>
+</body>
+</html>
