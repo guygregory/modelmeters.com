@@ -144,7 +144,7 @@ $(function () {
 
     // Construct the API URL with query parameters
     function constructApiUrl(filterQuery) {
-        const baseUrl = 'https://prices.azure.com/api/retail/prices';
+        const baseUrl = '/api/prices';
         const params = [];
         if (filterQuery) {
             params.push(`$filter=${encodeURIComponent(filterQuery)}`);

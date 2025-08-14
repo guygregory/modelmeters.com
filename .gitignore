@@ -1,3 +1,9 @@
+# Testing files
+test-server*.js
+package.json
+package-lock.json
+node_modules/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
