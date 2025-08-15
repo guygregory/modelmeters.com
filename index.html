@@ -52,6 +52,9 @@
 		.count-chip { font-size:11px; opacity:.75; }
 		.col-sort { background:none; border:0; padding:0; margin:0; font:inherit; color:inherit; cursor:pointer; display:inline-flex; align-items:center; gap:4px; }
 		.col-sort:focus { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; }
+		.info-container { background:var(--panel-2); border-bottom:1px solid var(--border); padding:12px 16px; }
+		.info-content { display:flex; gap:24px; font-size:13px; }
+		.info-row { display:flex; align-items:center; gap:6px; }
 	</style>
 </head>
 <body>
@@ -60,6 +63,7 @@
 			<div class="card-hd">
 				<div class="title">Azure AI Foundry Models - Retail Prices <span id="row-count" class="count-chip"></span></div>
 				<div class="toolbar">
+					<button id="btn-info" title="Show data information">ℹ️ Info</button>
 					<button id="btn-export-csv" title="Export to CSV">📥 Export CSV</button>
 					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
 					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
@@ -81,6 +85,16 @@
 						</select>
 					</div>
 					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
+				</div>
+			</div>
+			<div id="info-container" class="info-container" style="display:none;">
+				<div class="info-content">
+					<div class="info-row">
+						<strong>Last checked:</strong> <span id="last-checked">Never</span>
+					</div>
+					<div class="info-row">
+						<strong>Last changed:</strong> <span id="last-changed">Never</span>
+					</div>
 				</div>
 			</div>
 			<div class="table-wrap">
@@ -495,6 +509,31 @@
 			URL.revokeObjectURL(url);
 		}
 
+		// Info button functionality
+		document.getElementById('btn-info').addEventListener('click', toggleInfoContainer);
+
+		function toggleInfoContainer() {
+			const container = document.getElementById('info-container');
+			const isVisible = container.style.display !== 'none';
+			container.style.display = isVisible ? 'none' : 'block';
+		}
+
+		// Load metadata and update info display
+		async function loadMetadata() {
+			try {
+				const res = await fetch('metadata.json');
+				if (!res.ok) throw new Error('Metadata not available');
+				const metadata = await res.json();
+				
+				document.getElementById('last-checked').textContent = metadata.last_checked || 'Never';
+				document.getElementById('last-changed').textContent = metadata.last_changed || 'Never';
+			} catch (e) {
+				console.warn('Could not load metadata:', e);
+				document.getElementById('last-checked').textContent = 'Unknown';
+				document.getElementById('last-changed').textContent = 'Unknown';
+			}
+		}
+
 		// Pagination controls
 		document.getElementById('btn-prev').addEventListener('click', ()=> { if (state.page>1){state.page--; renderRows();} });
 		document.getElementById('btn-next').addEventListener('click', ()=> { const totalPages = Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize)); if (state.page<totalPages){state.page++; renderRows();} });
@@ -552,6 +591,7 @@
 		renderHeader();
 		tbody.innerHTML = '<tr><td class="empty">Loading price data…</td></tr>';
 		loadData();
+		loadMetadata();
 
 		// Basic smoke tests (console)
 		(function tests(){
