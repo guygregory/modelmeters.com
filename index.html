@@ -60,6 +60,7 @@
 			<div class="card-hd">
 				<div class="title">Azure AI Foundry Models - Retail Prices <span id="row-count" class="count-chip"></span></div>
 				<div class="toolbar">
+					<button id="btn-export-csv" title="Export to CSV">📥 Export CSV</button>
 					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
 					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
 					<div class="pagination" id="pagination" style="display:none">
@@ -414,6 +415,75 @@
 		colSearch.addEventListener('input', e => buildColumnList(e.target.value));
 		document.getElementById('btn-show-all').addEventListener('click', ()=> { for (const c of columns) state.visible[c.key]=true; renderHeader(); renderRows(); });
 		document.getElementById('btn-hide-all').addEventListener('click', ()=> { for (const c of columns) state.visible[c.key]=false; renderHeader(); renderRows(); });
+
+		// CSV Export functionality
+		document.getElementById('btn-export-csv').addEventListener('click', exportToCSV);
+
+		function exportToCSV() {
+			// Get visible columns
+			const visibleColumns = columns.filter(col => state.visible[col.key]);
+			
+			if (visibleColumns.length === 0) {
+				alert('No columns are visible. Please make some columns visible before exporting.');
+				return;
+			}
+
+			// Create CSV header
+			const headers = visibleColumns.map(col => col.name);
+			
+			// Create CSV rows from filtered data
+			const csvRows = [headers];
+			
+			for (const row of state.filteredRows) {
+				const csvRow = visibleColumns.map(col => {
+					const value = row[col.key];
+					let formattedValue = value;
+					
+					// Apply column formatting if available
+					if (col.format && value != null) {
+						formattedValue = col.format(value);
+					}
+					
+					// Handle null/undefined values
+					if (formattedValue == null) {
+						formattedValue = '';
+					}
+					
+					// Convert to string and escape CSV special characters
+					let stringValue = String(formattedValue);
+					
+					// If the value contains comma, quote, or newline, wrap in quotes and escape quotes
+					if (stringValue.includes(',') || stringValue.includes('"') || stringValue.includes('\n') || stringValue.includes('\r')) {
+						stringValue = '"' + stringValue.replace(/"/g, '""') + '"';
+					}
+					
+					return stringValue;
+				});
+				csvRows.push(csvRow);
+			}
+			
+			// Convert to CSV string
+			const csvContent = csvRows.map(row => row.join(',')).join('\n');
+			
+			// Create and download file
+			const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+			const link = document.createElement('a');
+			const url = URL.createObjectURL(blob);
+			link.setAttribute('href', url);
+			
+			// Generate filename with current date and filter info
+			const now = new Date();
+			const dateStr = now.toISOString().split('T')[0]; // YYYY-MM-DD format
+			const filename = `azure-prices-${dateStr}-${state.filteredRows.length}-rows.csv`;
+			link.setAttribute('download', filename);
+			
+			// Trigger download
+			link.style.visibility = 'hidden';
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			URL.revokeObjectURL(url);
+		}
 
 		// Pagination controls
 		document.getElementById('btn-prev').addEventListener('click', ()=> { if (state.page>1){state.page--; renderRows();} });
