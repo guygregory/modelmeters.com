@@ -5,14 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Azure Retail Prices – Explorer</title>
 	<style>
+		/* Light theme (default) */
 		:root {
-			--bg: #0b0c10; --panel: #14161a; --panel-2: #1b1f24; --text: #e8eef3; --muted: #a8b3bd; --accent: #3da9fc; --border: #2a2f36; --ring: #7cc4ff80;
+			--bg:#f5f7fa; --bg-alt:#e9eef2; --panel:#ffffff; --panel-2:#f0f3f7; --text:#1b242b; --muted:#5d6b76; --accent:#2563eb; --border:#d0d7de; --ring:#3b82f680; --shadow:0 6px 18px rgba(0,0,0,.08);
+		}
+		/* Dark theme */
+		:root[data-theme="dark"] {
+			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
 		}
 		html, body { height: 100%; }
-		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,#0b0c10 0%,#0e1116 100%); color: var(--text); overflow:hidden; }
+		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); overflow:hidden; }
 		/* Full-height flex layout so only the table region scrolls (single scrollbar) */
 		.container { height:100%; display:flex; flex-direction:column; padding:12px 12px 16px; box-sizing:border-box; }
-		.card { background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow:0 10px 24px rgba(0,0,0,.35); flex:1; display:flex; flex-direction:column; min-height:0; }
+		.card { background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow: var(--shadow); flex:1; display:flex; flex-direction:column; min-height:0; }
 		.card-hd { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
 		.title { font-size:18px; font-weight:650; letter-spacing:.2px; }
 		.toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
@@ -22,9 +27,9 @@
 		button:focus, select:focus, input:focus { box-shadow:0 0 0 4px var(--ring); border-color:var(--accent); }
 		.table-wrap { flex:1; min-height:0; overflow:auto; border-radius:0 0 16px 16px; }
 		table { width:100%; border-collapse:collapse; font-size:13px; }
-		thead th { position:sticky; top:0; background:#12151a; z-index:2; text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); }
+		thead th { position:sticky; top:0; background:var(--panel-2); z-index:2; text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); }
 		tbody td { padding:6px 10px; border-top:1px solid var(--border); white-space:nowrap; }
-		tbody tr:hover { background:#121822; }
+		tbody tr:hover { background:var(--panel-2); }
 		.th-inner { display:inline-flex; gap:6px; align-items:center; }
 		.icon { font-style:normal; opacity:.8; }
 		.menu { position:absolute; background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:8px; display:none; min-width:260px; box-shadow:0 24px 48px rgba(0,0,0,.5); }
@@ -36,8 +41,8 @@
 		.menu label { display:flex; gap:10px; align-items:center; padding:6px 10px; border-bottom:1px solid var(--border); font-size:12px; }
 		.menu label:last-child { border-bottom:0; }
 		.menu .actions { display:flex; justify-content:flex-end; gap:8px; }
-		.chip { background:#0f1720; border:1px solid var(--border); border-radius:999px; padding:3px 8px; font-size:11px; color:var(--muted); max-width:180px; overflow:hidden; text-overflow:ellipsis; }
-		.kbd { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:11px; padding:2px 6px; border-radius:6px; border:1px solid var(--border); background:#0f1318; color:var(--muted); }
+		.chip { background:var(--panel-2); border:1px solid var(--border); border-radius:999px; padding:3px 8px; font-size:11px; color:var(--muted); max-width:180px; overflow:hidden; text-overflow:ellipsis; }
+		.kbd { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:11px; padding:2px 6px; border-radius:6px; border:1px solid var(--border); background:var(--panel-2); color:var(--muted); }
 		.empty { color:var(--muted); padding:24px; text-align:center; }
 		.pagination { display:flex; gap:6px; align-items:center; font-size:12px; }
 		.pagination button { padding:6px 8px; font-size:12px; }
@@ -55,6 +60,7 @@
 			<div class="card-hd">
 				<div class="title">Azure Retail Prices <span id="row-count" class="count-chip"></span></div>
 				<div class="toolbar">
+					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
 					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
 					<div class="pagination" id="pagination" style="display:none">
 						<button id="btn-first" title="First page">⏮</button>
@@ -124,6 +130,29 @@
 	</div>
 
 	<script>
+		// Theme toggle (light default)
+		(function initTheme(){
+			const root = document.documentElement;
+			const btn = document.getElementById('btn-theme');
+			if(!btn) return; // safety
+			const stored = localStorage.getItem('priceExplorerTheme');
+			if (stored === 'dark') root.setAttribute('data-theme','dark');
+			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			function updateBtn(){
+				const mode = currentMode();
+				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
+				btn.setAttribute('aria-pressed', mode==='dark');
+				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+			}
+			btn.addEventListener('click', ()=> {
+				const isDark = currentMode()==='dark';
+				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
+				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				updateBtn();
+			});
+			updateBtn();
+		})();
+
 		// Data & columns
 		let data = []; // filled asynchronously
 		const columns = [
