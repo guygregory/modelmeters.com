@@ -413,8 +413,18 @@
 			}
 		}
 		colSearch.addEventListener('input', e => buildColumnList(e.target.value));
-		document.getElementById('btn-show-all').addEventListener('click', ()=> { for (const c of columns) state.visible[c.key]=true; renderHeader(); renderRows(); });
-		document.getElementById('btn-hide-all').addEventListener('click', ()=> { for (const c of columns) state.visible[c.key]=false; renderHeader(); renderRows(); });
+		document.getElementById('btn-show-all').addEventListener('click', ()=> {
+			for (const c of columns) state.visible[c.key]=true;
+			renderHeader();
+			renderRows();
+			buildColumnList(colSearch.value||''); // refresh ticks
+		});
+		document.getElementById('btn-hide-all').addEventListener('click', ()=> {
+			for (const c of columns) state.visible[c.key]=false;
+			renderHeader();
+			renderRows();
+			buildColumnList(colSearch.value||''); // refresh ticks
+		});
 
 		// CSV Export functionality
 		document.getElementById('btn-export-csv').addEventListener('click', exportToCSV);
