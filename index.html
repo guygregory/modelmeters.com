@@ -438,8 +438,8 @@
 				return;
 			}
 
-			// Create CSV header
-			const headers = visibleColumns.map(col => col.name);
+			// Create CSV header using original field keys (not friendly display names)
+			const headers = visibleColumns.map(col => col.key);
 			
 			// Create CSV rows from filtered data
 			const csvRows = [headers];
