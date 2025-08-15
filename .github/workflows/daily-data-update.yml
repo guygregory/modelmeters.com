@@ -1,0 +1,84 @@
+name: Daily Data Update
+
+on:
+  schedule:
+    # Run daily at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger for testing
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Download latest pricing data
+        run: |
+          python meter-download.py --cognitive-services-only --ndjson prices.ndjson
+          
+      - name: Check for changes and update metadata
+        id: check_changes
+        run: |
+          python -c "
+          import json
+          import hashlib
+          import os
+          from datetime import datetime, timezone
+          
+          # Read current data and compute hash
+          with open('prices.ndjson', 'r') as f:
+              current_data = f.read()
+          current_hash = hashlib.sha256(current_data.encode()).hexdigest()
+          
+          # Read existing metadata if it exists
+          metadata_file = 'metadata.json'
+          if os.path.exists(metadata_file):
+              with open(metadata_file, 'r') as f:
+                  metadata = json.load(f)
+          else:
+              metadata = {
+                  'last_checked': None,
+                  'last_changed': None,
+                  'data_hash': None
+              }
+          
+          # Update last_checked timestamp
+          current_time = datetime.now(timezone.utc)
+          formatted_time = current_time.strftime('%d %B %Y %H:%M UTC')
+          metadata['last_checked'] = formatted_time
+          
+          # Check if data has changed
+          data_changed = metadata.get('data_hash') != current_hash
+          if data_changed:
+              metadata['last_changed'] = formatted_time
+              metadata['data_hash'] = current_hash
+              print('DATA_CHANGED=true')
+          else:
+              print('DATA_CHANGED=false')
+          
+          # Save metadata
+          with open(metadata_file, 'w') as f:
+              json.dump(metadata, f, indent=2)
+          " >> $GITHUB_OUTPUT
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add prices.ndjson metadata.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Daily data update: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
