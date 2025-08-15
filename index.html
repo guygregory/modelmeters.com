@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Azure Retail Prices – Explorer</title>
+	<title>Azure AI Foundry Models - Retail Prices Explorer</title>
 	<style>
 		/* Light theme (default) */
 		:root {
@@ -58,7 +58,7 @@
 	<div class="container">
 		<div class="card" id="card">
 			<div class="card-hd">
-				<div class="title">Azure Retail Prices <span id="row-count" class="count-chip"></span></div>
+				<div class="title">Azure AI Foundry Models - Retail Prices <span id="row-count" class="count-chip"></span></div>
 				<div class="toolbar">
 					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
 					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
@@ -69,9 +69,14 @@
 						<button id="btn-next" title="Next page">▶</button>
 						<button id="btn-last" title="Last page">⏭</button>
 						<select id="page-size" title="Rows per page">
+							<option value="15">15</option>
 							<option value="20" selected>20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
 							<option value="50">50</option>
 							<option value="100">100</option>
+							<option value="1000">1000</option>
+							<option value="100000">All</option>
 						</select>
 					</div>
 					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
@@ -158,8 +163,8 @@
 		const columns = [
 			{ key: 'productName', name: 'Product' },
 			{ key: 'meterName', name: 'Meter' },
-			{ key: 'retailPrice', name: 'Retail Price', format: n => formatNumber(n) },
-			{ key: 'unitPrice', name: 'Unit Price', format: n => formatNumber(n) },
+			{ key: 'retailPrice', name: 'Retail Price', format: n => formatUSD(n) },
+			{ key: 'unitPrice', name: 'Unit Price', format: n => formatUSD(n) },
 			{ key: 'currencyCode', name: 'Currency' },
 			{ key: 'unitOfMeasure', name: 'Unit' },
 			{ key: 'armRegionName', name: 'ARM Region' },
@@ -189,7 +194,7 @@
 			page: 1,
 			pageSize: 20,
 			filteredRows: [],
-			sort: { key: null, dir: 'asc' }, // dir: 'asc' | 'desc'
+			sort: { key: 'effectiveStartDate', dir: 'desc' }, // default sort newest first
 		};
 
 		// Elements
@@ -207,6 +212,13 @@
 			if (isNaN(n)) return '' + n;
 			if (Math.abs(n) > 1000) return n.toLocaleString(undefined, { maximumFractionDigits: 4 });
 			return n.toLocaleString(undefined, { maximumFractionDigits: 6 });
+		}
+
+		function formatUSD(n) {
+			if (n === null || n === undefined || n === '') return '';
+			if (typeof n === 'string') n = Number(n);
+			if (isNaN(n)) return '' + n;
+			return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 6 });
 		}
 
 		// Header
@@ -287,6 +299,11 @@
 			state.filteredRows.sort((a,b)=>{
 				const av = a[key]; const bv = b[key];
 				if (av == null && bv == null) return 0; if (av == null) return 1; if (bv == null) return -1;
+				// Date detection for ISO strings
+				if (key === 'effectiveStartDate') {
+					const ad = Date.parse(av); const bd = Date.parse(bv);
+					if (!isNaN(ad) && !isNaN(bd)) return (ad - bd) * mult;
+				}
 				if (typeof av === 'number' && typeof bv === 'number') return (av - bv) * mult;
 				return av.toString().localeCompare(bv.toString(), undefined, { numeric:true, sensitivity:'base' }) * mult;
 			});
@@ -403,7 +420,17 @@
 		document.getElementById('btn-next').addEventListener('click', ()=> { const totalPages = Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize)); if (state.page<totalPages){state.page++; renderRows();} });
 		document.getElementById('btn-first').addEventListener('click', ()=> { state.page=1; renderRows(); });
 		document.getElementById('btn-last').addEventListener('click', ()=> { state.page=Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize)); renderRows(); });
-		pageSizeSel.addEventListener('change', ()=> { state.pageSize = parseInt(pageSizeSel.value,10)||20; state.page=1; renderRows(); });
+		pageSizeSel.addEventListener('change', ()=> {
+			const val = pageSizeSel.value;
+			if (val === 'all') {
+				state.pageSize = state.filteredRows.length || data.length || 1; // show everything
+				state.page = 1;
+			} else {
+				state.pageSize = parseInt(val,10) || 20;
+				state.page = 1;
+			}
+			renderRows();
+		});
 
 		// Utilities
 		function positionMenu(anchor, menu) {
