@@ -96,10 +96,7 @@
 			<div id="info-container" class="info-container" style="display:none;">
 				<div class="info-content">
 					<div class="info-row">
-						<strong>Last checked:</strong> <span id="last-checked">Never</span>
-					</div>
-					<div class="info-row">
-						<strong>Last changed:</strong> <span id="last-changed">Never</span>
+						<strong>Last updated:</strong> <span id="last-updated">Never</span>
 					</div>
 				</div>
 			</div>
@@ -531,12 +528,10 @@
 				if (!res.ok) throw new Error('Metadata not available');
 				const metadata = await res.json();
 				
-				document.getElementById('last-checked').textContent = metadata.last_checked || 'Never';
-				document.getElementById('last-changed').textContent = metadata.last_changed || 'Never';
+				document.getElementById('last-updated').textContent = metadata.last_updated || 'Never';
 			} catch (e) {
 				console.warn('Could not load metadata:', e);
-				document.getElementById('last-checked').textContent = 'Unknown';
-				document.getElementById('last-changed').textContent = 'Unknown';
+				document.getElementById('last-updated').textContent = 'Unknown';
 			}
 		}
 
