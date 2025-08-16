@@ -1,0 +1,66 @@
+{"productName": "Speech", "meterName": "Voice Live API Plus - Standard Speech Audio Output Tokens", "unitPrice": 0.038, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - LLM Audio Output Tokens", "unitPrice": 0.088, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-inp-cchd-glbl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - LLM Audio Cached Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Mistral Models", "meterName": "Doc AI DZone 2505 Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - LLM Text Output Tokens", "unitPrice": 0.00264, "unitOfMeasure": "1K"}
+{"productName": "Grok model family", "meterName": "Grok-4 Outp DZone Tokens", "unitPrice": 0.0303, "unitOfMeasure": "1K"}
+{"productName": "Grok model family", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.1, "unitOfMeasure": "1/Hour"}
+{"productName": "Grok model family", "meterName": "Grok-4 Inp glbl Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Mistral Models", "meterName": "Doc AI glbl 2505 Pages", "unitPrice": 3.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-inp-dzone 1M Tokens", "unitPrice": 11.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Content Understanding", "meterName": "Face Transaction Transactions", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "BFL Flux Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - Standard Speech Audio Cache Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Mistral Models", "meterName": "Doc AI regnl 2505 Pages", "unitPrice": 3.63, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-inp-glbl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - Custom Speech Audio Output Tokens", "unitPrice": 0.055, "unitOfMeasure": "1K"}
+{"productName": "Grok model family", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - LLM Text Output Tokens", "unitPrice": 0.00032, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-inp-cchd-dzone 1M Tokens", "unitPrice": 2.75, "unitOfMeasure": "1M"}
+{"productName": "Grok model family", "meterName": "Grok-4 Inp DZone Tokens", "unitPrice": 0.00605, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - Custom Speech Audio Output Tokens", "unitPrice": 0.05, "unitOfMeasure": "1K"}
+{"productName": "Mistral Models", "meterName": "Doc AI regnl 2505 Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
+{"productName": "Azure Agent Unit", "meterName": "SRE Agent Unit", "unitPrice": 0.1, "unitOfMeasure": "1"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - LLM Audio Input Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "CNV Neural HD Synthesis Characters", "unitPrice": 48.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - LLM Text Input Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - LLM Text Cached Tokens", "unitPrice": 4e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-out-glbl 1M Tokens", "unitPrice": 40.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-out-dzone 1M Tokens", "unitPrice": 44.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - LLM Audio Output Tokens", "unitPrice": 0.022, "unitOfMeasure": "1K"}
+{"productName": "Mistral Models", "meterName": "Doc AI glbl 2505 Pages", "unitPrice": 3.75, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - Standard Speech Audio Cached Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Speech", "unitPrice": 1.35, "unitOfMeasure": "1 Minute"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - Standard Speech Audio Output Tokens", "unitPrice": 0.033, "unitOfMeasure": "1K"}
+{"productName": "Grok model family", "meterName": "Grok-4 Outp glbl Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - Standard Speech Audio Input Tokens", "unitPrice": 0.017, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - LLM Audio Input Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - Standard Speech Audio Input Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Speech", "unitPrice": 0.8, "unitOfMeasure": "1 Minute"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - Standard Speech Audio Cached Tokens", "unitPrice": 4e-05, "unitOfMeasure": "1K"}
+{"productName": "Mistral Models", "meterName": "Doc AI regnl 2505 Pages", "unitPrice": 3.96, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - Custom Speech Audio Cached Tokens", "unitPrice": 4e-05, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - LLM Audio Input Tokens", "unitPrice": 0.044, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - LLM Text Output Tokens", "unitPrice": 0.022, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - Custom Speech Audio Cached Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - LLM Audio Cached Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Speech", "unitPrice": 2.7, "unitOfMeasure": "1 Minute"}
+{"productName": "Azure Agent Unit", "meterName": "SRE Agent Unit", "unitPrice": 0.11, "unitOfMeasure": "1"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - LLM Audio Cached Tokens", "unitPrice": 4e-05, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - LLM Text Cached Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "BFL Flux Models", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.1, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "Speech", "unitPrice": 0.7, "unitOfMeasure": "1 Minute"}
+{"productName": "Grok model family", "meterName": "Grok-4 Outp glbl Tokens", "unitPrice": 0.0344, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - LLM Text Cached Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - LLM Text Input Tokens", "unitPrice": 8e-05, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - Standard Speech Audio Outpt Tokens", "unitPrice": 0.033, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Neural HD Text to Speech Characters", "unitPrice": 30.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Voice Live API Basic - LLM Text Input Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Plus - Custom Speech Audio Cached Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - Custom Speech Audio Output Tokens", "unitPrice": 0.05, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Understanding", "meterName": "Std Contextualization Tokens", "unitPrice": 0.001, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Voice Live API Lite - Standard Speech Audio Input Tokens", "unitPrice": 0.013, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Understanding", "meterName": "Pro Contextualization Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "BFL Flux Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.25, "unitOfMeasure": "1/Hour"}
+{"productName": "Grok model family", "meterName": "Grok-4 Inp glbl Tokens", "unitPrice": 0.00688, "unitOfMeasure": "1K"}

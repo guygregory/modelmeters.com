@@ -1,0 +1,135 @@
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 8000K Unit", "unitPrice": 45360.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Unit", "unitPrice": 1600.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 25M Unit", "unitPrice": 21750.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Speech To Text CT Overage", "unitPrice": 0.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 2000K Unit", "unitPrice": 12960.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 25M CT Overage Transactions", "unitPrice": 0.875, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Unit", "unitPrice": 6500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier NTTS Disconnected 400M Unit", "unitPrice": 47424.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 1M CT Overage Transactions", "unitPrice": 0.56, "unitOfMeasure": "1K"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier STT Disconnected 10K Unit", "unitPrice": 92625.0, "unitOfMeasure": "1/Year"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 500K CT Overage Transactions", "unitPrice": 0.75, "unitOfMeasure": "1K"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier STT Disconnected 50K Unit", "unitPrice": 285000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 5M CT Overage Transactions", "unitPrice": 1.02, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 10M Unit", "unitPrice": 2800.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 2K Speech To Text CT Overage", "unitPrice": 0.76, "unitOfMeasure": "1 Hour"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 25M CT Overage Transactions", "unitPrice": 0.7, "unitOfMeasure": "1K"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 4000M CT Overage Characters", "unitPrice": 5.23, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 10M CT Overage Transactions", "unitPrice": 0.28, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding - disconnected", "meterName": "Commitment Tier Disconnected 25M Unit", "unitPrice": 208800.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 10M Unit", "unitPrice": 3500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 2000K Unit", "unitPrice": 1200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Unit", "unitPrice": 8125.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier NTTS Disconnected 2000M Unit", "unitPrice": 182400.0, "unitOfMeasure": "1/Year"}
+{"productName": "Translator Text - disconnected", "meterName": "Commitment Tier Disconnected 4000M Unit", "unitPrice": 250800.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 5M Unit", "unitPrice": 5100.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 500K Unit", "unitPrice": 338.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 50K Unit", "unitPrice": 23750.0, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 1000M CT Overage Characters", "unitPrice": 5.7, "unitOfMeasure": "1M"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier STT Disconnected 10K Unit", "unitPrice": 74100.0, "unitOfMeasure": "1/Year"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 1000M Unit", "unitPrice": 5700.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 10K Unit", "unitPrice": 6175.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 500K Unit", "unitPrice": 375.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 2000K Unit", "unitPrice": 1080.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 1M Unit", "unitPrice": 700.0, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 4000M Unit", "unitPrice": 20900.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 10K Speech To Text CT Overage", "unitPrice": 0.62, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 500K CT Overage Transactions", "unitPrice": 0.68, "unitOfMeasure": "1K"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 3M Unit", "unitPrice": 13200.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Speech To Text CT Overage", "unitPrice": 0.812, "unitOfMeasure": "1 Hour"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 1M CT Overage Transactions", "unitPrice": 1.2, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 3M CT Overage Transactions", "unitPrice": 0.44, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Speech To Text CT Overage", "unitPrice": 0.8, "unitOfMeasure": "1 Hour"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 1M CT Overage Transactions", "unitPrice": 0.7, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding - disconnected", "meterName": "Commitment Tier Disconnected 5M Unit", "unitPrice": 48960.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 10M Unit", "unitPrice": 4375.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 3M Unit", "unitPrice": 1100.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 5M CT Overage Transactions", "unitPrice": 0.82, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 10M Unit", "unitPrice": 3500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 3M Unit", "unitPrice": 1375.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 500K CT Overage Transactions", "unitPrice": 0.938, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 25M CT Overage Transactions", "unitPrice": 0.87, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 3M CT Overage Transactions", "unitPrice": 0.55, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 1M Unit", "unitPrice": 1200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier NTTS Disconnected 400M Unit", "unitPrice": 59280.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 2K Unit", "unitPrice": 1520.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 8000K CT Overage Transactions", "unitPrice": 0.53, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 25M Unit", "unitPrice": 17400.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 1M CT Overage Transactions", "unitPrice": 1.2, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 1M CT Overage Transactions", "unitPrice": 0.7, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 1M Unit", "unitPrice": 560.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 3M Unit", "unitPrice": 16500.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 1M CT Overage Transactions", "unitPrice": 0.96, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 2000K Unit", "unitPrice": 1500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Unit", "unitPrice": 25000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 3M CT Overage Transactions", "unitPrice": 0.55, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 10K Speech To Text CT Overage", "unitPrice": 0.775, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 2000K CT Overage Transactions", "unitPrice": 0.54, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 2000K CT Overage Transactions", "unitPrice": 0.6, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 3M Unit", "unitPrice": 1375.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 50K Speech To Text CT Overage", "unitPrice": 0.48, "unitOfMeasure": "1 Hour"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 10M CT Overage Transactions", "unitPrice": 0.35, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 5M Unit", "unitPrice": 4080.0, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text - disconnected", "meterName": "Commitment Tier Disconnected 10000M Unit", "unitPrice": 513000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Speech To Text CT Overage", "unitPrice": 0.65, "unitOfMeasure": "1 Hour"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 250M CT Overage Characters", "unitPrice": 9.762, "unitOfMeasure": "1M"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 10M Unit", "unitPrice": 33600.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier NTTS Disconnected 2000M Unit", "unitPrice": 228000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Azure 4000M Unit", "unitPrice": 27500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 8000K CT Overage Transactions", "unitPrice": 0.47, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Unit", "unitPrice": 2000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 8000K Unit", "unitPrice": 4200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 3M CT Overage Transactions", "unitPrice": 0.688, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 10M CT Overage Transactions", "unitPrice": 0.35, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding - disconnected", "meterName": "Commitment Tier Disconnected 25M Unit", "unitPrice": 261000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 2000K CT Overage Transactions", "unitPrice": 0.75, "unitOfMeasure": "1K"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 250M CT Overage Characters", "unitPrice": 7.81, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Unit", "unitPrice": 31250.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 3M Unit", "unitPrice": 1718.75, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 1M Unit", "unitPrice": 1200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 25M Unit", "unitPrice": 21750.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 8000K Unit", "unitPrice": 3780.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 1M Unit", "unitPrice": 960.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding - disconnected", "meterName": "Commitment Tier Disconnected 5M Unit", "unitPrice": 61200.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 10K Unit", "unitPrice": 7718.75, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Azure 1000M Unit", "unitPrice": 7500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 10M CT Overage Transactions", "unitPrice": 0.438, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Speech To Text CT Overage", "unitPrice": 0.625, "unitOfMeasure": "1 Hour"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 25M CT Overage Transactions", "unitPrice": 1.088, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 2K Unit", "unitPrice": 1900.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 5M CT Overage Transactions", "unitPrice": 1.025, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 5M Unit", "unitPrice": 6375.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 1M Unit", "unitPrice": 875.0, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text - disconnected", "meterName": "Commitment Tier Disconnected 4000M Unit", "unitPrice": 313500.0, "unitOfMeasure": "1/Year"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 500K Unit", "unitPrice": 468.75, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 2000K CT Overage Transactions", "unitPrice": 0.675, "unitOfMeasure": "1K"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier STT Disconnected 50K Unit", "unitPrice": 356250.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 50K Unit", "unitPrice": 29687.5, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 1M CT Overage Transactions", "unitPrice": 1.5, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 1M CT Overage Transactions", "unitPrice": 0.875, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 8000K CT Overage Transactions", "unitPrice": 0.662, "unitOfMeasure": "1K"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 10M Unit", "unitPrice": 42000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 50K Speech To Text CT Overage", "unitPrice": 0.6, "unitOfMeasure": "1 Hour"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 25M Unit", "unitPrice": 27187.5, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 8000K Unit", "unitPrice": 5250.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 8000K Unit", "unitPrice": 4725.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Connected 5M Unit", "unitPrice": 5100.0, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Azure 1000M CT Overage Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 250M Unit", "unitPrice": 2440.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Speech To Text CT Overage", "unitPrice": 1.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Azure 4000M CT Overage Characters", "unitPrice": 6.875, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 2K Speech To Text CT Overage", "unitPrice": 0.95, "unitOfMeasure": "1 Hour"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Azure 250M CT Overage Characters", "unitPrice": 10.275, "unitOfMeasure": "1M"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 5M CT Overage Transactions", "unitPrice": 1.275, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 1M Unit", "unitPrice": 700.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 500K Unit", "unitPrice": 422.5, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text - disconnected", "meterName": "Commitment Tier Disconnected 10000M Unit", "unitPrice": 641250.0, "unitOfMeasure": "1/Year"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Azure 250M Unit", "unitPrice": 2568.75, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 500K CT Overage Transactions", "unitPrice": 0.85, "unitOfMeasure": "1K"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 4000M Unit", "unitPrice": 26125.0, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 1000M CT Overage Characters", "unitPrice": 7.125, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 2000K Unit", "unitPrice": 1350.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language Understanding", "meterName": "Commitment Tier Azure 1M Unit", "unitPrice": 1500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 8000K CT Overage Transactions", "unitPrice": 0.588, "unitOfMeasure": "1K"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 1000M Unit", "unitPrice": 7125.0, "unitOfMeasure": "1/Month"}
+{"productName": "Translator Text", "meterName": "Commitment Tier Connected 4000M CT Overage Characters", "unitPrice": 6.538, "unitOfMeasure": "1M"}

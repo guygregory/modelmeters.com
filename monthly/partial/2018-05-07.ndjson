@@ -1,0 +1,9 @@
+{"productName": "Language Understanding", "meterName": "S1 Speech To Intent - Understanding Transactions", "unitPrice": 1.5, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Speech To Intent - Transcription Transactions", "unitPrice": 4.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Custom Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Free Custom Speech Model Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Free Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Speech Translation", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "QnA Maker", "meterName": "Free Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "QnA Maker", "meterName": "Standard Unit", "unitPrice": 0.32258, "unitOfMeasure": "1/Day"}

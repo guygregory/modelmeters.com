@@ -1,0 +1,99 @@
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Inp-glbl Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "file-search-tool-calls-rgnl Calls", "unitPrice": 2.75, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 20K hours App Overage", "unitPrice": 3.75, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Standard Streaming Minute", "unitPrice": 0.5, "unitOfMeasure": "1 Minute"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Batch Inp Data Zone Tokens", "unitPrice": 0.0825, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Inp regnl Tokens", "unitPrice": 0.1815, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-4-Mini MM-Audio-In Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Outp glbl Tokens", "unitPrice": 0.6, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Speech-to-Text-Batch-Whisper-glbl Unit", "unitPrice": 0.36, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-outp-datazone Tokens", "unitPrice": 0.0132, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3 Outp regnl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-inpt-glbl Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Inp Data Zone Tokens", "unitPrice": 0.165, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3 Outp glbl Tokens", "unitPrice": 0.00456, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Batch Inp glbl Tokens", "unitPrice": 0.075, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Batch Outp glbl Tokens", "unitPrice": 0.3, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-inpt-rgnl Tokens", "unitPrice": 0.00363, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-Vision-128K Outp-glbl Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 50K hours Unit", "unitPrice": 132000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Outp regnl Tokens", "unitPrice": 0.66, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "file-search-tool-calls-datazone Calls", "unitPrice": 2.75, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "file-search-tool-calls-glbl Calls", "unitPrice": 2.5, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Inp-glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3 Inp glbl Tokens", "unitPrice": 0.00114, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Batch Outp Data Zone Tokens", "unitPrice": 0.33, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-outp-rgnl Tokens", "unitPrice": 0.0132, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.5 0227 Outp glbl Tokens", "unitPrice": 0.15, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.5 0227 Inp glbl Tokens", "unitPrice": 0.075, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Standard Pay As You Go App", "unitPrice": 19.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 150K hours Unit", "unitPrice": 421875.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.5 0227 cached Inp glbl Tokens", "unitPrice": 0.0375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Trng-glbl tkn Tokens", "unitPrice": 0.006, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-outp-rgnl Tokens", "unitPrice": 0.01452, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Outp regnl Tokens", "unitPrice": 0.726, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "embedding-ada-datazone Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Inp regnl Tokens", "unitPrice": 0.165, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-outp-glbl Tokens", "unitPrice": 0.012, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Inp glbl Tokens", "unitPrice": 0.15, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "text-embedding-3-small-glbl Tokens", "unitPrice": 2e-05, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3 Inp regnl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-inpt-datazone Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp Data Zone Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-glbl Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1-pro Outp Data Zone Tokens", "unitPrice": 0.66, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "computer-use-inpt-rgnl Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 150K hours App Overage", "unitPrice": 2.25, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-Outp-glbl Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Outp-glbl Tokens", "unitPrice": 0.12, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Code-Interpreter-global Session", "unitPrice": 0.03, "unitOfMeasure": "1"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 400K hours Unit", "unitPrice": 780000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Outp-glbl Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-base-glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 20K hours Unit", "unitPrice": 60000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Standard Pay As You Go App", "unitPrice": 15.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "Image-DALL-E-2-glbl Images", "unitPrice": 2.0, "unitOfMeasure": "100"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Inp regnl Tokens", "unitPrice": 0.003025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Assistants-File Search-glbl GB", "unitPrice": 0.1, "unitOfMeasure": "1/Day"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Outp-glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-1106 Outp-glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 Std HighRes-glbl Images", "unitPrice": 8.0, "unitOfMeasure": "100"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp regnl Tokens", "unitPrice": 0.0121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "embedding-ada-glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "embedding-ada-regional Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 150K hours App Overage", "unitPrice": 2.8125, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-Vision-128K Inp-glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Inp-glbl Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo4K-Outp-glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 400K hours Unit", "unitPrice": 975000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Trng-glbl Unit", "unitPrice": 34.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-Inp-glbl Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Outp-glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo4K-Inp-glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 20K hours App Overage", "unitPrice": 3.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 Std LowRes-glbl Images", "unitPrice": 4.0, "unitOfMeasure": "100"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 400K hours App Overage", "unitPrice": 2.4375, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-0125 Inp-glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-Instruct-Outp-glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Inp-glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-0125 Outp-glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 cached Inp regnl Tokens", "unitPrice": 0.001513, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 20K hours Unit", "unitPrice": 75000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Trng-glbl Unit", "unitPrice": 40.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 50K hours App Overage", "unitPrice": 2.64, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 400K hours App Overage", "unitPrice": 1.95, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 50K hours Unit", "unitPrice": 165000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Hstng-glbl Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-Instruct-Inp-glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Inp Data Zone Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "file-search-tool-calls-rgnl Calls", "unitPrice": 3.025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 HD HighRes-glbl Images", "unitPrice": 12.0, "unitOfMeasure": "100"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Hstng-glbl Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Trng-glbl tkn Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 150K hours Unit", "unitPrice": 337500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Standard Streaming Minute", "unitPrice": 0.625, "unitOfMeasure": "1 Minute"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier App 50K hours App Overage", "unitPrice": 3.3, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-1106 Inp-glbl Tokens", "unitPrice": 0.001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 cached Inp Data Zone Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-base-glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 HD LowRes-glbl Images", "unitPrice": 8.0, "unitOfMeasure": "100"}

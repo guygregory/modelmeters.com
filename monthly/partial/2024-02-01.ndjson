@@ -1,0 +1,50 @@
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 400M Unit", "unitPrice": 3705.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 400M Unit", "unitPrice": 3900.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 80M Neural Text To Speech CT Overage Characters", "unitPrice": 11.4, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 2000M Unit", "unitPrice": 15000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 2.2, "unitOfMeasure": "1K"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 0.275, "unitOfMeasure": "1K"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 0.55, "unitOfMeasure": "1K"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 1.1, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Liveness Transactions", "unitPrice": 15.0, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Liveness and Verification Transactions", "unitPrice": 15.5, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Neural Text To Speech Characters", "unitPrice": 15.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 400M Neural Text To Speech CT Overage Characters", "unitPrice": 9.75, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 2000M Neural Text To Speech CT Overage Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Neural Text To Speech Characters", "unitPrice": 18.75, "unitOfMeasure": "1M"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier NTTS Disconnected 400M Unit", "unitPrice": 47424.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 2000M Unit", "unitPrice": 14250.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 400M Neural Text To Speech CT Overage Characters", "unitPrice": 9.2625, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 80M Unit", "unitPrice": 912.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 80M Unit", "unitPrice": 960.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "OAI-based Neural Text to Speech Characters", "unitPrice": 15.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 400M Neural Text To Speech CT Overage Characters", "unitPrice": 11.578125, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 80M Neural Text To Speech CT Overage Characters", "unitPrice": 12.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 80M Unit", "unitPrice": 1140.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 400M Unit", "unitPrice": 4875.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 80M Unit", "unitPrice": 1200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 2000M Neural Text To Speech CT Overage Characters", "unitPrice": 7.125, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Text to Speech - Personal Voice Characters", "unitPrice": 24.0, "unitOfMeasure": "1M"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier STT Disconnected 50K Unit", "unitPrice": 285000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 2000M Neural Text To Speech CT Overage Characters", "unitPrice": 9.375, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 2000M Neural Text To Speech CT Overage Characters", "unitPrice": 8.90625, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 400M Neural Text To Speech CT Overage Characters", "unitPrice": 12.1875, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 2000K Unit", "unitPrice": 12960.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 400M Unit", "unitPrice": 4631.25, "unitOfMeasure": "1/Month"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier CSTT Disconnected 10K Unit", "unitPrice": 88920.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Text to Speech - Personal Voice Voice Storage", "unitPrice": 600.0, "unitOfMeasure": "1K"}
+{"productName": "Translator Text - disconnected", "meterName": "Commitment Tier Disconnected 10000M Unit", "unitPrice": 513000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 80M Neural Text To Speech CT Overage Characters", "unitPrice": 14.25, "unitOfMeasure": "1M"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier NTTS Disconnected 2000M Unit", "unitPrice": 182400.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 2000M Unit", "unitPrice": 18750.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier CSTT Disconnected 50K Unit", "unitPrice": 342000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language Understanding - disconnected", "meterName": "Commitment Tier Disconnected 25M Unit", "unitPrice": 208800.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 80M Neural Text To Speech CT Overage Characters", "unitPrice": 15.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 2000M Unit", "unitPrice": 17812.5, "unitOfMeasure": "1/Month"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 10M Unit", "unitPrice": 33600.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language Understanding - disconnected", "meterName": "Commitment Tier Disconnected 5M Unit", "unitPrice": 48960.0, "unitOfMeasure": "1/Year"}
+{"productName": "Text Analytics Container", "meterName": "Free Text Records", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speech - disconnected", "meterName": "Commitment Tier STT Disconnected 10K Unit", "unitPrice": 74100.0, "unitOfMeasure": "1/Year"}
+{"productName": "Translator Text - disconnected", "meterName": "Commitment Tier Disconnected 4000M Unit", "unitPrice": 250800.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 3M Unit", "unitPrice": 13200.0, "unitOfMeasure": "1/Year"}
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 8000K Unit", "unitPrice": 45360.0, "unitOfMeasure": "1/Year"}

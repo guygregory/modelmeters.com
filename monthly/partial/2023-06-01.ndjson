@@ -1,0 +1,41 @@
+{"productName": "Speech", "meterName": "S1 Custom Voice Font Hosting Unit", "unitPrice": 0.0537, "unitOfMeasure": "1/Hour"}
+{"productName": "Language", "meterName": "Standard Custom Summarization Text Records", "unitPrice": 4.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Speech To Intent - Transcription Transactions", "unitPrice": 4.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Speech To Text CT Overage", "unitPrice": 0.65, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "Shelf Product Recognition - Custom Objects", "unitPrice": 0.15, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Speech To Text CT Overage", "unitPrice": 0.8, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Speech To Text CT Overage", "unitPrice": 0.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 50K Unit", "unitPrice": 23750.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Shelf Image Composition Transactions", "unitPrice": 2.5, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Custom Speech Model Hosting Unit", "unitPrice": 0.05375, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Training", "unitPrice": 52.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Long Audio Characters", "unitPrice": 100.0, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Standard Custom Summarization Text Records", "unitPrice": 5.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Speech Translation", "unitPrice": 2.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Speech to Text Enhanced Feature Audio", "unitPrice": 0.3, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 2K Unit", "unitPrice": 1520.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Neural Long Audio Characters", "unitPrice": 100.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Conversation Transcription Multichannel Audio", "unitPrice": 2.1, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Speaker Recognition Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Unit", "unitPrice": 6500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Voice Model Hosting Unit", "unitPrice": 4.032, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "S1 Conversation Transcription Video", "unitPrice": 3.1, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Text To Speech Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Shelf Planogram Compliance Transactions", "unitPrice": 5.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Custom Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Unit", "unitPrice": 25000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Speech To Text", "unitPrice": 1.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Conversation Transcription", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Custom Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Text To Speech Characters", "unitPrice": 4.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Custom Speech Model Hosting Unit", "unitPrice": 1.290322, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Free Custom Speech Model Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Speaker Verification Transactions", "unitPrice": 5.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Unit", "unitPrice": 1600.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Realtime Characters", "unitPrice": 24.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Voice Storage", "unitPrice": 0.2, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Custom Voice Font Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Free Speech Translation", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Speaker Identification Transactions", "unitPrice": 10.0, "unitOfMeasure": "1K"}

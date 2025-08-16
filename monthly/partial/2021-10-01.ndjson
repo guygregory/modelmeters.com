@@ -1,0 +1,13 @@
+{"productName": "Speech", "meterName": "S1 Custom Neural Long Audio Characters", "unitPrice": 100.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Voice Model Hosting Unit", "unitPrice": 4.032, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Training", "unitPrice": 52.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Realtime Characters", "unitPrice": 24.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Realtime Characters", "unitPrice": 30.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Speaker Identification Transactions", "unitPrice": 10.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Speech To Intent - Transcription Transactions", "unitPrice": 4.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Speech Translation", "unitPrice": 2.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Speaker Verification Transactions", "unitPrice": 5.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Voice Model Hosting Unit", "unitPrice": 5.04, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Voice Font Hosting Unit", "unitPrice": 0.0537, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Neural Long Audio Characters", "unitPrice": 125.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Voice Storage", "unitPrice": 0.2, "unitOfMeasure": "1K"}

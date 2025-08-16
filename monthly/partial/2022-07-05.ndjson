@@ -1,0 +1,22 @@
+{"productName": "Computer Vision", "meterName": "P1 Unit", "unitPrice": 38.7, "unitOfMeasure": "1/Day"}
+{"productName": "Text Analytics Container", "meterName": "Free Text Records", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1 Transactions", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1 Transactions", "unitPrice": 0.65, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1 Transactions", "unitPrice": 0.6, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1 Transactions", "unitPrice": 0.4, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 2 Transactions", "unitPrice": 1.5, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 2 Transactions", "unitPrice": 0.6, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "P2 Unit", "unitPrice": 96.77, "unitOfMeasure": "1/Day"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1-1 Transactions", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1-1 Transactions", "unitPrice": 0.65, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1-1 Transactions", "unitPrice": 0.6, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Analysis Group 1-1 Transactions", "unitPrice": 0.4, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Language Understanding", "meterName": "S1 Speech To Intent - Understanding Transactions", "unitPrice": 1.5, "unitOfMeasure": "1K"}
+{"productName": "Custom Vision", "meterName": "S0 Training", "unitPrice": 10.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Custom Vision", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Custom Vision", "meterName": "S0 Transactions", "unitPrice": 2.0, "unitOfMeasure": "1K"}
+{"productName": "Custom Vision", "meterName": "S0 Image Storage", "unitPrice": 0.7, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "P3 Unit", "unitPrice": 193.54, "unitOfMeasure": "1/Day"}
+{"productName": "Language Understanding", "meterName": "S1 Transactions", "unitPrice": 1.5, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}

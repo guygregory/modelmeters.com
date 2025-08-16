@@ -1,0 +1,10 @@
+{"productName": "Speech", "meterName": "Free Custom Voice Font Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Free Custom Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Text Analytics Container", "meterName": "Free Text Records", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Custom Vision", "meterName": "S0 Transactions", "unitPrice": 1.25, "unitOfMeasure": "1K"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 2.0, "unitOfMeasure": "1K"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 0.25, "unitOfMeasure": "1K"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 0.5, "unitOfMeasure": "1K"}
+{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "S0 Overage Transactions", "unitPrice": 3.75, "unitOfMeasure": "1K"}
+{"productName": "Custom Vision", "meterName": "S0 Image Storage", "unitPrice": 0.4375, "unitOfMeasure": "1K"}

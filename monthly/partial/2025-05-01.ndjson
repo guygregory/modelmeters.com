@@ -1,0 +1,168 @@
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft mdl grdr inpt Tokens", "unitPrice": 0.0022, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-4-mini-reasoning-Input Tokens", "unitPrice": 7.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft mdl grdr opt Tokens", "unitPrice": 0.00176, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-dev-ft cchd inpt glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-grader Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-dev-ft cchd inpt glbl Tokens", "unitPrice": 2.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "S1 Standard Characters", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft model grader input Tokens", "unitPrice": 0.00121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft output global Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft input regional Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft hosting global Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini RFT Training regional Unit", "unitPrice": 110.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Translator", "meterName": "S1 Custom Training Characters", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-dev-ft opt glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft hosting global Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Phi", "meterName": "Phi-4-reasoning-Output Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-dev-ft cchd inpt glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o3-mini-ft model grader output Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o3-mini-ft model grader cchd inpt Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft model grader cchd inp Tokens", "unitPrice": 0.000303, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft input global Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-ft model grader input Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Standard Streaming Minute", "unitPrice": 0.5, "unitOfMeasure": "1 Minute"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft hosting regional Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "o3-ft mdl grdr opt Tokens", "unitPrice": 0.044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 model ft grader cched input Tokens", "unitPrice": 0.00825, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-dev-ft inpt glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-dev-ft inpt glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft output regional Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano FT Training global Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o3-ft mdl grdr inpt Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft mdl grdr inpt Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-ft model grader output Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft cached input regional Tokens", "unitPrice": 0.000303, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-dev-ft opt glbl Tokens", "unitPrice": 0.0016, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-ft model grader output Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft mdl grdr opt Tokens", "unitPrice": 0.0088, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o3-mini-ft model grader input Tokens", "unitPrice": 0.00121, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 250M Unit", "unitPrice": 2568.75, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft input global Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft input regional Tokens", "unitPrice": 0.00121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft hosting regional Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft mdl grdr opt Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini RFT Training global Unit", "unitPrice": 100.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft cached input global Tokens", "unitPrice": 2.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft mdl grdr cchd inpt Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft cached input global Tokens", "unitPrice": 0.000275, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "D3 Unit", "unitPrice": 244.95, "unitOfMeasure": "1/Day"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-dev-ft opt glbl Tokens", "unitPrice": 0.008, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-ft model grader input Tokens", "unitPrice": 0.000165, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft output global Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o3-ft mdl grdr cchd inpt Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft hosting regional Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-ft model grader cched inpt Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-ft mdel grdr cched inpt Tokens", "unitPrice": 8.3e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-dev-ft inpt glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 model ft grader output Tokens", "unitPrice": 0.066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 model ft grader input Tokens", "unitPrice": 0.0165, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft mdl grdr cchd inpt Tokens", "unitPrice": 2.8e-05, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-4-mini-reasoning-Output Tokens", "unitPrice": 0.0003, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 1-5s regnl Video", "unitPrice": 1.3, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 1000M Unit", "unitPrice": 5700.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "C2 Custom Training Characters", "unitPrice": 10.275, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft cached input regnl Tokens", "unitPrice": 2.8e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft model grader output Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "S3 Custom Model Hosting Unit", "unitPrice": 12.5, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 4000M Unit", "unitPrice": 20900.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "C2 Characters", "unitPrice": 32.88, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C4 Custom Model Hosting Unit", "unitPrice": 10.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano FT Training regional Tokens", "unitPrice": 0.001815, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "C2 Characters", "unitPrice": 41.1, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft output regional Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "C3 Custom Model Hosting Unit", "unitPrice": 10.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "S1 Document Characters", "unitPrice": 15.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S1 Custom Model Hosting Unit", "unitPrice": 12.5, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "C2 Custom Training Characters", "unitPrice": 8.22, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 1000M Unit", "unitPrice": 7125.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-regional Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "C3 Characters", "unitPrice": 30.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 1-5s regnl Video", "unitPrice": 0.6, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 250M Characters", "unitPrice": 8.22, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S4 Unit", "unitPrice": 1451.612903, "unitOfMeasure": "1/Day"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft mdl grdr cchd inpt Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft mdl grdr inpt Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "S2 Unit", "unitPrice": 82.863, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "S2 Custom Model Hosting Unit", "unitPrice": 10.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "S4 Unit", "unitPrice": 1814.52, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "C4 Custom Training Characters", "unitPrice": 5.625, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano FT Training regional Tokens", "unitPrice": 0.00165, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-4-reasoning-Input Tokens", "unitPrice": 0.000125, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Free Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 1-5s regnl Video", "unitPrice": 0.45, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "C3 Custom Training Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 250M Characters", "unitPrice": 7.81, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 6-10s regnl Video", "unitPrice": 0.5, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "C2 Custom Model Hosting Unit", "unitPrice": 10.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "S2 Characters", "unitPrice": 10.275, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 480p 1-20s regnl Video", "unitPrice": 0.2, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "S3 Custom Model Hosting Unit", "unitPrice": 10.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 250M Unit", "unitPrice": 2440.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 1000M Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft hosting regional Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Translator", "meterName": "C3 Unit", "unitPrice": 193.548, "unitOfMeasure": "1/Day"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft output regional Tokens", "unitPrice": 0.005324, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "S4 Custom Model Hosting Unit", "unitPrice": 12.5, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 4000M Unit", "unitPrice": 27500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "D3 Unit", "unitPrice": 195.96, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 1000M Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 1000M Characters", "unitPrice": 5.7, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S4 Characters", "unitPrice": 4.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 6-10s regnl Video", "unitPrice": 0.75, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 250M Unit", "unitPrice": 1952.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "S1 Custom Translation Characters", "unitPrice": 40.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft output regional Tokens", "unitPrice": 0.000484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 16-20s regnl Video", "unitPrice": 0.75, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 16-20s regnl Video", "unitPrice": 3.6, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "C4 Characters", "unitPrice": 18.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S1 Custom Translation Characters", "unitPrice": 50.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S2 Unit", "unitPrice": 66.290323, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 250M Unit", "unitPrice": 2055.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 11-15s regnl Video", "unitPrice": 2.9, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "C4 Characters", "unitPrice": 22.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 480p Sq 1-20s regnl Video", "unitPrice": 0.15, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 6-10s regnl Video", "unitPrice": 1.85, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 11-15s regnl Video", "unitPrice": 0.65, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 4000M Characters", "unitPrice": 6.538, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C4 Custom Model Hosting Unit", "unitPrice": 12.5, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 11-15s regnl Video", "unitPrice": 1.1, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini RFT Training regional Unit", "unitPrice": 121.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 4000M Unit", "unitPrice": 22000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 4000M Unit", "unitPrice": 26125.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "S3 Unit", "unitPrice": 193.548387, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "S3 Unit", "unitPrice": 241.94, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "C4 Custom Training Characters", "unitPrice": 4.5, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C4 Unit", "unitPrice": 1814.52, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "C3 Unit", "unitPrice": 241.94, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 1000M Unit", "unitPrice": 7500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 4000M Characters", "unitPrice": 5.23, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S2 Custom Model Hosting Unit", "unitPrice": 12.5, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "D3 Characters", "unitPrice": 11.25, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 16-20s regnl Video", "unitPrice": 1.35, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 250M Characters", "unitPrice": 10.275, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C2 Custom Model Hosting Unit", "unitPrice": 12.5, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "S1 Custom Training Characters", "unitPrice": 12.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft input regional Tokens", "unitPrice": 0.001331, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "S3 Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C3 Characters", "unitPrice": 24.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft cached input regional Tokens", "unitPrice": 0.000333, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 4000M Characters", "unitPrice": 5.5, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S1 Custom Model Hosting Unit", "unitPrice": 10.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 4000M Characters", "unitPrice": 6.875, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft input regional Tokens", "unitPrice": 0.000121, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Azure 1000M Unit", "unitPrice": 6000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 1000M Characters", "unitPrice": 7.125, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "S1 Standard Characters", "unitPrice": 15.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C3 Custom Training Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C2 Unit", "unitPrice": 66.29, "unitOfMeasure": "1/Day"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft cached input regnl Tokens", "unitPrice": 3.1e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Translator", "meterName": "S2 Characters", "unitPrice": 8.22, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C2 Unit", "unitPrice": 82.863, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "C4 Unit", "unitPrice": 1451.613, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Translator", "meterName": "S3 Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "C3 Custom Model Hosting Unit", "unitPrice": 12.5, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "S4 Characters", "unitPrice": 5.625, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p Sq 1-20s regnl Video", "unitPrice": 0.3, "unitOfMeasure": "1 Second"}
+{"productName": "Azure AI Translator", "meterName": "S4 Custom Model Hosting Unit", "unitPrice": 10.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Translator", "meterName": "D3 Characters", "unitPrice": 9.0, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Translator", "meterName": "Commitment Tier Connected 250M Characters", "unitPrice": 9.762, "unitOfMeasure": "1M"}

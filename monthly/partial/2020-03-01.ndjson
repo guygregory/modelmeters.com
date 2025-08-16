@@ -1,0 +1,37 @@
+{"productName": "Speech", "meterName": "Free Speech Translation", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Language Understanding", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "S4 Unit", "unitPrice": 201.61, "unitOfMeasure": "1/Day"}
+{"productName": "Translator Text", "meterName": "C4 Custom Training Characters", "unitPrice": 5.625, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Free Custom Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Free Text Records", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speaker Recognition", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Text To Speech Characters", "unitPrice": 4.8, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Conversation Transcription Video", "unitPrice": 3.875, "unitOfMeasure": "1 Hour"}
+{"productName": "Translator Text", "meterName": "C2 Overage Characters", "unitPrice": 41.1, "unitOfMeasure": "1M"}
+{"productName": "Personalizer", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Custom Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Custom Voice Font Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Conversation Transcription Audio", "unitPrice": 1.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Language", "meterName": "S2 Unit", "unitPrice": 40.313, "unitOfMeasure": "1/Day"}
+{"productName": "Translator Text", "meterName": "C4 Unit", "unitPrice": 1814.52, "unitOfMeasure": "1/Day"}
+{"productName": "Content Moderator", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Personalizer", "meterName": "S0 Transactions", "unitPrice": 1.25, "unitOfMeasure": "1K"}
+{"productName": "Personalizer", "meterName": "S0 Transactions", "unitPrice": 0.438, "unitOfMeasure": "1K"}
+{"productName": "Personalizer", "meterName": "S0 Transactions", "unitPrice": 0.25, "unitOfMeasure": "1K"}
+{"productName": "Personalizer", "meterName": "S0 Transactions", "unitPrice": 0.0625, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Conversation Transcription", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Custom Vision", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Translator Text", "meterName": "C2 Custom Training Characters", "unitPrice": 10.275, "unitOfMeasure": "1M"}
+{"productName": "Translator Text", "meterName": "C3 Overage Characters", "unitPrice": 30.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Free Custom Speech Model Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Translator Text", "meterName": "C3 Custom Training Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Free Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Free Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Language", "meterName": "S0 Unit", "unitPrice": 3.013, "unitOfMeasure": "1/Day"}
+{"productName": "Language Understanding", "meterName": "S1 Transactions", "unitPrice": 1.875, "unitOfMeasure": "1K"}
+{"productName": "Translator Text", "meterName": "C3 Unit", "unitPrice": 241.94, "unitOfMeasure": "1/Day"}
+{"productName": "Ink Recognizer", "meterName": "S0 Transactions", "unitPrice": 2.5, "unitOfMeasure": "1K"}
+{"productName": "QnA Maker", "meterName": "Free Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Speech To Text", "unitPrice": 1.25, "unitOfMeasure": "1 Hour"}
+{"productName": "Translator Text", "meterName": "C4 Overage Characters", "unitPrice": 22.5, "unitOfMeasure": "1M"}
+{"productName": "Ink Recognizer", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}

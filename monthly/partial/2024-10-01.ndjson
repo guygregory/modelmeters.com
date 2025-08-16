@@ -1,0 +1,99 @@
+{"productName": "Phi", "meterName": "Phi-3.5-MoE-Instruct-Input Tokens", "unitPrice": 0.00016, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 cached Inp glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvw audio outp glbl Tokens", "unitPrice": 0.2, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 2K Unit", "unitPrice": 1920.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 cached Inp Data Zone Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvw audio inp glbl Tokens", "unitPrice": 0.1, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o mini 0718 cached Inp Data Zone Tokens", "unitPrice": 8.3e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o mini 0718 Outp Data Zone Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview cached input Data Zone Tokens", "unitPrice": 0.00825, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview input Data Zone Tokens", "unitPrice": 0.0165, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvwTxtInp DataZone Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Safety", "meterName": "Standard Images", "unitPrice": 0.938, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 Inp Data Zone Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Custom Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o mini 0718 cached Inp glbl Tokens", "unitPrice": 7.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 Outp Data Zone Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-MoE-Instruct-Output-FT Tokens", "unitPrice": 0.00064, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvw audio outp regn Tokens", "unitPrice": 0.22, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Custom Speech Model Hosting Unit", "unitPrice": 1.290322, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Speech To Text", "unitPrice": 1.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtime prvw text outp glbl Tokens", "unitPrice": 0.02, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvwAudOutp DataZone Tokens", "unitPrice": 0.22, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvwTxtOutp DataZone Tokens", "unitPrice": 0.022, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvwAudInp DataZone Tokens", "unitPrice": 0.11, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Custom Voice Font Hosting Unit", "unitPrice": 0.0537, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview input glbl Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o mini 0718 cached Inp regnl Tokens", "unitPrice": 8.3e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o mini 0718 Inp Data Zone Tokens", "unitPrice": 0.000165, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview output Data Zone Tokens", "unitPrice": 0.066, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 400M Unit", "unitPrice": 3705.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Speech To Text CT Overage", "unitPrice": 0.8, "unitOfMeasure": "1 Hour"}
+{"productName": "Phi", "meterName": "Phi-3.5-MoE-Instruct-Input-FT Tokens", "unitPrice": 0.00016, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtime prvw text inp regn Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 2K Unit", "unitPrice": 1600.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Free Conversation Transcription", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Text To Speech Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtime prvw text inp glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Text To Speech Characters", "unitPrice": 4.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview output glbl Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Unit", "unitPrice": 6500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Phi", "meterName": "Phi-3.5-MoE-Instruct-Output Tokens", "unitPrice": 0.00064, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvw audio inp regn Tokens", "unitPrice": 0.121, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 4000M Unit", "unitPrice": 24000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Speech Translation", "unitPrice": 2.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 cached Inp regnl Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvw audio outp regn Tokens", "unitPrice": 0.242, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-outp-regnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 2000M Unit", "unitPrice": 14250.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 50K Unit", "unitPrice": 23750.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 100K Unit", "unitPrice": 40000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-Trng-regnl tkn Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview cached input glbl Tokens", "unitPrice": 0.0075, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 80M Neural Text To Speech CT Overage Characters", "unitPrice": 12.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview output regnl Tokens", "unitPrice": 0.066, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 10K Speech To Text CT Overage", "unitPrice": 0.65, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtime prvw text outp regn Tokens", "unitPrice": 0.0242, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview input regnl Tokens", "unitPrice": 0.0165, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 2000M Unit", "unitPrice": 15000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtime prvw text outp regn Tokens", "unitPrice": 0.022, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Safety", "meterName": "Standard Text Records", "unitPrice": 0.469, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Custom Speech Model Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 100K Speech To Text CT Overage", "unitPrice": 0.4, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 80M Unit", "unitPrice": 912.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Speaker Identification Transactions", "unitPrice": 10.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvw audio inp regn Tokens", "unitPrice": 0.11, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Unit", "unitPrice": 25000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 2K Unit", "unitPrice": 1520.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Voice Storage", "unitPrice": 0.2, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 100K Custom Speech To Text CT Overage", "unitPrice": 0.48, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-Hstng-regnl Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 2000M Neural Text To Speech CT Overage Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt4o realtime prvw text inp regn Tokens", "unitPrice": 0.00605, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Custom Speech Model Hosting Unit", "unitPrice": 0.05375, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 50K Speech To Text CT Overage", "unitPrice": 0.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Speech To Intent - Transcription Transactions", "unitPrice": 4.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 4000M Neural Text To Speech CT Overage Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 400M Unit", "unitPrice": 3900.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Video Translation Automated Speech", "unitPrice": 1.0, "unitOfMeasure": "1 Minute"}
+{"productName": "Speech", "meterName": "Video Translation AddOn PersonalVoice Speech", "unitPrice": 0.2, "unitOfMeasure": "1 Minute"}
+{"productName": "Speech", "meterName": "Free Custom Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Free Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Free Text To Speech Characters", "unitPrice": 0.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Video Translation Edit Text to Video Speech", "unitPrice": 0.2, "unitOfMeasure": "1 Minute"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-inp-regnl Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o mini 0718 cached Inp regnl Tokens", "unitPrice": 9.1e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview cached input regnl Tokens", "unitPrice": 0.00825, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Speaker Recognition Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 2K Custom Speech To Text CT Overage", "unitPrice": 0.96, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "o1 preview cached input regnl Tokens", "unitPrice": 0.009075, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 cached Inp regnl Tokens", "unitPrice": 0.001513, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 100K Unit", "unitPrice": 48000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Speaker Verification Transactions", "unitPrice": 5.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Text to Speech - Personal Voice Characters", "unitPrice": 24.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Text to Speech - Personal Voice Voice Storage", "unitPrice": 600.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Free Speech Translation", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 80M Unit", "unitPrice": 960.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Custom Speech To Text", "unitPrice": 1.2, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Voice Conversion - Standard Speech", "unitPrice": 0.36, "unitOfMeasure": "1 Minute"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 400M Neural Text To Speech CT Overage Characters", "unitPrice": 9.75, "unitOfMeasure": "1M"}

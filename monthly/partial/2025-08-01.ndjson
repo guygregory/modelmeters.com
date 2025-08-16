@@ -1,0 +1,137 @@
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 1M CT Overage Transactions", "unitPrice": 1.6, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng outpt Glbl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch Inpt DZone 1M Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 10M CT Overage Transactions", "unitPrice": 1.16, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Batch outpt Glbl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Custom Image Classification Training", "unitPrice": 20.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 10M CT Overage Transactions", "unitPrice": 0.93, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch Inpt Glbl 1M Tokens", "unitPrice": 0.125, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Video Retrieval and Description - Ingestion Vision", "unitPrice": 3.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch Inpt cchd Dzone 1M Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini outpt DZone 1M Tokens", "unitPrice": 2.2, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Liveness and Verification Transactions", "unitPrice": 15.5, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Batch Inpt cchd Dzone 1M Tokens", "unitPrice": 0.06875, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini outpt Glbl 1M Tokens", "unitPrice": 2.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch Inpt cchd Glbl 1M Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1M"}
+{"productName": "Deepseek model family", "meterName": "MAI-DS-R1 Inp Dzone Tokens", "unitPrice": 0.001485, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 3M Unit", "unitPrice": 3264.0, "unitOfMeasure": "1/Month"}
+{"productName": "Deepseek model family", "meterName": "V3 Outp DZone Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Retrieval - Ingestion Transactions", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Video Retrieval - Query Transactions", "unitPrice": 0.25, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch outpt Glbl 1M Tokens", "unitPrice": 1.0, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 1M Unit", "unitPrice": 1600.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 25M CT Overage Transactions", "unitPrice": 0.96, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano cchd Inpt Glbl 1M Tokens", "unitPrice": 0.005, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Image Retrieval - Query Transactions", "unitPrice": 0.16, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch Inpt Glbl 1M Tokens", "unitPrice": 0.025, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI OSS models", "meterName": "gpt-oss-120B Outp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 3M CT Overage Transactions", "unitPrice": 1.7, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 25M CT Overage Transactions", "unitPrice": 0.77, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Chat Inpt Glbl 1M Tokens", "unitPrice": 1.25, "unitOfMeasure": "1M"}
+{"productName": "Deepseek model family", "meterName": "V3 Inp DZone Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Inpt Glbl 1M Tokens", "unitPrice": 0.25, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Batch Inpt cchd Glbl 1M Tokens", "unitPrice": 0.0625, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Vectorize Text Transactions", "unitPrice": 0.014, "unitOfMeasure": "1K"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier DC CLU 3M Unit", "unitPrice": 39168.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 10M Unit", "unitPrice": 9280.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 25M Unit", "unitPrice": 19200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Video Translation Std Audio Output Audio", "unitPrice": 15.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "Custom Object Detection Training", "unitPrice": 20.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "Free Training", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 25M Unit", "unitPrice": 24000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 1M CT Overage Transactions", "unitPrice": 2.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch Inpt cchd Dzone 1M Tokens", "unitPrice": 0.01375, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Inpt DZone 1M Tokens", "unitPrice": 1.375, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Inpt DZone 1M Tokens", "unitPrice": 0.275, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch Inpt cchd Glbl 1M Tokens", "unitPrice": 0.0125, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 3M Unit", "unitPrice": 4080.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Inpt Glbl 1M Tokens", "unitPrice": 0.05, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Vectorize Image Transactions", "unitPrice": 0.1, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 2000K Unit", "unitPrice": 1080.0, "unitOfMeasure": "1/Month"}
+{"productName": "Content Moderator", "meterName": "Standard Transactions", "unitPrice": 1.2, "unitOfMeasure": "1K"}
+{"productName": "Content Moderator", "meterName": "Standard Transactions", "unitPrice": 0.96, "unitOfMeasure": "1K"}
+{"productName": "Content Moderator", "meterName": "Standard Transactions", "unitPrice": 0.48, "unitOfMeasure": "1K"}
+{"productName": "Content Moderator", "meterName": "Standard Transactions", "unitPrice": 0.72, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 3M CT Overage Transactions", "unitPrice": 1.36, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng outpt DZone 1M Tokens", "unitPrice": 11.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI OSS models", "meterName": "gpt-oss-120B Inp glbl Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3-0324 Outp DZone Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier DC CLU 10M Unit", "unitPrice": 111360.0, "unitOfMeasure": "1/Year"}
+{"productName": "Computer Vision", "meterName": "Custom Object Detection Transactions", "unitPrice": 2.0, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 10M Unit", "unitPrice": 11600.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Chat cchd Inpt Glbl 1M Tokens", "unitPrice": 0.125, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Custom Image Classification Transactions", "unitPrice": 2.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Batch Inpt DZone 1M Tokens", "unitPrice": 0.6875, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp regnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 10M CT Overage Transactions", "unitPrice": 1.1625, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 8000K Unit", "unitPrice": 4200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch outpt DZone 1M Tokens", "unitPrice": 1.1, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano cchd Inpt DZone 1M Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 500K Unit", "unitPrice": 338.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini cchd Inpt DZone 1M Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Batch Inpt Glbl 1M Tokens", "unitPrice": 0.625, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng cchd Inpt Glbl 1M Tokens", "unitPrice": 0.125, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano outpt Glbl 1M Tokens", "unitPrice": 0.4, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Inpt Glbl 1M Tokens", "unitPrice": 1.25, "unitOfMeasure": "1M"}
+{"productName": "Deepseek model family", "meterName": "V3-0324 Inp DZone Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini cchd Inpt Glbl 1M Tokens", "unitPrice": 0.025, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 11-15s glbl Video", "unitPrice": 1.1, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Chat outpt Glbl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Inpt DZone 1M Tokens", "unitPrice": 0.055, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 500K CT Overage Transactions", "unitPrice": 0.75, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 25M Unit", "unitPrice": 24000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Video Translation Cstm Audio Output Audio", "unitPrice": 20.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 2.5, "unitOfMeasure": "1/Hour"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier DC CLU 10M Unit", "unitPrice": 139200.0, "unitOfMeasure": "1/Year"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch outpt Glbl 1M Tokens", "unitPrice": 0.2, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch Inpt DZone 1M Tokens", "unitPrice": 0.1375, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p Sq 1-20s glbl Video", "unitPrice": 0.3, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch outpt DZone 1M Tokens", "unitPrice": 0.22, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Video Retrieval - Query Transactions", "unitPrice": 0.3, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng Batch outpt DZone 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Video Retrieval and Description - Ingestion Vision", "unitPrice": 3.6, "unitOfMeasure": "1 Hour"}
+{"productName": "Deepseek model family", "meterName": "MAI-DS-R1 Outp Dzone Tokens", "unitPrice": 0.00594, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 25M CT Overage Transactions", "unitPrice": 0.9625, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano outpt DZone 1M Tokens", "unitPrice": 0.44, "unitOfMeasure": "1M"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 8000K Unit", "unitPrice": 3780.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Rsng cchd Inpt DZone 1M Tokens", "unitPrice": 0.1375, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 25M Unit", "unitPrice": 30000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 cached Inp regnl Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 10M CT Overage Transactions", "unitPrice": 1.45, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Video Translation Input Audio", "unitPrice": 5.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 10M Unit", "unitPrice": 14500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 2000K Unit", "unitPrice": 1200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Vectorize Text Transactions", "unitPrice": 0.0168, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 500K CT Overage Transactions", "unitPrice": 0.68, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Image Retrieval - Query Transactions", "unitPrice": 0.192, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Custom Image Classification Transactions", "unitPrice": 2.5, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.5, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI OSS models", "meterName": "gpt-oss-120B Inp glbl Tokens", "unitPrice": 0.00019, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 500K Unit", "unitPrice": 375.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 3M Unit", "unitPrice": 5100.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 6-10s glbl Video", "unitPrice": 0.75, "unitOfMeasure": "1 Second"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 2000K CT Overage Transactions", "unitPrice": 0.6, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 16-20s glbl Video", "unitPrice": 3.6, "unitOfMeasure": "1 Second"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 2000K CT Overage Transactions", "unitPrice": 0.54, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS models", "meterName": "gpt-oss-120B Outp glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 11-15s glbl Video", "unitPrice": 2.9, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 480p 1-20s glbl Video", "unitPrice": 0.2, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 11-15s glbl Video", "unitPrice": 0.65, "unitOfMeasure": "1 Second"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 25M CT Overage Transactions", "unitPrice": 1.2, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 1-5s glbl Video", "unitPrice": 0.45, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 16-20s glbl Video", "unitPrice": 1.35, "unitOfMeasure": "1 Second"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 3M Unit", "unitPrice": 4080.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p Sq 1-5s glbl Video", "unitPrice": 0.6, "unitOfMeasure": "1 Second"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Azure 1M Unit", "unitPrice": 2000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Image Retrieval - Ingestion Transactions", "unitPrice": 0.012, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Vectorize Image Transactions", "unitPrice": 0.012, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 10M Unit", "unitPrice": 11600.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier DC CLU 3M Unit", "unitPrice": 48960.0, "unitOfMeasure": "1/Year"}
+{"productName": "Computer Vision", "meterName": "Custom Object Detection Transactions", "unitPrice": 2.5, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Inp regnl Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 1-5s glbl Video", "unitPrice": 1.3, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 1080p 6-10s glbl Video", "unitPrice": 1.85, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 16-20s glbl Video", "unitPrice": 0.75, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 720p 6-10s glbl Video", "unitPrice": 0.5, "unitOfMeasure": "1 Second"}
+{"productName": "Azure OpenAI Image Video", "meterName": "Sora 480p Sq 1-20s glbl Video", "unitPrice": 0.15, "unitOfMeasure": "1 Second"}

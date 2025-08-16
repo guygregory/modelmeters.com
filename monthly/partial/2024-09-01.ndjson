@@ -1,0 +1,86 @@
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 100K Custom Speech To Text CT Overage", "unitPrice": 0.48, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Image Azure 250K CT Overage Transactions", "unitPrice": 0.675, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-4K-Instruct-Finetuned Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-V-128K-Instruct-Input Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 4000M Unit", "unitPrice": 24000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Txt Azure 1M Unit", "unitPrice": 338.0, "unitOfMeasure": "1/Month"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-4K-Instruct-Output Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-8K-Instruct-Finetuned Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 4000M Unit", "unitPrice": 22800.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 4000M Neural Text To Speech CT Overage Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Phi", "meterName": "Phi-3.5-Mini-128K-Instruct-Output Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 4000M Neural Text To Speech CT Overage Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-4K-Instruct-Output Tokens", "unitPrice": 0.00068, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 100K Custom Speech To Text CT Overage", "unitPrice": 0.45, "unitOfMeasure": "1 Hour"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-4K-Instruct-Input Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Image Azure 250K Unit", "unitPrice": 169.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 4000M Neural Text To Speech CT Overage Characters", "unitPrice": 5.7, "unitOfMeasure": "1M"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-128K-Instruct-Finetuned Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-4K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00017, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-Trng-regnl tkn Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 100K Unit", "unitPrice": 40000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Phi", "meterName": "Phi-3.5-V-128K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-4K-Instruct-Input Tokens", "unitPrice": 0.00017, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 100K Speech To Text CT Overage", "unitPrice": 0.38, "unitOfMeasure": "1 Hour"}
+{"productName": "Phi", "meterName": "Phi-3.5-Mini-128K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Image Conn 250K CT Overage Transactions", "unitPrice": 0.641, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-128K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.00068, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-128K-Instruct-Input Tokens", "unitPrice": 0.00017, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-4K-Instruct-Finetuned Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-V-128K-Instruct-Output Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-Mini-Instruct-Finetuned Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-8K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-4K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.00068, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-8K-Instruct-Input Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-128K-Instruct-Output Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 100K Unit", "unitPrice": 45600.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Txt Azure 1M CT Overage Transactions", "unitPrice": 0.338, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Image Conn 250K Unit", "unitPrice": 160.0, "unitOfMeasure": "1/Month"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-128K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00017, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 100K Unit", "unitPrice": 48000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Phi", "meterName": "Phi-3-Small-8K-Instruct-Output Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-128K-Instruct-Output Tokens", "unitPrice": 0.00068, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Txt Conn 1M Unit", "unitPrice": 321.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 100K Unit", "unitPrice": 47500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Phi", "meterName": "Phi-3.5-V-128K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-128K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 100K Speech To Text CT Overage", "unitPrice": 0.4, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 100K Custom Speech To Text CT Overage", "unitPrice": 0.565, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Content Safety", "meterName": "Commitment Tier Txt Conn 1M CT Overage Transactions", "unitPrice": 0.321, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Output global Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-Mini-Instruct-Finetuned Deployment Hosting Unit", "unitPrice": 0.8, "unitOfMeasure": "1/Hour"}
+{"productName": "Phi", "meterName": "Phi-3.5-Mini-128K-Instruct-Input Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-128K-Instruct-Input Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-128K-Instruct-Finetuned Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 100K Custom Speech To Text CT Overage", "unitPrice": 0.6, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 100K Unit", "unitPrice": 50000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-Outp-glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-128K-Instruct-Output Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-128K-Instruct-Input Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-4K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-inp-regnl Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-4K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 100K Unit", "unitPrice": 38000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 100K Unit", "unitPrice": 57000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-FT-inp-regnl Tokens", "unitPrice": 0.000165, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Mini-128K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-Mini-128K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.00052, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-FT-outp-regnl Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-8K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Small-128K-Instruct-Output-Finetuned Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 100K Unit", "unitPrice": 60000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Neural Text to Speech Azure 4000M Unit", "unitPrice": 30000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 100K Speech To Text CT Overage", "unitPrice": 0.475, "unitOfMeasure": "1 Hour"}
+{"productName": "Phi", "meterName": "Phi-3-Small-128K-Instruct-Input-Finetuned Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3-Medium-128K-Instruct-Finetuned Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 4000M Neural Text To Speech CT Overage Characters", "unitPrice": 7.125, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-Inp-glbl Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-FT-Hstng-regnl Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 4000M Unit", "unitPrice": 28500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Outp-glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Azure 100K Speech To Text CT Overage", "unitPrice": 0.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Input global Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Inp-glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-Hstng-regnl Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-FT-Trng-regnl Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-outp-regnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}

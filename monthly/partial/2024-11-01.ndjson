@@ -1,0 +1,76 @@
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 16000K Unit", "unitPrice": 77760.0, "unitOfMeasure": "1/Year"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 0.8, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 0.4, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 0.6, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 16000K Unit", "unitPrice": 6480.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 16000K CT Overage Transactions", "unitPrice": 0.45, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 25M Unit", "unitPrice": 6250.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "S1 Minute", "unitPrice": 0.6, "unitOfMeasure": "1 Minute"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 25M Unit", "unitPrice": 5000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 16000K Unit", "unitPrice": 7200.0, "unitOfMeasure": "1/Month"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 16000K CT Overage Transactions", "unitPrice": 0.41, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Batch Inp Data Zone Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 25M Unit", "unitPrice": 60000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 25M CT Overage Transactions", "unitPrice": 0.2, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Face", "meterName": "Standard Faces", "unitPrice": 1.0, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 25M CT Overage Transactions", "unitPrice": 0.25, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 16000K Unit", "unitPrice": 8100.0, "unitOfMeasure": "1/Month"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 25M CT Overage Transactions", "unitPrice": 0.312, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Overage Transactions", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Overage Transactions", "unitPrice": 0.8, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Overage Transactions", "unitPrice": 0.65, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Fast Transcription Speech To Text", "unitPrice": 0.36, "unitOfMeasure": "1 Hour"}
+{"productName": "Face", "meterName": "Liveness and Verification Transactions", "unitPrice": 15.5, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-MoE-Instruct-FT Deployment Hosting Unit", "unitPrice": 0.8, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 2000M Neural Text To Speech CT Overage Characters", "unitPrice": 7.125, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.1, "unitOfMeasure": "1/Hour"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Connected 16000K CT Overage Transactions", "unitPrice": 0.512, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "P3 Unit", "unitPrice": 354.83871, "unitOfMeasure": "1/Day"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 25M CT Overage Transactions", "unitPrice": 0.25, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 16000K CT Overage Transactions", "unitPrice": 0.562, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Liveness Transactions", "unitPrice": 18.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Batch Outp Data Zone Tokens", "unitPrice": 0.00825, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Phi", "meterName": "Phi-3.5-MoE-Instruct-FT Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 50K Custom Speech To Text CT Overage", "unitPrice": 0.6, "unitOfMeasure": "1 Hour"}
+{"productName": "Face", "meterName": "Liveness Transactions", "unitPrice": 15.0, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Overage Transactions", "unitPrice": 1.2, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Overage Transactions", "unitPrice": 0.96, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Overage Transactions", "unitPrice": 0.78, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier Connected 25M Unit", "unitPrice": 6250.0, "unitOfMeasure": "1/Month"}
+{"productName": "Face", "meterName": "P2 Unit", "unitPrice": 245.16129, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 50K Unit", "unitPrice": 30000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Face", "meterName": "P3 Unit", "unitPrice": 425.806452, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Connected 2K Unit", "unitPrice": 1824.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 50K Speech To Text CT Overage", "unitPrice": 0.48, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 400M Neural Text To Speech CT Overage Characters", "unitPrice": 9.2625, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 10K Unit", "unitPrice": 7800.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 10K Custom Speech To Text CT Overage", "unitPrice": 0.7372, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure AI Content Safety - Disconnected", "meterName": "Commitment Tier Txt DC 60M Unit", "unitPrice": 207765.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Connected 2K Custom Speech To Text CT Overage", "unitPrice": 0.9086, "unitOfMeasure": "1 Hour"}
+{"productName": "Face", "meterName": "P1 Unit", "unitPrice": 135.483871, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 50K Unit", "unitPrice": 28500.0, "unitOfMeasure": "1/Month"}
+{"productName": "Face", "meterName": "P2 Unit", "unitPrice": 294.193548, "unitOfMeasure": "1/Day"}
+{"productName": "Azure AI Content Safety - Disconnected", "meterName": "Commitment Tier Image DC 15M Unit", "unitPrice": 103883.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "S1 Unit", "unitPrice": 0.6, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 2K Speech To Text CT Overage", "unitPrice": 0.76, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commitment Tier Custom Speech to Text Azure 10K Custom Speech To Text CT Overage", "unitPrice": 0.78, "unitOfMeasure": "1 Hour"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 1.2, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 0.96, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 0.48, "unitOfMeasure": "1K"}
+{"productName": "Face", "meterName": "Standard Transactions", "unitPrice": 0.72, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Minute", "unitPrice": 2.0, "unitOfMeasure": "1 Minute"}
+{"productName": "Language", "meterName": "Commitment Tier Azure 25M Unit", "unitPrice": 7812.5, "unitOfMeasure": "1/Month"}
+{"productName": "Language - disconnected", "meterName": "Commitment Tier Standard 25M Unit", "unitPrice": 75000.0, "unitOfMeasure": "1/Year"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 10K Speech To Text CT Overage", "unitPrice": 0.62, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "Commitment Tier Azure 16000K Unit", "unitPrice": 9000.0, "unitOfMeasure": "1/Month"}
+{"productName": "Face", "meterName": "P1 Unit", "unitPrice": 162.580645, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Minute", "unitPrice": 1.0, "unitOfMeasure": "1 Minute"}
+{"productName": "Face", "meterName": "Liveness and Verification Transactions", "unitPrice": 18.6, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "Fast Transcription Speech To Text", "unitPrice": 0.45, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commit Tier Neural TTS Connected 80M Neural Text To Speech CT Overage Characters", "unitPrice": 11.4, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Commitment Tier Speech to Text Connected 10K Unit", "unitPrice": 6175.0, "unitOfMeasure": "1/Month"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 50K Custom Speech To Text CT Overage", "unitPrice": 0.565, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Commit Tier Custom STT Connected 10K Unit", "unitPrice": 7410.0, "unitOfMeasure": "1/Month"}

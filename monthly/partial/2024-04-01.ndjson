@@ -1,0 +1,4 @@
+{"productName": "Azure OpenAI", "meterName": "Provisioned Throughput - Available Unit", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 260.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2652.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}

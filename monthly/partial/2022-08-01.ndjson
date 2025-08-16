@@ -1,0 +1,16 @@
+{"productName": "Computer Vision", "meterName": "Spatial Analysis Video Stream Edge", "unitPrice": 0.0108, "unitOfMeasure": "1 Hour"}
+{"productName": "Text Analytics Container", "meterName": "Free Text Records", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Spatial Analysis Free Video Stream Edge", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Custom Vision", "meterName": "S0 Training", "unitPrice": 10.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Conversation Transcription Multichannel Audio", "unitPrice": 2.1, "unitOfMeasure": "1 Hour"}
+{"productName": "Face", "meterName": "Face Storage", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "P1 Unit", "unitPrice": 38.7, "unitOfMeasure": "1/Day"}
+{"productName": "Custom Vision", "meterName": "S0 Transactions", "unitPrice": 2.0, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision", "meterName": "Spatial Analysis Video Stream Edge", "unitPrice": 0.013, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "P2 Unit", "unitPrice": 96.77, "unitOfMeasure": "1/Day"}
+{"productName": "Custom Vision", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Conversation Transcription Video", "unitPrice": 3.1, "unitOfMeasure": "1 Hour"}
+{"productName": "Computer Vision", "meterName": "P3 Unit", "unitPrice": 193.54, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Neural Long Audio Characters", "unitPrice": 100.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "Free Conversation Transcription", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Custom Vision", "meterName": "S0 Image Storage", "unitPrice": 0.7, "unitOfMeasure": "1K"}

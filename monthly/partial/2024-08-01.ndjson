@@ -1,0 +1,26 @@
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Batch-Outp-glbl Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Outp-glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 8000K Unit", "unitPrice": 56700.0, "unitOfMeasure": "1/Year"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Inp-glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Batch Inp glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-trb16K-Batch-Outp-glbl Tokens", "unitPrice": 0.001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Batch-Inp-glbl Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-Turbo-Batch-128K Inp-glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Inp-regnl Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 2000K Unit", "unitPrice": 16200.0, "unitOfMeasure": "1/Year"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-trb16K-Batch-125-Outp-glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Batch Outp glbl Tokens", "unitPrice": 0.0075, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Outp-regnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-Batch-Outp-glbl Tokens", "unitPrice": 0.0003, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-Batch-Inp-glbl Tokens", "unitPrice": 7.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 16000K Unit", "unitPrice": 97200.0, "unitOfMeasure": "1/Year"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-trb16K-Batch-Inp-glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Input regional Tokens", "unitPrice": 0.00625, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Batch-Outp-glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-trb16K-Batch-125-Inp-glbl Tokens", "unitPrice": 0.00025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Batch-Inp-glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-Batch-Inp-glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Computer Vision - disconnected", "meterName": "Commitment Tier Disconnected 500K Unit", "unitPrice": 5063.0, "unitOfMeasure": "1/Year"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-Batch-Outp-glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-Turbo-Batch-128K Outp-glbl Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Output regional Tokens", "unitPrice": 0.01875, "unitOfMeasure": "1K"}

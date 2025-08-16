@@ -1,0 +1,174 @@
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Inp regnl Tokens", "unitPrice": 0.0022, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Batch Outp glbl Tokens", "unitPrice": 0.0022, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "MAI-DS-R1 Outp regnl Tokens", "unitPrice": 0.00594, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano cached Inp glbl Tokens", "unitPrice": 2.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-inp-glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Batch Outp glbl Tokens", "unitPrice": 0.0002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-aud-out-glbl Tokens", "unitPrice": 0.012, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini FT Training regional Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Outp glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Inp Data Zone Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3-0324 Inp regnl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft input regional Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini output regnl Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini input glbl Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini output glbl Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Inp regnl Tokens", "unitPrice": 0.00242, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3-0324 Outp glbl Tokens", "unitPrice": 0.00456, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft output global Tokens", "unitPrice": 0.0016, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-out-dz Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Batch Outp glbl Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Batch Inp glbl Tokens", "unitPrice": 0.0002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Inp glbl Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Batch Inp glbl Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3-0324 Outp regnl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Outp Data Zone Tokens", "unitPrice": 0.00176, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft hosting global Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-aud-inp-dz Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Batch Outp DZone Tokens", "unitPrice": 0.00022, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-out-dz Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-out-glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "MAI-DS-R1 Inp regnl Tokens", "unitPrice": 0.001485, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Outp glbl Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Batch Outp DZone Tokens", "unitPrice": 0.00088, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 cached Inp glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Batch Outp Data Zone Tokens", "unitPrice": 0.00242, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-out-glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-img-glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.1, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Outp regnl Tokens", "unitPrice": 0.00176, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "Provisioned Throughput Units", "unitPrice": 312.0, "unitOfMeasure": "1/Month"}
+{"productName": "Deepseek model family", "meterName": "MAI-DS-R1 Inp glbl Tokens", "unitPrice": 0.00135, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-inp-glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft cached input regnl Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft input global Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "V3-0324 Inp glbl Tokens", "unitPrice": 0.00114, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Outp Data Zone Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini cached Inp glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Outp Data Zone Tokens", "unitPrice": 0.0088, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft cached input global Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Batch Outp glbl Tokens", "unitPrice": 0.0008, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-aud-inp-rgnl Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-output-img-dzone Tokens", "unitPrice": 0.044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 cached Inp DataZone Tokens", "unitPrice": 0.000303, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1 FT Training regional Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini cached input glbl Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Outp Data Zone Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-aud-out-rgnl Tokens", "unitPrice": 0.0132, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1 FT Training global Tokens", "unitPrice": 0.025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Batch Inp glbl Tokens", "unitPrice": 5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft cached input global Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-txt-glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini cached input regnl Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier TA4H Connected 10M CT Overage Transactions", "unitPrice": 5.6, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Inp glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier TA4H Connected 1M CT Overage Transactions", "unitPrice": 11.2, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Outp glbl Tokens", "unitPrice": 0.0016, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-img-dzone Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft hosting global Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-aud-inp-dz Tokens", "unitPrice": 0.0066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-output-img-glbl Tokens", "unitPrice": 0.04, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-img-rgnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft output regional Tokens", "unitPrice": 0.00176, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Batch Inp Data Zone Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Inp glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Inp Data Zone Tokens", "unitPrice": 0.0022, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-aud-inp-glbl Tokens", "unitPrice": 0.006, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-aud-inp-glbl Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Batch Inp glbl Tokens", "unitPrice": 0.001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Inp glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Batch Inp Data Zone Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Inp Data Zone Tokens", "unitPrice": 0.00121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Inp regnl Tokens", "unitPrice": 0.00121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft input regional Tokens", "unitPrice": 0.0022, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini FT Training regional Tokens", "unitPrice": 0.00605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-img-rgnl Tokens", "unitPrice": 0.0121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-inp-rgnl Tokens", "unitPrice": 0.001513, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-out-rgnl Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Inp regnl Tokens", "unitPrice": 0.000484, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "MAI-DS-R1 Outp glbl Tokens", "unitPrice": 0.0054, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-inp-rgnl Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini cached Inp DZone Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-aud-inp-rgnl Tokens", "unitPrice": 0.0066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Inp regnl Tokens", "unitPrice": 0.000121, "unitOfMeasure": "1K"}
+{"productName": "Language", "meterName": "Commitment Tier TA4H Connected 3M CT Overage Transactions", "unitPrice": 8.8, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano cached Inp DZone Tokens", "unitPrice": 2.8e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-out-rgnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Batch Inp DZone Tokens", "unitPrice": 5.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-txt-inp-glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Batch Outp Data Zone Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-aud-out-dz Tokens", "unitPrice": 0.0132, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-inp-dz Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-txt-rgnl Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Batch Inp DZone Tokens", "unitPrice": 0.00022, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft input global Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Deepseek model family", "meterName": "Provisioned Throughput Units Overage", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini cached input Data Zone Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Inp Data Zone Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Outp regnl Tokens", "unitPrice": 0.0088, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-txt-rgnl Tokens", "unitPrice": 0.00605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini FT Training global Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft cached input regional Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Outp regnl Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Outp regnl Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft output global Tokens", "unitPrice": 0.008, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Batch Outp glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Inp regnl Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-txt-inp-dz Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini input regnl Tokens", "unitPrice": 0.00121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 cached Inp Data Zone Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-txt-dzone Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini input Data Zone Tokens", "unitPrice": 0.00121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-inp-dz Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 cached Inp glbl Tokens", "unitPrice": 0.000275, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Inp regnl Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-aud-inp-rgnl Tokens", "unitPrice": 0.00726, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini output Data Zone Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-inp-rgnl Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft output regional Tokens", "unitPrice": 0.00968, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Outp glbl Tokens", "unitPrice": 0.008, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Output-regional Tokens", "unitPrice": 0.12, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini cached Inp regnl Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-output-img-rgnl Tokens", "unitPrice": 0.044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft output regional Tokens", "unitPrice": 0.0088, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Input-regional Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-glbl Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Batch-Outp-regnl Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft input regional Tokens", "unitPrice": 0.00242, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 cached Inp regnl Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-image-1-output-img-rgnl Tokens", "unitPrice": 0.0484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 cached Inp glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Inp glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-txt-inp-rgnl Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Input-regional Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano cached Inp regnl Tokens", "unitPrice": 2.8e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Outp regnl Tokens", "unitPrice": 0.005324, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-out-rgnl Tokens", "unitPrice": 0.0121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini cached input regnl Tokens", "unitPrice": 0.000666, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 cached Inp regnl Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 Outp regnl Tokens", "unitPrice": 0.00968, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Outp regnl Tokens", "unitPrice": 0.001936, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-txt-out-rgnl Tokens", "unitPrice": 0.00605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1 FT Training regional Tokens", "unitPrice": 0.03025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft output regional Tokens", "unitPrice": 0.001936, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft cached input regional Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Batch Inp glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini output regnl Tokens", "unitPrice": 0.005324, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Inp regnl Tokens", "unitPrice": 0.001331, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Outp regnl Tokens", "unitPrice": 0.000484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-txt-inp-rgnl Tokens", "unitPrice": 0.000726, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-tts-aud-out-rgnl Tokens", "unitPrice": 0.01452, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Batch-Outp-regnl Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-transcribe-aud-inp-rgnl Tokens", "unitPrice": 0.00363, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-inp-rgnl Tokens", "unitPrice": 0.003025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini cached Inp regnl Tokens", "unitPrice": 0.000121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft cached input regnl Tokens", "unitPrice": 0.000121, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o1 mini input regnl Tokens", "unitPrice": 0.001331, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft input regional Tokens", "unitPrice": 0.000484, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Batch-Inp-regnl Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Batch-Inp-regnl Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Output-regional Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano cached Inp regnl Tokens", "unitPrice": 3.1e-05, "unitOfMeasure": "1K"}

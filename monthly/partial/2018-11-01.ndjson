@@ -1,0 +1,11 @@
+{"productName": "Speech", "meterName": "S1 Custom Text To Speech Characters", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Speech Translation", "unitPrice": 2.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Speech To Text", "unitPrice": 1.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Speech Model Hosting Unit", "unitPrice": 1.290322, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Text To Speech Characters", "unitPrice": 4.0, "unitOfMeasure": "1M"}
+{"productName": "Language", "meterName": "Free Text Records", "unitPrice": 0.0, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Text To Speech Characters", "unitPrice": 4.8, "unitOfMeasure": "1M"}
+{"productName": "Speech", "meterName": "S1 Custom Speech Model Hosting Unit", "unitPrice": 1.6129, "unitOfMeasure": "1/Day"}
+{"productName": "Speech", "meterName": "S1 Speech To Text", "unitPrice": 1.25, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Speech Translation", "unitPrice": 3.125, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Text To Speech Characters", "unitPrice": 7.5, "unitOfMeasure": "1M"}

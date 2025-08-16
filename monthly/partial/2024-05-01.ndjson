@@ -1,0 +1,64 @@
+{"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Trng-regnl Unit", "unitPrice": 40.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Custom Speech to Text Batch", "unitPrice": 0.225, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-1106 Input-regional Tokens", "unitPrice": 0.001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-4k-Output-regional Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-128K Input-regional Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Speech to Text Batch", "unitPrice": 0.18, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Output-regional Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Throughput Units", "unitPrice": 312.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "Code-Interpreter-regnl EP Session", "unitPrice": 0.03, "unitOfMeasure": "1"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16k-Input-regional Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-4k-Input-regional Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 Std LowRes-regnl EP Images", "unitPrice": 4.0, "unitOfMeasure": "100"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-FT-Inp-regnl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Throughput - Overage Unit", "unitPrice": 2.5, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI", "meterName": "text-embedding-3-small-regional Tokens", "unitPrice": 2e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "embedding-ada-regional Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-0125 Input-regional Tokens", "unitPrice": 0.000625, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Throughput - Overage Unit", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure AI Health Insights", "meterName": "Radiology Insights Language Detection Text Records", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-regional Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo4K-FT-Trng-regnl Unit", "unitPrice": 45.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Input-regional Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Input-regional Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-128K Input-regional Tokens", "unitPrice": 0.0125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-Vision-128K Output-regional Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Hstng-regnl Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-0125 Input-regional Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo4K-FT-Inp-regnl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-0125 Output-regional Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-128K Output-regional Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-1106 Output-regional Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Output-regional Tokens", "unitPrice": 0.12, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 HD HighRes-regnl EP Images", "unitPrice": 12.0, "unitOfMeasure": "100"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16k-Output-regional Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
+{"productName": "Speech", "meterName": "S1 Custom Speech to Text Batch", "unitPrice": 0.28125, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 HD LowRes-regnl EP Images", "unitPrice": 8.0, "unitOfMeasure": "100"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Outp-regnl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-128K Output-regional Tokens", "unitPrice": 0.0375, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "embedding-ada-regional Tokens", "unitPrice": 0.000125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Output regional Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-4-turbo-Vision-128K Input-regional Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-1106 Input-regional Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Input regional Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Outp-regnl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Provisioned Throughput Units", "unitPrice": 390.0, "unitOfMeasure": "1/Month"}
+{"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 Std HighRes-regnl EP Images", "unitPrice": 8.0, "unitOfMeasure": "100"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-0125 Output-regional Tokens", "unitPrice": 0.001875, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Speech-to-Text-Batch-Whisper-regnl Unit", "unitPrice": 0.36, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-FT-Trng-regnl Unit", "unitPrice": 68.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "S1 Speech to Text Batch", "unitPrice": 0.225, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-1106 Output-regional Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "davinci-002-base-regional Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Speech-Text to Speech-Regional Characters", "unitPrice": 15.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo4K-FT-Outp-regnl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-Instruct-Input-regional Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-FT-Outp-regnl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-Instruct-Output-regional Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Speech-Text to Speech HD-Regional Characters", "unitPrice": 30.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Trng-regnl Unit", "unitPrice": 34.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "babbage-002-base-regional Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "Image-DALL-E-2-regnl Images", "unitPrice": 2.0, "unitOfMeasure": "100"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 260.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2652.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Speech", "meterName": "Fast Transcription Speech To Text", "unitPrice": 0.45, "unitOfMeasure": "1 Hour"}
