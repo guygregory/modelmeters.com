@@ -32,7 +32,10 @@
 		tbody tr:hover { background:var(--panel-2); }
 		.th-inner { display:inline-flex; gap:6px; align-items:center; }
 		.icon { font-style:normal; opacity:.8; }
-		.menu { position:absolute; background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:8px; display:none; min-width:260px; box-shadow:0 24px 48px rgba(0,0,0,.5); }
+		/* Menus must float above sticky headers and other UI (z-index > thead th z-index=2) */
+		.menu { position:absolute; background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:8px; display:none; min-width:260px; box-shadow:0 24px 48px rgba(0,0,0,.5); z-index: 2000; }
+		/* Columns menu should always be above filter menu if both are open */
+		#menu-columns { z-index: 2100; }
 		.menu.open { display:block; }
 		.menu .row { display:grid; grid-template-columns:1fr; gap:8px; }
 		.menu .row-inline { display:flex; gap:8px; }
@@ -67,7 +70,7 @@
 	<div class="container">
 		<div class="card" id="card">
 			<div class="card-hd">
-				<div class="title">Azure AI Foundry Models - Retail Prices <span id="row-count" class="count-chip"></span></div>
+				<div class="title">Azure AI Foundry Models <span id="row-count" class="count-chip"></span></div>
 				<div class="toolbar">
 					<button id="btn-info" title="Show data information">ℹ️ Info</button>
 					<button id="btn-export-csv" title="Export to CSV">📥 Export CSV</button>
@@ -382,8 +385,19 @@
 			positionMenu(anchor, menuFilter); openMenu(menuFilter);
 			setTimeout(()=> opValue.focus(), 0); buildValueList(col, valueSearch.value||'');
 		}
-		function openMenu(menu) { menu.classList.add('open'); menu.setAttribute('aria-hidden', 'false'); }
-		function closeMenus() { document.querySelectorAll('.menu').forEach(m=>{m.classList.remove('open'); m.setAttribute('aria-hidden','true');}); }
+		function openMenu(menu) {
+			menu.classList.add('open');
+			menu.setAttribute('aria-hidden', 'false');
+			// Update aria-expanded for Columns button when its menu opens
+			if (menu === document.getElementById('menu-columns')) {
+				document.getElementById('btn-columns')?.setAttribute('aria-expanded','true');
+			}
+		}
+		function closeMenus() {
+			document.querySelectorAll('.menu').forEach(m=>{m.classList.remove('open'); m.setAttribute('aria-hidden','true');});
+			// Reset aria-expanded on Columns button when menus close
+			document.getElementById('btn-columns')?.setAttribute('aria-expanded','false');
+		}
 
 		document.getElementById('btn-apply-filter').addEventListener('click', () => {
 			if (!currentFilterCol) return;
@@ -419,7 +433,15 @@
 		const menuColumns = document.getElementById('menu-columns');
 		const colSearch = document.getElementById('col-search');
 		const colList = document.getElementById('col-list');
-		btnColumns.addEventListener('click', e => { buildColumnList(); positionMenu(e.currentTarget, menuColumns); openMenu(menuColumns); setTimeout(()=>colSearch.focus(),0); });
+		btnColumns.addEventListener('click', e => {
+			// Toggle: close if already open; otherwise build and open
+			if (menuColumns.classList.contains('open')) { closeMenus(); return; }
+			closeMenus(); // ensure other menus close first
+			buildColumnList();
+			positionMenu(e.currentTarget, menuColumns);
+			openMenu(menuColumns);
+			setTimeout(()=>colSearch.focus(),0);
+		});
 		function buildColumnList(filter='') {
 			colList.innerHTML=''; const q = filter.toLowerCase();
 			for (const col of columns) {

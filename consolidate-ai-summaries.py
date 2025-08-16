@@ -10,48 +10,56 @@ from __future__ import annotations
 
 import html
 from pathlib import Path
+from datetime import datetime
 
 TITLE = "Model Meter Monthly summaries"
 
 
 def read_markdown_files(aisummary_dir: Path) -> list[tuple[str, str]]:
-		"""Return list of (id, markdown_text) sorted descending by id (YYYY-MM-DD)."""
-		files = sorted(
-				(p for p in aisummary_dir.glob("*.md") if p.is_file()),
-				key=lambda p: p.stem,
-				reverse=True,
-		)
-		result: list[tuple[str, str]] = []
-		for p in files:
-				try:
-						text = p.read_text(encoding="utf-8")
-				except UnicodeDecodeError:
-						text = p.read_text(errors="replace")
-				result.append((p.stem, text))
-		return result
+	"""Return list of (id, markdown_text) sorted descending by id (YYYY-MM-DD)."""
+	files = sorted(
+		(p for p in aisummary_dir.glob("*.md") if p.is_file()),
+		key=lambda p: p.stem,
+		reverse=True,
+	)
+	result: list[tuple[str, str]] = []
+	for p in files:
+		try:
+			text = p.read_text(encoding="utf-8")
+		except UnicodeDecodeError:
+			text = p.read_text(errors="replace")
+		result.append((p.stem, text))
+	return result
 
 
 def build_html(sections: list[tuple[str, str]]) -> str:
-		"""Build a single HTML document string with a TOC and client-side MD rendering."""
-		# Escape content for safe embedding inside <script type="text/markdown">.
-		section_html = []
-		toc_items = []
-		for sid, md in sections:
-				toc_items.append(f'<li><a href="#${sid}">{sid}</a></li>'.replace("$", ""))
-				# Use textContent via script tag to keep raw markdown; minimal escaping
-				escaped_md = md.replace("</script>", "</scr" + "ipt>")
-				section_html.append(
-						"""
-						<article id="{sid}">
-							<h2>{sid}</h2>
-							<div class="markdown-body">
-								<script type="text/markdown">{md}</script>
-							</div>
-						</article>
-						""".format(sid=html.escape(sid), md=escaped_md)
-				)
+	"""Build a single HTML document string with a TOC and client-side MD rendering."""
+	# Escape content for safe embedding inside <script type="text/markdown">.
+	section_html: list[str] = []
+	toc_items: list[str] = []
+	for sid, md in sections:
+		# Build human-friendly date label from YYYY-MM-DD, safe on Windows (no %-d)
+		try:
+			dt = datetime.strptime(sid, "%Y-%m-%d")
+			label = f"{dt.day} {dt.strftime('%B %Y')}"  # e.g., 15 March 2016
+		except Exception:
+			label = sid
+		toc_items.append(
+			f'<li><a href="#{html.escape(sid)}">{html.escape(label)}</a></li>'
+		)
+		# Use textContent via script tag to keep raw markdown; minimal escaping
+		escaped_md = md.replace("</script>", "</scr" + "ipt>")
+		section_html.append(
+			f"""
+			<article id="{html.escape(sid)}">
+				<div class=\"markdown-body\">
+					<script type=\"text/markdown\">{escaped_md}</script>
+				</div>
+			</article>
+			"""
+		)
 
-		html_doc = f"""<!DOCTYPE html>
+	html_doc = f"""<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -117,27 +125,27 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 	</body>
 </html>
 """
-		return html_doc
+	return html_doc
 
 
 def main() -> int:
-		repo_root = Path(__file__).resolve().parent
-		monthly_dir = repo_root / "monthly"
-		aisummary_dir = monthly_dir / "aisummary"
-		if not aisummary_dir.exists():
-				raise SystemExit(f"Directory not found: {aisummary_dir}")
+	repo_root = Path(__file__).resolve().parent
+	monthly_dir = repo_root / "monthly"
+	aisummary_dir = monthly_dir / "aisummary"
+	if not aisummary_dir.exists():
+		raise SystemExit(f"Directory not found: {aisummary_dir}")
 
-		sections = read_markdown_files(aisummary_dir)
-		if not sections:
-				raise SystemExit("No markdown files found in monthly/aisummary")
+	sections = read_markdown_files(aisummary_dir)
+	if not sections:
+		raise SystemExit("No markdown files found in monthly/aisummary")
 
-		html_text = build_html(sections)
-		out_file = monthly_dir / "index.html"
-		out_file.write_text(html_text, encoding="utf-8")
-		print(f"Wrote {out_file} with {len(sections)} sections.")
-		return 0
+	html_text = build_html(sections)
+	out_file = monthly_dir / "index.html"
+	out_file.write_text(html_text, encoding="utf-8")
+	print(f"Wrote {out_file} with {len(sections)} sections.")
+	return 0
 
 
 if __name__ == "__main__":
-		raise SystemExit(main())
+	raise SystemExit(main())
 
