@@ -71,7 +71,7 @@ jobs:
           # Output to GitHub Actions
           import os
           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-              f.write(f'DATA_CHANGED={'true' if data_changed else 'false'}\\n')
+              f.write(f'DATA_CHANGED={\"true\" if data_changed else \"false\"}\\n')
           
       - name: Commit changes
         run: |
