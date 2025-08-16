@@ -16,7 +16,7 @@ The website is automatically deployed to Azure Static Web Apps whenever the dail
      - Triggers the website deployment workflow
 
 2. **Website Deployment** (`.github/workflows/azure-static-web-apps-blue-tree-01656d710.yml`)
-   - Runs on push to main branch, pull requests, and when triggered by the daily data update
+   - Runs on push to main branch, pull requests, when triggered by the daily data update, or manually via workflow_dispatch
    - Deploys the website to Azure Static Web Apps
    - Uses the updated `prices.ndjson` and `metadata.json` files
 
@@ -53,4 +53,6 @@ Azure Static Web Apps Deployment
 
 ## Manual Triggering
 
-The daily workflow can also be triggered manually via the GitHub Actions UI using the `workflow_dispatch` trigger.
+Both workflows can be triggered manually via the GitHub Actions UI:
+- **Daily Data Update**: Use the `workflow_dispatch` trigger to manually check for updated pricing data
+- **Website Deployment**: Use the `workflow_dispatch` trigger to manually deploy the website to Azure Static Web Apps
