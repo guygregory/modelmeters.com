@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     
     steps:
       - name: Checkout repository
@@ -54,7 +55,17 @@ jobs:
           
           if git diff --staged --quiet; then
             echo "No changes to commit"
+            echo "changes_made=false" >> $GITHUB_OUTPUT
           else
             git commit -m "Daily data update: $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
+            echo "changes_made=true" >> $GITHUB_OUTPUT
           fi
+        id: commit_step
+          
+      - name: Trigger deployment
+        if: steps.commit_step.outputs.changes_made == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: data-updated
