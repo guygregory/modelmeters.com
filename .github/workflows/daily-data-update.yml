@@ -27,52 +27,25 @@ jobs:
         run: |
           python meter-download.py --cognitive-services-only --ndjson prices.ndjson
           
-      - name: Check for changes and update metadata
-        id: check_changes
+      - name: Update metadata timestamp
         run: |
           python -c "
           import json
-          import hashlib
-          import os
           from datetime import datetime, timezone
           
-          # Read current data and compute hash
-          with open('prices.ndjson', 'r') as f:
-              current_data = f.read()
-          current_hash = hashlib.sha256(current_data.encode()).hexdigest()
-          
-          # Read existing metadata if it exists
-          metadata_file = 'metadata.json'
-          if os.path.exists(metadata_file):
-              with open(metadata_file, 'r') as f:
-                  metadata = json.load(f)
-          else:
-              metadata = {
-                  'last_checked': None,
-                  'last_changed': None,
-                  'data_hash': None
-              }
-          
-          # Update last_checked timestamp
+          # Update last_updated timestamp
           current_time = datetime.now(timezone.utc)
           formatted_time = current_time.strftime('%d %B %Y %H:%M UTC')
-          metadata['last_checked'] = formatted_time
           
-          # Check if data has changed
-          data_changed = metadata.get('data_hash') != current_hash
-          if data_changed:
-              metadata['last_changed'] = formatted_time
-              metadata['data_hash'] = current_hash
-              
+          metadata = {
+              'last_updated': formatted_time
+          }
+          
           # Save metadata
-          with open(metadata_file, 'w') as f:
+          with open('metadata.json', 'w') as f:
               json.dump(metadata, f, indent=2)
-              
-          # Output to GitHub Actions
-          import os
-          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
-              f.write(f'DATA_CHANGED={\"true\" if data_changed else \"false\"}\\n')
-          
+          "
+
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
@@ -85,12 +58,3 @@ jobs:
             git commit -m "Daily data update: $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
-
-      - name: Trigger website deployment
-        if: steps.check_changes.outputs.DATA_CHANGED == 'true'
-        run: |
-          curl -X POST \
-            -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            https://api.github.com/repos/${{ github.repository }}/dispatches \
-            -d '{"event_type":"data-updated","client_payload":{"reason":"Daily data update with changes"}}'
