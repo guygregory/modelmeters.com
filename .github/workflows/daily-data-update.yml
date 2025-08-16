@@ -63,14 +63,15 @@ jobs:
           if data_changed:
               metadata['last_changed'] = formatted_time
               metadata['data_hash'] = current_hash
-              print('DATA_CHANGED=true')
-          else:
-              print('DATA_CHANGED=false')
-          
+              
           # Save metadata
           with open(metadata_file, 'w') as f:
               json.dump(metadata, f, indent=2)
-          " >> $GITHUB_OUTPUT
+              
+          # Output to GitHub Actions
+          import os
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write(f'DATA_CHANGED={'true' if data_changed else 'false'}\\n')
           
       - name: Commit changes
         run: |
@@ -84,3 +85,12 @@ jobs:
             git commit -m "Daily data update: $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
+
+      - name: Trigger website deployment
+        if: steps.check_changes.outputs.DATA_CHANGED == 'true'
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/${{ github.repository }}/dispatches \
+            -d '{"event_type":"data-updated","client_payload":{"reason":"Daily data update with changes"}}'
