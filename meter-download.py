@@ -140,7 +140,8 @@ def build_start_url(filter_expr: str | None) -> str:
 	if not filter_expr:
 		return API_ROOT
 	# Encode filter expression; keep OData operators and parentheses, but encode spaces.
-	return f"{API_ROOT}?$filter={parse.quote(filter_expr, safe="()=/,'")}" 
+	safe_chars = "()=/,'"
+	return f"{API_ROOT}?$filter={parse.quote(filter_expr, safe=safe_chars)}"
 
 
 def main(argv: list[str]) -> int:
