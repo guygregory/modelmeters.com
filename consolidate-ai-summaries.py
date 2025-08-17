@@ -34,24 +34,24 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 	"""Build a single HTML document string styled like the main explorer page."""
 	# Escape content for safe embedding inside <script type="text/markdown">.
 	section_html: list[str] = []
-	toc_items: list[str] = []
-	for sid, md in sections:
+	for idx, (sid, md) in enumerate(sections):
 		# Build human-friendly date label from YYYY-MM-DD, safe on Windows (no %-d)
 		try:
 			dt = datetime.strptime(sid, "%Y-%m-%d")
 			label = f"{dt.day} {dt.strftime('%B %Y')}"  # e.g., 15 March 2016
 		except Exception:
 			label = sid
-		toc_items.append(
-			f'<li><a href="#{html.escape(sid)}">{html.escape(label)}</a></li>'
-		)
 		# Use textContent via script tag to keep raw markdown; minimal escaping
 		escaped_md = md.replace("</script>", "</scr" + "ipt>")
+		is_first = idx == 0
+		collapsed_cls = "" if is_first else " collapsed"
 		section_html.append(
 			f"""
-			<article id="{html.escape(sid)}">
-				<div class=\"markdown-body\">
-					<script type=\"text/markdown\">{escaped_md}</script>
+			<article id="{html.escape(sid)}" class="article{collapsed_cls}">
+				<div class="month-content">
+					<div class=\"markdown-body\">
+						<script type=\"text/markdown\">{escaped_md}</script>
+					</div>
 				</div>
 			</article>
 			"""
@@ -88,13 +88,7 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 		button:focus {{ box-shadow:0 0 0 4px var(--ring); border-color:var(--accent); }}
 
 		/* Content layout inside the card */
-	.content {{ display:grid; grid-template-columns: 280px 1fr; gap:16px; padding:16px; }}
-	nav.toc-wrap {{ position:sticky; top: calc(var(--topbar-offset) + 16px); align-self:start; padding-right:6px; background: var(--panel); }}
-	.toc {{ list-style:none; padding:0; margin:0; border:1px solid var(--border); border-radius:12px; overflow:auto; max-height: calc(100dvh - var(--topbar-offset) - 48px); }}
-		.toc a {{ display:block; padding:8px 10px; color:inherit; text-decoration:none; border-top:1px solid var(--border); background:var(--panel-2); }}
-		.toc a:first-child {{ border-top:0; }}
-		.toc a:hover {{ background:var(--panel); }}
-
+	.content {{ display:grid; grid-template-columns: 1fr; gap:16px; padding:16px; }}
 		.articles {{ min-width:0; }}
 	.article {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:12px; box-shadow: var(--shadow); scroll-margin-top: calc(var(--topbar-offset) + 16px); }}
 	.article:target::before {{ content: ""; display:block; height: calc(var(--topbar-offset) + 16px); margin-top: calc(-1 * (var(--topbar-offset) + 16px)); }}
@@ -106,8 +100,12 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 		.markdown-body table {{ border-collapse: collapse; width: 100%; }}
 		.markdown-body th, .markdown-body td {{ border: 1px solid var(--border); padding: 6px 8px; }}
 
+		/* Collapsible sections */
+		.month-title {{ cursor: pointer; display:flex; align-items:center; gap:8px; }}
+		.article.collapsed .month-details {{ display:none; }}
+
 		.footer {{ color: var(--muted); text-align:center; padding: 12px 16px; border-top:1px solid var(--border); }}
-		@media (max-width: 900px) {{ .content {{ grid-template-columns: 1fr; }} nav.toc-wrap {{ position:static; max-height:none; }} }}
+		@media (max-width: 900px) {{ .content {{ grid-template-columns: 1fr; }} }}
 	</style>
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<style>
@@ -131,12 +129,6 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 				</div>
 			</div>
 			<div class="content">
-				<nav class="toc-wrap" aria-label="Monthly summaries">
-					<div style="font-size:12px; color:var(--muted); padding:6px 2px 6px 2px;">Jump to month</div>
-					<ul class="toc">
-						{''.join(toc_items)}
-					</ul>
-				</nav>
 				<section class="articles">
 					{''.join(section_html)}
 				</section>
@@ -198,6 +190,78 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 			const html = marked.parse(raw, {{ breaks: true, mangle: false, headerIds: true }});
 			container.innerHTML = html;
 		}});
+	</script>
+
+	<script>
+		// Collapsible behavior: use the first heading inside each markdown section as the toggle.
+		(function(){{
+			function ensureDetailsWrapper(article){{
+				const body = article.querySelector('.markdown-body');
+				if (!body) return {{ heading: null, details: null }};
+				let heading = body.querySelector('h1, h2, h3, h4, h5, h6');
+				if (!heading) return {{ heading: null, details: null }};
+				// Ensure the first heading is level 1 (H1) so all date headers are consistent
+				if (heading.tagName.toLowerCase() !== 'h1') {{
+					const h1 = document.createElement('h1');
+					// Copy attributes
+					Array.from(heading.attributes).forEach(attr => h1.setAttribute(attr.name, attr.value));
+					// Move children
+					while (heading.firstChild) {{ h1.appendChild(heading.firstChild); }}
+					body.replaceChild(h1, heading);
+					heading = h1;
+				}}
+				// Wrap all siblings after the first heading into a details container
+				let details = body.querySelector('.month-details');
+				if (!details) {{
+					details = document.createElement('div');
+					details.className = 'month-details';
+					let node = heading.nextSibling;
+					const frag = document.createDocumentFragment();
+					while (node) {{
+						const next = node.nextSibling;
+						frag.appendChild(node);
+						node = next;
+					}}
+					body.insertBefore(details, null);
+					details.appendChild(frag);
+				}}
+				return {{ heading, details }};
+			}}
+
+			function setExpanded(article, expanded){{
+				const {{ heading }} = ensureDetailsWrapper(article);
+				if (expanded) {{
+					article.classList.remove('collapsed');
+					heading?.setAttribute('aria-expanded','true');
+				}} else {{
+					article.classList.add('collapsed');
+					heading?.setAttribute('aria-expanded','false');
+				}}
+			}}
+
+			const articles = Array.from(document.querySelectorAll('.articles > .article'));
+			articles.forEach((article)=>{{
+				const {{ heading }} = ensureDetailsWrapper(article);
+				if (!heading) return;
+				// Make heading interactive and add chevron cue
+				heading.classList.add('month-title');
+				heading.setAttribute('role','button');
+				heading.setAttribute('tabindex','0');
+				// Initial state
+				heading.setAttribute('aria-expanded', article.classList.contains('collapsed') ? 'false' : 'true');
+
+				heading.addEventListener('click', ()=> setExpanded(article, article.classList.contains('collapsed')));
+				heading.addEventListener('keydown', (e)=>{{
+					if (e.key === 'Enter' || e.key === ' ') {{ e.preventDefault(); heading.click(); }}
+				}});
+			}});
+
+			// If URL has a hash matching an article id, expand that one and collapse others.
+			const id = decodeURIComponent(location.hash || '').replace('#','');
+			if (id) {{
+				articles.forEach(a => setExpanded(a, a.id === id));
+			}}
+		}})();
 	</script>
 </body>
 </html>
