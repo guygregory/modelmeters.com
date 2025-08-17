@@ -219,7 +219,7 @@
 		const state = {
 			visible: Object.fromEntries(columns.map(c => [
 				c.key,
-				!['retailPrice','location','serviceId','productId','skuId','skuName','isPrimaryMeterRegion','armSkuName','serviceName','serviceFamily'].includes(c.key)
+				!['retailPrice','location','serviceId','productId','skuId','skuName','isPrimaryMeterRegion','armSkuName','serviceName','serviceFamily','tierMinimumUnits','type'].includes(c.key)
 			])),
 			filters: {},
 			valueSelections: {},
