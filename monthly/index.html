@@ -98,19 +98,59 @@
 		});
 
 		async function listMarkdownFiles(dirUrl) {
-			// Relies on the server providing a directory listing (e.g., Python http.server)
-			const res = await fetch(dirUrl);
-			if (!res.ok) throw new Error('Failed to list directory: ' + dirUrl);
-			const html = await res.text();
-			const doc = new DOMParser().parseFromString(html, 'text/html');
-			const hrefs = Array.from(doc.querySelectorAll('a'))
-				.map(a => a.getAttribute('href'))
-				.filter(h => h && h.toLowerCase().endsWith('.md'));
-			// Normalize and unique
-			const files = Array.from(new Set(hrefs.map(h => h.split('#')[0].split('?')[0])));
-			// Sort newest first (filenames are YYYY-MM-DD.md)
-			files.sort((a, b) => b.localeCompare(a));
-			return files;
+			// Strategy:
+			// 1) Try directory listing (works locally with Python http.server)
+			// 2) Try JSON manifest at aisummary/index.json (array of filenames or {files:[]})
+			// 3) Fallback: parse monthly/index.html to get article ids -> map to YYYY-MM-DD.md
+			// Return newest-first.
+			// 1) Directory listing
+			try {
+				const res = await fetch(dirUrl);
+				if (res.ok) {
+					const html = await res.text();
+					const doc = new DOMParser().parseFromString(html, 'text/html');
+					const hrefs = Array.from(doc.querySelectorAll('a'))
+						.map(a => a.getAttribute('href'))
+						.filter(h => h && h.toLowerCase().endsWith('.md'));
+					const files = Array.from(new Set(hrefs.map(h => h.split('#')[0].split('?')[0])));
+					if (files.length) {
+						files.sort((a, b) => b.localeCompare(a));
+						return files;
+					}
+				}
+			} catch (_) { /* ignore and try next */ }
+
+			// 2) Manifest
+			try {
+				const res = await fetch(dirUrl + 'index.json');
+				if (res.ok) {
+					const data = await res.json();
+					let files = Array.isArray(data) ? data : (Array.isArray(data.files) ? data.files : []);
+					files = files.filter(f => typeof f === 'string' && f.toLowerCase().endsWith('.md'));
+					if (files.length) {
+						files.sort((a, b) => b.localeCompare(a));
+						return files;
+					}
+				}
+			} catch (_) { /* ignore and try next */ }
+
+			// 3) Parse the static monthly page to infer ids
+			try {
+				const res = await fetch('index.html');
+				if (res.ok) {
+					const html = await res.text();
+					const doc = new DOMParser().parseFromString(html, 'text/html');
+					const ids = Array.from(doc.querySelectorAll('article[id]'))
+						.map(a => a.id)
+						.filter(Boolean);
+					let files = ids.map(id => `${id}.md`);
+					files = Array.from(new Set(files));
+					files.sort((a, b) => b.localeCompare(a));
+					return files;
+				}
+			} catch (_) { /* ignore */ }
+
+			return [];
 		}
 
 		function filenameBase(path) {
@@ -154,8 +194,8 @@
 					return;
 				}
 
-				// Fetch all markdown files in parallel
-				const fetched = await Promise.all(files.map(async (file) => {
+				// Fetch all markdown files in parallel, skipping any missing ones
+				const results = await Promise.allSettled(files.map(async (file) => {
 					const url = dir + file;
 					const res = await fetch(url);
 					if (!res.ok) throw new Error('Failed to fetch ' + url);
@@ -176,7 +216,13 @@
 					return { file, title, html };
 				}));
 
+				const fetched = results.filter(r => r.status === 'fulfilled').map(r => r.value);
+
 				// Clear status and append articles
+				if (!fetched.length) {
+					status.textContent = 'No Markdown files could be loaded. On Azure Static Web Apps, add aisummary/index.json (list of files) or ensure monthly/index.html includes article ids.';
+					return;
+				}
 				status.remove();
 				fetched.forEach((item, idx) => {
 					const id = filenameBase(item.file);
