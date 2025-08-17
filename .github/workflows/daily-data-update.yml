@@ -24,6 +24,11 @@ jobs:
         with:
           python-version: '3.11'
           
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai
+          
       - name: Download latest pricing data
         run: |
           python meter-download.py --cognitive-services-only --ndjson prices.ndjson
@@ -31,6 +36,12 @@ jobs:
       - name: Split price file into monthly files
         run: |
           python split_into_monthly.py
+          
+      - name: Generate AI summaries
+        run: |
+          python create-ai-summaries.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Update metadata timestamp
         run: |
