@@ -63,6 +63,36 @@
 		@media (max-width: 768px) {
 			/* Let long cell content wrap to avoid per-cell font inflation on mobile */
 			tbody td { white-space: normal; word-break: break-word; }
+			
+			/* Mobile-friendly header layout */
+			.card-hd { flex-direction: column; align-items: stretch; gap: 8px; }
+			.title { text-align: center; }
+			.toolbar { justify-content: center; margin-left: 0; gap: 6px; }
+			
+			/* Better mobile button sizing and spacing */
+			button, select { 
+				padding: 10px 12px; 
+				font-size: 14px;
+				min-height: 44px; /* iOS recommended touch target */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			
+			/* Ensure pagination fits nicely on mobile */
+			.pagination { 
+				justify-content: center; 
+				gap: 4px;
+				flex-wrap: wrap;
+			}
+			.pagination button { 
+				padding: 8px 10px; 
+				min-width: 44px;
+			}
+			.pagination span {
+				font-size: 12px;
+				padding: 8px 4px;
+			}
 		}
 	</style>
 </head>
