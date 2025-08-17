@@ -20,7 +20,7 @@
 		.card { background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow: var(--shadow); flex:1; display:flex; flex-direction:column; min-height:0; }
 		.card-hd { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
 		.title { font-size:18px; font-weight:650; letter-spacing:.2px; }
-		.toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+		.toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; flex:1; min-width:0; justify-content:flex-end; margin-left:auto; }
 		button, select, input[type="text"] { background:var(--panel-2); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:8px 10px; font-size:14px; line-height:1; outline:none; }
 		button { cursor:pointer; }
 		button:hover { border-color:#374151; }
@@ -75,7 +75,6 @@
 					<button id="btn-info" title="Show data information">ℹ️ Info</button>
 					<button id="btn-export-csv" title="Export to CSV">📥 Export CSV</button>
 					<button id="btn-share-url" title="Generate shareable URL">🔗 Share URL</button>
-					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
 					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
 					<div class="pagination" id="pagination" style="display:none">
 						<button id="btn-first" title="First page">⏮</button>
@@ -95,6 +94,8 @@
 						</select>
 					</div>
 					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
+					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
+					<button id="btn-ai-summaries" title="View AI monthly summaries">✨AI Summaries</button>
 				</div>
 			</div>
 			<div id="info-container" class="info-container" style="display:none;">
@@ -179,6 +180,15 @@
 			});
 			updateBtn();
 		})();
+
+		// Navigate to monthly page, preserving theme as a query param
+		document.getElementById('btn-ai-summaries').addEventListener('click', () => {
+			const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+			const theme = isDark ? 'dark' : 'light';
+			// Prefer relative path to work on file:// and http(s)://
+			const dest = 'monthly/?theme=' + encodeURIComponent(theme);
+			window.location.href = dest;
+		});
 
 		// Data & columns
 		let data = []; // filled asynchronously
