@@ -1,0 +1,46 @@
+name: Update Markdown Index
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'monthly/aisummary/*.md'
+      # Exclude index.json to prevent infinite loops
+      - '!monthly/aisummary/index.json'
+  workflow_dispatch: # Allow manual trigger for testing
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Generate markdown index
+        run: |
+          python monthly/generate-index.py array
+          
+      - name: Commit updated index
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add monthly/aisummary/index.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to index.json"
+          else
+            git commit -m "Auto-update markdown index after changes to aisummary files"
+            git push
+            echo "Updated markdown index committed and pushed"
+          fi
