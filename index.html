@@ -63,6 +63,9 @@
 		@media (max-width: 768px) {
 			/* Let long cell content wrap to avoid per-cell font inflation on mobile */
 			tbody td { white-space: normal; word-break: break-word; }
+			/* Prevent button wrapping on mobile - keep buttons horizontal */
+			.card-hd { flex-wrap: nowrap; }
+			.toolbar { flex-wrap: nowrap; overflow-x: auto; }
 		}
 	</style>
 </head>
