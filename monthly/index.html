@@ -74,21 +74,42 @@
 	</div>
 
 	<script>
-		// Theme setup
+		// Theme setup (match main page behavior + label/emoji toggle)
 		(function initTheme(){
-			const saved = localStorage.getItem('theme');
+			const root = document.documentElement;
+			const btn = document.getElementById('btn-theme');
+			const qp = new URLSearchParams(location.search);
+			const paramTheme = qp.get('theme'); // 'dark' or 'light' if passed from main page
+			const stored = localStorage.getItem('priceExplorerTheme');
 			const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-			const theme = saved || (prefersDark ? 'dark' : 'light');
-			if (theme === 'dark') document.documentElement.setAttribute('data-theme','dark');
-			document.getElementById('btn-theme').addEventListener('click', () => {
-				const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-				if (isDark) {
-					document.documentElement.removeAttribute('data-theme');
-					localStorage.setItem('theme','light');
-				} else {
-					document.documentElement.setAttribute('data-theme','dark');
-					localStorage.setItem('theme','dark');
-				}
+			let mode = (paramTheme || stored || (prefersDark ? 'dark' : 'light')) === 'dark' ? 'dark' : 'light';
+
+			if (paramTheme) localStorage.setItem('priceExplorerTheme', mode);
+
+			function currentMode(){
+				return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+			}
+
+			function applyMode(newMode){
+				const m = newMode === 'dark' ? 'dark' : 'light';
+				if (m === 'dark') root.setAttribute('data-theme','dark');
+				else root.removeAttribute('data-theme');
+				localStorage.setItem('priceExplorerTheme', m);
+				updateBtn();
+			}
+
+			function updateBtn(){
+				const m = currentMode();
+				// Show target mode on the button (same UX as main page)
+				const nextLabel = m === 'dark' ? '☀️ Light' : '🌙 Dark';
+				btn.textContent = nextLabel;
+				btn.setAttribute('aria-label', 'Switch to ' + (m === 'dark' ? 'light' : 'dark') + ' theme');
+			}
+
+			applyMode(mode);
+			btn.addEventListener('click', () => {
+				const isDark = currentMode() === 'dark';
+				applyMode(isDark ? 'light' : 'dark');
 			});
 		})();
 
