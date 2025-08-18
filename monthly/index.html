@@ -118,15 +118,26 @@
 			window.location.href = '../index.html';
 		});
 
+		function getEnsuredBase() {
+			const { origin, pathname } = window.location;
+			const pathBase = pathname.endsWith('/') ? pathname : pathname.slice(0, pathname.lastIndexOf('/') + 1);
+			return origin + pathBase; // always ends with '/'
+		}
+
 		async function listMarkdownFiles(dirUrl) {
 			// Strategy:
 			// 1) Try directory listing (works locally with Python http.server)
 			// 2) Try JSON manifest at aisummary/index.json (array of filenames or {files:[]})
 			// 3) Fallback: parse monthly/index.html to get article ids -> map to YYYY-MM-DD.md
 			// Return newest-first.
+			// Important: when the page is loaded as /monthly (no trailing slash),
+			// relative fetches like 'aisummary/' would incorrectly resolve to /aisummary/.
+			// Build absolute URLs against a base that guarantees a trailing slash.
+			const ensuredBase = getEnsuredBase();
+			const dirAbs = new URL(dirUrl, ensuredBase).toString();
 			// 1) Directory listing
 			try {
-				const res = await fetch(dirUrl);
+				const res = await fetch(dirAbs);
 				if (res.ok) {
 					const html = await res.text();
 					const doc = new DOMParser().parseFromString(html, 'text/html');
@@ -143,7 +154,7 @@
 
 			// 2) Manifest
 			try {
-				const res = await fetch(dirUrl + 'index.json');
+				const res = await fetch(new URL('index.json', dirAbs));
 				if (res.ok) {
 					const data = await res.json();
 					let files = Array.isArray(data) ? data : (Array.isArray(data.files) ? data.files : []);
@@ -157,7 +168,7 @@
 
 			// 3) Parse the static monthly page to infer ids
 			try {
-				const res = await fetch('index.html');
+				const res = await fetch(new URL('index.html', ensuredBase));
 				if (res.ok) {
 					const html = await res.text();
 					const doc = new DOMParser().parseFromString(html, 'text/html');
@@ -217,7 +228,9 @@
 
 				// Fetch all markdown files in parallel, skipping any missing ones
 				const results = await Promise.allSettled(files.map(async (file) => {
-					const url = dir + file;
+					const ensuredBase = getEnsuredBase();
+					const dirAbs = new URL(dir, ensuredBase);
+					const url = new URL(file, dirAbs);
 					const res = await fetch(url);
 					if (!res.ok) throw new Error('Failed to fetch ' + url);
 					const text = await res.text();
