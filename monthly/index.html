@@ -120,7 +120,7 @@
 
 		function getEnsuredBase() {
 			const { origin, pathname } = window.location;
-			const pathBase = pathname.endsWith('/') ? pathname : pathname.slice(0, pathname.lastIndexOf('/') + 1);
+			const pathBase = pathname.endsWith('/') ? pathname : pathname + '/';
 			return origin + pathBase; // always ends with '/'
 		}
 
