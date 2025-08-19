@@ -1,30 +1,60 @@
 import os
 import sys
+import argparse
 from datetime import datetime
 from openai import OpenAI
+from dotenv import load_dotenv
 
-import argparse
-endpoint = "https://models.github.ai/inference"
-model = "openai/gpt-4.1"
 
-system_message = """You are a helpful AI assistant that summarises a price list file of new Azure AI Foundry Model meters, and provides a concise overview of the file. The file is provided in ndjson format, and all the prices are in USD. Stick to the facts. Do not include a title or preamble. When there are multiple prices for the same model, don't quote the rage, just state from $xxxxx. At the end of the document, state that prices vary depending on region.
-When summarising, group the models by model provider (using heading level 3), and try to summarise one model per bullet point. Do not round up or round down pricing.
+load_dotenv()
 
-When quoting dollars, don't show to one decimal place, use two instead (or more if available)
+system_message = """
 
-Treat these models are different: o3-mini, o3, o3-pro."""
+<general instructions>
+You are a helpful AI assistant that summarises a price list file of new Azure AI Foundry Model meters, and provides a concise overview of the file. The file is provided in ndjson format. Stick to the facts. Do not include a title or preamble.  At the end of the document, state that prices vary depending on region.
+When summarising, group the models by model provider (using heading level 3), and try to summarise one model per bullet point.
+
+<general instructions/>
+
+<output sections>
+
+A summary of the new Azure AI Foundry Model meters, grouped by model provider.
+
+After each model group, use the Microsoft Learn MCP tool to provide links to the documentation for each specific model family, or service mentioned.
+
+<pricing format>
+
+- All the prices are in USD
+- Do not round up or round down pricing
+- When there are multiple prices for the same model, don't quote the rage, just state from $xxxxx.
+- Aways quote the exact price listed
+
+<pricing format/>
+
+<common abbreviations>
+Reasoning
+Data Zone
+Batch
+Cached
+Input
+Output
+
+<common abbreviations>
+
+"""
+
 
 def main():
+    # Match ai-summary.py: accept --date and resolve paths relative to this file
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("--date", dest="date", type=str, help="Date in YYYY-MM-DD format")
-    # Don't let argparse print its own usage; we provide a friendlier tip per requirements.
+    parser.add_argument("--force", dest="force", action="store_true", help="Overwrite existing summary if present")
     args, unknown = parser.parse_known_args()
 
     if not args.date:
-        print("Tip: run with --date YYYY-MM-DD. Example: python ai-summary.py --date 2025-08-01")
+        print("Tip: run with --date YYYY-MM-DD. Example: python ai-summary-responses.py --date 2025-08-01 [--force]")
         sys.exit(1)
 
-    # Validate date format and keep it as a variable for later use
     try:
         parsed_date = datetime.strptime(args.date, "%Y-%m-%d")
     except ValueError:
@@ -33,7 +63,6 @@ def main():
 
     date_str = parsed_date.strftime("%Y-%m-%d")
 
-    # Resolve paths relative to this script's directory
     base_dir = os.path.dirname(os.path.abspath(__file__))
     input_path = os.path.join(base_dir, "monthly", "partial", f"{date_str}.ndjson")
     output_dir = os.path.join(base_dir, "monthly", "aisummary")
@@ -43,10 +72,11 @@ def main():
         print(f"Error: input file not found: {input_path}")
         sys.exit(3)
 
-    # If the output already exists, skip generation to avoid rework and extra API calls
-    if os.path.exists(output_path):
+    if os.path.exists(output_path) and not args.force:
         print(f"Info: summary already exists for {date_str}, skipping: {output_path}")
         sys.exit(0)
+    elif os.path.exists(output_path) and args.force:
+        print(f"Info: --force set; overwriting existing summary: {output_path}")
 
     try:
         with open(input_path, "r", encoding="utf-8") as f:
@@ -55,44 +85,42 @@ def main():
         print(f"Error reading input file: {e}")
         sys.exit(4)
 
-    # Acquire token only when needed (after early exits above)
-    token = os.environ.get("GITHUB_TOKEN")
-    if not token:
-        print("Error: GITHUB_TOKEN environment variable is not set. Set it before running.")
+    # Ensure required Azure environment variables are present
+    azure_key = os.getenv("AZURE_OPENAI_API_KEY")
+    azure_endpoint = os.getenv("AZURE_OPENAI_V1_API_ENDPOINT")
+    azure_model = os.getenv("AZURE_OPENAI_API_MODEL")
+    if not azure_key or not azure_endpoint or not azure_model:
+        print("Error: Missing Azure OpenAI environment variables. Set AZURE_OPENAI_API_KEY, AZURE_OPENAI_V1_API_ENDPOINT, and AZURE_OPENAI_API_MODEL.")
         sys.exit(7)
 
     client = OpenAI(
-        base_url=endpoint,
-        api_key=token,
+        api_key=azure_key,
+        base_url=azure_endpoint,
+        default_query={"api-version": "preview"},
     )
 
     try:
-        response = client.chat.completions.create(
-            messages=[
+        response = client.responses.create(
+            model=azure_model,
+            instructions=system_message,
+            tools=[
                 {
-                    "role": "system",
-                    "content": system_message,
+                    "type": "mcp",
+                    "server_label": "MicrosoftLearn",
+                    "server_url": "https://learn.microsoft.com/api/mcp",
+                    "require_approval": "never",
                 },
-                {
-                    "role": "user",
-                    # Use the NDJSON string directly as the user content
-                    "content": ndjson_content,
-                }
             ],
-            temperature=1,
-            top_p=1,
-            model=model
+            input=ndjson_content,
         )
     except Exception as e:
         print(f"Error from model API: {e}")
         sys.exit(5)
 
-    content = response.choices[0].message.content if response and response.choices else ""
+    content = getattr(response, "output_text", "")
 
     try:
         os.makedirs(output_dir, exist_ok=True)
-        # Build a level-1 heading with the date in full format, e.g., "14 March 2025"
-        # Use parsed components to avoid platform-specific %-d/%#d issues
         full_date_title = f"# {parsed_date.day} {parsed_date.strftime('%B %Y')}\n\n"
         final_markdown = f"{full_date_title}{content or ''}"
         with open(output_path, "w", encoding="utf-8") as f:
@@ -104,4 +132,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
