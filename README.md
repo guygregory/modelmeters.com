@@ -22,6 +22,7 @@ Model Meters combines several Azure and GitHub services to create an automated p
 - **GitHub Actions Workflow**: Runs daily at midnight UTC to check for pricing updates
 - **AI-Powered Summaries**: Leverages Azure OpenAI to generate concise, factual summaries of pricing changes grouped by model provider
 - **Documentation Integration**: Uses [Microsoft Learn MCP Server](https://github.com/microsoftdocs/mcp) to automatically include relevant documentation links
+- **Human-in-the-loop**: As AI summaries are stored in markdown format, this allows for quick and easy human review (and potentially AI agent review)
 
 <img width="1531" height="700" alt="image" src="https://github.com/user-attachments/assets/aabbf3c8-14cb-488a-a49c-cca6440bb33d" />
 
