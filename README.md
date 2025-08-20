@@ -73,16 +73,16 @@ The minimal solution takes advantage of free tiers where available, and has been
 | Component | Minimal demo | Advanced demo | Notes |
 |-----------|----------------------|------------------------|-------|
 | **Azure Static Web Apps** | $0/month | $9/month (Standard) | Free tier includes 100GB bandwidth, 0.5GB storage |
-| **Azure AI Foundry - OpenAI** | ~$5-20/month | ~$50-200/month | Price varies based on token usage |
+| **Azure AI Foundry - OpenAI** | ~$5-20/month | ~$50-100/month | Price varies based on token usage |
 | **Azure Retail Prices API** | $0/month | $0/month | Free public API with rate limits |
 | **GitHub Actions** | $0/month | $4/month (Team plan) | 2000 minutes/month free, then $0.008/minute |
 | **GitHub Repository** | $0/month | $4/month (Team plan) | Public and private repos free, additional features in Team plan |
-| **Domain/Custom DNS** | $15/year | $15/year | Optional custom domain, via third-party domain registrar |
+| **Domain/Custom DNS** | Optional $15/year | Optional $15/year | Optional custom domain, via third-party domain registrar |
 | **Monitoring/Analytics** | $0/month | $10-25/month | Optional Application Insights, etc. |
 | **Storage (backup/logs)** | $0-2/month | $5-15/month | Azure Storage for additional data retention |
 | **Azure AI Search** | Optional (Free tier) | Optional \~\$75/month (Basic tier) | Free tier includes up to 3 indexes, 50MB storage; Basic tier allows larger workloads |
 | **Microsoft Fabric** | N/A | Optional \~\$262/month (F2 capacity) | Based on Fabric F2 capacity |
-| **Total Monthly Cost** | **$5-10/month** | **$100-700/month** |  |
+| **Total Monthly Cost** | **$5-10/month** | **$100-500/month** |  |
 
 > **Pricing Disclaimer**: Costs are approximate, correct at time of writing (August 2025), and may vary based on:
 > - Actual usage patterns and data volumes
