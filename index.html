@@ -184,12 +184,12 @@
 			updateBtn();
 		})();
 
-		// Navigate to monthly page, preserving theme as a query param
+		// Navigate to agent page, preserving theme as a query param
 		document.getElementById('btn-ai-summaries').addEventListener('click', () => {
 			const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
 			const theme = isDark ? 'dark' : 'light';
 			// Prefer relative path to work on file:// and http(s)://
-			const dest = 'monthly/?theme=' + encodeURIComponent(theme);
+			const dest = 'agent/?theme=' + encodeURIComponent(theme);
 			window.location.href = dest;
 		});
 
