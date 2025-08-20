@@ -1,49 +1,3319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Redirecting to Agent Summaries...</title>
-<style>
-body { 
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-text-align: center; 
-padding: 50px; 
-background: #f5f7fa;
-color: #1b242b;
-}
-.message { 
-margin: 20px 0; 
-padding: 20px;
-background: white;
-border-radius: 8px;
-border: 1px solid #d0d7de;
-box-shadow: 0 6px 18px rgba(0,0,0,.08);
-max-width: 500px;
-margin: 20px auto;
-}
-a { color: #2563eb; text-decoration: none; }
-a:hover { text-decoration: underline; }
-</style>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Model Meter Monthly summaries - ✨ AI generated</title>
+	<style>
+		/* Light theme (default) */
+		:root {
+			--bg:#f5f7fa; --bg-alt:#e9eef2; --panel:#ffffff; --panel-2:#f0f3f7; --text:#1b242b; --muted:#5d6b76; --accent:#2563eb; --border:#d0d7de; --ring:#3b82f680; --shadow:0 6px 18px rgba(0,0,0,.08);
+			--topbar-offset: 0px; /* header not sticky on monthly page */
+		}
+		/* Dark theme */
+		:root[data-theme="dark"] {
+			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
+		}
+	html, body { min-height: 100%; }
+	html { scroll-padding-top: calc(var(--topbar-offset) + 16px); }
+		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); }
+	.container { min-height:100dvh; padding:12px 12px 16px; box-sizing:border-box; }
+	.card { background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow: var(--shadow); overflow:hidden; position:relative; clip-path: inset(0 round 16px); }
+	/* Ensure the sticky header respects the rounded top corners */
+	.card-hd { position:relative; background:var(--panel); display:flex; gap:12px; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+		.title { font-size:18px; font-weight:650; letter-spacing:.2px; }
+		.toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+		button { background:var(--panel-2); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:8px 10px; font-size:14px; line-height:1; outline:none; cursor:pointer; }
+		button:hover { border-color:#374151; }
+		button:focus { box-shadow:0 0 0 4px var(--ring); border-color:var(--accent); }
+
+		/* Content layout inside the card */
+	.content { display:grid; grid-template-columns: 1fr; gap:16px; padding:16px; }
+		.articles { min-width:0; }
+	.article { background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:12px; box-shadow: var(--shadow); scroll-margin-top: calc(var(--topbar-offset) + 16px); }
+	.article:target::before { content: ""; display:block; height: calc(var(--topbar-offset) + 16px); margin-top: calc(-1 * (var(--topbar-offset) + 16px)); }
+
+		/* Minimal markdown styles tuned to tokens */
+		.markdown-body h1, .markdown-body h2, .markdown-body h3 { border-bottom:1px solid var(--border); padding-bottom:4px; }
+		.markdown-body pre { background: var(--panel-2); border:1px solid var(--border); padding:12px; border-radius:10px; overflow:auto; }
+		.markdown-body code { background: var(--panel-2); border:1px solid var(--border); padding:2px 6px; border-radius:8px; }
+		.markdown-body table { border-collapse: collapse; width: 100%; }
+		.markdown-body th, .markdown-body td { border: 1px solid var(--border); padding: 6px 8px; }
+
+		/* Collapsible sections */
+		.month-title { cursor: pointer; display:flex; align-items:center; gap:8px; }
+		.article.collapsed .month-details { display:none; }
+
+		.footer { color: var(--muted); text-align:center; padding: 12px 16px; border-top:1px solid var(--border); }
+		@media (max-width: 900px) { .content { grid-template-columns: 1fr; } }
+	</style>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<style>
+		/* Prevent mobile text inflation */
+		html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+	</style>
+	<base target="_self">
+	<meta name="color-scheme" content="light dark">
+	<meta name="theme-color" content="#2563eb">
+	<link rel="icon" href="data:,">
+    
 </head>
 <body>
-<div class="message">
-<h1>Redirecting...</h1>
-<p>This page has moved to <a href="../agent/" id="redirect-link">../agent/</a></p>
-<p>If you are not automatically redirected, please click the link above.</p>
-</div>
+	<div class="container">
+		<div class="card">
+			<div class="card-hd">
+				<div class="title">Model Meter Monthly summaries - ✨ AI generated</div>
+				<div class="toolbar">
+					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
+					<button id="btn-back" title="Back to Model Meters">↩️Model Meters</button>
+				</div>
+			</div>
+			<div class="content">
+				<section class="articles">
+					
+			<article id="2025-08-01" class="article">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 August 2025
 
-<script>
-// Preserve theme and any other query parameters during redirect
-const currentParams = window.location.search;
-const currentHash = window.location.hash;
-const newUrl = '../agent/' + currentParams + currentHash;
+### Azure OpenAI GPT-5
 
-// Update the visible link
-document.getElementById('redirect-link').href = newUrl;
+- GPT-5 models are priced for various use cases (input, output, batch, cached, reasoning, and chat), and token zones (global, data zone, cached data zone).  
+  - Input prices start from $0.025 per 1M tokens (Nano, global, batch) up to $1.375 per 1M tokens (Reasoning, data zone).
+  - Output prices start from $0.2 per 1M tokens (Nano, global, batch outpt) up to $11.0 per 1M tokens (Reasoning, data zone).
+  - Mini and Nano variants are available, with lower pricing. Mini input (global, batch) is $0.125 per 1M, Mini output (global, batch) is $1 per 1M.
+  - “Chat” variants: Input tokens priced from $0.125 to $1.25 per 1M.
+  - “Rsng” (Reasoning): Input starts at $0.0625 per 1M (batch, cached, global), output from $5 per 1M tokens.
+  - Data zones, batch, and cached options available for fine-grained pricing.
+- Find more details in the [Azure OpenAI documentation](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#gpt-5).
 
-// Redirect immediately
-window.location.replace(newUrl);
+### Azure OpenAI GPT-4o
+
+- GPT-4o regional input tokens: $0.00275 per 1K tokens.
+- Cached input: $0.001375 per 1K tokens.
+- Regional output: $0.011 per 1K tokens.
+- Full service info at the [Azure OpenAI Service Documentation](https://learn.microsoft.com/azure/ai-foundry/openai/overview).
+
+### Azure OpenAI Image Video (Sora)
+
+- Sora video generation is priced per second, with costs varying by resolution and duration range.
+  - 1080p from $0.6 per second (Sq 1-5s) to $3.6 per second (16-20s).
+  - 720p from $0.3 per second (Sq 1-20s) to $0.75 per second (16-20s).
+  - 480p and 480pSq from $0.15 to $0.2 per second.
+- See [Sora resources](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/video-generation) for information.
+
+### Azure OpenAI OSS Models
+
+- gpt-oss-120B model family:
+  - Input tokens from $0.00015 per 1K tokens.
+  - Output tokens from $0.0006 per 1K tokens.
+  - Additional input/output: $0.00019/$0.00075 per 1K.
+- See the [OSS Models documentation](https://learn.microsoft.com/azure/ai-foundry/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#gpt-oss).
+
+### Azure OpenAI General Service
+
+- Provisioned Managed Data Zone/Regional Unit: $2.5 per hour.
+
+### Deepseek Model Family
+
+- V3 and MAI-DS-R1 models:
+  - Input tokens from $0.00125 per 1K (V3, V3-0324) and $0.001485 per 1K (MAI-DS-R1).
+  - Output tokens from $0.005 (V3) and $0.00594 (MAI-DS-R1) per 1K.
+- [Deepseek model info](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#deepseek-models-sold-directly-by-azure).
+
+### Language (Commitment Tier CLU)
+
+- Commitment Tiers for Azure and Connected/Disconnected options, with both monthly and yearly plans.
+  - 3M Unit: from $4080/month (Azure) to $48960/year (Disconnected).
+  - 10M Unit: from $11600/month (Azure) to $111360/year (Disconnected).
+  - 25M Unit: from $19200/month (Connected) to $30000/month.
+  - Overage Transactions: from $0.77 to $2.0 per 1K transactions, depending on tier and connection status.
+- CLU (Conversational Language Understanding) details at the [Language Service documentation](https://learn.microsoft.com/azure/ai-services/language-service/).
+
+### Language - Disconnected
+
+- Yearly commitment pricing from $39168 (3M) to $139200 (10M).
+
+### Computer Vision
+
+- Custom model training: $20 per hour; custom classification/object detection transactions: from $2.0 to $2.5 per 1K transactions.
+- Video retrieval and description: from $3.0 to $3.6 per hour ingestion, query at $0.25–$0.3 per 1K.
+- Image retrieval: ingestion $0.012–$0.03 per 1K, query $0.16–$0.192 per 1K.
+- Vectorize operations: Text at $0.014–$0.0168 per 1K, Image at $0.012–$0.1 per 1K.
+- Commitment tiers range from $338 to $4200 per month based on volume (500K to 8000K/Month).
+- Free transactions/training available at $0.
+- More at [Azure Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/).
+
+### Content Moderator
+
+- Standard transactions: from $0.48 to $1.2 per 1K transactions.
+- Product documentation: [Content Moderator](https://learn.microsoft.com/azure/ai-services/content-moderator/).
+
+### Speech
+
+- Video translation audio input: $5.0/hr.
+- Standard audio output: $15.0/hr, Custom audio output: $20.0/hr.
+- Speech API info: [Azure Speech Service documentation](https://learn.microsoft.com/azure/ai-services/speech-service/).
+
+---
+
+Prices vary depending on region.
 </script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2025-07-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 July 2025
+
+### Speech
+
+- Voice Live API Plus - Standard Speech Audio Output Tokens: $0.038 per 1K tokens
+- Voice Live API Plus - LLM Audio Output Tokens: $0.088 per 1K tokens
+- Voice Live API Basic - LLM Audio Cached Tokens: $0.00033 per 1K tokens
+- Voice Live API Basic - LLM Text Output Tokens: $0.00264 per 1K tokens
+- Voice Live API Basic - Standard Speech Audio Cache Tokens: $0.00033 per 1K tokens
+- Voice Live API Plus - Custom Speech Audio Output Tokens: $0.055 per 1K tokens
+- Voice Live API Lite - LLM Text Output Tokens: $0.00032 per 1K tokens
+- Voice Live API Lite - LLM Audio Input Tokens: $0.004 per 1K tokens
+- CNV Neural HD Synthesis Characters: $48.0 per 1M characters
+- Voice Live API Plus - LLM Text Input Tokens: $0.0055 per 1K tokens
+- Voice Live API Lite - LLM Text Cached Tokens: $0.00004 per 1K tokens
+- Voice Live API Plus - Standard Speech Audio Cached Tokens: $0.00275 per 1K tokens
+- Speech (Standard, no variant specified): $1.35, $0.8, $2.7, and $0.7 per minute for different meters
+- Voice Live API Lite - Standard Speech Audio Output Tokens: $0.033 per 1K tokens
+- Voice Live API Plus - Standard Speech Audio Input Tokens: $0.017 per 1K tokens
+- Voice Live API Basic - LLM Audio Input Tokens: $0.011 per 1K tokens
+- Voice Live API Basic - Standard Speech Audio Input Tokens: $0.015 per 1K tokens
+- Voice Live API Lite - Standard Speech Audio Cached Tokens: $0.00004 per 1K tokens
+- Voice Live API Lite - Custom Speech Audio Cached Tokens: $0.00004 per 1K tokens
+- Voice Live API Plus - LLM Audio Input Tokens: $0.044 per 1K tokens
+- Voice Live API Plus - LLM Text Output Tokens: $0.022 per 1K tokens
+- Voice Live API Basic - Custom Speech Audio Cached Tokens: $0.00033 per 1K tokens
+- Voice Live API Plus - LLM Audio Cached Tokens: $0.00275 per 1K tokens
+- Voice Live API Lite - LLM Audio Cached Tokens: $0.00004 per 1K tokens
+- Voice Live API Plus - LLM Text Cached Tokens: $0.00275 per 1K tokens
+- Voice Live API Basic - LLM Text Cached Tokens: $0.00033 per 1K tokens
+- Voice Live API Lite - LLM Text Input Tokens: $0.00008 per 1K tokens
+- Voice Live API Basic - Standard Speech Audio Outpt Tokens: $0.033 per 1K tokens
+- Neural HD Text to Speech Characters: $30.0 per 1M characters
+- Voice Live API Basic - LLM Text Input Tokens: $0.00066 per 1K tokens
+- Voice Live API Plus - Custom Speech Audio Cached Tokens: $0.00275 per 1K tokens
+- Voice Live API Lite - Custom Speech Audio Output Tokens: $0.05 per 1K tokens
+- Voice Live API Lite - Standard Speech Audio Input Tokens: $0.013 per 1K tokens
+
+[Speech service documentation (Azure Cognitive Services)](https://learn.microsoft.com/azure/ai-services/speech-service/)
+
+---
+
+### Azure OpenAI Reasoning
+
+- o3-deep research 0626-inp-cchd-glbl 1M Tokens: $2.5 per 1M tokens
+- o3-deep research 0626-inp-dzone 1M Tokens: $11.0 per 1M tokens
+- o3-deep research 0626-inp-glbl 1M Tokens: $10.0 per 1M tokens
+- o3-deep research 0626-inp-cchd-dzone 1M Tokens: $2.75 per 1M tokens
+- o3-deep research 0626-out-glbl 1M Tokens: $40.0 per 1M tokens
+- o3-deep research 0626-out-dzone 1M Tokens: $44.0 per 1M tokens
+
+[Azure OpenAI Reasoning documentation](https://learn.microsoft.com/azure/ai-services/openai/overview)
+
+---
+
+### Mistral Models
+
+- Doc AI DZone 2505 Pages: $3.3 per 1K pages
+- Doc AI glbl 2505 Pages: $3.0 and $3.75 per 1K pages (multiple meters)
+- Doc AI regnl 2505 Pages: $3.63, $3.3, and $3.96 per 1K pages (multiple meters)
+
+[Mistral model documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#mistral-ai)
+
+---
+
+### Grok model family
+
+- Grok-4 Outp DZone Tokens: $0.0303 per 1K tokens
+- Provisioned Managed Data Zone Unit: $1.1 per hour
+- Grok-4 Inp glbl Tokens: $0.0055 and $0.00688 per 1K tokens (multiple meters)
+- Provisioned Managed Global Unit: $1.0 per hour
+- Grok-4 Inp DZone Tokens: $0.00605 per 1K tokens
+- Grok-4 Outp glbl Tokens: $0.0275 and $0.0344 per 1K tokens (multiple meters)
+
+[Grok model family documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#xai-models-sold-directly-by-azure)
+
+---
+
+### Azure AI Content Understanding
+
+- Face Transaction Transactions: $1.0 per 1K transactions
+- Std Contextualization Tokens: $0.001 per 1K tokens
+- Pro Contextualization Tokens: $0.0015 per 1K tokens
+
+[Azure AI Content Understanding documentation](https://learn.microsoft.com/azure/ai-services/content-understanding/)
+
+---
+
+### Azure Agent Unit
+
+- SRE Agent Unit: $0.1 and $0.11 per unit (multiple meters)
+
+---
+
+### BFL Flux Models
+
+- Provisioned Managed Global Unit: $1.25 per hour
+- Provisioned Managed Data Zone Unit: $1.1 per hour
+
+[BFL Flux Models documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#black-forest-labs-models-sold-directly-by-azure)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2025-06-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 June 2025
+
+### Azure OpenAI
+
+- GPT-4o (multiple variants, e.g., gpt-4o-rt-txt-0603, gpt-4o-aud-0603-txt):
+  - Input data zone tokens from $0.00275 per 1K tokens
+  - Output global tokens from $0.01 per 1K tokens
+  - Output data zone tokens from $0.011 per 1K tokens
+  - Input/output regional tokens from $0.00275 per 1K tokens (input) and $0.011 per 1K tokens (output)
+  - Audio output tokens from $0.08 per 1K tokens
+  - Cached and DZone tokens available for both input and output
+- o3 and o3-pro series:
+  - Input global tokens from $0.01 per 1K tokens (batch) and $0.02 per 1K tokens
+  - Output global tokens from $0.04 per 1K tokens (batch) and $0.08 per 1K tokens
+  - Input/output Data Zone tokens available from $0.011 per 1K tokens (batch input)
+  - Cached tokens from $0.0005 per 1K tokens
+- gpt-image-1:
+  - Cached image and text tokens for input, starting at $0.00125 per 1K tokens
+- gpt 4o 1120:
+  - Input and output regional tokens from $0.00275 and $0.011 per 1K tokens respectively
+  - Cached input regional tokens at $0.001375 per 1K tokens
+
+[Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview)
+
+### Azure OpenAI Reasoning
+
+- Codex mini:
+  - Input tokens (global, cached, DZone, regional) from $0.000375 to $0.001815 per 1K tokens
+  - Output tokens (global, DZone, regional) from $0.006 to $0.00726 per 1K tokens
+
+[Azure OpenAI Reasoning documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+### Mistral Models
+
+- Codestral:
+  - Input tokens (global, DZone, regional) from $0.0003 per 1K tokens
+  - Output tokens (global, DZone, regional) from $0.0009 per 1K tokens
+- OCR (global, DZone, regional) pages from $1.0 per 1K
+- Provisioned Managed Data Zone Unit at $1.1 per hour, Managed Global Unit at $1.0 per hour
+
+[Mistral Models on Azure documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#mistral-models-sold-directly-by-azure)
+
+### Llama models
+
+- Llama 3.3 70B:
+  - Input tokens (global, Dzone, regional) from $0.00071 per 1K tokens
+  - Output tokens (global, Dzone, regional) from $0.00071 per 1K tokens
+- Llama 4 Maverick 17B:
+  - Input tokens (global, regional, Dzone) from $0.00025 per 1K tokens
+  - Output tokens (global, regional, Dzone) from $0.001 per 1K tokens
+- Provisioned Managed Data Zone and Global Units from $1.1 and $1.0 per hour respectively
+
+[Llama Models on Azure documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#meta-models-sold-directly-by-azure)
+
+### Grok model family
+
+- Grok-3 and Grok-3 Mini:
+  - Input tokens (global, regional, Dzone) from $0.00025 per 1K tokens
+  - Output tokens (global, regional, Dzone) from $0.00127 per 1K tokens (Mini) and $0.015 per 1K tokens (Grok-3)
+
+[Grok Model Family on Azure documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#xai-models-sold-directly-by-azure)
+
+### Azure AI Content Understanding
+
+- Classification Input Tokens from $0.00344 per 1K tokens
+- Classification Output Tokens from $0.01375 per 1K tokens
+- Std and Pro Field Extract (input/output) tokens from $0.00121 to $0.00532 per 1K
+- Document Content Extraction pages from $5.0 per 1K
+- Add-On Layout Pages from $5.0 per 1K, Face Storage Faces from $0.01 per 1K/month
+- Audio Content Extraction from $0.36 per hour
+- Video Content Extraction from $1.0 per hour
+- Add-On Face Grouping Video from $2.0 per hour
+
+[Azure AI Content Understanding documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-understanding/overview)
+
+### BFL Flux Models
+
+- Flux 1.1 Pro (global, regional, Dzone) images from $40.0 per 1K
+- Kontext Pro (global, regional, Dzone) images from $40.0 per 1K
+
+[Flux Model information](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#black-forest-labs-models-sold-directly-by-azure)
+
+### Phi
+
+- Phi-4 Reasoning Plus input tokens at $0.000125 per 1K
+- Output tokens at $0.0005 per 1K
+
+[Phi-4 on Azure documentation](https://learn.microsoft.com/en-us/azure/ai-services/model-catalog/phi)
+
+### Azure AI Translator
+
+- Commitment Tier Embedding (Characters and Units) from $4.28 per 1M characters and $1,952.0 per Month for 250M Units
+
+[Azure AI Translator documentation](https://learn.microsoft.com/en-us/azure/ai-services/translator/)
+
+### Language
+
+- Standard Health Text Records from $0.0 to $20.0 per 1K
+
+[Language Service (Azure)](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2025-05-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 May 2025
+
+### Azure OpenAI
+
+- GPT-4.1 family meters:
+  - gpt-4.1-ft model grader input tokens from $0.0022 per 1K tokens.
+  - gpt-4.1-ft model grader output tokens from $0.0088 per 1K tokens.
+  - gpt-4.1-ft model grader cchd input tokens from $0.00055 per 1K tokens.
+  - gpt-4.1-ft hosting (regional unit) from $1.7 per hour.
+  - gpt-4.1-mini-ft model grader input tokens from $0.00044 per 1K tokens.
+  - gpt-4.1-mini-ft model grader output tokens from $0.00176 per 1K tokens.
+  - gpt-4.1-mini-ft model grader cchd input tokens from $0.00011 per 1K tokens.
+  - gpt-4.1-mini-ft hosting (regional unit) from $1.7 per hour.
+  - gpt-4.1-mini-dev-ft input global tokens from $0.0004 per 1K tokens.
+  - gpt-4.1-mini-dev-ft output global tokens from $0.0016 per 1K tokens.
+  - gpt-4.1-mini-dev-ft cached input global tokens from $0.0001 per 1K tokens.
+  - gpt-4.1-dev-ft input global tokens from $0.002 per 1K tokens.
+  - gpt-4.1-dev-ft cached input global tokens from $0.0005 per 1K tokens.
+  - gpt-4.1-dev-ft output global tokens from $0.008 per 1K tokens.
+  - gpt-4.1-nano-ft input global tokens from $0.0001 per 1K tokens.
+  - gpt-4.1-nano-ft input regional tokens from $0.00011 per 1K tokens and $0.000121 per 1K tokens.
+  - gpt-4.1-nano-ft output global tokens from $0.0004 per 1K tokens.
+  - gpt-4.1-nano-ft output regional tokens from $0.00044 per 1K tokens, and $0.000484 per 1K tokens.
+  - gpt-4.1-nano-ft model grader input tokens from $0.00011 per 1K tokens.
+  - gpt-4.1-nano-ft model grader output tokens from $0.00044 per 1K tokens.
+  - gpt-4.1-nano-ft model grader cchd input tokens from $0.000028 per 1K tokens.
+  - gpt-4.1-nano-ft hosting (global/regional unit) from $1.7 per hour.
+  - gpt-4.1-nano-ft cached input global tokens from $0.000025 per 1K tokens.
+  - gpt-4.1-nano-ft cached input regional tokens from $0.000028 per 1K tokens and $0.000031 per 1K tokens.
+  - gpt-4.1-nano-dev-ft input global tokens from $0.0001 per 1K tokens.
+  - gpt-4.1-nano-dev-ft output global tokens from $0.0004 per 1K tokens.
+  - gpt-4.1-nano-dev-ft cached input global tokens from $0.000025 per 1K tokens.
+  - gpt-4.1-nano-ft training (global) from $0.0015 per 1K tokens.
+  - gpt-4.1-nano-ft training (regional) from $0.00165 and $0.001815 per 1K tokens.
+
+- GPT-4o family meters:
+  - gpt-4o-ft model grader input tokens from $0.00275 per 1K tokens.
+  - gpt-4o-ft model grader output tokens from $0.011 per 1K tokens.
+  - gpt-4o-ft model grader cached input tokens from $0.001375 per 1K tokens.
+  - gpt-4o-mini-ft model grader input tokens from $0.000165 per 1K tokens.
+  - gpt-4o-mini-ft model grader output tokens from $0.00066 per 1K tokens.
+  - gpt-4o-mini-ft model grader cached input tokens from $0.000083 per 1K tokens.
+
+- text-embedding-3-large-grader and regional tokens from $0.00013 per 1K tokens.
+
+- o3-ft and o3-mini-ft family meters:
+  - o3-ft model grader input tokens from $0.011 per 1K tokens.
+  - o3-ft model grader output tokens from $0.044 per 1K tokens.
+  - o3-ft model grader cached input tokens from $0.00275 per 1K tokens.
+  - o3-mini-ft model grader input tokens from $0.00121 per 1K tokens.
+  - o3-mini-ft model grader output tokens from $0.00484 per 1K tokens.
+  - o3-mini-ft model grader cached input tokens from $0.000605 per 1K tokens.
+
+- o1 model ft grader input tokens from $0.0165 per 1K tokens, output tokens from $0.066 per 1K tokens, and cached input from $0.00825 per 1K tokens.
+
+#### Model family documentation:
+- [Azure OpenAI service documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+- [GPT-4 family](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4)
+- [GPT-4o overview](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#gpt-4o)
+- [Text Embeddings](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/embeddings)
+
+---
+
+### Azure OpenAI Reasoning
+
+- o4-mini-ft family:
+  - o4-mini-ft model grader input tokens from $0.00121 per 1K tokens.
+  - o4-mini-ft model grader cchd input tokens from $0.000303 per 1K tokens.
+  - o4-mini-ft model grader output tokens from $0.00484 per 1K tokens.
+  - o4-mini-ft input global tokens from $0.0011 per 1K tokens.
+  - o4-mini-ft input regional tokens from $0.00121, $0.001331 per 1K tokens.
+  - o4-mini-ft cached input global tokens from $0.000275 per 1K tokens, cached input regional from $0.000303, $0.000333 per 1K tokens.
+  - o4-mini-ft output global tokens from $0.0044 per 1K tokens, output regional tokens from $0.00484 and $0.005324 per 1K tokens.
+  - o4-mini-ft hosting (global/regional unit) from $1.7 per hour.
+  - o4-mini RFT Training (global) from $100.0 per hour, (regional unit) from $110.0 and $121.0 per hour.
+
+#### Model family documentation:
+- [Azure OpenAI Reasoning models](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/reasoning)
+
+---
+
+### Phi
+
+- Phi-4-reasoning-input tokens from $0.000125 per 1K tokens.
+- Phi-4-reasoning-output tokens from $0.0005 per 1K tokens.
+- Phi-4-mini-reasoning-input tokens from $0.000075 per 1K tokens.
+- Phi-4-mini-reasoning-output tokens from $0.0003 per 1K tokens.
+
+#### Model family documentation:
+- [Phi models in Azure AI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#phi)
+
+---
+
+### Azure OpenAI Image Video (Sora)
+
+- Sora meters for video generation by resolution/time/segment:
+  - 1080p 1-5s regional video at $1.3 per second, 6-10s at $1.85 per second, 11-15s at $2.9 per second, 16-20s at $3.6 per second.
+  - 1080p square 1-5s at $0.6 per second, 6-10s at $0.75 per second, 11-15s at $1.1 per second, 16-20s at $1.35 per second.
+  - 720p 1-5s regional at $0.45 per second, 6-10s at $0.5 per second, 11-15s at $0.65 per second, 16-20s at $0.75 per second.
+  - 720p square 1-20s regional at $0.3 per second.
+  - 480p 1-20s regional at $0.2 per second, 480p square 1-20s regional at $0.15 per second.
+
+#### Model family documentation:
+- [Sora video generation on Azure](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#sora)
+
+---
+
+### Azure AI Translator
+
+- S1, S2, S3, S4, D3, C2, C3, C4, and commitment tiers for translation and custom training:
+  - S1 Standard Characters from $10.0 and $15.0 per 1M, S1 Document Characters at $15.0 per 1M, S1 Custom Training Characters $10.0 and $12.5 per 1M, S1 Custom Model Hosting Unit $10.0 and $12.5 per month, S1 Custom Translation Characters $40.0 and $50.0 per 1M.
+  - S2 Characters from $8.22 and $10.275 per 1M, S2 Unit from $66.29, $82.863 per day, S2 Custom Model Hosting Unit $10.0 and $12.5 per month.
+  - S3 Characters from $6.0, $7.5 per 1M, S3 Unit from $193.548, $241.94 per day, S3 Custom Model Hosting Unit $10.0 and $12.5 per month.
+  - S4 Characters from $4.5, $5.625 per 1M, S4 Unit from $1451.613, $1814.52 per day, S4 Custom Model Hosting Unit $10.0 and $12.5 per month.
+  - D3 Unit at $195.96, $244.95 per day, D3 Characters $9.0, $11.25 per 1M.
+  - C2 Characters at $32.88 per 1M, C2 Custom Training Characters at $8.22, $10.275 per 1M, C2 Custom Model Hosting Unit $10.0, $12.5 per month.
+  - C3 Characters at $24, $30 per 1M, C3 Custom Training Characters $6.0, $7.5 per 1M, C3 Custom Model Hosting Unit $10.0, $12.5 per month, C3 Unit $193.548, $241.94 per day.
+  - C4 Characters at $4.5, $18, $22.5 per 1M, C4 Custom Training Characters $4.5, $5.625 per 1M, C4 Custom Model Hosting Unit $10.0, $12.5 per month, C4 Unit $1451.613, $1814.52 per day.
+  - Commitment Tier Units (Azure and Connected) for 250M/1000M/4000M at various price points per unit and per million characters.
+  - Free Characters at $0.0 per 1M.
+
+#### Service documentation:
+- [Azure AI Translator pricing details](https://learn.microsoft.com/en-us/azure/ai-services/translator/)
+
+---
+
+### Speech
+
+- Standard Streaming minute from $0.5 per minute.
+
+#### Service documentation:
+- [Azure Speech service pricing](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2025-04-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 April 2025
+
+### Azure OpenAI
+
+- GPT-4.1 family: Input tokens from $0.002 per 1K (global), $0.0022 per 1K (regional), $0.00242 per 1K (regional), Output tokens from $0.008 per 1K (global), $0.0088 per 1K (regional), $0.00968 per 1K (regional)
+- GPT-4.1 mini: Input tokens from $0.0004 per 1K (global), $0.00044 per 1K (regional or Data Zone). Output tokens from $0.0016 per 1K (global), $0.00176 per 1K (regional or Data Zone), $0.001936 per 1K (regional)
+- GPT-4.1 nano: Input tokens from $0.0001 per 1K (global), $0.00011 per 1K (regional or Data Zone). Output tokens from $0.0004 per 1K (global), $0.00044 per 1K (regional or Data Zone), Batch operations from $0.0002 per 1K (global), $0.00022 per 1K (Data Zone)
+- GPT-4o: Input tokens from $0.0025 per 1K (global), $0.00275 per 1K (regional or Data Zone), Output tokens from $0.01 per 1K (global)
+- GPT-4o mini (Transcription/TTS): Text and audio input/output from $0.00125 per 1K, output to $0.01452 per 1K (regional audio)
+- GPT-image-1: Image input from $0.01 per 1K (global), $0.011 per 1K (regional or Data Zone), Output from $0.04 per 1K (global), $0.044 per 1K (regional or Data Zone)
+- Fine-tuning & training: GPT-4.1 FT Training from $0.025 per 1K (global), $0.0275 per 1K (regional), up to $0.03025 per 1K (regional). Hosting from $1.7 per hour.
+- GPT-4/8K/32K variants: Batch, input, and output tokens range from $0.03 to $0.12 per 1K (regional)
+- Text Embedding 3 Large: $0.00013 per 1K (global)
+- Other metering: O1 mini input/output $0.0011–$0.005324 per 1K; various cached input tokens from as low as $0.0001 per 1K
+
+#### [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+---
+
+### Azure OpenAI Reasoning
+
+- O4-mini 0416 model: Batch output from $0.0022 per 1K (global Data Zone), Input $0.00055–$0.001331 per 1K (global, Data Zone, regional), Output $0.0044–$0.005324 per 1K
+- O4-mini 0416 cached input: $0.000275 per 1K (global), $0.000303 per 1K (Data Zone)
+- Data zone metering for input/output from $0.000605–$0.00484 per 1K
+
+#### [Azure OpenAI Reasoning documentation](https://learn.microsoft.com/azure/ai-foundry/openai/how-to/reasoning)
+
+---
+
+### Deepseek Model Family
+
+- V3-0324: Input tokens from $0.00114 per 1K (global) and $0.00125 per 1K (regional); Output tokens from $0.00456 per 1K (global), $0.005 per 1K (regional)
+- MAI-DS-R1: Input tokens $0.00135 per 1K (global), $0.001485 per 1K (regional); Output $0.0054 per 1K (global), $0.00594 per 1K (regional)
+- Provisioned/Managed units: Managed Global Unit $1.0 per hour, Managed Regional $2.0 per hour, Managed Data Zone $1.1 per hour. Provisioned Throughput $312 per month, overage $2 per hour
+
+#### [Deepseek documentation (Learn search)](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#deepseek-models-sold-directly-by-azure)
+
+---
+
+### Language (Commitment Tier TA4H)
+
+- CT Overage Transactions: $5.6 per 1K (10M), $8.8 per 1K (3M), $11.2 per 1K (1M)
+
+#### [Language Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2025-03-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 March 2025
+
+### Azure OpenAI
+
+- **GPT-4** family:
+  - gpt-4-8K input tokens from $0.03 per 1K; output tokens from $0.06 per 1K.
+  - gpt-4-32K input tokens from $0.06 per 1K; output tokens from $0.12 per 1K.
+  - gpt-4-turbo-Vision-128K input tokens from $0.01 per 1K; output tokens from $0.03 per 1K.
+- **GPT-4.5 (0227)**:
+  - Input tokens from $0.075 per 1K; output tokens from $0.15 per 1K.
+  - Cached input tokens from $0.0375 per 1K.
+- **GPT-4o (1120)**:
+  - Inp Data Zone tokens from $0.00275 per 1K, Inp regional tokens from $0.003025 per 1K.
+  - Cached Inp Data Zone tokens from $0.001375 per 1K, Cached Inp regional tokens from $0.001513 per 1K.
+  - Outp Data Zone tokens from $0.011 per 1K; output regional tokens from $0.0121 per 1K.
+- **GPT-35-turbo**:
+  - 16K model input tokens from $0.003 per 1K; output tokens from $0.004 per 1K.
+  - 4K model input tokens from $0.0015 per 1K; output tokens from $0.002 per 1K.
+  - 16K-0125 input from $0.0005 per 1K, output from $0.0015 per 1K.
+  - 16K-1106 input from $0.001 per 1K, output from $0.002 per 1K.
+  - Instruct input tokens from $0.0015 per 1K, output from $0.002 per 1K.
+- **o1-pro**:
+  - Input glbl tokens from $0.15 per 1K, data zone tokens from $0.165 per 1K, regional tokens from $0.165 per 1K, batch input (glbl) from $0.075 per 1K, batch input (data zone) from $0.0825 per 1K, batch output (glbl) from $0.3 per 1K, batch output (data zone) from $0.33 per 1K, output glbl tokens from $0.6 per 1K, output data zone from $0.66 per 1K, output regional tokens from $0.66 and $0.726 per 1K.
+- **Computer-Use Model**:
+  - Input glbl tokens from $0.003 per 1K, data zone tokens from $0.0033 per 1K, regional tokens from $0.0033 and $0.00363 per 1K.
+  - Output glbl tokens from $0.012 per 1K, data zone tokens from $0.0132 per 1K, regional tokens from $0.0132 and $0.01452 per 1K.
+- **Embeddings**:
+  - embedding-ada-glbl and embedding-ada-regional tokens from $0.0001 per 1K, embedding-ada-datazone from $0.00011 per 1K.
+  - text-embedding-3-small-glbl tokens from $0.00002 per 1K.
+  - text-embedding-3-large-glbl tokens from $0.00013 per 1K.
+- **Fine-Tuned Models**:
+  - babbage-002-base-glbl and babbage-002-FT-Inp/Outp-glbl tokens from $0.0004 per 1K; b-002-FT-Trng-glbl (unit) from $34 per hour and (token) from $0.0004 per 1K.
+  - davinci-002-base-glbl tokens from $0.002, davinci-002-FT-Inp-glbl from $0.002, FT-Outp-glbl from $0.002 per 1K.
+  - davinci-002-FT-Trng-glbl from $40 per hour or $0.006 per 1K tokens. FT-Hstng-glbl (babbage & davinci) from $1.7 per hour.
+- **File Search and Assistants**:
+  - file-search-tool-calls-glbl from $2.5 per 1K; datazone and regional from $2.75 per 1K; regional (gpt 4o) from $3.025 per 1K.
+  - Assistants-File Search-glbl from $0.1 per GB per day.
+- **Image Models (DALL-E)**:
+  - DALL-E 2 standard glbl images from $2.0 per 100.
+  - DALL-E 3 Std HighRes-glbl images from $8.0 per 100, Std LowRes from $4.0 per 100.
+  - DALL-E 3 HD HighRes from $12.0 per 100, HD LowRes from $8.0 per 100.
+- **Code Interpreter**:
+  - Code-Interpreter-global from $0.03 per session.
+- **Speech-to-Text**:
+  - Batch Whisper global unit from $0.36 per hour.
+
+[Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview)
+
+---
+
+### Deepseek model family
+
+- V3 Inp glbl tokens from $0.00114 per 1K, regional tokens from $0.00125 per 1K.
+- V3 Outp glbl tokens from $0.00456 per 1K, regional tokens from $0.005 per 1K.
+
+[Deepseek Model documentation](https://learn.microsoft.com/en-us/azure/machine-learning/concept-deepseek-models)
+
+---
+
+### Phi
+
+- Phi-4-Mini MM-Audio-In tokens from $0.004 per 1K.
+
+[Phi model documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts-model-references#phi-3)
+
+---
+
+### Azure AI Translator
+
+- Standard Pay As You Go App from $15.00–$19.00 per hour.
+- Commitment Tiers:
+  - 20K hours unit from $60,000.00–$75,000.00 per month; App Overage from $3.00–$3.75 per hour.
+  - 50K hours unit from $132,000.00–$165,000.00 per month; Overage from $2.64–$3.30 per hour.
+  - 150K hours unit from $337,500.00–$421,875.00 per month; Overage from $2.25–$2.8125 per hour.
+  - 400K hours unit from $780,000.00–$975,000.00 per month; Overage from $1.95–$2.4375 per hour.
+
+[Azure AI Translator documentation](https://learn.microsoft.com/en-us/azure/ai-services/translator/)
+
+---
+
+### Speech
+
+- Standard Streaming Minute from $0.5 to $0.625 per minute.
+
+[Azure Speech Services documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2025-02-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 February 2025
+
+### Azure OpenAI
+
+- o3 mini 0131: Input from $0.0011 per 1K tokens (glbl), outputs from $0.0022 per 1K tokens (glbl); Data Zone input from $0.00121, output from $0.00242; regional input from $0.00121, output from $0.00484; Batch modes available; cached input options from $0.00055 per 1K tokens.
+- o1 mini: Batch input $0.00055 per 1K tokens (glbl), output $0.0022 per 1K tokens (glbl); Data Zone input $0.000605 per 1K tokens, output $0.00242.
+- o1 1217: Batch input $0.00825 per 1K tokens (Data Zone), output $0.033 per 1K tokens (Data Zone); Batch output $0.03 per 1K tokens (glbl).
+- o1: Batch input $0.0075 per 1K tokens (glbl), output $0.03 per 1K tokens (glbl); Data Zone batch input $0.00825, output $0.033.
+- gpt-4-turbo128K: Input $0.01 per 1K tokens (glbl), output $0.03 per 1K tokens (glbl).
+- gpt-4-8K: Input $0.0363 per 1K tokens (regional), output $0.0726 per 1K tokens (regional).
+
+[Learn about Azure OpenAI pricing](https://learn.microsoft.com/azure/ai-foundry/openai/overview)
+
+---
+
+### Phi
+
+- Phi-4: Input $0.000125 per 1K tokens, output $0.0005 per 1K tokens, FT tokens $0.003 per 1K, output-FT tokens $0.0005 per 1K, input-FT tokens $0.000125 per 1K, FT deployment hosting $0.8 per hour.
+- Phi-4-Mini: Input $0.000075 per 1K tokens, output $0.0003 per 1K tokens, FT tokens $0.003 per 1K, output-FT tokens $0.0003 per 1K, input-FT tokens $0.000075 per 1K, FT deployment hosting $0.8 per hour.
+- Phi-4-Mini MM: Input $0.00008 per 1K tokens, output $0.00032 per 1K tokens, FT tokens $0.003 per 1K, MM-output $0.00032 per 1K, MM-output-FT $0.00032 per 1K, MM-input-FT $0.00008 per 1K, FT deployment hosting $0.8 per hour.
+
+[Learn about Phi models](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts-models#phi-models)
+
+---
+
+### Deepseek model family
+
+- R1: Input from $0.00135 per 1K tokens (glbl), $0.001485 per 1K tokens (regional or DZone); output from $0.0054 per 1K tokens (glbl), $0.00594 per 1K tokens (regional or DZone).
+
+[Learn about Deepseek models](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts-models#deepseek-models)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2025-01-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 January 2025
+
+### Azure OpenAI
+
+- **GPT-4o (various flavors, including 0806 and 1217 revisions)**
+  - Text model input, output, regional/global/cached tokens from $0.0003 per 1K tokens (e.g., gpt-4o-rt-txt-1217 Inp glbl Tokens $0.005 per 1K, gpt-4o-rt-txt-1217 Outp glbl Tokens $0.02 per 1K).
+  - Audio model input, output, batch and cached tokens, Data Zone and region-specific variants from $0.0003 per 1K tokens (e.g., gpt-4o-rt-aud-1217 Outp glbl Tokens $0.08 per 1K, gpt-4o-rt-aud-1217 Inp glbl Tokens $0.04 per 1K).
+  - Fine-tuning and training: e.g., gpt-4o-0806-FT-Trng-glbl tkn Tokens $0.025 per 1K.
+  - Hosting: gpt-4o-0806-FT-Hstng-glbl Unit $1.7 per hour; FT-Hstng-regnl $2.04 per hour.
+  - Provisioned Units: Global $1.00 per hour, Regional $2.00 per hour.
+- **GPT-4o Mini (minified versions, 0718/1217)**
+  - Input and output tokens from $0.00015 per 1K tokens (e.g., gpt-4o-mini-0718-Inp-glbl Tokens $0.00015 per 1K; Outp-glbl Tokens $0.0006 per 1K).
+  - Batch processing, cached tokens, and Data Zone variants from $0.000075 per 1K.
+  - Fine-tuning, training, and hosting: e.g., FT-Hstng-glbl $1.7/hr, FT-Hstng-regnl $2.04/hr.
+- **GPT-4o-micro (gpt4omini/mini variants)**
+  - Ultra-low-cost input/output and cached tokens; e.g., gpt4omini-rt-txt1217 Inp glbl Tokens $0.0006 per 1K, Outp glbl Tokens $0.0024 per 1K.
+  - Audio-specific input/output/cached/datazone tokens from $0.00015–$0.0242 per 1K.
+- **Batch, Training, and Special Modes**
+  - "Batch" tokens for efficient large-volume processing from $0.000075 per 1K (gpt-4o-mini-0718-Batch-Inp-glbl Tokens).
+  - Data zone-specific pricing for hybrid architectures, sometimes as low as $0.000165 per 1K tokens.
+- **Other Services**
+  - Speech-to-Text-Batch-Whisper (regional/global): $0.36 per hour.
+  - Speech models: Custom TTS Avatar Training $15.00 per hour, Personal Voice Characters $24.00 per 1M, Voice Storage $600.00 per 1K.
+
+[Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+---
+
+### Language (Azure Cognitive Language Services Commitment Tiers)
+
+- **TA4H Commitment Tiers**
+  - 1M units: $14,000.00 per month, 3M units: $27,500.00 per month, 10M units: $70,000.00 per month.
+  - Overage Transactions: 1M tier $14.00 per 1K, 3M tier $11.00 per 1K, 10M tier $7.00 per 1K.
+- **CLU Connected Containers Commitment Tiers**
+  - 1M units: $1,600.00 or $1,280.00 per month, 3M: $1,360.00 per 1K overage, 1M/3M: $1.28–$1.36 per 1K overage transactions.
+
+[Azure Language service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+### Azure AI Foundry Provisioned Throughput Reservation
+
+- **Provisioned Managed Regional Unit**
+  - $260.00 or $2,652.00 per hour (variable by service level).
+- **Provisioned Managed Global Unit**
+  - $260.00 or $2,652.00 per hour (variable by service level).
+
+[Azure AI Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-services/foundry/)
+
+---
+
+### Azure AI Content Safety
+
+- Free Text Analysis: $0.00 per 1K records.
+- Free Images Analysis: $0.00 per 1K images.
+
+[Azure AI Content Safety documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/)
+
+---
+
+### Azure AI Content Understanding
+
+- Image Field Extraction: $6.00 per 1K images.
+
+[Azure AI Document Intelligence (Content Understanding) documentation](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/)
+
+---
+
+### Speech
+
+- S1 Custom TTS Avatar Training: $15.00 per hour.
+- Text to Speech - Personal Voice Characters: $24.00 per 1M characters.
+- Text to Speech - Personal Voice Storage: $600.00 per 1K.
+
+[Azure Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-12-04" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 4 December 2024
+
+### Azure AI Foundry
+
+- Provisioned Throughput Reservation offers two meter types: Managed Global Unit and Managed Data Zone Unit.
+    - Provisioned Managed Global Unit is priced from $260.00 per hour.
+    - Provisioned Managed Data Zone Unit is priced from $260.00 per hour.
+
+Prices vary depending on region.
+
+#### Further Reading and Documentation
+
+- [Azure AI Foundry documentation on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-12-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 December 2024
+
+### Azure OpenAI
+
+- GPT-4o 1120 (Input, Output, Batch, Cached): Input global tokens from $0.0025/1K, input regional tokens from $0.00275/1K, batch input global tokens from $0.00125/1K, output global and regional tokens from $0.01/1K, cached input global from $0.00125/1K, cached input regional from $0.001375/1K, output data zone from $0.011/1K.
+- GPT-4o 0513 (Input, Output): Input data zone tokens $0.005/1K, output data zone tokens $0.015/1K.
+- GPT-4o "mini" 0718 (Input, Output, Cached, Fine-Tuned): Input global tokens $0.00015/1K, input regional tokens $0.000206/1K, fine-tuned input & output global from $0.0006/1K, fine-tuned cached input (regional) from $8.3e-05/1K, output regional from $0.000825/1K, cached (global) $7.5e-05/1K, cached (regional) $0.000104/1K, FT Hstng $1.7/hour, FT Trng $0.003/1K.
+- GPT-4o 0806 (Fine-Tuned, Cached, Hosting, Training): FT input global & output global from $0.0025/1K & $0.01/1K, FT input regional & cached FT input regional from $0.001375/1K & $0.001513/1K, cached FT input global $0.00125/1K, FT Hosting $1.7/hour, FT Training $0.025/1K.
+- GPT-35-turbo-16K-0125: Input regional tokens $0.0005/1K, output regional tokens $0.0015/1K.
+- GPT4o Real-time, Cached/audio/text tokens: Real-time cached text input global from $0.0025/1K, text input regional from $0.003025/1K, cached audio input global $0.02/1K, cached audio input regional from $0.022/1K, cached audio input data zone $0.022/1K.
+- "o1 1217" (Input, Output, Cached, Data Zone): Input data zone $0.0165/1K, cached input data zone $0.00825/1K, input regional $0.0165/1K or $0.01815/1K, cached input regional from $0.00825/1K, cached input global $0.0075/1K, output data zone $0.066/1K, output global $0.06/1K, output regional $0.066/1K or $0.0726/1K.
+- Text-embedding-3-large-regional: $0.000163/1K.
+- gpt4o rtime/cached: Cached text input data zone & regional from $0.00275/1K & $0.003025/1K.
+
+[Azure OpenAI documentation on model pricing and usage](https://learn.microsoft.com/azure/ai-services/openai/concepts/models)
+
+---
+
+### Language
+
+- Standard Text Records: Priced from $0.25, $0.3, $0.75, $1.0/1K.
+- Free Text Records: $0.0/1K.
+- S0, S1, S2, S3, S4 Unit: S0 $2.41/day, S1 $8.06/day, S2 $32.25/day, S3 $80.64/day, S4 $161.29/day.
+- S0, S1, S2, S3, S4 Overage Transactions: S0 $3.0/1K, S1 $2.5/1K, S2 $2.0/1K, S3 $1.0/1K, S4 $0.5/1K.
+
+[Language services documentation](https://learn.microsoft.com/azure/ai-services/language-service/overview)
+
+---
+
+### Azure AI Content Understanding
+
+- Document Field Extraction Pages: $20.0 or $22.0/1K.
+- Add-On Formula Pages: from $3.0/1K.
+- Audio Field Extraction: from $0.8/hour.
+- Audio Content Extraction: $0.36/hour.
+- Image Field Extraction: $6.6/1K images.
+- Video Content Extraction: $1.0/hour.
+- Video Field Extraction: $9.0 or $9.9/hour.
+
+[Azure AI Content Understanding documentation](https://learn.microsoft.com/azure/ai-services/document-intelligence/)
+
+---
+
+### Speech
+
+- Custom - Fast Transcription Speech to Text: from $0.45/hour.
+- S1 Text To Speech Characters: $4.0/1M.
+
+[Speech service documentation](https://learn.microsoft.com/azure/ai-services/speech-service/overview)
+
+---
+
+### Face
+
+- Standard Faces: from $1.0/1M.
+
+[Face service documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identityoverview)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-11-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 November 2024
+
+### Computer Vision
+
+- Commitment Tier Disconnected 16000K Unit: $77760.0 per year
+- Commitment Tier Connected 16000K Unit: from $6480.0 per month
+- Commitment Tier Azure 16000K Unit: from $7200.0 per month
+- Commitment Tier Azure 16000K CT Overage Transactions: from $0.45 per 1,000 transactions
+- Commitment Tier Connected 16000K CT Overage Transactions: from $0.41 per 1,000 transactions
+
+[Microsoft Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+---
+
+### Face
+
+- Standard Transactions: from $0.4 per 1,000 transactions
+- Standard Faces: $1.0 per 1 million faces
+- Overage Transactions: from $0.65 per 1,000 transactions
+- Liveness and Verification Transactions: from $15.5 per 1,000 transactions
+- Liveness Transactions: from $15.0 per 1,000 transactions
+- P1 Unit: from $135.483871 per day
+- P2 Unit: from $245.16129 per day
+- P3 Unit: from $354.83871 per day
+- Free Transactions: $0.0 per 1,000 transactions
+
+[Microsoft Face API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+---
+
+### Language
+
+- Commitment Tier Azure 25M Unit: from $6250.0 per month
+- Commitment Tier Azure 25M CT Overage Transactions: from $0.25 per 1,000 transactions
+- Commitment Tier Connected 25M Unit: from $5000.0 per month
+- Commitment Tier Connected 25M CT Overage Transactions: from $0.2 per 1,000 transactions
+
+[Azure Language service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+### Language - Disconnected
+
+- Commitment Tier Standard 25M Unit: from $60,000.0 per year
+
+[Azure Language service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+### Speech
+
+- S1 Minute: from $0.6 per minute
+- Fast Transcription Speech To Text: from $0.36 per hour
+- Commitment Tier Custom Speech to Text Azure 50K Custom Speech To Text CT Overage: $0.6 per hour
+- Commitment Tier Custom Speech to Text Azure 50K Unit: $30,000.0 per month
+- Commitment Tier Custom Speech to Text Azure 10K Custom Speech To Text CT Overage: $0.78 per hour
+- Commitment Tier Custom Speech to Text Azure 10K Unit: $7,800.0 per month
+- Commitment Tier Custom Speech to Text Connected 2K Custom Speech To Text CT Overage: $0.9086 per hour
+- Commitment Tier Custom Speech to Text Connected 2K Unit: $1,824.0 per month
+- Commitment Tier Neural TTS Connected 2000M Neural Text To Speech CT Overage Characters: $7.125 per 1 million characters
+- Commitment Tier Neural TTS Connected 400M Neural Text To Speech CT Overage Characters: $9.2625 per 1 million characters
+- Commitment Tier Neural TTS Connected 80M Neural Text To Speech CT Overage Characters: $11.4 per 1 million characters
+- Commitment Tier Speech to Text Connected 2K Speech To Text CT Overage: $0.76 per hour
+- Commitment Tier Speech to Text Connected 10K Speech To Text CT Overage: $0.62 per hour
+- Commitment Tier Speech to Text Connected 50K Speech To Text CT Overage: $0.48 per hour
+- Commitment Tier Speech to Text Connected 10K Unit: $6,175.0 per month
+- Commit Tier Custom STT Connected 10K Custom Speech To Text CT Overage: $0.7372 per hour
+- Commit Tier Custom STT Connected 10K Unit: $7,410.0 per month
+- Commit Tier Custom STT Connected 50K Custom Speech To Text CT Overage: $0.565 per hour
+- Commit Tier Custom STT Connected 50K Unit: $28,500.0 per month
+
+[Azure Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+### Azure OpenAI
+
+- gpt 4o 0513 Batch Input Data Zone Tokens: $0.00275 per 1,000 tokens
+- gpt 4o 0513 Batch Output Data Zone Tokens: $0.00825 per 1,000 tokens
+- Provisioned Managed Global Unit: $1.0 per hour
+- Provisioned Managed Data Zone Unit: $1.1 per hour
+
+[Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+---
+
+### Phi
+
+- Phi-3.5-MoE-Instruct-FT Deployment Hosting Unit: $0.8 per hour
+- Phi-3.5-MoE-Instruct-FT Tokens: $0.003 per 1,000 tokens
+
+[Phi models documentation (Azure OpenAI)](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#phi-models)
+
+---
+
+### Azure AI Content Safety - Disconnected
+
+- Commitment Tier Txt DC 60M Unit: $207,765.0 per year
+- Commitment Tier Image DC 15M Unit: $103,883.0 per year
+
+[Azure AI Content Safety documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-10-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 October 2024
+
+### Phi
+
+- **Phi-3.5-MoE-Instruct**:  
+  - Input Tokens priced at $0.00016 per 1K tokens  
+  - Output Tokens priced at $0.00064 per 1K tokens  
+  - Fine-tuned (FT) Input Tokens priced at $0.00016 per 1K tokens  
+  - Fine-tuned (FT) Output Tokens priced at $0.00064 per 1K tokens  
+
+Documentation:  
+- [Phi Model on Azure](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts-models?tabs=phi)  
+
+---
+
+### Azure OpenAI
+
+- **GPT-4o**:
+  - 0806 cached input tokens:  
+    - Global: $0.00125 per 1K tokens  
+    - Data Zone: $0.001375 per 1K tokens  
+    - Regional: $0.001375 and $0.001513 per 1K tokens  
+  - 0806 input tokens (non-cached):  
+    - Data Zone: $0.00275 per 1K tokens  
+  - 0806 output tokens:  
+    - Data Zone: $0.011 per 1K tokens  
+    - Regional FT output: $0.011 per 1K tokens  
+  - 0806 FT tokens:  
+    - Training (regional): $0.0275 per 1K tokens  
+    - Input (regional): $0.00275 per 1K tokens  
+    - Hosting (regional): $1.7 per hour  
+  - **Mini 0718**:  
+    - Cached Input:  
+      - Global: $0.000075 per 1K tokens  
+      - Data Zone: $0.000083 per 1K tokens  
+      - Regional: $0.000083 and $0.000091 per 1K tokens  
+    - Input (non-cached): Data Zone $0.000165 per 1K tokens  
+    - Output (Data Zone): $0.00066 per 1K tokens  
+  - **O1 Preview**:  
+    - Cached Input:  
+      - Global: $0.0075 per 1K tokens  
+      - Data Zone: $0.00825 per 1K tokens  
+      - Regional: $0.00825 and $0.009075 per 1K tokens  
+    - Input (non-cached):  
+      - Global: $0.015 per 1K tokens  
+      - Data Zone: $0.0165 per 1K tokens  
+      - Regional: $0.0165 per 1K tokens  
+    - Output:  
+      - Global: $0.06 per 1K tokens  
+      - Data Zone: $0.066 per 1K tokens  
+      - Regional: $0.066 per 1K tokens  
+  - **Realtime Preview (Text and Audio)**:  
+    - Text Input:  
+      - Global: $0.005 per 1K tokens  
+      - Data Zone: $0.0055 per 1K tokens  
+      - Regional: $0.0055 and $0.00605 per 1K tokens  
+    - Text Output:  
+      - Global: $0.02 per 1K tokens  
+      - Data Zone: $0.022 per 1K tokens  
+      - Regional: $0.022 and $0.0242 per 1K tokens  
+    - Audio Input:  
+      - Global: $0.1 per 1K tokens  
+      - Data Zone: $0.11 per 1K tokens  
+      - Regional: $0.11 and $0.121 per 1K tokens  
+    - Audio Output:  
+      - Global: $0.2 per 1K tokens  
+      - Data Zone: $0.22 per 1K tokens  
+      - Regional: $0.22 and $0.242 per 1K tokens  
+
+Documentation:  
+- [Azure OpenAI GPT-4o](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts-models#gpt-4o)  
+- [Azure OpenAI Model Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts-models)  
+- [Azure OpenAI Pricing](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview#pricing)  
+
+---
+
+### Speech
+
+- **Custom Speech to Text**:
+  - Commitment Tier 2K Unit: $1920, Overage $0.96 per hour  
+  - Commitment Tier 10K Unit: $6500, Overage $0.65 per hour  
+  - Commitment Tier 50K Unit: $25000, Overage $0.5 per hour  
+  - Commitment Tier 100K Unit: $48000, Overage $0.48 per hour  
+  - S1 Custom Speech To Text: $1.2 per hour  
+  - Free Custom Speech To Text: $0.0 per hour  
+- **Speech to Text**:
+  - Commitment Tier 2K Unit: $1600, Overage $0.8 per hour  
+  - Commitment Tier 10K Unit: $6500, Overage $0.65 per hour  
+  - Commitment Tier 50K Unit: $23750, Overage $0.5 per hour  
+  - Commitment Tier 100K Unit: $40000, Overage $0.4 per hour  
+  - S1 Speech To Text: $1.0 per hour  
+  - Free Speech To Text: $0.0 per hour  
+- **Neural Text To Speech**:
+  - 80M Unit: $960 (CT Overage: $12 per 1M characters)  
+  - 400M Unit: $3900 (CT Overage: $9.75 per 1M characters)  
+  - 2000M Unit: $15000 (CT Overage: $7.5)  
+  - 4000M Unit: $24000 (CT Overage: $6)  
+- **Custom Voice** and **Voice Storage**:
+  - S1 Custom Voice Font Hosting Unit: $0.0537 per hour  
+  - S1 Voice Storage: $0.2 per 1K  
+  - Text to Speech, Personal Voice Characters: $24 per 1M  
+  - Personal Voice Voice Storage: $600 per 1K  
+  - Free Custom Text To Speech Characters: $0.0 per 1M  
+  - Free Text To Speech Characters: $0.0 per 1M  
+- **Other Features**:
+  - S1 Custom Speech Model Hosting: $0.05375 per hour or $1.290322 per day  
+  - S1 Speech Translation: $2.5 per hour  
+  - Free Conversation Transcription: $0.0 per hour  
+  - Free Speech Translation: $0.0 per hour  
+  - Video Translation Automated Speech: $1 per minute  
+  - Video Translation AddOn PersonalVoice Speech: $0.2 per minute  
+  - Video Translation Edit Text to Video Speech: $0.2 per minute  
+  - S1 Speech To Intent Transcription Transactions: $4 per 1K  
+  - S1 Speaker Identification Transactions: $10 per 1K  
+  - S1 Speaker Verification Transactions: $5 per 1K  
+  - Free Speaker Recognition Transactions: $0 per 1K  
+  - Voice Conversion - Standard Speech: $0.36 per minute  
+
+Documentation:  
+- [Azure Speech Services Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)  
+- [Speech-to-Text](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-to-text)  
+- [Text-to-Speech](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/text-to-speech)  
+
+---
+
+### Azure AI Content Safety
+
+- **Content Safety**
+  - Standard Images: $0.938 per 1K images  
+  - Standard Text Records: $0.469 per 1K records  
+
+Documentation:  
+- [Azure AI Content Safety](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/overview)  
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-09-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 September 2024
+
+### Speech
+
+- Speech to Text "Commitment Tier Speech to Text Azure 100K":
+  - From $38,000.00 per 1/Month and $0.38 per Hour for Connected; from $40,000.00 per 1/Month and $0.4 per Hour for Azure, up to $50,000.00 per 1/Month and $0.5 per Hour for Azure.
+- Custom Speech to Text "Commitment Tier Custom Speech to Text Azure 100K":
+  - From $45,600.00 per 1/Month and $0.45 per Hour for Connected; from $48,000.00 per 1/Month and $0.48 per Hour for Azure, up to $60,000.00 per 1/Month and $0.6 per Hour for Azure; $0.565 per Hour for Connected.
+- Neural Text to Speech "Commitment Tier Neural Text to Speech Azure 4000M":
+  - From $24,000.00 to $30,000.00 per 1/Month for Azure; Overage rates from $6.00 up to $7.5 per 1M Characters.
+- "Commit Tier Neural TTS Connected 4000M":
+  - From $22,800.00 up to $28,500.00 per 1/Month; Overage from $5.7 up to $7.125 per 1M Characters.
+
+[Azure Speech documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+### Azure AI Content Safety
+
+- Text Commitment Tiers:
+  - "Commitment Tier Txt Azure 1M" at $338.00 per 1/Month, with Overage $0.338 per 1K Transactions.
+  - "Commitment Tier Txt Conn 1M" at $321.00 per 1/Month, with Overage $0.321 per 1K Transactions.
+- Image Commitment Tiers:
+  - "Commitment Tier Image Azure 250K" at $169.00 per 1/Month, Overage $0.675 per 1K Transactions.
+  - "Commitment Tier Image Conn 250K" at $160.00 per 1/Month, Overage $0.641 per 1K Transactions.
+
+[Azure AI Content Safety documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/)
+
+---
+
+### Phi
+
+- Phi-3-Mini Series:
+  - "Phi-3-Mini-4K-Instruct": $0.00013 per 1K Input and $0.00052 per 1K Output Tokens. Finetuned: $0.003 per 1K Tokens (Input/Output).
+  - "Phi-3-Mini-128K-Instruct": $0.00013 per 1K Input and $0.00052 per 1K Output Tokens. Finetuned: $0.003 per 1K Tokens, $0.00052 per 1K Output and $0.00013 per 1K Input Tokens.
+- Phi-3-Small Series:
+  - "Phi-3-Small-8K-Instruct": $0.00015 per 1K Input and $0.0006 per 1K Output Tokens. Finetuned: $0.003 per 1K (Input), $0.0006 per 1K Output.
+  - "Phi-3-Small-128K-Instruct": $0.00015 per 1K Input, $0.0006 per 1K Output Tokens. Finetuned: $0.003 per 1K (Input), $0.0006 per 1K Output.
+- Phi-3-Medium Series:
+  - "Phi-3-Medium-4K-Instruct": $0.00017 per 1K Input and $0.00068 per 1K Output Tokens. Finetuned: $0.003 per 1K (Input), $0.00068 per 1K Output.
+  - "Phi-3-Medium-128K-Instruct": $0.00017 per 1K Input, $0.00068 per 1K Output. Finetuned: $0.003 per 1K (Input), $0.00068 per 1K Output.
+- Phi-3.5-Mini Series:
+  - "Phi-3.5-Mini-128K-Instruct": $0.00013 per 1K Input and $0.00052 per 1K Output Tokens. Finetuned: $0.003 per 1K (Input), $0.00052 per 1K Output. Deployment Hosting: $0.8 per Hour.
+- Phi-3.5-V Series:
+  - "Phi-3.5-V-128K-Instruct": $0.00013 per 1K Input and $0.00052 per 1K Output Tokens. Finetuned: $0.00013 per 1K Input, $0.00052 per 1K Output.
+- Phi-3-Small-8K-Instruct-Finetuned Tokens: $0.0006 per 1K Output.
+- Phi-3-Medium-4K-Instruct-Finetuned Tokens: $0.00068 per 1K Output.
+- Phi-3-Small-128K-Instruct-Finetuned Tokens: $0.003 per 1K Input, $0.0006 per 1K Output.
+
+[Phi model family documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#microsoft-models-sold-directly-by-azure)
+
+---
+
+### Azure OpenAI
+
+- GPT-4o-0806:
+  - "gpt-4o-0806-Inp-glbl": $0.0025 per 1K Tokens, "gpt-4o-0806-Outp-glbl": $0.01 per 1K Tokens.
+  - "gpt-4o-0806-FT-inp-regnl": $0.00275 per 1K Tokens, "gpt-4o-0806-FT-outp-regnl": $0.011 per 1K Tokens.
+  - "gpt-4o-0806-FT-Trng-regnl": $0.0275 per 1K Tokens. "gpt-4o-0806-FT-Hstng-regnl": $1.7 per Hour.
+- GPT-4o-mini-0718:
+  - "gpt-4o-mini-0718-Inp-glbl": $0.00015 per 1K Tokens, "gpt-4o-mini-0718-Outp-glbl": $0.0006 per 1K Tokens.
+  - "gpt-4o-mini-0718-FT-inp-regnl": $0.000165 per 1K Tokens, "gpt-4o-mini-0718-FT-outp-regnl": $0.00066 per 1K Tokens.
+  - "gpt-4o-mini-0718-FT-Trng-regnl": $0.0033 per 1K Tokens, "gpt-4o-mini-0718-FT-Hstng-regnl": $1.7 per Hour.
+- GPT 4o 0513:
+  - Input: $0.005 per 1K Tokens, Output: $0.015 per 1K Tokens.
+
+[Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-08-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 August 2024
+
+### Azure OpenAI
+
+- GPT-4o models:
+  - gpt-4o-0806: Input tokens from $0.0025 per 1K (global), $0.00275 per 1K (regional). Output tokens from $0.01 per 1K (global), $0.011 per 1K (regional). Batch input from $0.00125 per 1K (global); batch output from $0.005 per 1K (global).
+  - gpt-4o-0513: Input tokens from $0.00625 per 1K (regional). Output tokens from $0.01875 per 1K (regional). Batch input from $0.0025 per 1K (global); batch output from $0.0075 per 1K (global).
+  - gpt-4o-mini-0718: Batch input from $0.000075 per 1K (global); batch output from $0.0003 per 1K (global).
+
+- GPT-4 models:
+  - gpt-4-8K: Batch input from $0.015 per 1K (global); batch output from $0.03 per 1K (global).
+  - gpt-4-Turbo-Batch-128K: Input tokens from $0.005 per 1K (global); output tokens from $0.015 per 1K (global).
+
+- GPT-3.5 Turbo models:
+  - gpt-35-turbo16K: Batch input from $0.0015 per 1K (global); batch output from $0.002 per 1K (global).
+  - gpt-35-trb16K: Batch input from $0.0005 per 1K (global); batch output from $0.001 per 1K (global).
+  - gpt-35-trb16K-125: Batch input from $0.00025 per 1K (global); batch output from $0.00075 per 1K (global).
+
+[Azure OpenAI documentation](https://learn.microsoft.com/azure/ai-services/openai/)
+
+---
+
+### Computer Vision - disconnected
+
+- Commitment Tier Disconnected 500K Unit: $5063.00 per year
+- Commitment Tier Disconnected 2000K Unit: $16200.00 per year
+- Commitment Tier Disconnected 8000K Unit: $56700.00 per year
+- Commitment Tier Disconnected 16000K Unit: $97200.00 per year
+
+[Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-07-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 July 2024
+
+### Phi
+
+- Phi-3-Medium-128K-Instruct-Finetuned Deployment Hosting Unit: $0.8 per hour
+- Phi-3-Small-128K-Instruct-Finetuned Deployment Hosting Unit: $0.8 per hour
+- Phi-3-Mini-128K-Instruct-Finetuned Deployment Hosting Unit: $0.8 per hour
+- Phi-3-Small-8K-Instruct-Finetuned Deployment Hosting Unit: $0.8 per hour
+- Phi-3-Mini-4K-Instruct-Finetuned Deployment Hosting Unit: $0.8 per hour
+- Phi-3-Medium-4K-Instruct-Finetuned Deployment Hosting Unit: $0.8 per hour
+
+[Phi model family documentation](https://learn.microsoft.com/azure/ai-foundry/foundry-models/concepts/models#microsoft-models-sold-directly-by-azure)
+
+---
+
+### Azure OpenAI
+
+- gpt-4o-0513 Input global Tokens: $0.005 per 1K tokens
+- gpt-4o-0513 Output global Tokens: $0.015 per 1K tokens
+- gpt-4o-0513 Output regional Tokens: from $0.015 per 1K tokens
+- gpt-4o-0513 Input regional Tokens: from $0.005 per 1K tokens
+- gpt-4o-mini-0718 Input global Tokens: $0.00015 per 1K tokens
+- gpt-4o-mini-0718 Output global Tokens: $0.0006 per 1K tokens
+- gpt-4o-mini-0718 Output regional Tokens: $0.00066 per 1K tokens
+- gpt-4o-mini-0718 Input regional Tokens: $0.000165 per 1K tokens
+- gpt-4-8K-FT Input regional Tokens: $0.03 per 1K tokens
+- gpt-4-8K-FT Output regional Tokens: $0.06 per 1K tokens
+- gpt-4-8K-FT Hosting global Unit: $5.0 per hour
+- gpt-4-8K-FT Hosting regional Unit: $5.0 per hour
+- gpt-4-8K-FT Training regional Unit: $102.0 per hour
+- davinci-002-FT Hosting regional Unit: $1.7 per hour
+- davinci-002-FT Hosting global Unit: $1.7 per hour
+- gpt-35-turbo16K-FT Hosting regional Unit: $1.7 per hour
+- gpt-35-turbo16K-FT Hosting global Unit: $1.7 per hour
+- gpt-35-turbo4K-FT Hosting regional Unit: $1.7 per hour
+- gpt-35-turbo4K-FT Hosting global Unit: $1.7 per hour
+
+[Azure OpenAI models documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+---
+
+### Face
+
+- Standard Transactions: from $0.4 per 1K transactions
+
+[Azure Face API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-06-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 June 2024
+
+### Azure OpenAI
+
+- Code Interpreter session pricing is $0.03 per session.
+- Embedding model ada pricing is $0.0001 per 1,000 tokens.
+- GPT-3.5 Turbo 4K fine-tuning training (regional) is $0.008 per 1,000 tokens.
+- DALL-E 3 image generation: HD HighRes (regional) is $12 per 100 images, Std HighRes is $8 per 100 images, Std LowRes and HD LowRes are both $8-$12 per 100 images depending on tier.
+- GPT-4o 0513 input (regional) is $0.005 per 1,000 tokens; output is $0.015 per 1,000 tokens.
+- Text to speech is $15 per 1 million characters, HD version is $30 per 1 million characters.
+- Assistants: file search (regional/global) is $0.10 per GB per day.
+- Whisper speech-to-text batch (regional/global) is $0.36 per hour.
+- GPT-4 Turbo (128K): input is $0.01 per 1,000 tokens, output is $0.03 per 1,000 tokens.
+- GPT-4 (32K): input is $0.06 per 1,000 tokens, output is $0.12 per 1,000 tokens.
+- GPT-4 (8K): input is $0.03 per 1,000 tokens, output is $0.06 per 1,000 tokens. Fine-tuning 8K training is $0.08 per 1,000 tokens.
+- GPT-3.5 Turbo 16K: input is $0.003 per 1,000 tokens, output is $0.004 per 1,000 tokens. Fine-tuning (input) is $0.0005 per 1,000 tokens, (output) is $0.0015 per 1,000 tokens, and training is $0.008 per 1,000 tokens.
+- Embedding models: text-embedding-3-small is $0.00002 per 1,000 tokens, text-embedding-3-large is $0.00013 per 1,000 tokens.
+- Davinci-002 fine-tuning training (regional) is $0.006 per 1,000 tokens; babbage-002 fine-tuning training (regional) is $0.0004 per 1,000 tokens.
+- Provisioned throughput overage is $2 per hour.
+
+[Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+---
+
+### Azure AI Content Safety
+
+- Standard image moderation is $0.75 per 1,000 images.
+- Standard text moderation is $0.375 per 1,000 records.
+
+[Azure AI Content Safety documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/)
+
+---
+
+### Speech
+
+- S1 minute pricing is from $1.00 to $2.00 per minute.
+- S1 unit (per hour) is $0.60.
+- Voice conversion standard speech is $0.36 per minute.
+- Video translation, automated speech is $1 per minute, edit text to video speech is $0.20 per minute, and add-on personal voice speech is $0.20 per minute.
+
+[Azure Speech Services documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+### Phi
+
+- Phi-3 Mini-128K Instruct Finetuned deployment hosting is $0.80 per hour.
+- Phi-3 Mini-4K Instruct Finetuned deployment hosting is $0.80 per hour.
+
+[Phi-3 model family documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#phi-3-model-family)
+
+---
+
+### Text Analytics Container
+
+- Standard text records are $2.00 per 1,000 records.
+- Free text records are $0.00 per 1,000 records.
+
+[Text Analytics Containers documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/text-analytics/how-to/use-containers)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-05-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 May 2024
+
+### Azure OpenAI
+
+- GPT-3.5 Turbo (various configurations): Input tokens from $0.0005 to $0.003 per 1K, Output tokens from $0.0015 to $0.004 per 1K.
+- GPT-4 Turbo: Input tokens at $0.01 and $0.0125 per 1K, Output tokens from $0.03 to $0.0375 per 1K.
+- GPT-4: Input tokens at $0.03 (8K) and $0.06 (32K) per 1K, Output tokens at $0.06 (8K) and $0.12 (32K) per 1K.
+- GPT-4 Turbo Vision: Input tokens at $0.01 per 1K, Output tokens at $0.03 per 1K.
+- GPT-4o (0513): Input tokens at $0.005 per 1K, Output tokens at $0.015 per 1K.
+- Fine-tuning and training: GPT-3.5 Turbo 4K ($45.0/hr), GPT-3.5 Turbo 16K ($68.0/hr), Davinci-002 ($40.0/hr), Babbage-002 ($34.0/hr).
+- Fine-tuned model input/output tokens: Various options, e.g., GPT-3.5 Turbo 16K FT Input at $0.0005 per 1K.
+- Embeddings: Text-embedding-3-small ($0.00002/1K), Text-embedding-3-large ($0.00013/1K), Embedding-ada ($0.0001 to $0.000125/1K).
+- Code Interpreter: $0.03 per session.
+- Provisioned Throughput: From $312.0 and $390.0 per month, overage from $2.0 to $2.5 per hour.
+- DALL-E Image Generation: DALL-E-2 at $2.0/100 images, DALL-E-3 Std LowRes $4.0/100, Std HighRes $8.0/100, HD LowRes $8.0/100, HD HighRes $12.0/100.
+- Speech-to-Text Batch (Whisper): $0.36 per hour.
+- Speech-Text to Speech: $15.0/1M characters (standard), $30.0/1M characters (HD).
+- Babbage-002 tokens: Base $0.0004/1K, Output $0.0004/1K.
+- Davinci-002 tokens: Base $0.002/1K, Output $0.002/1K.
+- GPT-35 Turbo Instruct: Input $0.0015/1K, Output $0.002/1K.
+
+#### Documentation links
+- [Azure OpenAI models and pricing](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models)
+- [Azure OpenAI fine-tuning](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/fine-tuning)
+- [DALL-E image models](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models#dall-e)
+- [Provisioned Throughput in Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/provisioned-throughput)
+- [Azure OpenAI Embeddings](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/embeddings)
+
+---
+
+### Speech
+
+- S1 Speech to Text Batch: $0.18 and $0.225 per hour.
+- S1 Custom Speech to Text Batch: $0.225 and $0.28125 per hour.
+- Fast Transcription Speech to Text: $0.45 per hour.
+
+#### Documentation links
+- [Azure AI Speech pricing](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/pricing)
+- [Speech to Text batch transcription](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/batch-transcription)
+- [Custom Speech](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/custom-speech-overview)
+
+---
+
+### Azure AI Health Insights
+
+- Radiology Insights Language Detection: $1.0 per 1K text records.
+
+#### Documentation links
+- [Azure AI Health Insights overview](https://learn.microsoft.com/en-us/azure/ai-services/health-insights/overview)
+
+---
+
+### Azure AI Foundry Provisioned Throughput Reservation
+
+- Provisioned Managed Regional Unit: $260.0 per hour, $2652.0 per hour.
+
+#### Documentation links
+- [Azure AI Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-services/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-04-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 April 2024
+
+### Azure OpenAI
+
+- Provisioned Throughput - Available Unit: $2.0 per hour
+- Provisioned Managed Regional Unit: $2.0 per hour
+
+[Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+### Azure AI Foundry Provisioned Throughput Reservation
+
+- Provisioned Managed Regional Unit: from $260.0 per hour
+- Provisioned Managed Regional Unit: from $2652.0 per hour
+
+[Azure AI Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-services/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2024-02-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 February 2024
+
+### Speech
+
+- Neural Text to Speech commitment and overage pricing is available in various tiers, including 80M, 400M, and 2000M units per month. Monthly commitment tiers start from $912.0 (80M), $3705.0 (400M), and $14250.0 (2000M). Overage charges start from $7.125 per 1M characters.
+- "Azure" and "Connected" variants are offered for Neural Text to Speech, with input and overage pricing differing slightly (e.g., "Commitment Tier Neural Text to Speech Azure 80M Unit" from $960.0/month, "Commit Tier Neural TTS Connected 80M Unit" from $912.0/month).
+- Disconnected (on-premises) commitment tiers also exist, such as "Commitment Tier NTTS Disconnected 400M Unit" at $47424.0/year and "Commitment Tier NTTS Disconnected 2000M Unit" at $182400.0/year.
+- Additional SKUs include "S1 Neural Text To Speech Characters" from $15.0 per 1M, "Text to Speech - Personal Voice Characters" at $24.0 per 1M, and "Text to Speech - Personal Voice Voice Storage" at $600.0 per 1K.
+- Commitment tiers are also available for Speech-to-Text (STT) and Custom Speech-to-Text (CSTT) on disconnected environments, such as "Commitment Tier STT Disconnected 50K Unit" at $285000.0/year, and "Commitment Tier CSTT Disconnected 50K Unit" at $342000.0/year.
+- "OAI-based Neural Text to Speech Characters" is priced at $15.0 per 1M.
+
+[Azure Speech Documentation](https://learn.microsoft.com/azure/ai-services/speech-service/)
+[Neural Text to Speech Overview](https://learn.microsoft.com/azure/ai-services/speech-service/text-to-speech)
+
+
+### Text Analytics Container
+
+- Standard Text Records are priced at $2.2, $1.1, $0.55, or $0.275 per 1K, depending on volume, with a free tier available.
+
+[Text Analytics Documentation](https://learn.microsoft.com/azure/ai-services/text-analytics/)
+[Text Analytics Containers](https://learn.microsoft.com/en-us/azure/ai-services/language-service/text-analytics/how-to/use-containers)
+
+
+### Face
+
+- "Liveness Transactions" are priced at $15.0 per 1K.
+- "Liveness and Verification Transactions" are priced at $15.5 per 1K.
+
+[Face API Documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+
+### Computer Vision - disconnected
+
+- Commitment Tier Disconnected 2,000K Unit is priced at $12,960.0 per year.
+- Commitment Tier Disconnected 8,000K Unit is priced at $45,360.0 per year.
+
+[Computer Vision Documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+
+### Translator Text - disconnected
+
+- Commitment Tier Disconnected 4,000M Unit is priced at $250,800.0 per year.
+- Commitment Tier Disconnected 10,000M Unit is priced at $513,000.0 per year.
+
+[Translator Documentation](https://learn.microsoft.com/azure/ai-services/translator/)
+
+
+### Language Understanding - disconnected
+
+- Commitment Tier Disconnected 5M Unit is priced at $48,960.0 per year.
+- Commitment Tier Disconnected 25M Unit is priced at $208,800.0 per year.
+
+[Language Understanding (LUIS) Documentation](https://learn.microsoft.com/azure/ai-services/language-service/)
+
+
+### Language - disconnected
+
+- Commitment Tier Standard 3M Unit is priced at $13,200.0 per year.
+- Commitment Tier Standard 10M Unit is priced at $33,600.0 per year.
+
+[Language Service Documentation](https://learn.microsoft.com/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-12-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 December 2023
+
+### Azure Speech - Disconnected
+
+- Commitment Tier STT AddOn is available as a 10K Unit from $22,230.00 per year, and as a 50K Unit from $85,500.00 per year.
+- Commitment Tier CSTT Disconnected is available as a 10K Unit from $88,920.00 per year, and as a 50K Unit from $342,000.00 per year.
+
+[Documentation for Azure Speech service](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### Computer Vision
+
+- Liveness Transactions are billed at $15.00 per 1K transactions.
+
+[Documentation for Azure Computer Vision](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+### Azure OpenAI
+
+- Free Meter (Standard Unit) is priced at $0.00 per hour.
+
+[Documentation for Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-11-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 November 2023
+
+### Computer Vision
+
+- Video Retrieval - Summary Vision: $6.0 per 1 hour
+
+[Computer Vision documentation on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+### Language - Disconnected
+
+- Commitment Tier Summarization 3M Unit: $39,600.0 per year
+- Commitment Tier Summarization 10M Unit: $84,000.0 per year
+
+[Language services documentation on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-10-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 October 2023
+
+### Speech
+
+- Commitment Tier STT AddOn Azure: Unit pricing ranges from $480.0 per month (2K Unit) to $15,000.0 per month (100K Unit); Speech To Text CT Overage starts from $0.12 per hour.
+- Commitment Tier STT AddOn Connected: Unit pricing ranges from $456.0 per month (2K Unit) to $14,250.0 per month (100K Unit); Speech To Text CT Overage starts from $0.114 per hour.
+- Commitment Tier Custom Speech to Text Azure: Unit pricing starts at $1,920.0 per month (2K Unit) up to $48,000.0 per month (100K Unit); Custom Speech To Text CT Overage starts from $0.48 per hour.
+- Commitment Tier Custom Speech to Text Connected: 2K Unit from $1,824.0 per month; CT Overage from $0.9086 per hour.
+- Commit Tier Custom STT Connected: 10K Unit from $7,410.0 per month, 50K Unit from $28,500.0 per month; Custom Speech To Text CT Overage starts from $0.565 per hour.
+- S1 Custom Speech Training: $10.0 or $12.5 per hour
+- S1 Custom Speech To Text: $1.2 or $1.5 per hour
+
+[Speech service documentation (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+### Language
+
+- Commitment Tier Summarization Azure: Unit pricing from $3,300.0 per month (3M Unit) up to $8,750.0 per month (10M Unit); CT Overage Transactions from $0.7 per 1K.
+- Commitment Tier Summarization Connected: Unit pricing from $2,640.0 per month (3M Unit) up to $7,000.0 per month (10M Unit); CT Overage Transactions from $0.56 per 1K.
+
+[Language service documentation (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+### Azure AI Content Safety
+
+- Free Images: $0.0 per 1K
+- Free Text Records: $0.0 per 1K
+
+[Azure AI Content Safety documentation (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-09-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 September 2023
+
+### Language - disconnected
+
+- Commitment Tier Summarization 10M Unit: $67200 per year
+- Commitment Tier Summarization 3M Unit: $31680 per year
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-06-27" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 27 June 2023
+
+### Azure AI (Microsoft)
+
+- Language - disconnected: Annual commitment tiers are available, with Standard 3 million unit priced at $13,200 and Standard 10 million unit from $33,600.
+- Language Understanding - disconnected: Annual commitments, with pricing from $48,960 for 5 million units and $208,800 for 25 million units.
+- Translator Text - disconnected: Commitment tier for 4,000 million units is $250,800 per year and for 10,000 million units is $513,000 per year.
+- Speech - disconnected: Options include STT Disconnected 10,000 unit at $74,100 per year, STT Disconnected 50,000 unit at $285,000 per year, NTTS Disconnected 400 million unit at $47,424 per year, and NTTS Disconnected 2,000 million unit at $182,400 per year.
+- Computer Vision - disconnected: 2,000,000 unit commitment is $12,960 per year, and 8,000,000 unit commitment is $45,360 per year.
+
+#### Relevant documentation
+- [Azure AI Language documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+- [Azure AI Language Understanding documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/overview)
+- [Azure AI Translator documentation](https://learn.microsoft.com/en-us/azure/ai-services/translator/)
+- [Azure AI Speech documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+- [Azure AI Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-06-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 June 2023
+
+### Speech
+
+- S1 Custom Voice Font Hosting Unit: $0.0537 per hour
+- S1 Custom Speech Model Hosting Unit: $0.05375 per hour, also available at $1.290322 per day
+- S1 Custom Neural Training: $52.0 per hour
+- S1 Custom Neural Long Audio Characters: $100.0 per 1M characters
+- S1 Speech to Text Enhanced Feature Audio: $0.3 per hour
+- S1 Custom Neural Voice Model Hosting Unit: $4.032 per hour
+- S1 Custom Text To Speech Characters: $6.0 per 1M characters
+- S1 Text To Speech Characters: $4.0 per 1M characters
+- S1 Custom Neural Realtime Characters: $24.0 per 1M characters
+- S1 Neural Long Audio Characters: $100.0 per 1M characters
+- S1 Conversation Transcription Multichannel Audio: $2.1 per hour
+- S1 Conversation Transcription Video: $3.1 per hour
+- S1 Speech Translation: $2.5 per hour
+- S1 Speech To Intent - Transcription Transactions: $4.0 per 1K transactions
+- S1 Speech To Text: $1.0 per hour
+- S1 Speaker Verification Transactions: $5.0 per 1K transactions
+- S1 Speaker Identification Transactions: $10.0 per 1K transactions
+- S1 Voice Storage: $0.2 per 1K units
+- Commitment Tier Speech to Text Azure 2K Unit: $1600.0 per month; Overage: $0.8 per hour
+- Commitment Tier Speech to Text Azure 10K Unit: $6500.0 per month; Overage: $0.65 per hour
+- Commitment Tier Speech to Text Azure 50K Unit: $25000.0 per month; Overage: $0.5 per hour
+- Commitment Tier Speech to Text Connected 2K Unit: $1520.0 per month
+- Commitment Tier Speech to Text Connected 50K Unit: $23750.0 per month
+- Free Custom Text To Speech Characters: $0.0 per 1M characters
+- Free Conversation Transcription: $0.0 per hour
+- Free Speech To Text: $0.0 per hour
+- Free Custom Speech To Text: $0.0 per hour
+- Free Custom Speech Model Hosting Unit: $0.0 per day
+- Free Custom Voice Font Hosting Unit: $0.0 per day
+- Free Speech Translation: $0.0 per hour
+- Free Text To Speech Characters: $0.0 per 1M characters
+- Free Speaker Recognition Transactions: $0.0 per 1K transactions
+
+[Learn more about Azure AI Speech models and pricing](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/overview/)
+
+---
+
+### Language
+
+- Standard Custom Summarization Text Records: from $4.0 per 1K records (also available at $5.0 per 1K records)
+
+[Learn more about Azure AI Language models](https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview/)
+
+---
+
+### Computer Vision
+
+- Shelf Product Recognition - Custom Objects: $0.15 per 1K objects
+- Shelf Image Composition Transactions: $2.5 per 1K transactions
+- Shelf Planogram Compliance Transactions: $5.0 per 1K transactions
+
+[Learn more about Azure Computer Vision models](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-05-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 May 2023
+
+### Language
+
+- Standard Summarization Text Records: from $2.0 per 1,000 records
+
+[Language model documentation on Microsoft Learn](https://learn.microsoft.com/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-04-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 April 2023
+
+### Azure AI Language
+
+- Standard Text Records are priced from $0.25 per 1K records.
+- S1 Overage Transactions cost $2.5 per 1K transactions.
+- S2 Overage Transactions cost $2.0 per 1K transactions.
+- S3 Overage Transactions cost $1.0 per 1K transactions.
+- S4 Overage Transactions cost $0.5 per 1K transactions.
+- S0 Overage Transactions cost $3.0 per 1K transactions.
+- S0 Unit is $2.41 per day.
+- S1 Unit is $8.06 per day.
+- S2 Unit is $32.25 per day.
+- S3 Unit is $80.64 per day.
+- S4 Unit is $161.29 per day.
+- Free Text Records are $0.0 per 1K.
+- Standard Custom Training Unit is $3.0 per hour.
+- Standard Custom Hosting Unit is $0.5 per month.
+- Standard Custom Text Records are $5.0 per 1K.
+- Standard CLU Advanced Training Unit is $3.0 per hour.
+- Standard CLU Text Records are $2.0 per 1K.
+- Standard QA Text Records are from $1.00005 per 1K.
+- Commitment Tier Azure 1M Unit is $700.0 per month, with CT Overage Transactions at $0.7 per 1K.
+- Commitment Tier Azure 3M Unit is $1375.0 per month, with CT Overage Transactions at $0.55 per 1K.
+- Commitment Tier Azure 10M Unit is $3500.0 per month.
+- Commitment Tier Connected 1M Unit is $560.0 per month.
+- Commitment Tier Connected 10M Unit is $2800.0 per month.
+
+[Documentation for Azure AI Language](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+### Face
+
+- Free Transactions are $0.0 per 1K.
+- Face Storage is $0.01 per 1K records.
+- Overage Transactions are from $0.65 per 1K.
+- Standard Transactions are from $0.4 per 1K.
+
+[Documentation for Face API](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+---
+
+### Content Moderator
+
+- Standard Transactions are from $0.4 per 1K.
+- Free Transactions are $0.0 per 1K.
+
+[Documentation for Content Moderator](https://learn.microsoft.com/en-us/azure/ai-services/content-moderator/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-03-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 March 2023
+
+### Anomaly Detector
+
+- Standard Multivariate training hour: $0.24 per hour
+- Standard Multivariate data points: $0.5 per 1,000 data points
+- Standard Univariate Transactions: $0.314 per 1,000 transactions
+- Free Univariate Transactions, Free Multivariate data points, and Free Multivariate training hour are available at $0.0
+
+Prices vary depending on region.
+
+#### Documentation links
+
+- [Anomaly Detector documentation on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-02-21" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 21 February 2023
+
+### Computer Vision
+- Multiple commitment tiers and overage transaction options for Azure and Connected units, starting at $338.0/Month for Connected 500K Unit, $375.0/Month for Azure 500K Unit, $1080.0/Month for Connected 2000K Unit, $1200.0/Month for Azure 2000K Unit, and $4200.0/Month for Azure 8000K Unit. Overage transaction rates start from $0.53/1K and up to $0.75/1K depending on the tier. 
+- Daily capacity units available: P1 Unit at $38.7/Day, P2 Unit at $96.77/Day, P3 Unit at $193.54/Day.
+- Image Analysis available as Group 1 or Group 2 Transactions, with rates beginning at $0.4/1K for Group 1-1 or Group 1, and $0.6/1K for Group 2, with additional higher price points of $0.65, $1.0, and $1.5 depending on the transaction group and scenario.
+- Spatial Analysis Video Stream Edge pricing starts from $0.0108/Hour. Free tier available at $0.0/Hour for Spatial Analysis Free Video Stream Edge.
+- Free transactions available at $0.0/1K.
+
+#### [Computer Vision Documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+### Language - disconnected
+- Commitment Tier Standard 3M Unit at $13200.0/Year.
+- Commitment Tier Standard 10M Unit at $33600.0/Year.
+
+#### [Language Service Documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+### Speech - disconnected
+- Commitment Tier NTTS Disconnected 400M Unit at $47424.0/Year and 2000M Unit at $182400.0/Year.
+- Commitment Tier STT Disconnected 10K Unit at $74100.0/Year and 50K Unit at $285000.0/Year.
+
+#### [Speech Service Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### Text Analytics Container
+- Free Text Records at $0.0/1K.
+
+#### [Text Analytics Container Documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/text-analytics/how-to/use-containers)
+
+### Language Understanding - disconnected
+- Commitment Tier Disconnected 5M Unit at $48960.0/Year.
+- Commitment Tier Disconnected 25M Unit at $208800.0/Year.
+
+#### [Language Understanding Documentation](https://learn.microsoft.com/en-us/azure/ai-services/luis/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-02-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 February 2023
+
+### Anomaly Detector
+
+- Standard Univariate Transactions are priced from $0.314 per 1K transactions.
+- Free Univariate Transactions are available at $0.0 per 1K transactions.
+
+**Documentation:**
+- [Anomaly Detector documentation on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/)
+
+### Language Understanding
+
+- Commitment Tier Azure 1M Unit is priced at $1200.0 per month.
+- Commitment Tier Connected 5M Unit is priced at $4080.0 per month.
+- Commitment Tier Azure 1M CT Overage Transactions are priced at $1.2 per 1K transactions.
+
+**Documentation:**
+- [Language Understanding (LUIS) documentation on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/luis/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2023-01-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 January 2023
+
+### Microsoft Azure Anomaly Detector
+
+- Standard Multivariate data points metered by 1,000 units, priced at $0.5 per 1K.
+- Standard Multivariate training hour metered per hour, priced at $0.24 per hour.
+- Free Multivariate training hour and Free Multivariate data points available at no charge.
+
+[Documentation: Azure Anomaly Detector](https://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/overview)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2022-12-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 December 2022
+
+### Computer Vision
+
+- Connected and Azure commitment tiers for 500K, 2000K, and 8000K annualized unit transactions, with monthly pricing starting from $338.00 for 500K Connected, $1,200.00 for 2,000K Azure, and $3,780.00 for 8,000K Connected; overage (extra transactions) priced from $0.47 per 1K for 8,000K Connected.
+- Disconnected commitment available at annual rates such as $12,960.00 for Disconnected 2,000K and $45,360.00 for Disconnected 8,000K.
+- Overage rates vary by volume and connection type; e.g., $0.53 per 1K for Azure 8,000K CT Overage Transactions.
+- Multiple price points exist for the same unit depending on commitment and connectivity type.
+
+**Documentation links:**
+- [Azure Computer Vision documentation](https://learn.microsoft.com/azure/cognitive-services/computer-vision/)
+
+---
+
+### Language
+
+- Connected commitment tiers for 1M, 3M, and 10M units, from $560.00 per month for 1M Connected and $3,500.00 per month for 10M Connected; Azure commitment starts at $700.00 per month for 1M and up to $4,375.00 for 10M.
+- Overage (extra transaction) rates start at $0.28 per 1K Connected 10M, $0.35 per 1K Azure 10M, and upwards based on volume and tier.
+- Disconnected annual standard tiers also available (e.g., 3M Disconnected at $13,200.00 per year, 10M at $33,600.00 per year).
+
+**Documentation links:**
+- [Azure Language service documentation](https://learn.microsoft.com/azure/ai-services/language-service/)
+
+---
+
+### Language Understanding
+
+- Azure and Connected monthly commitment tiers for 1M, 5M, and 25M, starting at $960.00 per month for 1M Connected and $5,100.00 for 5M Connected.
+- Azure overage transaction rates from $0.87 per 1K for 25M Azure to $1.2 per 1K for 1M Azure; Connected overage from $0.7 per 1K for 25M Connected.
+- Disconnected commitment (annual): 5M at $48,960.00 and $61,200.00; 25M at $208,800.00 and $261,000.00 per year.
+
+**Documentation links:**
+- [Language Understanding (LUIS) documentation](https://learn.microsoft.com/azure/cognitive-services/luis/)
+
+---
+
+### Speech
+
+- Commitment tiers for Speech to Text (STT) for Azure and Connected, ranging from $1,520.00 (2K Connected) up to $31,250.00 (50K Azure) per month.
+- Overage rates for additional speech-to-text hours start at $0.48 per hour (50K Connected) and $0.5 per hour (50K Azure), varying by usage level.
+- Disconnected annual commitments include STT 10K at $74,100.00 and $92,625.00, STT 50K at $285,000.00 and $356,250.00; NTTS (neural TTS) 400M at $47,424.00 and $59,280.00; NTTS 2000M at $182,400.00 and $228,000.00.
+
+**Documentation links:**
+- [Azure Speech service documentation](https://learn.microsoft.com/azure/ai-services/speech-service/)
+
+---
+
+### Translator Text
+
+- Connected and Azure monthly tiers for 250M, 1,000M, and 4,000M characters. Pricing starts at $2,440.00 for 250M Connected, $5,700.00 for 1,000M Connected, and $20,900.00 for 4,000M Connected; Azure 4,000M at $27,500.00.
+- Overage rates for extra characters from $5.23 per 1M (4,000M Connected) and $6.875 per 1M (4,000M Azure).
+- Disconnected annual tiers for 4,000M at $250,800.00 and $313,500.00, 10,000M at $513,000.00 and $641,250.00.
+
+**Documentation links:**
+- [Translator service documentation](https://learn.microsoft.com/azure/ai-services/translator/)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2022-10-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 October 2022
+
+### Microsoft Speech
+
+- S1 Speech to Text Enhanced Feature Audio: from $0.3 per 1 Hour
+
+Prices vary depending on region.
+
+[Learn more: Microsoft Speech documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2022-08-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 August 2022
+
+### Computer Vision
+
+- Spatial Analysis Video Stream Edge: from $0.0108 per hour.
+- Spatial Analysis Free Video Stream Edge: $0.0 per hour.
+- P1 Unit: $38.7 per day.
+- P2 Unit: $96.77 per day.
+- P3 Unit: $193.54 per day.
+
+[Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+### Text Analytics
+
+- Text Analytics Container Free Text Records: $0.0 per 1K records.
+
+[Text Analytics documentation](https://learn.microsoft.com/en-us/azure/ai-services/text-analytics/)
+
+### Custom Vision
+
+- S0 Training: $10.0 per hour.
+- S0 Transactions: $2.0 per 1K transactions.
+- Free Transactions: $0.0 per 1K transactions.
+- S0 Image Storage: $0.7 per 1K images.
+
+[Custom Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/)
+
+### Speech
+
+- S1 Conversation Transcription Multichannel Audio: $2.1 per hour.
+- S1 Conversation Transcription Video: $3.1 per hour.
+- S1 Neural Long Audio Characters: $100.0 per 1M characters.
+- Free Conversation Transcription: $0.0 per hour.
+
+[Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### Face
+
+- Face Storage: $0.01 per 1K records.
+
+[Face API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2022-07-05" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 5 July 2022
+
+### Computer Vision
+
+- P1 Unit: $38.7 per day
+- Image Analysis Group 1 Transactions: from $0.4 per 1,000 transactions
+- Image Analysis Group 2 Transactions: from $0.6 per 1,000 transactions
+- P2 Unit: $96.77 per day
+- Image Analysis Group 1-1 Transactions: from $0.4 per 1,000 transactions
+- P3 Unit: $193.54 per day
+- Free Transactions: $0.0 per 1,000 transactions
+
+[Learn more about Computer Vision on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+### Language Understanding
+
+- Free Transactions: $0.0 per 1,000 transactions
+- S1 Speech To Intent - Understanding Transactions: $1.5 per 1,000 transactions
+- S1 Transactions: $1.5 per 1,000 transactions
+
+[Learn more about Language Understanding on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+### Custom Vision
+
+- S0 Training: $10.0 per hour
+- Free Transactions: $0.0 per 1,000 transactions
+- S0 Transactions: $2.0 per 1,000 transactions
+- S0 Image Storage: $0.7 per 1,000 images
+
+[Learn more about Custom Vision on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2022-07-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 July 2022
+
+### Azure Language
+
+- Standard CLU Text Records are priced from $2.0 per 1K.
+- Standard CLU Advanced Training Unit is priced from $3.0 per hour.
+- Free Training Unit is provided at $0.0 per hour.
+
+#### Documentation Links
+
+- [Azure Language Service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2022-06-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 June 2022
+
+### Speech
+
+- S1 Neural Long Audio Characters: $100.0 per 1 million characters
+- S1 Custom Neural Training: $52.0 per hour
+- S1 Custom Neural Voice Model Hosting Unit: $4.032 per hour
+- S1 Custom Neural Realtime Characters: $24.0 per 1 million characters
+- S1 Custom Neural Long Audio Characters: $100.0 per 1 million characters
+
+[Speech service documentation (Microsoft Learn)](https://learn.microsoft.com/azure/ai-services/speech-service/)
+
+### Language
+
+- Standard Custom Training Unit: from $3.0 per hour
+- Standard Custom Text Records: from $5.0 per 1,000 records
+- Standard Custom Hosting Unit: from $0.5 per month
+
+[Language service documentation (Microsoft Learn)](https://learn.microsoft.com/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-12-03" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 3 December 2021
+
+### Language
+
+- Standard QA Text Records pricing starts from $1.00005 per 1,000 records.  
+
+Prices vary depending on region.
+
+#### Documentation
+
+- [Azure AI Language documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/overview)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-10-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 October 2021
+
+### Microsoft Speech
+
+- S1 Custom Neural Long Audio Characters: from $100.0 per 1M characters
+- S1 Custom Neural Voice Model Hosting Unit: from $4.032 per hour
+- S1 Custom Neural Training: $52.0 per hour
+- S1 Custom Neural Realtime Characters: from $24.0 per 1M characters
+- S1 Speaker Identification Transactions: $10.0 per 1K transactions
+- S1 Speech To Intent - Transcription Transactions: $4.0 per 1K transactions
+- S1 Speech Translation: $2.5 per hour
+- S1 Speaker Verification Transactions: $5.0 per 1K transactions
+- S1 Custom Voice Font Hosting Unit: $0.0537 per hour
+- S1 Voice Storage: $0.2 per 1K units
+
+Documentation:
+- [Azure AI Speech Service documentation](https://learn.microsoft.com/azure/ai-services/speech-service/)
+- [Text-to-speech documentation](https://learn.microsoft.com/azure/ai-services/speech-service/text-to-speech)
+- [Custom Neural Voice documentation](https://learn.microsoft.com/azure/ai-services/speech-service/how-to-custom-voice)
+- [Speaker Recognition documentation](https://learn.microsoft.com/azure/ai-services/speech-service/speaker-recognition-overview)
+- [Speech Translation documentation](https://learn.microsoft.com/azure/ai-services/speech-service/speech-translation)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-06-08" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 8 June 2021
+
+### Custom Vision
+
+- Custom Vision S0 Transactions: $2.0 per 1,000 transactions.
+
+[Learn more about Custom Vision on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/overview)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-06-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 June 2021
+
+### Speech
+
+- S1 Text To Speech Characters: $4.0 per 1M characters
+- S1 Custom Neural Training: from $52.0 per hour
+- S1 Neural Long Audio Characters: from $100.0 per 1M characters
+- S1 Conversation Transcription Multichannel Audio: from $2.1 per hour
+- S1 Custom Speech Model Hosting Unit: $0.05375 per hour
+- S1 Speech To Text: $1.0 per hour
+- S1 Custom Neural Long Audio Characters: $100.0 per 1M characters
+- S1 Custom Neural Realtime Characters: $24.0 per 1M characters
+- S1 Custom Text To Speech Characters: $6.0 per 1M characters
+- Free Speech Translation: $0.0 per hour
+- Free Text To Speech Characters: $0.0 per 1M characters
+- Free Custom Voice Font Hosting Unit: $0.0 per day
+- Free Custom Text To Speech Characters: $0.0 per 1M characters
+- Free Speaker Recognition Transactions: $0.0 per 1K transactions
+- Free Custom Speech Model Hosting Unit: $0.0 per day
+- Free Custom Speech To Text: $0.0 per hour
+- Free Conversation Transcription: $0.0 per hour
+- Free Speech To Text: $0.0 per hour
+
+[Microsoft Learn: Azure AI Speech documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+### Language Understanding
+
+- S1 Transactions: $1.5 per 1K transactions
+- S1 Speech To Intent - Understanding Transactions: $1.5 per 1K transactions
+- Free Transactions: $0.0 per 1K transactions
+
+[Microsoft Learn: Language Understanding (LUIS) documentation](https://learn.microsoft.com/en-us/azure/ai-services/luis/)
+
+---
+
+### Custom Vision
+
+- S0 Training: from $10.0 per hour
+
+[Microsoft Learn: Custom Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/)
+
+---
+
+### Content Moderator
+
+- Standard Transactions: from $0.4 per 1K transactions
+- Free Transactions: $0.0 per 1K transactions
+
+[Microsoft Learn: Content Moderator documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-moderator/)
+
+---
+
+### Face
+
+- Free Transactions: $0.0 per 1K transactions
+
+[Microsoft Learn: Face API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-05-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 May 2021
+
+### Microsoft Translator
+
+- Translator Text D3 Overage Characters: From $11.25 per 1 million characters.
+
+#### Documentation Links
+
+- [Translator documentation (Microsoft Learn)](https://learn.microsoft.com/azure/ai-services/translator/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-04-15" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 15 April 2021
+
+### Speech
+
+- S1 Custom Speech Model Hosting Unit: $0.05375 per hour or $1.290322 per day
+- S1 Custom Voice Font Hosting Unit: $0.0537 per hour
+- S1 Speech To Text: $1.0 per hour
+- S1 Speech Translation: $2.5 per hour
+- S1 Speech To Intent - Transcription Transactions: $4.0 per 1K
+- S1 Custom Text To Speech Characters: $6.0 per 1M
+- S1 Text To Speech Characters: $4.0 per 1M
+- Free Custom Speech Model Hosting Unit: $0.0 per day
+- Free Custom Voice Font Hosting Unit: $0.0 per day
+- Free Speech To Text: $0.0 per hour
+- Free Custom Speech To Text: $0.0 per hour
+- Free Custom Text To Speech Characters: $0.0 per 1M
+- Free Text To Speech Characters: $0.0 per 1M
+- Free Speech Translation: $0.0 per hour
+
+[Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+---
+
+### Language
+
+- S1 Unit: $8.06 per day
+- S2 Unit: $32.25 per day
+- S3 Unit: $80.64 per day
+- S4 Unit: $161.29 per day
+- S0 Unit: $2.41 per day
+- S0 Overage Transactions: $3.0 per 1K
+- S1 Overage Transactions: $2.5 per 1K
+- S2 Overage Transactions: $2.0 per 1K
+- S3 Overage Transactions: $1.0 per 1K
+- S4 Overage Transactions: $0.5 per 1K
+- Standard Text Records: from $0.25 per 1K
+- Free Text Records: $0.0 per 1K
+
+[Language service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+---
+
+### Language Understanding
+
+- S1 Transactions: $1.5 per 1K
+- S1 Speech To Intent - Understanding Transactions: $1.5 per 1K
+- P1 Transactions: $1.5 per 1K
+- Free Transactions: $0.0 per 1K
+
+[Language Understanding documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/luis/)
+
+---
+
+### Computer Vision
+
+- Image Analysis Group 1 Transactions: from $0.4 per 1K
+- Image Analysis Group 1-1 Transactions: from $0.4 per 1K
+- Image Analysis Group 2 Transactions: from $0.6 per 1K
+- Free Transactions: $0.0 per 1K
+
+[Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+---
+
+### Content Moderator
+
+- Standard Transactions: from $0.4 per 1K
+- Free Transactions: $0.0 per 1K
+
+[Content Moderator documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-moderator/)
+
+---
+
+### Face
+
+- Standard Transactions: from $0.4 per 1K
+- Face Storage: $0.01 per 1K
+- Free Transactions: $0.0 per 1K
+
+[Face service documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+---
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-02-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 February 2021
+
+### Microsoft Azure Speech
+
+- S1 Custom Neural Realtime Characters are priced at $24.0 per 1M characters.
+- S1 Neural Long Audio Characters are priced at $100.0 per 1M characters.
+- S1 Custom Neural Long Audio Characters are priced at $100.0 per 1M characters.
+- S1 Custom Neural Voice Model Hosting Unit is $4.032 per hour.
+- S1 Custom Neural Training is $52.0 per hour.
+
+[Learn more about Azure AI Speech](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2021-01-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 January 2021
+
+### Microsoft Computer Vision
+
+- Image Analysis Group 1 transactions are priced from $0.4 per 1K transactions. Other prices presented are $0.48, $0.6, $0.65, $0.72, $0.78, $1.0, $1.2 per 1K transactions.
+- Image Analysis Group 2 transactions are priced from $0.6 per 1K transactions. Other listed prices are $0.72, $1.5, $1.8 per 1K transactions.
+- Image Analysis Group 1-1 transactions are priced from $0.4 per 1K transactions. Other listed prices are $0.48, $0.6, $0.65, $0.72, $0.78, $1.0, $1.2 per 1K transactions.
+- Free transactions are available at $0.0 per 1K.
+
+[Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+### Microsoft Speech
+
+- Free Speaker Recognition transactions are $0.0 per 1K.
+- S1 Speaker Identification transactions are $10.0 per 1K.
+- S1 Speaker Verification transactions are $5.0 per 1K.
+- S1 Voice Storage is $0.2 per 1K.
+
+[Speech documentation](https://learn.microsoft.com/azure/ai-services/speech-service/)
+
+### Microsoft Language
+
+- S0 Unit is $2.41 per day, S1 Unit is $8.06 per day, S2 Unit is $32.25 per day, S3 Unit is $80.64 per day, and S4 Unit is $161.29 per day.
+- S0 Overage transactions are $3.0 per 1K; S1 Overage transactions are $2.5 per 1K; S2 Overage transactions are $2.0 per 1K; S3 Overage transactions are $1.0 per 1K, and S4 Overage transactions are $0.5 per 1K.
+- Standard Text Records are priced from $0.25 per 1K. Other prices are $0.3, $0.75, $1.0 per 1K.
+- Free Text Records are $0.0 per 1K.
+
+[Language documentation](https://learn.microsoft.com/azure/ai-services/language-service/)
+
+### Microsoft Face
+
+- Standard Transactions are priced from $0.4 per 1K. Other prices listed are $0.6, $0.8, $1.0 per 1K transactions.
+- Free Transactions are $0.0 per 1K.
+- Face Storage is $0.01 per 1K.
+
+[Face documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+### Microsoft Personalizer
+
+- Free Transactions are $0.0 per 1K.
+- S0 Transactions are priced from $0.05 per 1K. Other listed prices: $0.2, $0.35, $1.0 per 1K.
+
+[Personalizer documentation](https://learn.microsoft.com/azure/ai-services/personalizer/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2020-12-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 December 2020
+
+### Microsoft
+
+- Language – Standard Text Records are priced from $0.25 per 1K records, with other available price points at $0.3, $0.3125, $0.375, $0.75, $0.9375, $1.0, $1.25 per 1K records.
+- Language Understanding – Free Authoring Transactions are provided at $0.0 per 1K transactions.
+
+#### Documentation links
+- [Azure AI Language documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+- [Language Understanding (LUIS) documentation](https://learn.microsoft.com/en-us/azure/ai-services/luis/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2020-09-22" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 22 September 2020
+
+### Microsoft
+
+- Anomaly Detector: Standard Transactions (free tier) are available at $0.0 for 1,000 transactions.
+
+#### Documentation
+- [Anomaly Detector documentation](https://learn.microsoft.com/en-us/azure/ai-services/anomaly-detector/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2020-03-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 March 2020
+
+### Speech
+
+- Free Speech Translation: $0.0 per hour
+- Free Custom Text To Speech Characters: $0.0 per 1M characters
+- S1 Text To Speech Characters: $4.8 per 1M characters
+- S1 Conversation Transcription Video: $3.875 per hour
+- Free Custom Speech To Text: $0.0 per hour
+- Free Custom Voice Font Hosting Unit: $0.0 per day
+- S1 Conversation Transcription Audio: $1.5 per hour
+- Free Conversation Transcription: $0.0 per hour
+- Free Custom Speech Model Hosting Unit: $0.0 per day
+- Free Text To Speech Characters: $0.0 per 1M characters
+- Free Speech To Text: $0.0 per hour
+- S1 Speech To Text: $1.25 per hour
+
+[Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### Language Understanding
+
+- Free Transactions: $0.0 per 1K transactions
+- S1 Transactions: $1.875 per 1K transactions
+
+[Language Understanding (LUIS) documentation](https://learn.microsoft.com/en-us/azure/ai-services/luis/)
+
+### Language
+
+- S4 Unit: $201.61 per day
+- Free Text Records: $0.0 per 1K records
+- S2 Unit: $40.313 per day
+- S0 Unit: $3.013 per day
+
+[Language service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+### Translator Text
+
+- C4 Custom Training Characters: $5.625 per 1M characters
+- C2 Overage Characters: $41.1 per 1M characters
+- C4 Unit: $1814.52 per day
+- C2 Custom Training Characters: $10.275 per 1M characters
+- C3 Overage Characters: $30.0 per 1M characters
+- C3 Custom Training Characters: $7.5 per 1M characters
+- C3 Unit: $241.94 per day
+- C4 Overage Characters: $22.5 per 1M characters
+
+[Translator Text documentation](https://learn.microsoft.com/en-us/azure/ai-services/translator/)
+
+### Personalizer
+
+- Free Transactions: $0.0 per 1K transactions
+- S0 Transactions: from $0.0625 per 1K transactions
+
+[Personalizer documentation](https://learn.microsoft.com/en-us/azure/ai-services/personalizer/)
+
+### Speaker Recognition
+
+- Free Transactions: $0.0 per 1K transactions
+
+[Speaker Recognition documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speaker-recognition-overview)
+
+### Content Moderator
+
+- Free Transactions: $0.0 per 1K transactions
+
+[Content Moderator documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/content-moderator/)
+
+### Custom Vision
+
+- Free Transactions: $0.0 per 1K transactions
+
+[Custom Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/overview)
+
+### Ink Recognizer
+
+- S0 Transactions: $2.5 per 1K transactions
+- Free Transactions: $0.0 per 1K transactions
+
+[Ink Recognizer documentation](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/)
+
+### QnA Maker
+
+- Free Unit: $0.0 per day
+
+[QnA Maker documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/qnamaker/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2020-02-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 February 2020
+
+### Speech
+
+- S1 Custom Voice Font Hosting Unit: from $0.0537 per hour
+
+[Learn more about Speech services on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2020-01-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 January 2020
+
+### Personalizer
+
+- Personalizer S0 Transactions: Pricing starts from $0.05 per 1K transactions, with higher pricing tiers including $0.2, $0.35, and $1.0 per 1K transactions.
+
+Documentation:
+- [Personalizer documentation – Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/personalizer/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2019-11-04" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 4 November 2019
+
+### Microsoft
+
+- Personalizer: Free transactions available at $0.0 per 1,000 transactions.
+
+[Microsoft Learn: Personalizer documentation](https://learn.microsoft.com/en-us/azure/ai-services/personalizer/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2019-10-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 October 2019
+
+### Custom Vision
+- S0 Transactions: Free for every 1K transactions.
+- S0 Training: Free for every hour of training.
+- S0 Image Storage: Free for every 1K images.
+
+[Custom Vision documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/overview)
+
+### Ink Recognizer
+- S0 Transactions: Free for every 1K transactions.
+
+[Ink Recognizer documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/)
+
+### Computer Vision
+- Image Analysis Group 1 Transactions: Free for every 1K transactions.
+
+[Computer Vision documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cognitive-services/computer-vision/)
+
+### Content Moderator
+- Standard Transactions: Free for every 1K transactions.
+
+[Content Moderator documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cognitive-services/content-moderator/)
+
+### Face
+- Standard Transactions: Free for every 1K transactions.
+
+[Face API documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+### QnA Maker
+- Standard Unit: $0.403 per day.
+- Standard Unit - Free: Free per day.
+
+[QnA Maker documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cognitive-services/qnamaker/)
+
+### Translator Text
+- S1 Translation Transactions: Free for every 1M transactions.
+
+[Translator Text documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cognitive-services/translator/)
+
+### Language Understanding
+- S1 Speech To Intent - Understanding Transactions: Free for every 1K transactions.
+
+[Language Understanding documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/)
+
+### Language
+- Standard Text Records: Free for every 1K records.
+
+[Language service documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/)
+
+### Personalizer
+- S0 Transactions: Free for every 1K transactions.
+
+[Personalizer documentation - Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/personalizer/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2019-09-20" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 20 September 2019
+
+### Microsoft
+
+- Speech: S1 Custom Speech Model Hosting Unit charges $0.067 per hour for hosting custom speech models.
+
+#### Documentation links
+- [Azure Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2019-05-07" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 7 May 2019
+
+### Speech
+
+- S1 Conversation Transcription Video: $3.1 per hour
+- Free Conversation Transcription: $0.0 per hour
+- S1 Conversation Transcription Audio: $1.2 per hour
+
+#### Documentation:
+- [Azure AI Speech documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### Ink Recognizer
+
+- Free Transactions: $0.0 per 1K transactions
+- S0 Transactions: $2.0 per 1K transactions
+
+#### Documentation:
+- [Azure Ink Recognizer documentation](https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2019-05-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 May 2019
+
+### Custom Vision
+
+- S0 Transactions are priced at $2.0 per 1,000 transactions.
+- S0 Image Storage is priced at $0.7 per 1,000 images stored.
+
+[Custom Vision documentation on Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/overview)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2019-04-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 April 2019
+
+### Microsoft
+
+- Face: Storage is priced at $0.01 per 1,000 units.
+
+[Face API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-face-detection)
+
+- Speech: S1 Custom Speech Model Hosting Unit is priced at $0.05375 per hour.
+
+[Speech services documentation](https://learn.microsoft.com/azure/ai-services/speech-service/overview)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2019-03-27" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 27 March 2019
+
+### Custom Vision
+
+- Free Transactions: No charge for every 1,000 transactions.
+
+Prices vary depending on region.
+
+**Documentation Links**
+- [Custom Vision documentation – Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/overview)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2018-11-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 November 2018
+
+### Speech
+
+- S1 Custom Text To Speech Characters: from $6.0 per 1M characters (another SKU at $7.5 per 1M characters)
+- S1 Text To Speech Characters: from $4.0 per 1M characters (another SKU at $4.8 per 1M characters)
+- S1 Speech Translation: from $2.5 per 1 Hour (another SKU at $3.125 per 1 Hour)
+- S1 Speech To Text: from $1.0 per 1 Hour (another SKU at $1.25 per 1 Hour)
+- S1 Custom Speech Model Hosting Unit: from $1.290322 per 1/Day (another SKU at $1.6129 per 1/Day)
+
+[Azure AI Speech documentation – Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### Language
+
+- Free Text Records: $0.0 per 1K records
+
+[Azure AI Language documentation – Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2018-09-24" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 24 September 2018
+
+### Microsoft
+
+- Speech service offers free Custom Voice Font Hosting Units (1/Day) and free Custom Text To Speech Characters (1M).
+- Text Analytics Container provides free Text Records (1K) and a range of Standard Text Records pricing from $0.25 per 1K to $2.00 per 1K.
+- Custom Vision S0 Transactions are priced at $1.25 per 1K, and S0 Image Storage is priced at $0.4375 per 1K.
+- Language service S0 Overage Transactions are priced at $3.75 per 1K.
+
+#### Documentation Links
+- [Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+- [Text Analytics Container documentation](https://learn.microsoft.com/en-us/azure/ai-services/text-analytics/)
+- [Custom Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/custom-vision-service/)
+- [Language service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2018-09-04" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 4 September 2018
+
+### Language
+
+- S1 Unit: $10.075 per day.
+- S2 Overage Transactions: $2.5 per 1K transactions.
+- S3 Unit: $100.8 per day.
+- S3 Overage Transactions: $1.25 per 1K transactions.
+- S4 Overage Transactions: $0.625 per 1K transactions.
+- S1 Overage Transactions: $3.125 per 1K transactions.
+
+[Language service documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+### Speech
+
+- S1 Speech To Intent - Transcription Transactions: $5.0 per 1K transactions.
+
+[Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### Face
+
+- Face Storage: $0.012 per 1K storage events.
+
+[Face service documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+### Language Understanding
+
+- S1 Speech To Intent - Understanding Transactions: $1.875 per 1K transactions.
+
+[Language Understanding (LUIS) documentation](https://learn.microsoft.com/en-us/azure/ai-services/luis/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2018-05-07" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 7 May 2018
+
+### Language Understanding
+
+- S1 Speech To Intent - Understanding Transactions: $1.5 per 1,000 transactions
+
+[Language Understanding documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/language-service/)
+
+### Speech
+
+- S1 Speech To Intent - Transcription Transactions: $4.0 per 1,000 transactions
+- Free Custom Speech To Text: $0.0 per 1 hour
+- Free Text To Speech Characters: $0.0 per 1 million characters
+- Free Custom Speech Model Hosting Unit: $0.0 per day
+- Free Speech To Text: $0.0 per 1 hour
+- Free Speech Translation: $0.0 per 1 hour
+
+[Speech service documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/)
+
+### QnA Maker
+
+- Free Unit: $0.0 per day
+- Standard Unit: $0.32258 per day
+
+[QnA Maker documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/qnamaker/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2018-03-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 March 2018
+
+### Microsoft
+
+- **Face API**  
+  Standard Transactions priced from $0.4 per 1K transactions.
+
+**Documentation:**  
+- [Face API documentation (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identityoverview)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2018-02-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 February 2018
+
+### Microsoft
+
+- Language Understanding: S1 Transactions are priced at $1.5 per 1,000 transactions.
+
+[Learn more about Language Understanding (LUIS) documentation.](https://learn.microsoft.com/en-us/azure/cognitive-services/luis/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2018-01-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 January 2018
+
+### Microsoft Azure Cognitive Services
+
+- Computer Vision: Free transactions for the first 1K units.
+- Emotion: Free transactions for the first 1K units.
+- Face: Free transactions for the first 1K units.
+- Content Moderator: Free transactions for the first 1K units.
+- Speaker Recognition: Free transactions for the first 1K units.
+- Translator Text: Free usage up to 1 unit per day.
+- Translator Speech: Free usage up to 1 unit per day.
+- Web Language Model: Free transactions for the first 1K units.
+
+#### Relevant Documentation Links
+
+- [Computer Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+- [Emotion API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+- [Face API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+- [Content Moderator documentation](https://learn.microsoft.com/azure/ai-services/content-moderator/)
+- [Speaker Recognition documentation](https://learn.microsoft.com/azure/ai-services/speaker-recognition/)
+- [Translator Text documentation](https://learn.microsoft.com/azure/ai-services/translator/)
+- [Translator Speech documentation](https://learn.microsoft.com/azure/ai-services/translator/speech-translation/)
+- [Web Language Model documentation](https://learn.microsoft.com/azure/ai-services/web-language-model/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2017-12-13" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 13 December 2017
+
+### Microsoft
+
+- Language Understanding: Free transactions, $0.0 per 1,000 units
+
+Prices vary depending on region.
+
+**Related Documentation:**
+
+- [Language Understanding service documentation (LUIS)](https://learn.microsoft.com/azure/cognitive-services/luis/)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2017-11-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 November 2017
+
+### Azure AI Language
+
+- S1 Unit: $8.06 per day. Overage transactions: $2.50 per 1,000 transactions.
+- S2 Unit: $32.25 per day. Overage transactions: $2.00 per 1,000 transactions.
+- S3 Unit: $80.64 per day. Overage transactions: $1.00 per 1,000 transactions.
+- S4 Unit: $161.29 per day. Overage transactions: $0.50 per 1,000 transactions.
+
+[Azure AI Language documentation](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2017-09-25" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 25 September 2017
+
+### Microsoft
+
+- Speaker Identification: Standard Transactions are priced from $8.75 per 1K transactions.
+- Speaker Verification: Standard Transactions are priced from $3.75 per 1K transactions.
+- Custom Recognition: S0 Acoustic Adaptation is priced at $6.25 per hour.
+- Translator Text: S4 Overage Characters are priced at $5.625 per 1M characters.
+
+#### Documentation Links
+- [Speaker Identification](https://learn.microsoft.com/azure/ai-services/speaker-recognition/)
+- [Speaker Verification](https://learn.microsoft.com/azure/ai-services/speaker-recognition/)
+- [Custom Recognition (Speech Service)](https://learn.microsoft.com/azure/ai-services/speech-service/)
+- [Translator Text](https://learn.microsoft.com/azure/ai-services/translator/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2017-09-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 September 2017
+
+### Azure Language
+
+- S0 Unit: $2.41 per day
+- S0 Overage Transactions: $3.00 per 1,000 transactions
+
+[Learn more about Azure Language services](https://learn.microsoft.com/en-us/azure/ai-services/language-service/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2017-06-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 June 2017
+
+### Microsoft
+
+- Content Moderator: Standard Transactions are priced from $0.4 per 1,000 transactions.
+- Language Understanding: P1 Transactions are priced at $1.5 per 1,000 transactions.
+
+Prices vary depending on region.
+
+#### Related Microsoft Learn Documentation
+
+- [Content Moderator documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/content-moderator/)
+- [Language Understanding (LUIS) documentation](https://learn.microsoft.com/en-us/azure/cognitive-services/luis/)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2017-04-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 April 2017
+
+### Computer Vision
+
+- P1 Unit: $38.7 per day
+- P2 Unit: $96.77 per day
+- P2 Overage Transactions: $0.5 per 1,000 transactions
+- P3 Unit: $193.54 per day
+- P4 Overage Transactions: $2.3 per 1,000 transactions
+- P5 Overage Transactions: $2.0 per 1,000 transactions
+- P6 Overage Transactions: $1.9 per 1,000 transactions
+
+#### Related Documentation
+- [Azure AI Vision documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2017-03-01" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 1 March 2017
+
+### Face
+
+- P1 Unit is priced at $135.483871 per day.
+- P2 Unit is priced at $245.16129 per day.
+- P3 Unit is priced at $354.83871 per day.
+- Overage Transactions are priced from $0.65 per 1,000 transactions.
+
+#### Related Microsoft Learn documentation links:
+- [Azure Face API documentation](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-identity)
+
+Prices vary depending on region.</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2016-08-04" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 4 August 2016
+
+### Academic Knowledge
+
+- Academic Knowledge Standard Transactions are priced at $0.25 per 1K transactions.
+
+Prices vary depending on region.
+
+**Documentation:**
+- [Academic Knowledge API documentation – Microsoft Learn](https://www.microsoft.com/en-us/research/project/academic-knowledge/)</script>
+					</div>
+				</div>
+			</article>
+			
+			<article id="2016-05-02" class="article collapsed">
+				<div class="month-content">
+					<div class="markdown-body">
+						<script type="text/markdown"># 2 May 2016
+
+### Microsoft
+
+- Speaker Identification: Standard Transactions priced from $7.0 per 1K transactions.
+- Speaker Verification: Standard Transactions priced from $3.0 per 1K transactions.
+
+Prices vary depending on region.
+
+#### Documentation links
+
+- [Speaker Identification Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speaker-recognition-overview)
+- [Speaker Verification Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speaker-recognition-overview)</script>
+					</div>
+				</div>
+			</article>
+			
+				</section>
+			</div>
+			<div class="footer">Generated by consolidate-ai-summaries.py</div>
+		</div>
+	</div>
+
+	<script>
+		// Theme toggle (match main index.html behavior exactly)
+		(function initTheme(){
+			const root = document.documentElement;
+			const btn = document.getElementById('btn-theme');
+			if(!btn) return; // safety
+			// Prefer explicit ?theme= in URL; else fall back to stored preference
+			const urlTheme = new URLSearchParams(window.location.search).get('theme');
+			if (urlTheme === 'dark' || urlTheme === 'light') {
+				if (urlTheme === 'dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
+				localStorage.setItem('priceExplorerTheme', urlTheme);
+			} else {
+				const stored = localStorage.getItem('priceExplorerTheme');
+				if (stored === 'dark') root.setAttribute('data-theme','dark');
+			}
+			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			function updateBtn(){
+				const mode = currentMode();
+				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
+				btn.setAttribute('aria-pressed', mode==='dark');
+				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+			}
+			btn.addEventListener('click', ()=> {
+				const isDark = currentMode()==='dark';
+				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
+				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				updateBtn();
+			});
+			updateBtn();
+		})();
+	</script>
+
+	<script>
+		// Back button: navigate to parent, preserving theme via ?theme=
+		(function(){
+			const btn = document.getElementById('btn-back');
+			if (!btn) return;
+			btn.addEventListener('click', ()=>{
+				const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+				const theme = isDark ? 'dark' : 'light';
+				window.location.href = '../?theme=' + encodeURIComponent(theme);
+			});
+		})();
+	</script>
+
+	<script>
+		// Render markdown into each article section using marked.js
+		document.querySelectorAll('div.markdown-body > script[type="text/markdown"]').forEach((script) => {
+			const container = script.parentElement;
+			const raw = script.textContent || '';
+			const html = marked.parse(raw, { breaks: true, mangle: false, headerIds: true });
+			container.innerHTML = html;
+		});
+	</script>
+
+	<script>
+		// Collapsible behavior: use the first heading inside each markdown section as the toggle.
+		(function(){
+			function ensureDetailsWrapper(article){
+				const body = article.querySelector('.markdown-body');
+				if (!body) return { heading: null, details: null };
+				let heading = body.querySelector('h1, h2, h3, h4, h5, h6');
+				if (!heading) return { heading: null, details: null };
+				// Ensure the first heading is level 1 (H1) so all date headers are consistent
+				if (heading.tagName.toLowerCase() !== 'h1') {
+					const h1 = document.createElement('h1');
+					// Copy attributes
+					Array.from(heading.attributes).forEach(attr => h1.setAttribute(attr.name, attr.value));
+					// Move children
+					while (heading.firstChild) { h1.appendChild(heading.firstChild); }
+					body.replaceChild(h1, heading);
+					heading = h1;
+				}
+				// Wrap all siblings after the first heading into a details container
+				let details = body.querySelector('.month-details');
+				if (!details) {
+					details = document.createElement('div');
+					details.className = 'month-details';
+					let node = heading.nextSibling;
+					const frag = document.createDocumentFragment();
+					while (node) {
+						const next = node.nextSibling;
+						frag.appendChild(node);
+						node = next;
+					}
+					body.insertBefore(details, null);
+					details.appendChild(frag);
+				}
+				return { heading, details };
+			}
+
+			function setExpanded(article, expanded){
+				const { heading } = ensureDetailsWrapper(article);
+				if (expanded) {
+					article.classList.remove('collapsed');
+					heading?.setAttribute('aria-expanded','true');
+				} else {
+					article.classList.add('collapsed');
+					heading?.setAttribute('aria-expanded','false');
+				}
+			}
+
+			const articles = Array.from(document.querySelectorAll('.articles > .article'));
+			articles.forEach((article)=>{
+				const { heading } = ensureDetailsWrapper(article);
+				if (!heading) return;
+				// Make heading interactive and add chevron cue
+				heading.classList.add('month-title');
+				heading.setAttribute('role','button');
+				heading.setAttribute('tabindex','0');
+				// Initial state
+				heading.setAttribute('aria-expanded', article.classList.contains('collapsed') ? 'false' : 'true');
+
+				heading.addEventListener('click', ()=> setExpanded(article, article.classList.contains('collapsed')));
+				heading.addEventListener('keydown', (e)=>{
+					if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); heading.click(); }
+				});
+			});
+
+			// If URL has a hash matching an article id, expand that one and collapse others.
+			const id = decodeURIComponent(location.hash || '').replace('#','');
+			if (id) {
+				articles.forEach(a => setExpanded(a, a.id === id));
+			}
+		})();
+	</script>
 </body>
 </html>
