@@ -9,22 +9,20 @@ Model Meters combines several Azure and GitHub services to create an automated p
 ### Architecture Flow
 
 1. **Daily Data Collection**: GitHub Actions automatically downloads the latest Azure pricing data using the Azure Retail Prices API
-2. **Data Processing**: The raw pricing data is filtered for AI/Cognitive Services and split into monthly segments
-3. **AI Enhancement**: Azure OpenAI (via Azure AI Foundry) generates intelligent summaries of pricing changes using the Model Context Protocol (MCP) with Microsoft Learn documentation
-4. **Web Deployment**: The processed data and summaries are automatically deployed to Azure Static Web Apps
+2. **Data Processing**: The raw pricing data is split into segments based on the pricing `startDate` value
+3. **AI Enhancement**: Azure OpenAI (via Azure AI Foundry) generates intelligent summaries of the latest pricing changes, using Model Context Protocol (MCP) to include Microsoft Learn documentation
+4. **Web Deployment**: The processed data and summaries are automatically deployed to Azure Static Web Apps using GitHub Actions
 5. **User Interface**: A responsive web interface allows users to explore pricing data and AI-generated insights
 
 ### Key Automation Features
 
 - **GitHub Actions Workflow**: Runs daily at midnight UTC to check for pricing updates
-- **Intelligent Change Detection**: Only triggers deployments when actual pricing changes are detected using SHA256 hash comparison
 - **AI-Powered Summaries**: Leverages Azure OpenAI to generate concise, factual summaries of pricing changes grouped by model provider
-- **Documentation Integration**: Uses Microsoft Learn MCP Server to automatically include relevant documentation links
-- **Multi-format Output**: Provides both raw pricing data (NDJSON) and processed summaries (Markdown)
+- **Documentation Integration**: Uses [Microsoft Learn MCP Server](https://github.com/microsoftdocs/mcp) to automatically include relevant documentation links
 
 ## Who Would Benefit From This?
 
-This sample is designed to help Microsoft partners understand how they can:
+This sample is designed to help Microsoft partners (and their customers) understand how they can:
 
 - **Use GitHub and GitHub Copilot** to rapidly build a simple AI agent for data processing
 - **Combine GitHub Actions with Azure AI Foundry** to automate repeatable tasks at scale
@@ -44,42 +42,44 @@ This sample is designed to help Microsoft partners understand how they can:
 
 ### Development Stack
 - **HTML/CSS/JavaScript** - Frontend web interface
-- **Python 3.11** - Backend data processing and AI integration
+- **Python 3.1x** - Backend data processing and AI integration
 - **OpenAI Python SDK** - AI model interaction
 - **JSON/NDJSON** - Data storage and interchange formats
 
 ## Services Used
 
 ### Azure Services
-- **[Azure Retail Prices API](https://docs.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices)** - Official Azure pricing data source
-- **[Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service/)** - AI model hosting and inference
-- **[Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/)** - Web application hosting and deployment
+- **[Azure Retail Prices API](https://docs.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices)** - Official Azure pricing data source
+- **[Azure OpenAI Service](https://azure.microsoft.com/products/ai-services/openai-service/)** - AI model hosting and inference
+- **[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/)** - Web application hosting and deployment
 
 ### AI Services
 - **[Microsoft Learn MCP Server](https://learn.microsoft.com/api/mcp)** - Documentation context provider for AI summaries
-- **[OpenAI Responses API](https://platform.openai.com/docs/api-reference/responses)** - Structured AI response generation
+- **[OpenAI Responses API](https://platform.openai.com/docs/api-reference/responses)** - AI response generation, with support for MCP
 
 ### GitHub Services
 - **[GitHub Actions](https://docs.github.com/en/actions)** - Workflow automation and CI/CD
-- **[GitHub Models](https://github.com/marketplace/models)** - Alternative AI model access (fallback option)
+- **[GitHub Models](https://github.com/marketplace/models)** - Alternative AI model access (fallback option, especially for simpler, smaller demos)
 
 ## Cost Breakdown
 
 | Component | Minimal Implementation | Advanced Implementation | Notes |
 |-----------|----------------------|------------------------|-------|
 | **Azure Static Web Apps** | $0/month | $9/month (Standard) | Free tier includes 100GB bandwidth, 0.5GB storage |
-| **Azure AI Foundry - OpenAI** | ~$5-20/month | ~$50-200/month | Based on token usage for daily summaries |
+| **Azure AI Foundry - OpenAI** | ~$5-20/month | ~$50-200/month | Price varies based on token usage |
 | **Azure Retail Prices API** | $0/month | $0/month | Free public API with rate limits |
 | **GitHub Actions** | $0/month | $4/month (Team plan) | 2000 minutes/month free, then $0.008/minute |
 | **GitHub Repository** | $0/month | $4/month (Team plan) | Public repos free, private repos need paid plan |
-| **Domain/Custom DNS** | $0-15/year | $15-50/year | Optional custom domain |
+| **Domain/Custom DNS** | $15/year | $15/year | Optional custom domain, via third-party domain registrar |
 | **Monitoring/Analytics** | $0/month | $10-25/month | Optional Application Insights, etc. |
 | **Storage (backup/logs)** | $0-2/month | $5-15/month | Azure Storage for additional data retention |
+| **Azure AI Search** | Optional (Free tier) | Optional \~\$75/month (Basic tier) | Free tier includes up to 3 indexes, 50MB storage; Basic tier allows larger workloads |
+| **Microsoft Fabric** | N/A | Optional \~\$262/month (F2 capacity) | Based on Fabric F2 capacity |
 
 ### **Total Monthly Cost**
 | **Minimal Implementation** | **Advanced Implementation** |
 |---------------------------|----------------------------|
-| **$0-7/month** | **$97-317/month** |
+| **$5-10/month** | **$100-700/month** |
 
 > **Pricing Disclaimer**: Costs are approximate, correct at time of writing (August 2025), and may vary based on:
 > - Actual usage patterns and data volumes
@@ -94,8 +94,8 @@ This sample is designed to help Microsoft partners understand how they can:
 
 ### Prerequisites
 
-- Azure subscription with AI Foundry/OpenAI access
-- GitHub repository with Actions enabled
+- Azure subscription with AI Foundry access
+- GitHub repository
 - Python 3.11+ for local development
 
 ### Environment Setup
@@ -232,7 +232,7 @@ response = client.responses.create(
 
 ⚠️ **Important Notice**:
 
-- **Demonstration Purpose**: The site and code in this repository are for **demonstration purposes only**, not for production use
+- **Demonstration Purposes**: The site and code in this repository are for **demonstration purposes only**, not intended for production use
 - **No Warranties**: No warranties, guarantees, or support is provided for this code
 - **AI-Generated Content**: Summaries are AI-generated and could contain mistakes or inaccuracies
 - **Authoritative Source**: Always refer to the [official Azure pricing page](https://azure.microsoft.com/en-us/pricing/) and price lists directly for authoritative pricing information
@@ -241,11 +241,11 @@ response = client.responses.create(
 
 ## Support and Resources
 
-- **Azure Pricing Documentation**: https://docs.microsoft.com/en-us/azure/cost-management-billing/
-- **Azure AI Foundry**: https://docs.microsoft.com/en-us/azure/ai-foundry/
+- **Azure Pricing Documentation**: https://docs.microsoft.com/azure/cost-management-billing/
+- **Azure AI Foundry**: https://docs.microsoft.com/azure/ai-foundry/
 - **GitHub Actions**: https://docs.github.com/en/actions
-- **Azure Static Web Apps**: https://docs.microsoft.com/en-us/azure/static-web-apps/
-- **Model Context Protocol**: https://modelcontextprotocol.io/
+- **Azure Static Web Apps**: https://docs.microsoft.com/azure/static-web-apps/
+- **Microsoft Learn MCP Server**: [https://github.com/microsoftdocs/mcp](https://github.com/microsoftdocs/mcp)
 
 ## License
 
