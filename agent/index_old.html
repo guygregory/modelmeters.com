@@ -74,14 +74,12 @@
 	</div>
 
 	<script>
-		// Theme support (preserves and allows switching)
-		(() => {
+		// Theme setup (match main page behavior + label/emoji toggle)
+		(function initTheme(){
 			const root = document.documentElement;
 			const btn = document.getElementById('btn-theme');
-
-			// Check URL params first, then localStorage, then system preference
-			const urlParams = new URLSearchParams(window.location.search);
-			const paramTheme = urlParams.get('theme');
+			const qp = new URLSearchParams(location.search);
+			const paramTheme = qp.get('theme'); // 'dark' or 'light' if passed from main page
 			const stored = localStorage.getItem('priceExplorerTheme');
 			const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 			let mode = (paramTheme || stored || (prefersDark ? 'dark' : 'light')) === 'dark' ? 'dark' : 'light';
@@ -132,8 +130,7 @@
 			// 2) Try JSON manifest at aisummary/index.json (array of filenames or {files:[]})
 			// 3) Fallback: parse monthly/index.html to get article ids -> map to YYYY-MM-DD.md
 			// Return newest-first.
-
-			// Important: when the page is loaded as /agent (no trailing slash),
+			// Important: when the page is loaded as /monthly (no trailing slash),
 			// relative fetches like 'aisummary/' would incorrectly resolve to /aisummary/.
 			// Build absolute URLs against a base that guarantees a trailing slash.
 			const ensuredBase = getEnsuredBase();
@@ -157,15 +154,31 @@
 
 			// 2) Manifest
 			try {
-				const manifestUrl = new URL('index.json', dirAbs);
-				const res = await fetch(manifestUrl);
+				const res = await fetch(new URL('index.json', dirAbs));
 				if (res.ok) {
 					const data = await res.json();
-					const files = Array.isArray(data) ? data : (data.files || []);
+					let files = Array.isArray(data) ? data : (Array.isArray(data.files) ? data.files : []);
+					files = files.filter(f => typeof f === 'string' && f.toLowerCase().endsWith('.md'));
 					if (files.length) {
 						files.sort((a, b) => b.localeCompare(a));
 						return files;
 					}
+				}
+			} catch (_) { /* ignore and try next */ }
+
+			// 3) Parse the static monthly page to infer ids
+			try {
+				const res = await fetch(new URL('index.html', ensuredBase));
+				if (res.ok) {
+					const html = await res.text();
+					const doc = new DOMParser().parseFromString(html, 'text/html');
+					const ids = Array.from(doc.querySelectorAll('article[id]'))
+						.map(a => a.id)
+						.filter(Boolean);
+					let files = ids.map(id => `${id}.md`);
+					files = Array.from(new Set(files));
+					files.sort((a, b) => b.localeCompare(a));
+					return files;
 				}
 			} catch (_) { /* ignore */ }
 
@@ -206,10 +219,10 @@
 			const status = document.getElementById('status');
 			const container = document.getElementById('articles');
 			try {
-				const dir = '../monthly/aisummary/';
+				const dir = 'aisummary/';
 				const files = await listMarkdownFiles(dir);
 				if (!files.length) {
-					status.textContent = 'No Markdown files found in monthly/aisummary/';
+					status.textContent = 'No Markdown files found in aisummary/';
 					return;
 				}
 
@@ -225,7 +238,6 @@
 					let title = filenameBase(file);
 					const h1Match = text.match(/^#\s*(.+)$/m);
 					if (h1Match) title = h1Match[1];
-
 					// Remove the first H1 (and a following blank line, if present) from content to avoid duplicates
 					const lines = text.split(/\r?\n/);
 					const idx = lines.findIndex(l => /^#\s/.test(l));
@@ -242,7 +254,7 @@
 
 				// Clear status and append articles
 				if (!fetched.length) {
-					status.textContent = 'No Markdown files could be loaded. On Azure Static Web Apps, add monthly/aisummary/index.json (list of files).';
+					status.textContent = 'No Markdown files could be loaded. On Azure Static Web Apps, add aisummary/index.json (list of files) or ensure monthly/index.html includes article ids.';
 					return;
 				}
 				status.remove();
@@ -259,12 +271,12 @@
 				}
 			} catch (err) {
 				console.error(err);
-				status.textContent = 'Error loading summaries. Ensure directory listing is enabled for monthly/aisummary/.';
+				status.textContent = 'Error loading summaries. Ensure directory listing is enabled for aisummary/.';
 			}
 		}
 
 		// Kick off
-			loadSummaries();
+		loadSummaries();
 	</script>
 </body>
 </html>
