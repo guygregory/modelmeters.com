@@ -7,7 +7,7 @@
 
 ## Solution Overview
 
-Model Meters combines several Azure and GitHub services to create an automated pricing intelligence platform:
+Model Meters combines several Azure and GitHub services to create an automated pricing intelligence solution:
 
 ### Architecture Flow
 
