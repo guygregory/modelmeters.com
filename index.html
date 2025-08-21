@@ -395,8 +395,11 @@
 			currentFilterCol = col; filterColName.textContent = col.name;
 			const f = state.filters[col.key] || { op: 'contains', value: '' };
 			opSelect.value = f.op; opValue.value = f.value ?? '';
+			// Reset the value search box so it doesn't persist across columns
+			valueSearch.value = '';
 			positionMenu(anchor, menuFilter); openMenu(menuFilter);
-			setTimeout(()=> opValue.focus(), 0); buildValueList(col, valueSearch.value||'');
+			setTimeout(()=> opValue.focus(), 0);
+			buildValueList(col, '');
 		}
 		function openMenu(menu) {
 			menu.classList.add('open');
@@ -408,6 +411,8 @@
 		}
 		function closeMenus() {
 			document.querySelectorAll('.menu').forEach(m=>{m.classList.remove('open'); m.setAttribute('aria-hidden','true');});
+			// Clear the value search when menus close (clicking away)
+			if (valueSearch) valueSearch.value = '';
 			// Reset aria-expanded on Columns button when menus close
 			document.getElementById('btn-columns')?.setAttribute('aria-expanded','false');
 		}
