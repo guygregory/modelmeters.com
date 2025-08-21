@@ -144,7 +144,7 @@
 				<button id="btn-value-show-all">Show all</button>
 				<button id="btn-value-hide-all">Hide all</button>
 			</div>
-			<div class="muted">Enter to apply</div>
+			<div class="muted">Changes apply as you type</div>
 		</div>
 	</div>
 
@@ -400,6 +400,24 @@
 			positionMenu(anchor, menuFilter); openMenu(menuFilter);
 			setTimeout(()=> opValue.focus(), 0);
 			buildValueList(col, '');
+
+			// Live-apply top filter as user types or changes operator (debounced)
+			const applyTopFilterLive = debounce(() => {
+				if (!currentFilterCol) return;
+				const val = opValue.value;
+				const op = opSelect.value;
+				if (val == null || val === '') {
+					delete state.filters[currentFilterCol.key];
+				} else {
+					state.filters[currentFilterCol.key] = { op, value: val };
+				}
+				computeFiltered();
+				renderHeader();
+				renderRows();
+			}, 150);
+			// Ensure only one handler is active per open by assigning properties
+			opValue.oninput = () => applyTopFilterLive();
+			opSelect.onchange = () => applyTopFilterLive();
 		}
 		function openMenu(menu) {
 			menu.classList.add('open');
@@ -714,6 +732,13 @@
 		});
 
 		// Utilities
+		function debounce(fn, delay = 150) {
+			let t;
+			return function(...args) {
+				clearTimeout(t);
+				t = setTimeout(() => fn.apply(this, args), delay);
+			};
+		}
 		function positionMenu(anchor, menu) {
 			const rect = anchor.getBoundingClientRect(); const bodyRect = document.body.getBoundingClientRect();
 			const top = rect.bottom + window.scrollY + 6; const left = Math.min(rect.left + window.scrollX, bodyRect.width - menu.offsetWidth - 12);
