@@ -1,0 +1,15 @@
+{
+  "name": "modelmeters.com",
+  "version": "1.0.0",
+  "description": "[modelmeters.com](https://modelmeters.com) provides a simple front-end to the [Azure Retail Prices API](https://docs.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices), automatically downloading and enriching Azure AI pricing data with AI-generated summaries and insights.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
