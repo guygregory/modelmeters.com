@@ -37,12 +37,16 @@ def extract_title_and_content(markdown_text: str) -> tuple[str, str]:
     content = '\n'.join(content_lines).strip()
     
     # Convert markdown to basic HTML for RSS description
+    # First escape any existing HTML to prevent issues, then apply markdown patterns
+    content = html.escape(content)
+    
     # Simple conversion - replace common markdown patterns
     content = re.sub(r'^### (.+)$', r'<h3>\1</h3>', content, flags=re.MULTILINE)
     content = re.sub(r'^## (.+)$', r'<h2>\1</h2>', content, flags=re.MULTILINE)
     content = re.sub(r'^# (.+)$', r'<h1>\1</h1>', content, flags=re.MULTILINE)
     content = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', content)
     content = re.sub(r'\*(.+?)\*', r'<em>\1</em>', content)
+    content = re.sub(r'_(.+?)_', r'<em>\1</em>', content)  # Support underscore italics
     content = re.sub(r'`(.+?)`', r'<code>\1</code>', content)
     content = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href="\2">\1</a>', content)
     
@@ -108,16 +112,16 @@ def generate_rss_feed(summaries: list[tuple[str, str, str, datetime]], base_url:
     
     # Add items
     for file_id, title, content, pub_date in summaries[:20]:  # Limit to 20 most recent
-        # Escape HTML content
+        # Escape HTML in title only - content is already converted HTML
         escaped_title = html.escape(title)
-        escaped_content = html.escape(content)
+        # Don't escape content as it's already been converted from markdown to HTML
         
         # Create item
         item_xml = f'''
 <item>
 <title>{escaped_title}</title>
 <link>{base_url}/agent/#{file_id}</link>
-<description>{escaped_content}</description>
+<description>{content}</description>
 <pubDate>{formatdate(pub_date.timestamp())}</pubDate>
 <guid isPermaLink="true">{base_url}/agent/#{file_id}</guid>
 <category>Azure AI</category>
