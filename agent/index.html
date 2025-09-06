@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Model Meters - AI summary</title>
+	<title>🎃 Model Meters - AI summary</title>
 	<link rel="icon" type="image/png" href="../img/favicon.png">
 	<style>
 		/* Light theme (default) */
@@ -14,6 +14,10 @@
 		/* Dark theme */
 		:root[data-theme="dark"] {
 			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
+		}
+		/* Halloween theme */
+		:root[data-theme="halloween"] {
+			--bg:#1a0d1a; --bg-alt:#0d0a0d; --panel:#2d1810; --panel-2:#3d2415; --text:#f5f0e8; --muted:#d4a574; --accent:#ff6b35; --border:#ff8c42; --ring:#ff6b3580; --shadow:0 10px 24px rgba(255,107,53,.25);
 		}
 		html, body { min-height: 100%; }
 		html { scroll-padding-top: calc(var(--topbar-offset) + 16px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
@@ -59,7 +63,7 @@
 	<div class="container">
 		<div class="card">
 			   <div class="card-hd">
-				   <div class="title">Model Meters - AI summary agent ✨</div>
+				   <div class="title">🎃 Model Meters - AI summary agent ✨</div>
 				   <div style="display:flex; align-items:center; gap:12px; margin-left:auto;">
 					   <span class="title" style="font-size:16px; font-weight:500; white-space:nowrap;">Powered by <a href="https://ai.azure.com/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Azure AI</a> + <a href="https://github.com/microsoftdocs/mcp" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Microsoft Learn MCP Server</a></span>
 					   <button id="btn-rss" title="RSS Feed">🌐 RSS</button>
@@ -77,7 +81,7 @@
 	</div>
 
 	<script>
-		// Theme support (preserves and allows switching)
+		// Theme support (preserves and allows switching through light/dark/halloween)
 		(() => {
 			const root = document.documentElement;
 			const btn = document.getElementById('btn-theme');
@@ -87,34 +91,48 @@
 			const paramTheme = urlParams.get('theme');
 			const stored = localStorage.getItem('priceExplorerTheme');
 			const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-			let mode = (paramTheme || stored || (prefersDark ? 'dark' : 'light')) === 'dark' ? 'dark' : 'light';
+			let mode = paramTheme || stored || (prefersDark ? 'dark' : 'light');
+			
+			// Validate theme
+			if (!['light', 'dark', 'halloween'].includes(mode)) mode = 'light';
 
 			if (paramTheme) localStorage.setItem('priceExplorerTheme', mode);
 
 			function currentMode(){
-				return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+				const theme = root.getAttribute('data-theme');
+				return theme === 'dark' ? 'dark' : theme === 'halloween' ? 'halloween' : 'light';
 			}
 
 			function applyMode(newMode){
-				const m = newMode === 'dark' ? 'dark' : 'light';
-				if (m === 'dark') root.setAttribute('data-theme','dark');
+				if (newMode === 'dark') root.setAttribute('data-theme','dark');
+				else if (newMode === 'halloween') root.setAttribute('data-theme','halloween');
 				else root.removeAttribute('data-theme');
-				localStorage.setItem('priceExplorerTheme', m);
+				localStorage.setItem('priceExplorerTheme', newMode);
 				updateBtn();
 			}
 
 			function updateBtn(){
 				const m = currentMode();
-				// Show target mode on the button (same UX as main page)
-				const nextLabel = m === 'dark' ? '☀️ Light' : '🌙 Dark';
-				btn.textContent = nextLabel;
-				btn.setAttribute('aria-label', 'Switch to ' + (m === 'dark' ? 'light' : 'dark') + ' theme');
+				if (m === 'light') {
+					btn.textContent = '🌙 Dark';
+					btn.setAttribute('aria-label', 'Switch to dark theme');
+				} else if (m === 'dark') {
+					btn.textContent = '🎃 Halloween';
+					btn.setAttribute('aria-label', 'Switch to Halloween theme');
+				} else {
+					btn.textContent = '☀️ Light';
+					btn.setAttribute('aria-label', 'Switch to light theme');
+				}
 			}
 
 			applyMode(mode);
 			btn.addEventListener('click', () => {
-				const isDark = currentMode() === 'dark';
-				applyMode(isDark ? 'light' : 'dark');
+				const m = currentMode();
+				let nextMode;
+				if (m === 'light') nextMode = 'dark';
+				else if (m === 'dark') nextMode = 'halloween';
+				else nextMode = 'light';
+				applyMode(nextMode);
 			});
 		})();
 

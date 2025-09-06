@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Model Meter Monthly summaries - ✨ AI generated</title>
+	<title>🎃 Model Meter Monthly summaries - ✨ AI generated</title>
 	<style>
 		/* Light theme (default) */
 		:root {
@@ -13,6 +13,10 @@
 		/* Dark theme */
 		:root[data-theme="dark"] {
 			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
+		}
+		/* Halloween theme */
+		:root[data-theme="halloween"] {
+			--bg:#1a0d1a; --bg-alt:#0d0a0d; --panel:#2d1810; --panel-2:#3d2415; --text:#f5f0e8; --muted:#d4a574; --accent:#ff6b35; --border:#ff8c42; --ring:#ff6b3580; --shadow:0 10px 24px rgba(255,107,53,.25);
 		}
 	html, body { min-height: 100%; }
 	html { scroll-padding-top: calc(var(--topbar-offset) + 16px); }
@@ -3190,31 +3194,58 @@ Prices vary depending on region.
 	</div>
 
 	<script>
-		// Theme toggle (match main index.html behavior exactly)
+		// Theme toggle (match main index.html behavior exactly - supports light/dark/halloween)
 		(function initTheme(){
 			const root = document.documentElement;
 			const btn = document.getElementById('btn-theme');
 			if(!btn) return; // safety
 			// Prefer explicit ?theme= in URL; else fall back to stored preference
 			const urlTheme = new URLSearchParams(window.location.search).get('theme');
-			if (urlTheme === 'dark' || urlTheme === 'light') {
-				if (urlTheme === 'dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
+			if (['light', 'dark', 'halloween'].includes(urlTheme)) {
+				if (urlTheme === 'dark') root.setAttribute('data-theme','dark');
+				else if (urlTheme === 'halloween') root.setAttribute('data-theme','halloween');
+				else root.removeAttribute('data-theme');
 				localStorage.setItem('priceExplorerTheme', urlTheme);
 			} else {
 				const stored = localStorage.getItem('priceExplorerTheme');
 				if (stored === 'dark') root.setAttribute('data-theme','dark');
+				else if (stored === 'halloween') root.setAttribute('data-theme','halloween');
 			}
-			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			
+			function currentMode(){ 
+				const theme = root.getAttribute('data-theme');
+				return theme === 'dark' ? 'dark' : theme === 'halloween' ? 'halloween' : 'light';
+			}
+			
 			function updateBtn(){
 				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
-				btn.setAttribute('aria-pressed', mode==='dark');
-				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				if (mode === 'light') {
+					btn.textContent = '🌙 Dark';
+					btn.title = 'Switch to dark mode';
+				} else if (mode === 'dark') {
+					btn.textContent = '🎃 Halloween';
+					btn.title = 'Switch to Halloween mode';
+				} else {
+					btn.textContent = '☀️ Light';
+					btn.title = 'Switch to light mode';
+				}
+				btn.setAttribute('aria-pressed', mode !== 'light');
 			}
+			
 			btn.addEventListener('click', ()=> {
-				const isDark = currentMode()==='dark';
-				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
-				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				const mode = currentMode();
+				let nextMode;
+				if (mode === 'light') {
+					nextMode = 'dark';
+					root.setAttribute('data-theme','dark');
+				} else if (mode === 'dark') {
+					nextMode = 'halloween';
+					root.setAttribute('data-theme','halloween');
+				} else {
+					nextMode = 'light';
+					root.removeAttribute('data-theme');
+				}
+				localStorage.setItem('priceExplorerTheme', nextMode);
 				updateBtn();
 			});
 			updateBtn();
@@ -3227,8 +3258,7 @@ Prices vary depending on region.
 			const btn = document.getElementById('btn-back');
 			if (!btn) return;
 			btn.addEventListener('click', ()=>{
-				const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-				const theme = isDark ? 'dark' : 'light';
+				const theme = document.documentElement.getAttribute('data-theme') || 'light';
 				window.location.href = '../?theme=' + encodeURIComponent(theme);
 			});
 		})();

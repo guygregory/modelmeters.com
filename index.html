@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Model Meters - Azure AI Foundry</title>
+	<title>🎃 Model Meters - Azure AI Foundry</title>
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<style>
 		/* Light theme (default) */
@@ -13,6 +13,10 @@
 		/* Dark theme */
 		:root[data-theme="dark"] {
 			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
+		}
+		/* Halloween theme */
+		:root[data-theme="halloween"] {
+			--bg:#1a0d1a; --bg-alt:#0d0a0d; --panel:#2d1810; --panel-2:#3d2415; --text:#f5f0e8; --muted:#d4a574; --accent:#ff6b35; --border:#ff8c42; --ring:#ff6b3580; --shadow:0 10px 24px rgba(255,107,53,.25);
 		}
 		html, body { height: 100%; }
 		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); overflow:hidden; }
@@ -81,7 +85,7 @@
 	<div class="container">
 		<div class="card" id="card">
 			<div class="card-hd">
-				<div class="title"><a href="/" id="home-link" style="all:unset;cursor:pointer;display:inline;">Model Meters - Azure AI Foundry</a> <span id="row-count" class="count-chip"></span></div>
+				<div class="title"><a href="/" id="home-link" style="all:unset;cursor:pointer;display:inline;">🎃 Model Meters - Azure AI Foundry</a> <span id="row-count" class="count-chip"></span></div>
 <script>
 // Make the home link work on any path or subdirectory, without hard-coding
 document.addEventListener('DOMContentLoaded', function() {
@@ -199,24 +203,65 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 
 	<script>
-		// Theme toggle (light default)
+		// Theme toggle (light default, cycles through light → dark → halloween)
 		(function initTheme(){
 			const root = document.documentElement;
 			const btn = document.getElementById('btn-theme');
 			if(!btn) return; // safety
 			const stored = localStorage.getItem('priceExplorerTheme');
 			if (stored === 'dark') root.setAttribute('data-theme','dark');
-			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			else if (stored === 'halloween') root.setAttribute('data-theme','halloween');
+			
+			function currentMode(){ 
+				const theme = root.getAttribute('data-theme');
+				return theme === 'dark' ? 'dark' : theme === 'halloween' ? 'halloween' : 'light';
+			}
+			
 			function updateBtn(){
 				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
-				btn.setAttribute('aria-pressed', mode==='dark');
-				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				if (mode === 'light') {
+					btn.textContent = '🌙 Dark';
+					btn.title = 'Switch to dark mode';
+				} else if (mode === 'dark') {
+					btn.textContent = '🎃 Halloween';
+					btn.title = 'Switch to Halloween mode';
+				} else {
+					btn.textContent = '☀️ Light';
+					btn.title = 'Switch to light mode';
+				}
+				btn.setAttribute('aria-pressed', mode !== 'light');
+				updateHalloweenEmojis(mode);
 			}
+			
+			function updateHalloweenEmojis(mode) {
+				const buttons = {
+					'btn-favorites': mode === 'halloween' ? '🕷️ Favorites' : '⭐ Favorites',
+					'btn-export-csv': mode === 'halloween' ? '🦇 Export CSV' : '📥 Export CSV',
+					'btn-share-url': mode === 'halloween' ? '👻 Share URL' : '🔗 Share URL',
+					'btn-columns': mode === 'halloween' ? '🕸️ Columns' : '☰ Columns',
+					'btn-ai-summaries': mode === 'halloween' ? '🔮 AI Summaries' : '✨AI Summaries'
+				};
+				
+				Object.entries(buttons).forEach(([id, text]) => {
+					const button = document.getElementById(id);
+					if (button) button.textContent = text;
+				});
+			}
+			
 			btn.addEventListener('click', ()=> {
-				const isDark = currentMode()==='dark';
-				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
-				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				const mode = currentMode();
+				let nextMode;
+				if (mode === 'light') {
+					nextMode = 'dark';
+					root.setAttribute('data-theme','dark');
+				} else if (mode === 'dark') {
+					nextMode = 'halloween';
+					root.setAttribute('data-theme','halloween');
+				} else {
+					nextMode = 'light';
+					root.removeAttribute('data-theme');
+				}
+				localStorage.setItem('priceExplorerTheme', nextMode);
 				updateBtn();
 			});
 			updateBtn();
@@ -224,8 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		// Navigate to agent page, preserving theme as a query param
 		document.getElementById('btn-ai-summaries').addEventListener('click', () => {
-			const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-			const theme = isDark ? 'dark' : 'light';
+			const theme = document.documentElement.getAttribute('data-theme') || 'light';
 			// Prefer relative path to work on file:// and http(s)://
 			const dest = 'agent/?theme=' + encodeURIComponent(theme);
 			window.location.href = dest;
