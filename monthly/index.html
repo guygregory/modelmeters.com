@@ -64,7 +64,7 @@
 			<div class="card-hd">
 				<div class="title">Model Meter Monthly summaries - ✨ AI generated</div>
 				<div class="toolbar">
-					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
+					<button id="btn-language" title="Toggle language">🇺🇸 English</button>
 					<button id="btn-back" title="Back to Model Meters">↩️Model Meters</button>
 				</div>
 			</div>
@@ -3190,46 +3190,52 @@ Prices vary depending on region.
 	</div>
 
 	<script>
-		// Theme toggle (match main index.html behavior exactly)
-		(function initTheme(){
-			const root = document.documentElement;
-			const btn = document.getElementById('btn-theme');
+		// Language toggle (match main index.html behavior exactly)
+		(function initLanguage(){
+			const btn = document.getElementById('btn-language');
 			if(!btn) return; // safety
-			// Prefer explicit ?theme= in URL; else fall back to stored preference
-			const urlTheme = new URLSearchParams(window.location.search).get('theme');
-			if (urlTheme === 'dark' || urlTheme === 'light') {
-				if (urlTheme === 'dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
-				localStorage.setItem('priceExplorerTheme', urlTheme);
-			} else {
-				const stored = localStorage.getItem('priceExplorerTheme');
-				if (stored === 'dark') root.setAttribute('data-theme','dark');
-			}
-			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			
+			// Check URL params first, then localStorage, default to English
+			const urlParams = new URLSearchParams(window.location.search);
+			const urlLang = urlParams.get('lang');
+			const stored = localStorage.getItem('modelMetersLanguage');
+			let currentLang = urlLang || stored || 'en';
+			
+			// Normalize language codes
+			if (currentLang !== 'pl') currentLang = 'en';
+			
+			// Store the preference if it came from URL
+			if (urlLang) localStorage.setItem('modelMetersLanguage', currentLang);
+			
 			function updateBtn(){
-				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
-				btn.setAttribute('aria-pressed', mode==='dark');
-				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				if (currentLang === 'pl') {
+					btn.textContent = '🇵🇱 Polish';
+					btn.title = 'Switch to English';
+				} else {
+					btn.textContent = '🇺🇸 English';
+					btn.title = 'Switch to Polish';
+				}
+				btn.setAttribute('aria-pressed', currentLang === 'pl');
 			}
+			
 			btn.addEventListener('click', ()=> {
-				const isDark = currentMode()==='dark';
-				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
-				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				currentLang = currentLang === 'pl' ? 'en' : 'pl';
+				localStorage.setItem('modelMetersLanguage', currentLang);
 				updateBtn();
 			});
+			
 			updateBtn();
 		})();
 	</script>
 
 	<script>
-		// Back button: navigate to parent, preserving theme via ?theme=
+		// Back button: navigate to parent, preserving language via ?lang=
 		(function(){
 			const btn = document.getElementById('btn-back');
 			if (!btn) return;
 			btn.addEventListener('click', ()=>{
-				const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-				const theme = isDark ? 'dark' : 'light';
-				window.location.href = '../?theme=' + encodeURIComponent(theme);
+				const currentLang = localStorage.getItem('modelMetersLanguage') || 'en';
+				window.location.href = '../?lang=' + encodeURIComponent(currentLang);
 			});
 		})();
 	</script>

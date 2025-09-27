@@ -63,7 +63,7 @@
 				   <div style="display:flex; align-items:center; gap:12px; margin-left:auto;">
 					   <span class="title" style="font-size:16px; font-weight:500; white-space:nowrap;">Powered by <a href="https://ai.azure.com/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Azure AI</a> + <a href="https://github.com/microsoftdocs/mcp" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;">Microsoft Learn MCP Server</a></span>
 					   <button id="btn-rss" title="RSS Feed">🌐 RSS</button>
-					   <button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
+					   <button id="btn-language" title="Toggle language">🇺🇸 English</button>
 					   <button id="btn-back" title="Back to Model Meters">↩️Model Meters</button>
 				   </div>
 			</div>
@@ -77,44 +77,39 @@
 	</div>
 
 	<script>
-		// Theme support (preserves and allows switching)
+		// Language support (preserves and allows switching)
 		(() => {
-			const root = document.documentElement;
-			const btn = document.getElementById('btn-theme');
+			const btn = document.getElementById('btn-language');
 
-			// Check URL params first, then localStorage, then system preference
+			// Check URL params first, then localStorage, default to English
 			const urlParams = new URLSearchParams(window.location.search);
-			const paramTheme = urlParams.get('theme');
-			const stored = localStorage.getItem('priceExplorerTheme');
-			const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-			let mode = (paramTheme || stored || (prefersDark ? 'dark' : 'light')) === 'dark' ? 'dark' : 'light';
+			const paramLang = urlParams.get('lang');
+			const stored = localStorage.getItem('modelMetersLanguage');
+			let currentLang = paramLang || stored || 'en';
+			
+			// Normalize language codes
+			if (currentLang !== 'pl') currentLang = 'en';
 
-			if (paramTheme) localStorage.setItem('priceExplorerTheme', mode);
-
-			function currentMode(){
-				return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-			}
-
-			function applyMode(newMode){
-				const m = newMode === 'dark' ? 'dark' : 'light';
-				if (m === 'dark') root.setAttribute('data-theme','dark');
-				else root.removeAttribute('data-theme');
-				localStorage.setItem('priceExplorerTheme', m);
-				updateBtn();
-			}
+			if (paramLang) localStorage.setItem('modelMetersLanguage', currentLang);
 
 			function updateBtn(){
-				const m = currentMode();
-				// Show target mode on the button (same UX as main page)
-				const nextLabel = m === 'dark' ? '☀️ Light' : '🌙 Dark';
-				btn.textContent = nextLabel;
-				btn.setAttribute('aria-label', 'Switch to ' + (m === 'dark' ? 'light' : 'dark') + ' theme');
+				if (currentLang === 'pl') {
+					btn.textContent = '🇵🇱 Polish';
+					btn.setAttribute('aria-label', 'Switch to English');
+					btn.title = 'Switch to English';
+				} else {
+					btn.textContent = '🇺🇸 English';
+					btn.setAttribute('aria-label', 'Switch to Polish');
+					btn.title = 'Switch to Polish';
+				}
+				btn.setAttribute('aria-pressed', currentLang === 'pl');
 			}
 
-			applyMode(mode);
+			updateBtn();
 			btn.addEventListener('click', () => {
-				const isDark = currentMode() === 'dark';
-				applyMode(isDark ? 'light' : 'dark');
+				currentLang = currentLang === 'pl' ? 'en' : 'pl';
+				localStorage.setItem('modelMetersLanguage', currentLang);
+				updateBtn();
 			});
 		})();
 

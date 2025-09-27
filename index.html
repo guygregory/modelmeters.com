@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						</select>
 					</div>
 					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
-					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
+					<button id="btn-language" title="Toggle language">🇺🇸 English</button>
 					<button id="btn-ai-summaries" title="View AI monthly summaries">✨AI Summaries</button>
 				</div>
 			</div>
@@ -199,35 +199,48 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 
 	<script>
-		// Theme toggle (light default)
-		(function initTheme(){
-			const root = document.documentElement;
-			const btn = document.getElementById('btn-theme');
+		// Language toggle (English default)
+		(function initLanguage(){
+			const btn = document.getElementById('btn-language');
 			if(!btn) return; // safety
-			const stored = localStorage.getItem('priceExplorerTheme');
-			if (stored === 'dark') root.setAttribute('data-theme','dark');
-			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			
+			// Check URL params first, then localStorage, default to English
+			const urlParams = new URLSearchParams(window.location.search);
+			const urlLang = urlParams.get('lang');
+			const stored = localStorage.getItem('modelMetersLanguage');
+			let currentLang = urlLang || stored || 'en';
+			
+			// Normalize language codes
+			if (currentLang !== 'pl') currentLang = 'en';
+			
+			// Store the preference if it came from URL
+			if (urlLang) localStorage.setItem('modelMetersLanguage', currentLang);
+			
 			function updateBtn(){
-				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
-				btn.setAttribute('aria-pressed', mode==='dark');
-				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				if (currentLang === 'pl') {
+					btn.textContent = '🇵🇱 Polish';
+					btn.title = 'Switch to English';
+				} else {
+					btn.textContent = '🇺🇸 English';
+					btn.title = 'Switch to Polish';
+				}
+				btn.setAttribute('aria-pressed', currentLang === 'pl');
 			}
+			
 			btn.addEventListener('click', ()=> {
-				const isDark = currentMode()==='dark';
-				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
-				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				currentLang = currentLang === 'pl' ? 'en' : 'pl';
+				localStorage.setItem('modelMetersLanguage', currentLang);
 				updateBtn();
 			});
+			
 			updateBtn();
 		})();
 
-		// Navigate to agent page, preserving theme as a query param
+		// Navigate to agent page, preserving language as a query param
 		document.getElementById('btn-ai-summaries').addEventListener('click', () => {
-			const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-			const theme = isDark ? 'dark' : 'light';
+			const currentLang = localStorage.getItem('modelMetersLanguage') || 'en';
 			// Prefer relative path to work on file:// and http(s)://
-			const dest = 'agent/?theme=' + encodeURIComponent(theme);
+			const dest = 'agent/?lang=' + encodeURIComponent(currentLang);
 			window.location.href = dest;
 		});
 
