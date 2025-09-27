@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						</select>
 					</div>
 					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
-					<button id="btn-language" title="Toggle language">🇺🇸 English</button>
+					<button id="btn-language" title="Toggle language">🇬🇧 English</button>
 					<button id="btn-ai-summaries" title="View AI monthly summaries">✨AI Summaries</button>
 				</div>
 			</div>
@@ -199,6 +199,138 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 
 	<script>
+		// Language translations
+		const translations = {
+			en: {
+				// Button texts
+				favorites: '⭐ Favorites',
+				exportCsv: '📥 Export CSV',
+				shareUrl: '🔗 Share URL',
+				columns: '☰ Columns',
+				aiSummaries: '✨AI Summaries',
+				firstPage: '⏮',
+				prevPage: '◀',
+				nextPage: '▶',
+				lastPage: '⏭',
+				showAll: 'Show all',
+				hideAll: 'Hide all',
+				clear: 'Clear',
+				apply: 'Apply',
+				
+				// Other UI elements
+				loadingData: 'Loading data…',
+				lastUpdated: 'Last updated:',
+				createdBy: 'Created by',
+				rowsPerPage: 'Rows per page',
+				all: 'All',
+				page: 'Page',
+				
+				// Column headers
+				productName: 'Product',
+				meterName: 'Meter',
+				retailPrice: 'Retail Price',
+				unitPrice: 'Unit Price',
+				currencyCode: 'Currency',
+				unitOfMeasure: 'Unit',
+				armRegionName: 'ARM Region',
+				location: 'Location',
+				serviceName: 'Service',
+				serviceFamily: 'Family',
+				tierMinimumUnits: 'Tier Min Units',
+				effectiveStartDate: 'Start Date',
+				meterId: 'Meter Id',
+				serviceId: 'Service Id',
+				productId: 'Product Id',
+				skuId: 'SKU Id',
+				skuName: 'SKU Name',
+				type: 'Type',
+				isPrimaryMeterRegion: 'Primary Region',
+				armSkuName: 'ARM SKU',
+				
+				// Filter menu
+				filterCol: 'Filter',
+				operator: 'Operator',
+				contains: 'Contains',
+				notContains: 'Not contains',
+				equals: 'Equals',
+				notEqual: 'Not equal',
+				startsWith: 'Starts with',
+				endsWith: 'Ends with',
+				value: 'Value',
+				pickValues: 'or pick specific values',
+				filterValues: 'Filter values…',
+				changesApply: 'Changes apply as you type',
+				
+				// Language button
+				languageButton: '🇬🇧 English',
+				switchToPolish: 'Switch to Polish'
+			},
+			pl: {
+				// Button texts
+				favorites: '⭐ Ulubione',
+				exportCsv: '📥 Eksport CSV',
+				shareUrl: '🔗 Udostępnij URL',
+				columns: '☰ Kolumny',
+				aiSummaries: '✨Podsumowania AI',
+				firstPage: '⏮',
+				prevPage: '◀',
+				nextPage: '▶',
+				lastPage: '⏭',
+				showAll: 'Pokaż wszystkie',
+				hideAll: 'Ukryj wszystkie',
+				clear: 'Wyczyść',
+				apply: 'Zastosuj',
+				
+				// Other UI elements
+				loadingData: 'Ładowanie danych…',
+				lastUpdated: 'Ostatnia aktualizacja:',
+				createdBy: 'Utworzone przez',
+				rowsPerPage: 'Wierszy na stronę',
+				all: 'Wszystkie',
+				page: 'Strona',
+				
+				// Column headers
+				productName: 'Produkt',
+				meterName: 'Licznik',
+				retailPrice: 'Cena detaliczna',
+				unitPrice: 'Cena jednostkowa',
+				currencyCode: 'Waluta',
+				unitOfMeasure: 'Jednostka',
+				armRegionName: 'Region ARM',
+				location: 'Lokalizacja',
+				serviceName: 'Usługa',
+				serviceFamily: 'Rodzina',
+				tierMinimumUnits: 'Min. jednostek warstwy',
+				effectiveStartDate: 'Data rozpoczęcia',
+				meterId: 'ID licznika',
+				serviceId: 'ID usługi',
+				productId: 'ID produktu',
+				skuId: 'ID SKU',
+				skuName: 'Nazwa SKU',
+				type: 'Typ',
+				isPrimaryMeterRegion: 'Region główny',
+				armSkuName: 'ARM SKU',
+				
+				// Filter menu
+				filterCol: 'Filtr',
+				operator: 'Operator',
+				contains: 'Zawiera',
+				notContains: 'Nie zawiera',
+				equals: 'Równa się',
+				notEqual: 'Nie równa się',
+				startsWith: 'Zaczyna się od',
+				endsWith: 'Kończy się na',
+				value: 'Wartość',
+				pickValues: 'lub wybierz konkretne wartości',
+				filterValues: 'Filtruj wartości…',
+				changesApply: 'Zmiany są stosowane podczas pisania',
+				
+				// Language button
+				languageButton: '🇵🇱 Polish',
+				switchToEnglish: 'Przełącz na angielski'
+			}
+		};
+
 		// Language toggle (English default)
 		(function initLanguage(){
 			const btn = document.getElementById('btn-language');
@@ -218,22 +350,140 @@ document.addEventListener('DOMContentLoaded', function() {
 			
 			function updateBtn(){
 				if (currentLang === 'pl') {
-					btn.textContent = '🇵🇱 Polish';
-					btn.title = 'Switch to English';
+					btn.textContent = translations.pl.languageButton;
+					btn.title = translations.pl.switchToEnglish;
 				} else {
-					btn.textContent = '🇺🇸 English';
-					btn.title = 'Switch to Polish';
+					btn.textContent = translations.en.languageButton;
+					btn.title = translations.en.switchToPolish;
 				}
 				btn.setAttribute('aria-pressed', currentLang === 'pl');
+			}
+			
+			function updateUI() {
+				const t = translations[currentLang];
+				
+				// Update button texts
+				const btnFavorites = document.getElementById('btn-favorites');
+				if (btnFavorites) btnFavorites.textContent = t.favorites;
+				
+				const btnExportCsv = document.getElementById('btn-export-csv');
+				if (btnExportCsv) btnExportCsv.textContent = t.exportCsv;
+				
+				const btnShareUrl = document.getElementById('btn-share-url');
+				if (btnShareUrl) btnShareUrl.textContent = t.shareUrl;
+				
+				const btnColumns = document.getElementById('btn-columns');
+				if (btnColumns) btnColumns.textContent = t.columns;
+				
+				const btnAiSummaries = document.getElementById('btn-ai-summaries');
+				if (btnAiSummaries) btnAiSummaries.textContent = t.aiSummaries;
+				
+				// Update pagination buttons
+				const btnFirst = document.getElementById('btn-first');
+				if (btnFirst) btnFirst.title = currentLang === 'pl' ? 'Pierwsza strona' : 'First page';
+				
+				const btnPrev = document.getElementById('btn-prev'); 
+				if (btnPrev) btnPrev.title = currentLang === 'pl' ? 'Poprzednia strona' : 'Previous page';
+				
+				const btnNext = document.getElementById('btn-next');
+				if (btnNext) btnNext.title = currentLang === 'pl' ? 'Następna strona' : 'Next page';
+				
+				const btnLast = document.getElementById('btn-last');
+				if (btnLast) btnLast.title = currentLang === 'pl' ? 'Ostatnia strona' : 'Last page';
+				
+				const pageSize = document.getElementById('page-size');
+				if (pageSize) {
+					pageSize.title = t.rowsPerPage;
+					const allOption = pageSize.querySelector('option[value="100000"]');
+					if (allOption) allOption.textContent = t.all;
+				}
+				
+				// Update loading text
+				const loadingSpan = document.querySelector('#loading span');
+				if (loadingSpan) loadingSpan.textContent = t.loadingData;
+				
+				// Update "Last updated" text
+				const lastUpdatedLabel = document.querySelector('strong');
+				if (lastUpdatedLabel && lastUpdatedLabel.textContent.includes('Last updated')) {
+					lastUpdatedLabel.textContent = t.lastUpdated;
+				}
+				
+				// Update filter menu elements
+				const btnClearFilter = document.getElementById('btn-clear-filter');
+				if (btnClearFilter) btnClearFilter.textContent = t.clear;
+				
+				const btnApplyFilter = document.getElementById('btn-apply-filter');
+				if (btnApplyFilter) btnApplyFilter.textContent = t.apply;
+				
+				const btnShowAll = document.getElementById('btn-value-show-all');
+				if (btnShowAll) btnShowAll.textContent = t.showAll;
+				
+				const btnHideAll = document.getElementById('btn-value-hide-all');
+				if (btnHideAll) btnHideAll.textContent = t.hideAll;
+				
+				const btnShowAllCols = document.getElementById('btn-show-all');
+				if (btnShowAllCols) btnShowAllCols.textContent = t.showAll;
+				
+				const btnHideAllCols = document.getElementById('btn-hide-all');
+				if (btnHideAllCols) btnHideAllCols.textContent = t.hideAll;
+				
+				// Update filter placeholders and text
+				const opValue = document.getElementById('op-value');
+				if (opValue) opValue.placeholder = t.value;
+				
+				const valueSearch = document.getElementById('value-search');
+				if (valueSearch) valueSearch.placeholder = t.filterValues;
+				
+				// Update column headers by re-rendering the table
+				updateColumnHeaders();
+			}
+			
+			function updateColumnHeaders() {
+				const t = translations[currentLang];
+				
+				// Update the columns array
+				columns[0].name = t.productName;
+				columns[1].name = t.meterName;
+				columns[2].name = t.retailPrice;
+				columns[3].name = t.unitPrice;
+				columns[4].name = t.currencyCode;
+				columns[5].name = t.unitOfMeasure;
+				columns[6].name = t.armRegionName;
+				columns[7].name = t.location;
+				columns[8].name = t.serviceName;
+				columns[9].name = t.serviceFamily;
+				columns[10].name = t.tierMinimumUnits;
+				columns[11].name = t.effectiveStartDate;
+				columns[12].name = t.meterId;
+				columns[13].name = t.serviceId;
+				columns[14].name = t.productId;
+				columns[15].name = t.skuId;
+				columns[16].name = t.skuName;
+				columns[17].name = t.type;
+				columns[18].name = t.isPrimaryMeterRegion;
+				columns[19].name = t.armSkuName;
+				
+				// Re-render the table headers if the table exists
+				if (typeof renderHeader === 'function') {
+					renderHeader();
+				}
 			}
 			
 			btn.addEventListener('click', ()=> {
 				currentLang = currentLang === 'pl' ? 'en' : 'pl';
 				localStorage.setItem('modelMetersLanguage', currentLang);
 				updateBtn();
+				updateUI();
 			});
 			
 			updateBtn();
+			
+			// Initialize UI language after DOM is ready
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', updateUI);
+			} else {
+				updateUI();
+			}
 		})();
 
 		// Navigate to agent page, preserving language as a query param

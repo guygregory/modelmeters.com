@@ -124,7 +124,7 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 			<div class="card-hd">
 				<div class="title">{html.escape(TITLE)}</div>
 				<div class="toolbar">
-					<button id="btn-language" title="Toggle language">🇺🇸 English</button>
+					<button id="btn-language" title="Toggle language">🇬🇧 English</button>
 					<button id="btn-back" title="Back to Model Meters">↩️Model Meters</button>
 				</div>
 			</div>
@@ -160,7 +160,7 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 					btn.textContent = '🇵🇱 Polish';
 					btn.title = 'Switch to English';
 				}} else {{
-					btn.textContent = '🇺🇸 English';
+					btn.textContent = '🇬🇧 English';
 					btn.title = 'Switch to Polish';
 				}}
 				btn.setAttribute('aria-pressed', currentLang === 'pl');
