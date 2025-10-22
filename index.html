@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		const state = {
 			visible: Object.fromEntries(columns.map(c => [
 				c.key,
-				!['retailPrice','location','serviceId','productId','skuId','skuName','isPrimaryMeterRegion','armSkuName','serviceName','serviceFamily','tierMinimumUnits','type'].includes(c.key)
+				!['retailPrice','location','serviceId','productId','skuId','skuName','isPrimaryMeterRegion','armSkuName','serviceName','serviceFamily','tierMinimumUnits','type','meterId'].includes(c.key)
 			])),
 			filters: {},
 			valueSelections: {},
