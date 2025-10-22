@@ -14,6 +14,10 @@
 		:root[data-theme="dark"] {
 			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
 		}
+		/* Bonfire theme */
+		:root[data-theme="bonfire"] {
+			--bg:#000000; --bg-alt:#0a0a0a; --panel:#1a1a1aee; --panel-2:#252525dd; --text:#ffffff; --muted:#cccccc; --accent:#ff8800; --border:#444444; --ring:#ff880080; --shadow:0 10px 24px rgba(255,136,0,.2);
+		}
 		html, body { height: 100%; }
 		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); overflow:hidden; }
 		/* Full-height flex layout so only the table region scrolls (single scrollbar) */
@@ -75,9 +79,26 @@
 			.card-hd { flex-wrap: nowrap; }
 			.toolbar { flex-wrap: nowrap; overflow-x: auto; }
 		}
+		/* Fireworks animation for Bonfire theme */
+		.fireworks-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: hidden; }
+		:root[data-theme="bonfire"] .fireworks-container { display: block; }
+		:root:not([data-theme="bonfire"]) .fireworks-container { display: none; }
+		.firework { position: absolute; width: 4px; height: 4px; border-radius: 50%; animation: firework-launch 2s ease-out infinite; }
+		.firework::before, .firework::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; }
+		.spark { position: absolute; width: 2px; height: 2px; border-radius: 50%; animation: spark-fade 1.5s ease-out forwards; }
+		@keyframes firework-launch {
+			0% { transform: translateY(100vh) scale(1); opacity: 1; }
+			70% { transform: translateY(20vh) scale(1); opacity: 1; }
+			100% { transform: translateY(20vh) scale(0); opacity: 0; }
+		}
+		@keyframes spark-fade {
+			0% { transform: translate(0, 0) scale(1); opacity: 1; }
+			100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+		}
 	</style>
 </head>
 <body>
+	<div class="fireworks-container" id="fireworks"></div>
 	<div class="container">
 		<div class="card" id="card">
 			<div class="card-hd">
@@ -199,28 +220,118 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 
 	<script>
-		// Theme toggle (light default)
+		// Theme toggle (light/dark/bonfire)
 		(function initTheme(){
 			const root = document.documentElement;
 			const btn = document.getElementById('btn-theme');
 			if(!btn) return; // safety
 			const stored = localStorage.getItem('priceExplorerTheme');
 			if (stored === 'dark') root.setAttribute('data-theme','dark');
-			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			if (stored === 'bonfire') root.setAttribute('data-theme','bonfire');
+			function currentMode(){ 
+				const theme = root.getAttribute('data-theme');
+				return theme === 'dark' ? 'dark' : theme === 'bonfire' ? 'bonfire' : 'light';
+			}
 			function updateBtn(){
 				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
-				btn.setAttribute('aria-pressed', mode==='dark');
-				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				if (mode === 'dark') {
+					btn.textContent = '🎆 Bonfire';
+					btn.title = 'Switch to bonfire mode';
+				} else if (mode === 'bonfire') {
+					btn.textContent = '☀️ Light';
+					btn.title = 'Switch to light mode';
+				} else {
+					btn.textContent = '🌙 Dark';
+					btn.title = 'Switch to dark mode';
+				}
+				btn.setAttribute('aria-pressed', mode !== 'light');
 			}
 			btn.addEventListener('click', ()=> {
-				const isDark = currentMode()==='dark';
-				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
-				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				const mode = currentMode();
+				let newMode;
+				if (mode === 'light') {
+					newMode = 'dark';
+					root.setAttribute('data-theme','dark');
+				} else if (mode === 'dark') {
+					newMode = 'bonfire';
+					root.setAttribute('data-theme','bonfire');
+				} else {
+					newMode = 'light';
+					root.removeAttribute('data-theme');
+				}
+				localStorage.setItem('priceExplorerTheme', newMode);
 				updateBtn();
+				if (newMode === 'bonfire') initFireworks();
 			});
 			updateBtn();
+			if (currentMode() === 'bonfire') initFireworks();
 		})();
+
+		// Fireworks animation
+		function initFireworks() {
+			const container = document.getElementById('fireworks');
+			if (!container) return;
+			
+			const colors = ['#ff0000', '#ff8800', '#ffff00', '#00ff00', '#0088ff', '#8800ff', '#ff00ff', '#ffffff'];
+			
+			function createFirework() {
+				const x = Math.random() * window.innerWidth;
+				const color = colors[Math.floor(Math.random() * colors.length)];
+				const burstHeight = 15 + Math.random() * 30; // 15-45vh
+				
+				const firework = document.createElement('div');
+				firework.className = 'firework';
+				firework.style.left = x + 'px';
+				firework.style.bottom = '0';
+				firework.style.backgroundColor = color;
+				
+				const duration = 1.5 + Math.random() * 0.8;
+				firework.style.animation = `firework-launch ${duration}s ease-out`;
+				
+				container.appendChild(firework);
+				
+				setTimeout(() => {
+					createBurst(x, burstHeight, color);
+					firework.remove();
+				}, duration * 700);
+			}
+			
+			function createBurst(x, y, color) {
+				const sparkCount = 30 + Math.floor(Math.random() * 20);
+				for (let i = 0; i < sparkCount; i++) {
+					const spark = document.createElement('div');
+					spark.className = 'spark';
+					spark.style.left = x + 'px';
+					spark.style.top = `${100 - y}vh`;
+					spark.style.backgroundColor = color;
+					
+					const angle = (Math.PI * 2 * i) / sparkCount;
+					const velocity = 50 + Math.random() * 100;
+					const tx = Math.cos(angle) * velocity;
+					const ty = Math.sin(angle) * velocity;
+					
+					spark.style.setProperty('--tx', `${tx}px`);
+					spark.style.setProperty('--ty', `${ty}px`);
+					
+					container.appendChild(spark);
+					
+					setTimeout(() => spark.remove(), 1500);
+				}
+			}
+			
+			// Create fireworks at intervals
+			const interval = setInterval(() => {
+				if (document.documentElement.getAttribute('data-theme') !== 'bonfire') {
+					clearInterval(interval);
+					container.innerHTML = '';
+					return;
+				}
+				createFirework();
+			}, 800);
+			
+			// Initial burst
+			setTimeout(() => createFirework(), 100);
+		}
 
 		// Navigate to agent page, preserving theme as a query param
 		document.getElementById('btn-ai-summaries').addEventListener('click', () => {
