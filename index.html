@@ -14,6 +14,10 @@
 		:root[data-theme="dark"] {
 			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
 		}
+		/* Bonfire Night theme */
+		:root[data-theme="bonfire"] {
+			--bg:#0a0604; --bg-alt:#140c08; --panel:#1a0f0a; --panel-2:#251511; --text:#ffd4a3; --muted:#d4a574; --accent:#ff6b35; --border:#3d1f0f; --ring:#ff9e6080; --shadow:0 10px 24px rgba(255,69,0,.35);
+		}
 		html, body { height: 100%; }
 		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); overflow:hidden; }
 		/* Full-height flex layout so only the table region scrolls (single scrollbar) */
@@ -75,9 +79,24 @@
 			.card-hd { flex-wrap: nowrap; }
 			.toolbar { flex-wrap: nowrap; overflow-x: auto; }
 		}
+		/* Fireworks canvas */
+		#fireworks-canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			z-index: 9999;
+			display: none;
+		}
+		:root[data-theme="bonfire"] #fireworks-canvas {
+			display: block;
+		}
 	</style>
 </head>
 <body>
+	<canvas id="fireworks-canvas"></canvas>
 	<div class="container">
 		<div class="card" id="card">
 			<div class="card-hd">
@@ -199,24 +218,46 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 
 	<script>
-		// Theme toggle (light default)
+		// Theme toggle (light, dark, bonfire)
 		(function initTheme(){
 			const root = document.documentElement;
 			const btn = document.getElementById('btn-theme');
 			if(!btn) return; // safety
 			const stored = localStorage.getItem('priceExplorerTheme');
 			if (stored === 'dark') root.setAttribute('data-theme','dark');
-			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			if (stored === 'bonfire') root.setAttribute('data-theme','bonfire');
+			function currentMode(){ 
+				const theme = root.getAttribute('data-theme');
+				return theme === 'dark' ? 'dark' : theme === 'bonfire' ? 'bonfire' : 'light'; 
+			}
 			function updateBtn(){
 				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
-				btn.setAttribute('aria-pressed', mode==='dark');
-				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				if (mode === 'light') {
+					btn.textContent = '🌙 Dark';
+					btn.title = 'Switch to dark mode';
+				} else if (mode === 'dark') {
+					btn.textContent = '🎆 Bonfire';
+					btn.title = 'Switch to Bonfire Night mode';
+				} else {
+					btn.textContent = '☀️ Light';
+					btn.title = 'Switch to light mode';
+				}
+				btn.setAttribute('aria-pressed', mode !== 'light');
 			}
 			btn.addEventListener('click', ()=> {
-				const isDark = currentMode()==='dark';
-				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
-				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				const mode = currentMode();
+				let newTheme;
+				if (mode === 'light') {
+					newTheme = 'dark';
+					root.setAttribute('data-theme', 'dark');
+				} else if (mode === 'dark') {
+					newTheme = 'bonfire';
+					root.setAttribute('data-theme', 'bonfire');
+				} else {
+					newTheme = 'light';
+					root.removeAttribute('data-theme');
+				}
+				localStorage.setItem('priceExplorerTheme', newTheme);
 				updateBtn();
 			});
 			updateBtn();
@@ -985,6 +1026,147 @@ document.addEventListener('DOMContentLoaded', function() {
 		(function tests(){
 			console.assert(applyOp('abc','contains','b')===true,'contains');
 			console.assert(applyOp('abc','equals','ABC')===true,'equals case');
+		})();
+
+		// Fireworks animation for Bonfire Night theme
+		(function initFireworks(){
+			const canvas = document.getElementById('fireworks-canvas');
+			if (!canvas) return;
+			const ctx = canvas.getContext('2d');
+			let animationId = null;
+			let fireworks = [];
+			let particles = [];
+
+			function resizeCanvas() {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}
+			window.addEventListener('resize', resizeCanvas);
+			resizeCanvas();
+
+			class Firework {
+				constructor() {
+					this.x = Math.random() * canvas.width;
+					this.y = canvas.height;
+					this.targetY = Math.random() * canvas.height * 0.5;
+					this.speed = 3 + Math.random() * 2;
+					this.hue = Math.random() * 60 + 10; // Orange/red/yellow range
+					this.brightness = 50 + Math.random() * 30;
+				}
+
+				update() {
+					this.y -= this.speed;
+					return this.y <= this.targetY;
+				}
+
+				draw() {
+					ctx.beginPath();
+					ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+					ctx.fillStyle = `hsl(${this.hue}, 100%, ${this.brightness}%)`;
+					ctx.fill();
+				}
+			}
+
+			class Particle {
+				constructor(x, y, hue) {
+					this.x = x;
+					this.y = y;
+					this.hue = hue;
+					this.brightness = 50 + Math.random() * 30;
+					this.radius = 2 + Math.random() * 2;
+					this.angle = Math.random() * Math.PI * 2;
+					this.speed = 1 + Math.random() * 3;
+					this.friction = 0.95;
+					this.gravity = 0.3;
+					this.opacity = 1;
+					this.decay = 0.015 + Math.random() * 0.015;
+					this.vx = Math.cos(this.angle) * this.speed;
+					this.vy = Math.sin(this.angle) * this.speed;
+				}
+
+				update() {
+					this.vx *= this.friction;
+					this.vy *= this.friction;
+					this.vy += this.gravity;
+					this.x += this.vx;
+					this.y += this.vy;
+					this.opacity -= this.decay;
+					return this.opacity > 0;
+				}
+
+				draw() {
+					ctx.save();
+					ctx.globalAlpha = this.opacity;
+					ctx.beginPath();
+					ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+					ctx.fillStyle = `hsl(${this.hue}, 100%, ${this.brightness}%)`;
+					ctx.fill();
+					ctx.restore();
+				}
+			}
+
+			function createParticles(x, y, hue) {
+				const count = 30 + Math.random() * 30;
+				for (let i = 0; i < count; i++) {
+					particles.push(new Particle(x, y, hue));
+				}
+			}
+
+			function animate() {
+				ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+				ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+				// Create new fireworks randomly
+				if (Math.random() < 0.05) {
+					fireworks.push(new Firework());
+				}
+
+				// Update and draw fireworks
+				fireworks = fireworks.filter(fw => {
+					const exploded = fw.update();
+					fw.draw();
+					if (exploded) {
+						createParticles(fw.x, fw.y, fw.hue);
+						return false;
+					}
+					return true;
+				});
+
+				// Update and draw particles
+				particles = particles.filter(p => {
+					const alive = p.update();
+					p.draw();
+					return alive;
+				});
+
+				animationId = requestAnimationFrame(animate);
+			}
+
+			// Start/stop animation based on theme
+			function checkTheme() {
+				const theme = document.documentElement.getAttribute('data-theme');
+				if (theme === 'bonfire') {
+					if (!animationId) animate();
+				} else {
+					if (animationId) {
+						cancelAnimationFrame(animationId);
+						animationId = null;
+						fireworks = [];
+						particles = [];
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+					}
+				}
+			}
+
+			// Initial check
+			checkTheme();
+
+			// Watch for theme changes
+			const observer = new MutationObserver(checkTheme);
+			observer.observe(document.documentElement, { 
+				attributes: true, 
+				attributeFilter: ['data-theme'] 
+			});
 		})();
 	</script>
 </body>
