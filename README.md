@@ -12,7 +12,7 @@ To watch the November 2025 Cloud Champion session associated with this tool, ple
 
 ## Solution Overview
 
-Model Meters combines several Azure and GitHub services to create an automated pricing intelligence solution:
+Model Meters combines several Azure and GitHub services to create an automated pricing intelligence solution. The system architecture orchestrates daily updates through GitHub Actions workflows, with Azure OpenAI generating insights and Azure Static Web Apps hosting the results. The social preview image at the top of this README provides a visual overview of how these components work together.
 
 ### Architecture Flow
 
@@ -42,6 +42,20 @@ This sample is designed to help Microsoft partners (and their customers) underst
 - **Build cost-effective monitoring solutions** for tracking Azure service pricing changes
 - **Create automated reporting systems** that combine real-time data with AI-generated insights
 
+### Value Proposition
+
+**Before modelmeters.com:**
+- Manually checking Azure pricing pages to track AI model costs
+- Missing important price changes that impact project budgets
+- Difficult to compare pricing across different regions and models
+- No historical view of how AI pricing has evolved over time
+
+**After modelmeters.com:**
+- Automated daily price monitoring with AI-generated summaries
+- Historical pricing data and trend analysis at your fingertips
+- Side-by-side model comparison with interactive filtering
+- RSS/email notifications when new pricing data is available
+
 ## Technologies Used
 
 ### Core Technologies
@@ -53,7 +67,7 @@ This sample is designed to help Microsoft partners (and their customers) underst
 
 ### Development Stack
 - **HTML/CSS/JavaScript** - Frontend web interface
-- **Python 3.1x** - Backend data processing and AI integration
+- **Python 3.11+** - Backend data processing and AI integration
 - **OpenAI Python SDK** - AI model interaction
 - **JSON/NDJSON** - Data storage and interchange formats
 
@@ -76,6 +90,11 @@ This sample is designed to help Microsoft partners (and their customers) underst
 
 The minimal solution takes advantage of free tiers where available, and has been designed to be deployed on a Visual Studio Subscription, or an Azure Free account. The Advanced demo could be deployed on Azure Bulk Credit, or on a commercial Azure subscription (CSP, PAYG, MCA-E, etc.).
 
+### Understanding the Cost Tiers
+
+- **Minimal demo:** Suitable for learning, personal projects, or proof-of-concept. Uses free tiers where available. Best for understanding how the system works and experimenting with the code.
+- **Advanced demo:** Designed for production use with higher data volumes, custom domains, and enhanced monitoring. Includes features like Azure AI Search and Microsoft Fabric for advanced analytics.
+
 | Component | Minimal demo | Advanced demo | Notes |
 |-----------|----------------------|------------------------|-------|
 | **Azure Static Web Apps** | $0/month | $9/month (Standard) | Free tier includes 100GB bandwidth, 0.5GB storage |
@@ -90,7 +109,7 @@ The minimal solution takes advantage of free tiers where available, and has been
 | **Microsoft Fabric** | N/A | Optional \~\$262/month (F2 capacity) | Based on Fabric F2 capacity |
 | **Total Monthly Cost** | **$5-10/month** | **$100-500/month** |  |
 
-> **Pricing Disclaimer**: Costs are approximate, correct at time of writing (August 2025), and may vary based on:
+> **Pricing Disclaimer**: Costs are approximate, correct at time of writing (November 2025), and may vary based on:
 > - Actual usage patterns and data volumes
 > - Regional pricing differences
 > - Azure service tier selections
@@ -103,9 +122,17 @@ The minimal solution takes advantage of free tiers where available, and has been
 
 ### Prerequisites
 
-- Azure subscription with AI Foundry access
-- GitHub repository
-- Python 3.11+ for local development
+**Required:**
+- **Azure subscription** with Azure AI Foundry or Azure OpenAI Service access
+  - [Create a free Azure account](https://azure.microsoft.com/free/) or use an existing subscription
+  - [Deploy an Azure OpenAI resource](https://learn.microsoft.com/azure/ai-services/openai/how-to/create-resource)
+- **Python 3.11 or later** ([Download Python](https://www.python.org/downloads/))
+- **Git** for cloning the repository
+- **Python packages:** `openai`, `python-dotenv` (installed via pip in setup steps)
+
+**Optional (for deploying your own version):**
+- GitHub account with repository access
+- Azure Static Web Apps resource for hosting
 
 ### Environment Setup
 
@@ -115,40 +142,61 @@ The minimal solution takes advantage of free tiers where available, and has been
    cd modelmeters.com
    ```
 
-2. **Configure Azure OpenAI** (for AI summaries):
+2. **Install Python dependencies**:
+   ```bash
+   pip install openai python-dotenv
+   ```
+
+3. **Configure Azure OpenAI** (for AI summaries):
    ```bash
    # Set environment variables
    export AZURE_OPENAI_API_KEY="your-api-key"
    export AZURE_OPENAI_V1_API_ENDPOINT="https://your-resource.openai.azure.com/openai/v1/"
    export AZURE_OPENAI_API_MODEL="gpt-4"
+   
+   # Verify environment variables are set (optional):
+   env | grep AZURE_OPENAI
    ```
 
-3. **Configure GitHub Token** (for GitHub Models fallback):
+4. **Configure GitHub Token** (optional, for GitHub Models fallback):
    ```bash
    export GITHUB_TOKEN="your-github-token"
    ```
+   
+   > **Note:** GitHub Models provides a simpler alternative for demos and experimentation. The project automatically falls back to GitHub Models if Azure OpenAI credentials are not configured. See `ai-summary-github-models.py` for implementation details.
 
 ### Local Development
 
 1. **Download pricing data**:
    ```bash
    python meter-download.py --cognitive-services-only --ndjson prices.ndjson
+   # Expected output:
+   # Fetching Azure Retail Prices...
+   # Downloaded 234 items
+   # Completed: 234 items written to prices.ndjson
    ```
 
 2. **Process monthly data**:
    ```bash
    python split_into_monthly.py
+   # Expected output:
+   # Processing prices.ndjson...
+   # Created 45 monthly files in monthly/full/ and monthly/partial/
    ```
 
 3. **Generate AI summaries**:
    ```bash
    python create-ai-summaries.py
+   # Expected output:
+   # Generating AI summary for 2024-10-01...
+   # Summary saved to monthly/aisummary/2024-10-01.md
    ```
 
 4. **Serve locally**:
    ```bash
    python -m http.server 8000
    # Visit http://localhost:8000
+   # You should see the pricing data explorer interface
    ```
 
 ### Deployment
@@ -209,6 +257,9 @@ pricing_data = response.json()
 ### AI Summary Generation
 ```python
 # Generate AI summary using Azure OpenAI
+# NOTE: This is a conceptual example showing the approach used in ai-summary.py
+#       Actual implementation may differ based on Azure OpenAI SDK version
+
 from openai import OpenAI
 
 client = OpenAI(
@@ -227,6 +278,118 @@ response = client.responses.create(
     }],
     input=pricing_data
 )
+```
+
+## Command Reference
+
+### Data Download Commands
+
+Download all Azure pricing data:
+```bash
+python meter-download.py --ndjson prices.ndjson
+```
+
+Download only Cognitive Services (AI) pricing:
+```bash
+python meter-download.py --cognitive-services-only --ndjson prices.ndjson
+```
+
+Quick test with limited pages:
+```bash
+python meter-download.py --max-pages 3 --ndjson sample.ndjson
+```
+
+### Data Processing Commands
+
+Split pricing data into monthly files:
+```bash
+python split_into_monthly.py
+# Creates files in monthly/full/ (complete data) and monthly/partial/ (filtered data)
+```
+
+Generate AI summaries for all months:
+```bash
+python create-ai-summaries.py
+# Creates AI-generated summaries in monthly/aisummary/
+```
+
+Generate AI summary for a specific date:
+```bash
+python ai-summary.py monthly/partial/2024-10-01.json
+# Outputs markdown summary to monthly/aisummary/2024-10-01.md
+```
+
+Use GitHub Models fallback (no Azure OpenAI needed):
+```bash
+python ai-summary-github-models.py monthly/partial/2024-10-01.json
+```
+
+### Local Development Commands
+
+Serve the site locally:
+```bash
+python -m http.server 8000
+# Then visit http://localhost:8000 in your browser
+```
+
+Generate RSS feed:
+```bash
+python generate-rss.py
+# Creates agent/rss.xml with recent AI summaries
+```
+
+Consolidate multiple AI summaries:
+```bash
+python consolidate-ai-summaries.py
+# Combines summaries for analysis
+```
+
+## Troubleshooting
+
+### Common Issues
+
+**Problem:** `ModuleNotFoundError: No module named 'openai'` or `No module named 'dotenv'`  
+**Solution:** Install the required Python packages:
+```bash
+pip install openai python-dotenv
+```
+
+**Problem:** AI summaries fail with authentication error  
+**Solution:** Verify your environment variables are set correctly:
+```bash
+# Check that all required variables are set:
+env | grep AZURE_OPENAI
+
+# Verify the values (be careful not to expose your actual API key):
+echo $AZURE_OPENAI_API_KEY | head -c 10  # Should show first 10 chars
+echo $AZURE_OPENAI_V1_API_ENDPOINT       # Should show your endpoint URL
+echo $AZURE_OPENAI_API_MODEL             # Should show your model name (e.g., gpt-4)
+```
+
+Ensure:
+- `AZURE_OPENAI_API_KEY` is your actual API key from Azure portal
+- `AZURE_OPENAI_V1_API_ENDPOINT` ends with `/openai/v1/`
+- `AZURE_OPENAI_API_MODEL` matches your Azure OpenAI deployment name
+
+**Problem:** Data download times out or returns errors  
+**Solution:** The Azure Retail Prices API has rate limits. The script includes retry logic with exponential backoff. Common causes:
+- Network connectivity issues - check your internet connection
+- API rate limiting - the script will automatically retry with delays
+- Temporary API unavailability - try again in a few minutes
+
+**Problem:** Local web server shows no data or empty tables  
+**Solution:** Ensure you've completed all steps in "Local Development" in order:
+1. Download pricing data (creates `prices.ndjson`)
+2. Process monthly data (creates files in `monthly/full/` and `monthly/partial/`)
+3. Verify files exist: `ls -lh monthly/partial/`
+4. Then serve the site
+
+**Problem:** `python` command not found  
+**Solution:** On some systems, Python 3 is called `python3`:
+```bash
+python3 --version              # Check Python 3 is installed
+python3 -m pip install openai  # Use python3 instead of python
+python3 meter-download.py      # Run scripts with python3
 ```
 
 ## Contributing
@@ -250,11 +413,11 @@ response = client.responses.create(
 
 ## Support and Resources
 
-- **Azure Pricing Documentation**: https://docs.microsoft.com/azure/cost-management-billing/
-- **Azure AI Foundry**: https://docs.microsoft.com/azure/ai-foundry/
-- **GitHub Actions**: https://docs.github.com/en/actions
-- **Azure Static Web Apps**: https://docs.microsoft.com/azure/static-web-apps/
-- **Microsoft Learn MCP Server**: [https://github.com/microsoftdocs/mcp](https://github.com/microsoftdocs/mcp)
+- **Azure Pricing Documentation**: [Cost Management and Billing](https://docs.microsoft.com/azure/cost-management-billing/)
+- **Azure AI Foundry**: [AI Foundry Documentation](https://docs.microsoft.com/azure/ai-foundry/)
+- **GitHub Actions**: [GitHub Actions Documentation](https://docs.github.com/en/actions)
+- **Azure Static Web Apps**: [Static Web Apps Documentation](https://docs.microsoft.com/azure/static-web-apps/)
+- **Microsoft Learn MCP Server**: [MCP Server on GitHub](https://github.com/microsoftdocs/mcp)
 
 ## License
 
