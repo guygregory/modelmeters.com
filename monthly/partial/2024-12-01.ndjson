@@ -25,7 +25,6 @@
 {"productName": "Azure OpenAI", "meterName": "o1 1217 Inp regnl Tokens", "unitPrice": 0.01815, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Inp regnl Tokens", "unitPrice": 0.003025, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt4o realtime cached audio inp glbl Tokens", "unitPrice": 0.02, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Video Content Extraction", "unitPrice": 1.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp Data Zone Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-outp-glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-regional Tokens", "unitPrice": 0.000163, "unitOfMeasure": "1K"}
@@ -64,7 +63,6 @@
 {"productName": "Azure AI Content Understanding", "meterName": "Document Field Extraction Pages", "unitPrice": 20.0, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-cached-FT-inp-regnl Tokens", "unitPrice": 8.3e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure AI Content Understanding", "meterName": "Document Field Extraction Pages", "unitPrice": 22.0, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Audio Content Extraction", "unitPrice": 0.36, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure AI Content Understanding", "meterName": "Add-On Formula Pages", "unitPrice": 3.0, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-FT-Hstng-glbl Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-Trng-glbl tkn Tokens", "unitPrice": 0.025, "unitOfMeasure": "1K"}

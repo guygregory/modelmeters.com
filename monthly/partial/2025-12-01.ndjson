@@ -1,38 +1,21 @@
-{"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT cd inp glb Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT cd inp glb Tokens", "unitPrice": 0.000275, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT opt glb Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT opt glb Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano dev ft training glbl Tokens", "unitPrice": 0.022, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano dev ft training glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT Training glb Unit", "unitPrice": 0.01, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT Training glb Unit", "unitPrice": 50.0, "unitOfMeasure": "1 Hour"}
-{"productName": "Speech", "meterName": "Voice Live API Lite - Custom Speech Audio Input Tokens", "unitPrice": 0.032, "unitOfMeasure": "1K"}
 {"productName": "Speech", "meterName": "Voice Live API Lite - Custom Speech Audio Input Tokens", "unitPrice": 0.038, "unitOfMeasure": "1K"}
 {"productName": "Speech", "meterName": "Voice Live API Lite - LLM Text Output Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT inp glb Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT inp glb Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 dev ft training glbl Tokens", "unitPrice": 0.0125, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini dev ft training glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Speech", "meterName": "Voice Live API Lite - LLM Text Input Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Audio Content Extraction", "unitPrice": 0.01, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure AI Content Understanding", "meterName": "Audio Content Extraction", "unitPrice": 0.36, "unitOfMeasure": "1 Hour"}
-{"productName": "Azure AI Content Understanding", "meterName": "Standard Doc Content Extraction Pages", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure AI Content Understanding", "meterName": "Standard Doc Content Extraction Pages", "unitPrice": 5.0, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Std Contextualization Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Std Contextualization Tokens", "unitPrice": 0.001, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "gpt 4.1 dev ft training glbl Tokens", "unitPrice": 0.044, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Basic Doc Content Extraction Pages", "unitPrice": 0.01, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Basic Doc Content Extraction Pages", "unitPrice": 1.0, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Add-On Layout Pages", "unitPrice": 0.01, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Add-On Layout Pages", "unitPrice": 5.0, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini dev ft training glbl Tokens", "unitPrice": 0.088, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "gpt 4o dev ft training glbl Tokens", "unitPrice": 0.0125, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Understanding", "meterName": "Video Content Extraction", "unitPrice": 0.01, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure AI Content Understanding", "meterName": "Video Content Extraction", "unitPrice": 1.0, "unitOfMeasure": "1 Hour"}
-{"productName": "Azure OpenAI", "meterName": "gpt 4o dev ft training glbl Tokens", "unitPrice": 0.1056, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Understanding", "meterName": "Std Contextualization Tokens", "unitPrice": 0.001, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Understanding", "meterName": "Basic Doc Content Extraction Pages", "unitPrice": 1.0, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Content Understanding", "meterName": "Add-On Layout Pages", "unitPrice": 5.0, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o dev ft training glbl Tokens", "unitPrice": 0.0125, "unitOfMeasure": "1K"}
 {"productName": "Speech", "meterName": "Voice Live API Lite - Standard Speech Audio Input Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o mini dev ft training glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "gpt 4o mini dev ft training glbl Tokens", "unitPrice": 0.0264, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Translator", "meterName": "S1 Image Images", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure AI Translator", "meterName": "S1 Image Images", "unitPrice": 8.0, "unitOfMeasure": "1K"}
 {"productName": "Azure AI Translator", "meterName": "S1 Image Images", "unitPrice": 10.0, "unitOfMeasure": "1K"}

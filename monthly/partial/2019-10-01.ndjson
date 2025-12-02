@@ -3,8 +3,6 @@
 {"productName": "Computer Vision", "meterName": "Image Analysis Group 1 Transactions - Free", "unitPrice": 0.0, "unitOfMeasure": "1K"}
 {"productName": "Content Moderator", "meterName": "Standard Transactions - Free", "unitPrice": 0.0, "unitOfMeasure": "1K"}
 {"productName": "Face", "meterName": "Standard Transactions - Free", "unitPrice": 0.0, "unitOfMeasure": "1K"}
-{"productName": "QnA Maker", "meterName": "Standard Unit", "unitPrice": 0.403, "unitOfMeasure": "1/Day"}
-{"productName": "QnA Maker", "meterName": "Standard Unit - Free", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
 {"productName": "Translator Text", "meterName": "S1 Translation Transactions - Free", "unitPrice": 0.0, "unitOfMeasure": "1M"}
 {"productName": "Language Understanding", "meterName": "S1 Speech To Intent - Understanding Transactions - Free", "unitPrice": 0.0, "unitOfMeasure": "1K"}
 {"productName": "Language", "meterName": "Standard Text Records - Free", "unitPrice": 0.0, "unitOfMeasure": "1K"}

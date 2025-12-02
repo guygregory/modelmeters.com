@@ -5,5 +5,3 @@
 {"productName": "Speech", "meterName": "Free Custom Speech Model Hosting Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
 {"productName": "Speech", "meterName": "Free Speech To Text", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Speech", "meterName": "Free Speech Translation", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
-{"productName": "QnA Maker", "meterName": "Free Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
-{"productName": "QnA Maker", "meterName": "Standard Unit", "unitPrice": 0.32258, "unitOfMeasure": "1/Day"}

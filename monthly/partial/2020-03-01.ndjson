@@ -31,7 +31,6 @@
 {"productName": "Language Understanding", "meterName": "S1 Transactions", "unitPrice": 1.875, "unitOfMeasure": "1K"}
 {"productName": "Translator Text", "meterName": "C3 Unit", "unitPrice": 241.94, "unitOfMeasure": "1/Day"}
 {"productName": "Ink Recognizer", "meterName": "S0 Transactions", "unitPrice": 2.5, "unitOfMeasure": "1K"}
-{"productName": "QnA Maker", "meterName": "Free Unit", "unitPrice": 0.0, "unitOfMeasure": "1/Day"}
 {"productName": "Speech", "meterName": "S1 Speech To Text", "unitPrice": 1.25, "unitOfMeasure": "1 Hour"}
 {"productName": "Translator Text", "meterName": "C4 Overage Characters", "unitPrice": 22.5, "unitOfMeasure": "1M"}
 {"productName": "Ink Recognizer", "meterName": "Free Transactions", "unitPrice": 0.0, "unitOfMeasure": "1K"}
