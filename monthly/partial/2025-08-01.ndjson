@@ -35,7 +35,7 @@
 {"productName": "Language - disconnected", "meterName": "Commitment Tier DC CLU 3M Unit", "unitPrice": 39168.0, "unitOfMeasure": "1/Year"}
 {"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 10M Unit", "unitPrice": 9280.0, "unitOfMeasure": "1/Month"}
 {"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 25M Unit", "unitPrice": 19200.0, "unitOfMeasure": "1/Month"}
-{"productName": "Speech", "meterName": "Video Translation Std Audio Output Audio", "unitPrice": 15.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Video Translation Std Audio Output", "unitPrice": 15.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Computer Vision", "meterName": "Custom Object Detection Training", "unitPrice": 20.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Computer Vision", "meterName": "Free Training", "unitPrice": 0.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Language", "meterName": "Commitment Tier CLU Azure 25M Unit", "unitPrice": 24000.0, "unitOfMeasure": "1/Month"}
@@ -80,7 +80,7 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Inpt DZone 1M Tokens", "unitPrice": 0.055, "unitOfMeasure": "1M"}
 {"productName": "Computer Vision", "meterName": "Commitment Tier Azure 500K CT Overage Transactions", "unitPrice": 0.75, "unitOfMeasure": "1K"}
 {"productName": "Language", "meterName": "Commitment Tier CLU Connected Cont 25M Unit", "unitPrice": 24000.0, "unitOfMeasure": "1/Month"}
-{"productName": "Speech", "meterName": "Video Translation Cstm Audio Output Audio", "unitPrice": 20.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Video Translation Cstm Audio Output", "unitPrice": 20.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 2.5, "unitOfMeasure": "1/Hour"}
 {"productName": "Language - disconnected", "meterName": "Commitment Tier DC CLU 10M Unit", "unitPrice": 139200.0, "unitOfMeasure": "1/Year"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch outpt Glbl 1M Tokens", "unitPrice": 0.2, "unitOfMeasure": "1M"}

@@ -48,7 +48,7 @@
 {"productName": "Azure OpenAI", "meterName": "gpt-35-trb16K-Batch-Inp-glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.2, "unitOfMeasure": "1/Hour"}
 {"productName": "Deepseek model family", "meterName": "V3.1 Outp glbl Tokens", "unitPrice": 0.00494, "unitOfMeasure": "1K"}
-{"productName": "Speech", "meterName": "Live Interpreter Custom Audio Audio", "unitPrice": 2.0, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Live Interpreter Custom Audio", "unitPrice": 2.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Llama models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.2, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16K-0125 Input-regional Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Assistants-File Search-regnl GB", "unitPrice": 0.121, "unitOfMeasure": "1/Day"}
@@ -112,7 +112,7 @@
 {"productName": "Deepseek model family", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.4, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-regional Tokens", "unitPrice": 0.000172, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Output regional Tokens", "unitPrice": 0.0165, "unitOfMeasure": "1K"}
-{"productName": "Speech", "meterName": "Live Interpreter Std Audio Output Audio", "unitPrice": 1.5, "unitOfMeasure": "1 Hour"}
+{"productName": "Speech", "meterName": "Live Interpreter Std Audio Output", "unitPrice": 1.5, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt img 0828 Inp DZn Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt img 0828 cchd Inp DZn Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 HD LowRes-regnl EP Images", "unitPrice": 8.8, "unitOfMeasure": "100"}
