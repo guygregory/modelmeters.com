@@ -31,7 +31,7 @@ jobs:
           
       - name: Download latest pricing data
         run: |
-          python meter-download.py --cognitive-services-only --ndjson prices.ndjson
+          python meter-download.py --foundry-models-only --ndjson prices.ndjson
           
       - name: Split price file into monthly files
         run: |
