@@ -133,6 +133,7 @@ The minimal solution takes advantage of free tiers where available, and has been
 1. **Download pricing data**:
    ```bash
    python meter-download.py --cognitive-services-only --ndjson prices.ndjson
+   python meter-download.py --foundry-models-only --ndjson prices.ndjson
    ```
 
 2. **Process monthly data**:

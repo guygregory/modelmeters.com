@@ -16,6 +16,7 @@ Usage examples:
   python meter-download.py --output all.json --ndjson all.ndjson
   python meter-download.py --max-pages 3 --ndjson sample.ndjson  (quick test)
   python meter-download.py --cognitive-services-only --ndjson cognitive.ndjson
+  python meter-download.py --foundry-models-only --ndjson foundry-models.ndjson
 
 Notes:
 Full dataset is large (hundreds of thousands of items). Writing a JSON array file may
@@ -111,10 +112,16 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 		"--filter",
 		help="Optional OData style filter appended as $filter=... (do NOT include $filter= prefix).",
 	)
-	p.add_argument(
+	service_group = p.add_mutually_exclusive_group()
+	service_group.add_argument(
 		"--cognitive-services-only",
 		action="store_true",
 		help="Convenience flag: restrict to serviceName eq 'Cognitive Services'. Can be combined with --filter (AND).",
+	)
+	service_group.add_argument(
+		"--foundry-models-only",
+		action="store_true",
+		help="Convenience flag: restrict to serviceName eq 'Foundry Models'. Can be combined with --filter (AND).",
 	)
 	p.add_argument(
 		"--max-pages",
@@ -155,7 +162,7 @@ def main(argv: list[str]) -> int:
 	if args.output == "":  # defensive; argparse typically won't produce empty string unless explicitly given
 		args.output = "prices.json"
 
-	# Build combined filter expression if cognitive services convenience flag used
+	# Build combined filter expression if a convenience service flag used
 	combined_filter: str | None = args.filter
 	if getattr(args, "cognitive_services_only", False):
 		cs_filter = "serviceName eq 'Cognitive Services'"
@@ -163,6 +170,12 @@ def main(argv: list[str]) -> int:
 			combined_filter = f"({cs_filter}) and ({combined_filter})"
 		else:
 			combined_filter = cs_filter
+	elif getattr(args, "foundry_models_only", False):
+		fm_filter = "serviceName eq 'Foundry Models'"
+		if combined_filter:
+			combined_filter = f"({fm_filter}) and ({combined_filter})"
+		else:
+			combined_filter = fm_filter
 
 	start_url = build_start_url(combined_filter)
 	all_items: list[dict] | None = [] if args.output else None
