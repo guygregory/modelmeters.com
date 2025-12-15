@@ -1,6 +1,5 @@
 {"productName": "Azure OpenAI", "meterName": "Code-Interpreter-global Session", "unitPrice": 0.03, "unitOfMeasure": "1"}
 {"productName": "Azure OpenAI", "meterName": "embedding-ada-glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Content Safety", "meterName": "Standard Images", "unitPrice": 0.75, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Speech-Text to Speech-global Characters", "unitPrice": 15.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "davinci-002-FT-Trng-regnl tkn Tokens", "unitPrice": 0.006, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-FT-Inp-glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
@@ -9,26 +8,17 @@
 {"productName": "Azure OpenAI", "meterName": "babbage-002-FT-Trng-regnl tkn Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Output-regional Tokens", "unitPrice": 0.12, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Assistants-File Search-glbl GB", "unitPrice": 0.1, "unitOfMeasure": "1/Day"}
-{"productName": "Speech", "meterName": "S1 Minute", "unitPrice": 2.0, "unitOfMeasure": "1 Minute"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Input-regional Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "text-embedding-3-small-glbl Tokens", "unitPrice": 2e-05, "unitOfMeasure": "1K"}
-{"productName": "Speech", "meterName": "S1 Minute", "unitPrice": 1.0, "unitOfMeasure": "1 Minute"}
-{"productName": "Azure AI Content Safety", "meterName": "Standard Text Records", "unitPrice": 0.375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Speech-to-Text-Batch-Whisper-glbl Unit", "unitPrice": 0.36, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI", "meterName": "text-embedding-3-large-glbl Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Speech-Text to Speech HD-global Characters", "unitPrice": 30.0, "unitOfMeasure": "1M"}
-{"productName": "Speech", "meterName": "S1 Unit", "unitPrice": 0.6, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4-32K-Input-regional Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
-{"productName": "Phi", "meterName": "Phi-3-Mini-128K-Instruct-Finetuned Deployment Hosting Unit", "unitPrice": 0.8, "unitOfMeasure": "1/Hour"}
-{"productName": "Speech", "meterName": "Video Translation Edit Text to Video Speech", "unitPrice": 0.2, "unitOfMeasure": "1 Minute"}
-{"productName": "Speech", "meterName": "Video Translation AddOn PersonalVoice Speech", "unitPrice": 0.2, "unitOfMeasure": "1 Minute"}
-{"productName": "Phi", "meterName": "Phi-3-Mini-4K-Instruct-Finetuned Deployment Hosting Unit", "unitPrice": 0.8, "unitOfMeasure": "1/Hour"}
-{"productName": "Text Analytics Container", "meterName": "Standard Text Records", "unitPrice": 2.0, "unitOfMeasure": "1K"}
-{"productName": "Speech", "meterName": "Video Translation Automated Speech", "unitPrice": 1.0, "unitOfMeasure": "1 Minute"}
+{"productName": "Azure Phi Models", "meterName": "Phi-3-Mini-128K-Instruct-Finetuned Deployment Hosting Unit", "unitPrice": 0.8, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Phi Models", "meterName": "Phi-3-Mini-4K-Instruct-Finetuned Deployment Hosting Unit", "unitPrice": 0.8, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16k-Input-regional Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4-8K-FT-Trng-regnl tkn Tokens", "unitPrice": 0.08, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-16k-Output-regional Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-FT-Outp-glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Provisioned Throughput - Overage Unit", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Output-regional Tokens", "unitPrice": 0.06, "unitOfMeasure": "1K"}
-{"productName": "Text Analytics Container", "meterName": "Free Text Records", "unitPrice": 0.0, "unitOfMeasure": "1K"}
