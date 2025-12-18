@@ -1,3 +1,4 @@
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Inp DZ Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
 {"productName": "Azure Llama Models", "meterName": "3.3 70b FT Tokens", "unitPrice": 0.0045, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.1 codex max inp Dz 1M Tokens", "unitPrice": 1.375, "unitOfMeasure": "1M"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flux 2 Ref MP Megapixel", "unitPrice": 0.015, "unitOfMeasure": "1"}
@@ -9,6 +10,7 @@
 {"productName": "Azure Deepseek Models", "meterName": "V3.2 SP Inp DZ Tokens", "unitPrice": 0.00064, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 pro opt Gl 1M Tokens", "unitPrice": 168.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 chat opt Gl 1M Tokens", "unitPrice": 14.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Inp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.1 codex max cd inp Gl 1M Tokens", "unitPrice": 0.125, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank v4 Fast Glbl Search", "unitPrice": 2.0, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 pro Batch inp Gl 1M Tokens", "unitPrice": 10.5, "unitOfMeasure": "1M"}
@@ -20,8 +22,10 @@
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 Batch Inp Data Zone Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o1 1217 Inp Data Zone Tokens", "unitPrice": 0.0165, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT opt glb Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Outp glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Azure Deepseek Models", "meterName": "V3.2 SP Inp glbl Tokens", "unitPrice": 0.00058, "unitOfMeasure": "1K"}
 {"productName": "Azure Deepseek Models", "meterName": "V3.2 SP Outp glbl Tokens", "unitPrice": 0.00168, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Outp DZ Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano dev ft training glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4 mini dev RFT Training glb Unit", "unitPrice": 50.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 Batch inp Gl 1M Tokens", "unitPrice": 0.875, "unitOfMeasure": "1M"}
@@ -83,11 +87,13 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 pro opt Dz 1M Tokens", "unitPrice": 184.8, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 pro inp Gl 1M Tokens", "unitPrice": 21.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-Batch-Outp-glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Inp glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-mini-0718-Batch-Inp-glbl Tokens", "unitPrice": 7.5e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Inpt DZone 1M Tokens", "unitPrice": 0.275, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 chat inp Dz 1M Tokens", "unitPrice": 1.925, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini cached Inp glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Outp DZ Tokens", "unitPrice": 0.00344, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "Large 3 Inp glbl Tokens", "unitPrice": 0.00063, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 Batch cd inp Dz 1M Tokens", "unitPrice": 0.09625, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "o3 mini 0131 output Data Zone Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
@@ -97,6 +103,7 @@
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 cached Inp regnl Tokens", "unitPrice": 0.001513, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-rt-txt-0603 cchd Inp glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 pro Batch inp Dz 1M Tokens", "unitPrice": 11.55, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Outp glbl Tokens", "unitPrice": 0.00313, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt img mini cchd Inp glbl Tokens", "unitPrice": 8e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure Deepseek Models", "meterName": "V3.2 Outp DZ Tokens", "unitPrice": 0.0023, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 inp Dz 1M Tokens", "unitPrice": 1.925, "unitOfMeasure": "1M"}
@@ -142,6 +149,7 @@
 {"productName": "Azure OpenAI", "meterName": "o3 mini 0131 output glbl Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano cchd Inpt Glbl 1M Tokens", "unitPrice": 0.005, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-rt-aud-0603 Inp glbl Tokens", "unitPrice": 0.04, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2 Thinking Inp DZ Tokens", "unitPrice": 0.00083, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 0513 Input Data Zone Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Inpt Glbl 1M Tokens", "unitPrice": 0.05, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Batch Inp DZone Tokens", "unitPrice": 0.00022, "unitOfMeasure": "1K"}
