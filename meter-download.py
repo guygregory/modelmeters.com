@@ -17,6 +17,7 @@ Usage examples:
   python meter-download.py --max-pages 3 --ndjson sample.ndjson  (quick test)
   python meter-download.py --cognitive-services-only --ndjson cognitive.ndjson
   python meter-download.py --foundry-models-only --ndjson foundry-models.ndjson
+  python meter-download.py --foundry-plus-cognitive --ndjson prices.ndjson
 
 Notes:
 Full dataset is large (hundreds of thousands of items). Writing a JSON array file may
@@ -123,6 +124,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 		action="store_true",
 		help="Convenience flag: restrict to serviceName eq 'Foundry Models'. Can be combined with --filter (AND).",
 	)
+	service_group.add_argument(
+		"--foundry-plus-cognitive",
+		action="store_true",
+		help="Convenience flag: restrict to serviceName eq 'Foundry Models' OR 'Cognitive Services'. Can be combined with --filter (AND).",
+	)
 	p.add_argument(
 		"--max-pages",
 		type=int,
@@ -176,6 +182,12 @@ def main(argv: list[str]) -> int:
 			combined_filter = f"({fm_filter}) and ({combined_filter})"
 		else:
 			combined_filter = fm_filter
+	elif getattr(args, "foundry_plus_cognitive", False):
+		fpc_filter = "serviceName eq 'Foundry Models' or serviceName eq 'Cognitive Services'"
+		if combined_filter:
+			combined_filter = f"({fpc_filter}) and ({combined_filter})"
+		else:
+			combined_filter = fpc_filter
 
 	start_url = build_start_url(combined_filter)
 	all_items: list[dict] | None = [] if args.output else None
