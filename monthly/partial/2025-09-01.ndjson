@@ -195,4 +195,3 @@
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo-Instruct-Input-regional Tokens", "unitPrice": 0.00165, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "Sora 1080p Sq 16-20s regnl Video", "unitPrice": 1.35, "unitOfMeasure": "1 Second"}
 {"productName": "Azure OpenAI Media", "meterName": "Sora 720p 16-20s glbl Video", "unitPrice": 0.75, "unitOfMeasure": "1 Second"}
-{"productName": "Azure OpenAI Media", "meterName": "Sora 720p 16-20s regnl Video", "unitPrice": 0.75, "unitOfMeasure": "1 Second"}
