@@ -56,3 +56,4 @@
 {"productName": "Azure OpenAI", "meterName": "gpt-4-turbo128K Inp-glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o3 mini 0131 output regnl Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4-8K-Output-regional Tokens", "unitPrice": 0.0726, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "o3 mini 0131 output regnl Tokens", "unitPrice": 0.005324, "unitOfMeasure": "1K"}
