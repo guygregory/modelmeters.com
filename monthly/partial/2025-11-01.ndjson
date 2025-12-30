@@ -194,6 +194,7 @@
 {"productName": "Cohere Models", "meterName": "Embed v4 Img Glbl Tokens", "unitPrice": 0.00059, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini 0416 Outp regnl Tokens", "unitPrice": 0.005324, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 0828 txt Inp glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 cached Inp glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
 {"productName": "Azure Llama Models", "meterName": "3.3 70b FT Deployment Hosting Unit", "unitPrice": 0.36, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Chat outpt Glbl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 Batch Outp Data Zone Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
@@ -263,6 +264,7 @@
 {"productName": "Azure OpenAI", "meterName": "gpt-4.1-ft cached input global Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o1 1217 cached Inp glbl Tokens", "unitPrice": 0.0075, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4.1-dev-ft inpt glbl Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 cached Inp regnl Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o3 mini 0131 cached input Data Zone Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp Data Zone Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 Batch Inp Data Zone Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
@@ -273,6 +275,7 @@
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-cached-FT-inp-regnl Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud mini txt Outp glbl Tokens", "unitPrice": 0.0024, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4.1-mini-ft hosting global Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI", "meterName": "gpt 4o mini 0718 cached Inp glbl Tokens", "unitPrice": 7.5e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o3 mini 0131 output Data Zone Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt txt mini Inp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-dev-ft inpt glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
