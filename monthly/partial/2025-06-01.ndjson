@@ -16,7 +16,6 @@
 {"productName": "Azure Grok Models", "meterName": "Grok-3 Mini Outp regnl Tokens", "unitPrice": 0.00166, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-rt-aud-0603 cchd Inp glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o dev ft opt glbl Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
-{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Inp glbl Tokens", "unitPrice": 0.00071, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "Grok-3 Outp glbl Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-aud-0603-txt Outp glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure Llama Models", "meterName": "Llama 4 Maverick 17B Inp glbl Tokens", "unitPrice": 0.00025, "unitOfMeasure": "1K"}
@@ -44,10 +43,8 @@
 {"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Inp regnl Tokens", "unitPrice": 0.000859, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-aud-0603-txt Outp regnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
-{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Outp glbl Tokens", "unitPrice": 0.00071, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "codex mini inp cchd glbl Tokens", "unitPrice": 0.000375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-rt-aud-0603 Outp DZone Tokens", "unitPrice": 0.088, "unitOfMeasure": "1K"}
-{"productName": "Azure Llama Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure BFL Flux Models", "meterName": "Kontext Pro glbl Images", "unitPrice": 40.0, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-aud-0603 Inp DZone Tokens", "unitPrice": 0.044, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o3 0416 cached Inp glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
@@ -108,7 +105,6 @@
 {"productName": "Azure BFL Flux Models", "meterName": "Kontext Pro regnl Images", "unitPrice": 48.4, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "Grok-3 Mini Outp Dzone Tokens", "unitPrice": 0.00138, "unitOfMeasure": "1K"}
 {"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Inp regnl Tokens", "unitPrice": 0.000781, "unitOfMeasure": "1K"}
-{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Inp glbl Tokens", "unitPrice": 0.000888, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-image-1-inp-cached-txt-glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
 {"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Outp regnl Tokens", "unitPrice": 0.000781, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "Grok-3 Mini Inp regnl Tokens", "unitPrice": 0.000275, "unitOfMeasure": "1K"}
@@ -141,7 +137,6 @@
 {"productName": "Azure Mistral Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.25, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "o3 0416 cached Inp regnl Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp regnl Tokens", "unitPrice": 0.0121, "unitOfMeasure": "1K"}
-{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Outp glbl Tokens", "unitPrice": 0.000888, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-aud-0603 Outp regnl Tokens", "unitPrice": 0.0968, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-aud-0603 Inp regnl Tokens", "unitPrice": 0.0484, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 cached Inp regnl Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
@@ -155,11 +150,11 @@
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-aud-0603-txt Inp regnl Tokens", "unitPrice": 0.003025, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "codex mini inp rgnl Tokens", "unitPrice": 0.001815, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "OCR glbl Pages", "unitPrice": 1.25, "unitOfMeasure": "1K"}
-{"productName": "Azure Llama Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.25, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o dev ft opt glbl Tokens", "unitPrice": 0.003025, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "Codestral Outp glbl Tokens", "unitPrice": 0.001125, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 cached Inp regnl Tokens", "unitPrice": 0.001513, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "codex mini out rgnl Tokens", "unitPrice": 0.00726, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-rt-aud-0603 Outp regnl Tokens", "unitPrice": 0.0968, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-rt-txt-0603 Outp regnl Tokens", "unitPrice": 0.0242, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o3 0416 Outp regnl Tokens", "unitPrice": 0.00968, "unitOfMeasure": "1K"}

@@ -1,7 +1,5 @@
 {"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-inp-cchd-glbl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
-{"productName": "Azure Mistral Models", "meterName": "Doc AI DZone 2505 Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.1, "unitOfMeasure": "1/Hour"}
-{"productName": "Azure Mistral Models", "meterName": "Doc AI glbl 2505 Pages", "unitPrice": 3.0, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-inp-dzone 1M Tokens", "unitPrice": 11.0, "unitOfMeasure": "1M"}
 {"productName": "Azure BFL Flux Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI regnl 2505 Pages", "unitPrice": 3.63, "unitOfMeasure": "1K"}
@@ -11,7 +9,6 @@
 {"productName": "Azure Mistral Models", "meterName": "Doc AI regnl 2505 Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-out-glbl 1M Tokens", "unitPrice": 40.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-out-dzone 1M Tokens", "unitPrice": 44.0, "unitOfMeasure": "1M"}
-{"productName": "Azure Mistral Models", "meterName": "Doc AI glbl 2505 Pages", "unitPrice": 3.75, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI regnl 2505 Pages", "unitPrice": 3.96, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.1, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure Grok Models", "meterName": "Grok-4 Outp DZone Tokens", "unitPrice": 0.0303, "unitOfMeasure": "1K"}

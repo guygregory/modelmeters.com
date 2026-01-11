@@ -1,0 +1,15 @@
+{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Outp DZone Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Doc AI DZone 2505 Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Inp glbl Tokens", "unitPrice": 0.00071, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "OCR 1125 glbl Pages", "unitPrice": 2.0, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Doc AI glbl 2505 Pages", "unitPrice": 3.0, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Outp glbl Tokens", "unitPrice": 0.00071, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Inp DZone Tokens", "unitPrice": 0.000165, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "OCR 1125 Dzone Pages", "unitPrice": 2.2, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Doc AI glbl 2505 Pages", "unitPrice": 3.75, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Inp glbl Tokens", "unitPrice": 0.000888, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "OCR 1125 glbl Pages", "unitPrice": 2.5, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "OCR 1125 Dzone Pages", "unitPrice": 2.75, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "Llama 3.3 70B Outp glbl Tokens", "unitPrice": 0.000888, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.25, "unitOfMeasure": "1/Hour"}
