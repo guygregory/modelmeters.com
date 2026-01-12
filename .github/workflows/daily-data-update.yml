@@ -45,6 +45,10 @@ jobs:
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
           AZURE_OPENAI_V1_API_ENDPOINT: ${{ secrets.AZURE_OPENAI_V1_API_ENDPOINT }}
           AZURE_OPENAI_API_MODEL: ${{ secrets.AZURE_OPENAI_API_MODEL }}
+
+      - name: Generate markdown index
+        run: |
+          python monthly/generate-index.py array
           
       - name: Generate RSS feed
         run: |
