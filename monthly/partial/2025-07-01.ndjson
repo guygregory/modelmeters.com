@@ -11,6 +11,4 @@
 {"productName": "Azure OpenAI Reasoning", "meterName": "o3-deep research 0626-out-dzone 1M Tokens", "unitPrice": 44.0, "unitOfMeasure": "1M"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI regnl 2505 Pages", "unitPrice": 3.96, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.1, "unitOfMeasure": "1/Hour"}
-{"productName": "Azure Grok Models", "meterName": "Grok-4 Outp DZone Tokens", "unitPrice": 0.0303, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.25, "unitOfMeasure": "1/Hour"}
-{"productName": "Azure Grok Models", "meterName": "Grok-4 Inp DZone Tokens", "unitPrice": 0.00605, "unitOfMeasure": "1K"}
