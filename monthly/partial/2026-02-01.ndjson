@@ -1,4 +1,2 @@
-{"productName": "Azure OpenAI Embedding", "meterName": "text embedding 3 large DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Embedding", "meterName": "text embedding 3 large DZ Tokens", "unitPrice": 0.000143, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI Embedding", "meterName": "text embedding 3 small DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Embedding", "meterName": "text embedding 3 small DZ Tokens", "unitPrice": 2.2e-05, "unitOfMeasure": "1K"}
