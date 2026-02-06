@@ -1,2 +1,18 @@
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Outp glbl Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Command A Inp Glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Embedding", "meterName": "text embedding 3 large DZ Tokens", "unitPrice": 0.000143, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed v4 Txt Glbl Tokens", "unitPrice": 0.00012, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed v4 Txt Glbl Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Command A Outp Glbl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Outp DZ Tokens", "unitPrice": 0.004125, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Embedding", "meterName": "text embedding 3 small DZ Tokens", "unitPrice": 2.2e-05, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed v4 Img Glbl Tokens", "unitPrice": 0.00047, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Outp glbl Tokens", "unitPrice": 0.00375, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp DZ Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Outp DZ Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed v4 Img Glbl Tokens", "unitPrice": 0.00059, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Command A Outp Glbl Tokens", "unitPrice": 0.0125, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp DZ Tokens", "unitPrice": 0.000825, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Command A Inp Glbl Tokens", "unitPrice": 0.003125, "unitOfMeasure": "1K"}
