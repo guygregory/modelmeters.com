@@ -12,7 +12,6 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch outpt Glbl 1M Tokens", "unitPrice": 1.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano cchd Inpt Glbl 1M Tokens", "unitPrice": 0.005, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Batch Inpt Glbl 1M Tokens", "unitPrice": 0.025, "unitOfMeasure": "1M"}
-{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Outp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Chat Inpt Glbl 1M Tokens", "unitPrice": 1.25, "unitOfMeasure": "1M"}
 {"productName": "Azure Deepseek Models", "meterName": "V3 Inp DZone Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Inpt Glbl 1M Tokens", "unitPrice": 0.25, "unitOfMeasure": "1M"}
@@ -23,7 +22,6 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Mini Batch Inpt cchd Glbl 1M Tokens", "unitPrice": 0.0125, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Nano Inpt Glbl 1M Tokens", "unitPrice": 0.05, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 outpt DZone 1M Tokens", "unitPrice": 11.0, "unitOfMeasure": "1M"}
-{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Inp glbl Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
 {"productName": "Azure Deepseek Models", "meterName": "V3-0324 Outp DZone Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Chat cchd Inpt Glbl 1M Tokens", "unitPrice": 0.125, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5 Batch Inpt DZone 1M Tokens", "unitPrice": 0.6875, "unitOfMeasure": "1M"}

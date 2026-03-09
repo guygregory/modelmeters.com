@@ -1,5 +1,6 @@
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 1.5 txt opt Gl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 txt inp Dz 1M Tokens", "unitPrice": 4.4, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5 pp cd inp Gl 1M Tokens", "unitPrice": 0.25, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 1.5 opt Gl 1M Tokens", "unitPrice": 64.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 txt opt Dz 1M Tokens", "unitPrice": 17.6, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI PP GPT4s", "meterName": "4.1 pp cd inp Gl Tokens", "unitPrice": 0.000875, "unitOfMeasure": "1K"}
@@ -7,22 +8,42 @@
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 txt inp Gl 1M Tokens", "unitPrice": 4.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 img inp Dz 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 aud inp Gl 1M Tokens", "unitPrice": 32.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.2 pp cd inp Gl 1M Tokens", "unitPrice": 0.35, "unitOfMeasure": "1M"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI 2512 Dzone Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 aud cd inp Gl 1M Tokens", "unitPrice": 0.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 txt cd inp Gl 1M Tokens", "unitPrice": 0.4, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Rerank v4 Fast Glbl Search", "unitPrice": 2.0, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI PP GPT4s", "meterName": "4.1 pp inp Gl Tokens", "unitPrice": 0.0035, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 img inp Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex pp cd inp Gl 1M Tokens", "unitPrice": 0.35, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 1.5 inp Gl 1M Tokens", "unitPrice": 32.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex opt Dz 1M Tokens", "unitPrice": 15.4, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex inp Dz 1M Tokens", "unitPrice": 1.925, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.2 pp opt Gl 1M Tokens", "unitPrice": 28.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 img cd inp Gl 1M Tokens", "unitPrice": 0.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex inp Gl 1M Tokens", "unitPrice": 1.75, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Outp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex pp inp Gl 1M Tokens", "unitPrice": 3.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex opt Gl 1M Tokens", "unitPrice": 14.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 txt cd inp Dz 1M Tokens", "unitPrice": 0.44, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 aud opt Gl 1M Tokens", "unitPrice": 64.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5 pp inp Dz 1M Tokens", "unitPrice": 2.75, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat opt Gl 1M Tokens", "unitPrice": 14.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex cd inp Gl 1M Tokens", "unitPrice": 0.175, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI PP GPT4s", "meterName": "4.1 pp cd inp Dz Tokens", "unitPrice": 0.000963, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.2 pp inp Dz 1M Tokens", "unitPrice": 3.85, "unitOfMeasure": "1M"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI 2512 glbl Pages", "unitPrice": 3.0, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 1.5 txt inp Dz 1M Tokens", "unitPrice": 2.75, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex pp cd inp Dz 1M Tokens", "unitPrice": 0.385, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI PP GPT4s", "meterName": "4.1 pp inp Dz Tokens", "unitPrice": 0.00385, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 img cd inp Dz 1M Tokens", "unitPrice": 0.55, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat inp Dz 1M Tokens", "unitPrice": 1.925, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Inp glbl Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex cd inp Dz 1M Tokens", "unitPrice": 0.1925, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex pp opt Gl 1M Tokens", "unitPrice": 28.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5 pp inp Gl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex pp inp Dz 1M Tokens", "unitPrice": 3.85, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5 pp opt Gl 1M Tokens", "unitPrice": 20.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 aud opt Dz 1M Tokens", "unitPrice": 70.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat inp Gl 1M Tokens", "unitPrice": 1.75, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI PP GPT4s", "meterName": "4.1 pp opt Dz Tokens", "unitPrice": 0.0154, "unitOfMeasure": "1K"}
@@ -31,13 +52,25 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat cd inp Gl 1M Tokens", "unitPrice": 0.175, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 aud cd inp Dz 1M Tokens", "unitPrice": 0.44, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 1.5 txt inp Gl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.2 pp inp Gl 1M Tokens", "unitPrice": 3.5, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Rerank v4 Pro Glbl Search", "unitPrice": 2.5, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5 pp cd inp Dz 1M Tokens", "unitPrice": 0.275, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.3 codex pp opt Dz 1M Tokens", "unitPrice": 30.8, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.2 pp cd inp Dz 1M Tokens", "unitPrice": 0.385, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "Speech-to-Text-Batch-Whisper-regnl Unit", "unitPrice": 0.396, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 1.5 opt Dz 1M Tokens", "unitPrice": 70.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt 1.5 aud inp Dz 1M Tokens", "unitPrice": 35.2, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI PP GPT4s", "meterName": "4.1 pp opt Gl Tokens", "unitPrice": 0.014, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5 pp opt Dz 1M Tokens", "unitPrice": 22.0, "unitOfMeasure": "1M"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI 2512 Dzone Pages", "unitPrice": 4.125, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.2 pp opt Dz 1M Tokens", "unitPrice": 30.8, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat cd inp Dz 1M Tokens", "unitPrice": 0.1925, "unitOfMeasure": "1M"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI 2512 glbl Pages", "unitPrice": 3.75, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Rerank v4 Fast Glbl Search", "unitPrice": 2.5, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat opt Dz 1M Tokens", "unitPrice": 15.4, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Inp glbl Tokens", "unitPrice": 0.00019, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Rerank v4 Pro Glbl Search", "unitPrice": 3.125, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Speech-to-Text-Batch-Whisper-regnl Unit", "unitPrice": 0.4752, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Outp glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Speech-to-Text-Batch-Whisper-regnl Unit", "unitPrice": 0.4356, "unitOfMeasure": "1 Hour"}
+{"productName": "Cohere Models", "meterName": "Rerank v4 Pro DZ Search", "unitPrice": 2.75, "unitOfMeasure": "1K"}
