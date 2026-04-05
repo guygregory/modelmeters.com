@@ -134,7 +134,6 @@
 {"productName": "Azure Llama Models", "meterName": "Llama 4 Maverick 17B Outp regnl Tokens", "unitPrice": 0.00132, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "Grok-3 Mini Inp regnl Tokens", "unitPrice": 0.0003, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "codex mini inp cchd rgnl Tokens", "unitPrice": 0.000454, "unitOfMeasure": "1K"}
-{"productName": "Azure Mistral Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.25, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "o3 0416 cached Inp regnl Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Outp regnl Tokens", "unitPrice": 0.0121, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-aud-0603 Outp regnl Tokens", "unitPrice": 0.0968, "unitOfMeasure": "1K"}

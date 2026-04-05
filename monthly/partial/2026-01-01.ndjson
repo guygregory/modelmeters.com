@@ -33,7 +33,6 @@
 {"productName": "Azure Grok Models", "meterName": "Grok 4.1 Inp Glbl Tokens", "unitPrice": 0.00025, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Inp regnl Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini cached Inp DZone Tokens", "unitPrice": 0.000138, "unitOfMeasure": "1K"}
-{"productName": "Azure Llama Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.25, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure Grok Models", "meterName": "Grok-4 Inp glbl Tokens", "unitPrice": 0.00375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 cached Inp regnl Tokens", "unitPrice": 0.000688, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 mini Inp Data Zone Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
