@@ -8,7 +8,6 @@
 {"productName": "Azure BFL Flux Models", "meterName": "Flex Megapixel", "unitPrice": 0.05, "unitOfMeasure": "1"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.2 chat 0210 inp Dz 1M Tokens", "unitPrice": 1.925, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Embed v4 Txt Glbl Tokens", "unitPrice": 0.00012, "unitOfMeasure": "1K"}
-{"productName": "Azure Mistral Models", "meterName": "OCR 2512 glbl Pages", "unitPrice": 2.0, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flux 2 Pro Initial MP DZ Megapixel", "unitPrice": 0.033, "unitOfMeasure": "1"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flex Ref DZone Megapixel", "unitPrice": 0.055, "unitOfMeasure": "1"}
 {"productName": "Cohere Models", "meterName": "Embed v4 Txt Glbl Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
@@ -21,16 +20,13 @@
 {"productName": "Azure BFL Flux Models", "meterName": "Flux 2 Pro MP DZone Megapixel", "unitPrice": 0.0198, "unitOfMeasure": "1"}
 {"productName": "Cohere Models", "meterName": "Embed v4 Img Glbl Tokens", "unitPrice": 0.00047, "unitOfMeasure": "1K"}
 {"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
-{"productName": "Azure Mistral Models", "meterName": "OCR 2512 Dzone Pages", "unitPrice": 2.2, "unitOfMeasure": "1K"}
 {"productName": "Azure Kimi", "meterName": "K2.5 Thinking Outp glbl Tokens", "unitPrice": 0.00375, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flex Ref Megapixel", "unitPrice": 0.0625, "unitOfMeasure": "1"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flex DZone Megapixel", "unitPrice": 0.06875, "unitOfMeasure": "1"}
 {"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp DZ Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.2 chat 0210 opt Dz 1M Tokens", "unitPrice": 15.4, "unitOfMeasure": "1M"}
 {"productName": "Azure Kimi", "meterName": "K2.5 Thinking Outp DZ Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
-{"productName": "Azure Mistral Models", "meterName": "OCR 2512 glbl Pages", "unitPrice": 2.5, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flux 2 Pro Initial MP DZ Megapixel", "unitPrice": 0.04125, "unitOfMeasure": "1"}
-{"productName": "Azure Mistral Models", "meterName": "OCR 2512 Dzone Pages", "unitPrice": 2.75, "unitOfMeasure": "1K"}
 {"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp glbl Tokens", "unitPrice": 0.00075, "unitOfMeasure": "1K"}
 {"productName": "Cohere Models", "meterName": "Embed v4 Img Glbl Tokens", "unitPrice": 0.00059, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flex Megapixel", "unitPrice": 0.0625, "unitOfMeasure": "1"}
