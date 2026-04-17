@@ -30,7 +30,6 @@
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 0806 cached Inp regnl Tokens", "unitPrice": 0.001375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt4o realtimePrvw audio outp regn Tokens", "unitPrice": 0.242, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-outp-regnl Tokens", "unitPrice": 0.011, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "gpt-4o-0806-FT-Trng-regnl tkn Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o1 preview cached input glbl Tokens", "unitPrice": 0.0075, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "o1 preview output regnl Tokens", "unitPrice": 0.066, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt4o realtime prvw text outp regn Tokens", "unitPrice": 0.0242, "unitOfMeasure": "1K"}
