@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Model Meters - GitHub</title>
+	<link rel="icon" type="image/png" href="../img/favicon.png">
+	<style>
+		/* Light theme (default) */
+		:root {
+			--bg:#f5f7fa; --bg-alt:#e9eef2; --panel:#ffffff; --panel-2:#f0f3f7; --text:#1b242b; --muted:#5d6b76; --accent:#2563eb; --border:#d0d7de; --ring:#3b82f680; --shadow:0 6px 18px rgba(0,0,0,.08);
+		}
+		/* Dark theme */
+		:root[data-theme="dark"] {
+			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
+		}
+		html, body { height: 100%; }
+		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); overflow:hidden; }
+		/* Full-height flex layout so only the table region scrolls (single scrollbar) */
+		.container { height:100%; display:flex; flex-direction:column; padding:12px 12px 16px; box-sizing:border-box; }
+		.card { background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow: var(--shadow); flex:1; display:flex; flex-direction:column; min-height:0; }
+		.card-hd { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+		.title { font-size:18px; font-weight:650; letter-spacing:.2px; }
+		.toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; flex:1; min-width:0; justify-content:flex-end; margin-left:auto; }
+		button, select, input[type="text"] { background:var(--panel-2); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:8px 10px; font-size:14px; line-height:1; outline:none; }
+		button { cursor:pointer; }
+		button:hover { border-color:#374151; }
+		button:focus, select:focus, input:focus { box-shadow:0 0 0 4px var(--ring); border-color:var(--accent); }
+		.table-wrap { flex:1; min-height:0; overflow:auto; border-radius:0 0 16px 16px; }
+		table { width:100%; border-collapse:collapse; font-size:13px; }
+		thead th { position:sticky; top:0; background:var(--panel-2); z-index:2; text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); }
+		tbody td { padding:6px 10px; border-top:1px solid var(--border); white-space:nowrap; }
+		tbody tr:hover { background:var(--panel-2); }
+		.th-inner { display:inline-flex; gap:6px; align-items:center; }
+		.icon { font-style:normal; opacity:.8; }
+		/* Menus must float above sticky headers and other UI (z-index > thead th z-index=2) */
+		.menu { position:absolute; background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:8px; display:none; min-width:260px; box-shadow:0 24px 48px rgba(0,0,0,.5); z-index: 2000; }
+		/* Columns menu should always be above filter menu if both are open */
+		#menu-columns { z-index: 2100; }
+		/* Shortcuts menu should have a z-index between filter and columns */
+		#menu-shortcuts { z-index: 2050; }
+		.menu.open { display:block; }
+		.menu .row { display:grid; grid-template-columns:1fr; gap:8px; }
+		.menu .row-inline { display:flex; gap:8px; }
+		.menu .muted { color:var(--muted); font-size:12px; }
+		.discount-label { font-size:13px; color:var(--text); }
+		.menu .list { max-height:260px; overflow:auto; border:1px solid var(--border); border-radius:10px; }
+		.menu label { display:flex; gap:10px; align-items:center; padding:6px 10px; border-bottom:1px solid var(--border); font-size:12px; }
+		.menu label:last-child { border-bottom:0; }
+		.menu .actions { display:flex; justify-content:flex-end; gap:8px; }
+		/* Shortcuts menu specific styles */
+		.menu .shortcuts-link { display:block; padding:6px 10px; border-bottom:1px solid var(--border); font-size:13px; color:var(--text); text-decoration:none; }
+		.menu .shortcuts-link:hover { background:var(--panel); }
+		.menu .shortcuts-link:last-child { border-bottom:0; }
+		.chip { background:var(--panel-2); border:1px solid var(--border); border-radius:999px; padding:3px 8px; font-size:11px; color:var(--muted); max-width:180px; overflow:hidden; text-overflow:ellipsis; }
+		.kbd { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:11px; padding:2px 6px; border-radius:6px; border:1px solid var(--border); background:var(--panel-2); color:var(--muted); }
+		.empty { color:var(--muted); padding:24px; text-align:center; }
+		.pagination { display:flex; gap:6px; align-items:center; font-size:12px; }
+		.pagination button { padding:6px 8px; font-size:12px; }
+		.loading { font-size:12px; color: var(--muted); display:flex; align-items:center; gap:6px; }
+		.spinner { width:12px; height:12px; border:2px solid var(--border); border-top-color: var(--accent); border-radius:50%; animation: spin 0.8s linear infinite; }
+		@keyframes spin { to { transform: rotate(360deg); } }
+		.count-chip { font-size:11px; opacity:.75; }
+		.col-sort { background:none; border:0; padding:0; margin:0; font:inherit; color:inherit; cursor:pointer; display:inline-flex; align-items:center; gap:4px; }
+		.col-sort:focus { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; }
+		.info-container { background:var(--panel-2); border-bottom:1px solid var(--border); padding:12px 16px; }
+		.info-content { display:flex; gap:24px; font-size:13px; }
+		.info-row { display:flex; align-items:center; gap:6px; }
+	.info-right { margin-left:auto; text-align:right; }
+		.discount-indicator { background:#7c3aed; color:white; padding:8px 16px; text-align:center; font-weight:600; font-size:14px; border-bottom:1px solid var(--border); display:none; }
+		.discount-indicator a { color:white; text-decoration:underline; }
+		#discount-value { width:25%; min-width:80px; text-align:right; }
+		.discount-input { display:flex; align-items:center; gap:6px; }
+		.discount-input .discount-unit { font-size:13px; color:var(--text); }
+		.discount-indicator.active { display:block; }
+		/* Prevent mobile text inflation and allow wrapping on small screens */
+		html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+		@media (max-width: 768px) {
+			/* Let long cell content wrap to avoid per-cell font inflation on mobile */
+			tbody td { white-space: normal; word-break: break-word; }
+			/* Prevent button wrapping on mobile - keep buttons horizontal */
+			.card-hd { flex-wrap: nowrap; }
+			.toolbar { flex-wrap: nowrap; overflow-x: auto; }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="card" id="card">
+			<div class="discount-indicator" id="discount-indicator"></div>
+			<div class="card-hd">
+				<div class="title"><a href="/" id="home-link" style="all:unset;cursor:pointer;display:inline;">Model Meters - GitHub</a> <span id="row-count" class="count-chip"></span></div>
+<script>
+// Make the home link work on any path or subdirectory, without hard-coding
+document.addEventListener('DOMContentLoaded', function() {
+	var homeLink = document.getElementById('home-link');
+	if (homeLink) {
+		// Always go to the root of the current site (relative to domain)
+		homeLink.addEventListener('click', function(e) {
+			e.preventDefault();
+			window.location.href = window.location.origin + '/';
+		});
+	}
+});
+</script>
+				<div class="toolbar">
+					<button id="btn-favorites" title="Show favorites menu" aria-haspopup="menu" aria-controls="menu-shortcuts">⭐ Favorites</button>
+					<button id="btn-export-csv" title="Export to CSV">📥 Export CSV</button>
+					<button id="btn-share-url" title="Generate shareable URL">🔗 Share URL</button>
+					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
+					<div class="pagination" id="pagination" style="display:none">
+						<button id="btn-first" title="First page">⏮</button>
+						<button id="btn-prev" title="Previous page">◀</button>
+						<span id="page-info">Page 1 / 1</span>
+						<button id="btn-next" title="Next page">▶</button>
+						<button id="btn-last" title="Last page">⏭</button>
+						<select id="page-size" title="Rows per page">
+							<option value="15">15</option>
+							<option value="20" selected>20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="50">50</option>
+							<option value="100">100</option>
+							<option value="1000">1000</option>
+							<option value="100000">All</option>
+						</select>
+					</div>
+					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
+					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
+					<button id="btn-ai-summaries" title="View AI monthly summaries">✨AI Summaries</button>
+				</div>
+			</div>
+			<div id="info-container" class="info-container">
+				<div class="info-content">
+					<div class="info-row">
+						<strong>Last updated:</strong> <span id="last-updated">Never</span>
+					</div>
+					<div class="info-row info-right">
+						<span>
+							Created by <a href="https://github.com/guygregory" target="_blank" rel="noopener noreferrer">Guy Gregory</a> +
+							<a href="https://github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a>
+							&nbsp; | &nbsp;
+							<a href="https://github.com/guygregory/modelmeters.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+							&nbsp; | &nbsp;
+							<button id="btn-discount" style="all:unset;cursor:pointer;color:blue;text-decoration:underline;" title="Set pricing discount">Discount</button>
+							&nbsp; | &nbsp;
+							<a href="https://github.com/guygregory/modelmeters.com?tab=readme-ov-file#disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="table-wrap">
+				<table id="grid" aria-describedby="grid-caption">
+					<caption id="grid-caption" style="display:none">Filterable, paginated table built from GitHub retail prices (local file)</caption>
+					<thead id="thead"></thead>
+					<tbody id="tbody"></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- Filter menu -->
+	<div class="menu" id="menu-filter" role="menu" aria-hidden="true">
+		<div class="row">
+			<div class="muted">Filter <span id="filter-col-name" class="chip"></span></div>
+			<div class="row-inline">
+				<select id="op-select" aria-label="Operator">
+					<option value="contains">Contains</option>
+					<option value="notcontains">Not contains</option>
+					<option value="equals">Equals</option>
+					<option value="notequal">Not equal</option>
+					<option value="startswith">Starts with</option>
+					<option value="endswith">Ends with</option>
+				</select>
+				<input id="op-value" type="text" placeholder="Value" />
+			</div>
+			<div class="actions">
+				<button id="btn-clear-filter">Clear</button>
+				<button id="btn-apply-filter">Apply</button>
+			</div>
+			<div class="muted" style="margin-top:8px">or pick specific values</div>
+			<input id="value-search" type="text" placeholder="Filter values…" />
+			<div id="value-list" class="list" role="group" aria-label="Distinct values"></div>
+			<div class="actions">
+				<button id="btn-value-show-all">Show all</button>
+				<button id="btn-value-hide-all">Hide all</button>
+			</div>
+			<div class="muted">Changes apply as you type</div>
+		</div>
+	</div>
+
+	<!-- Column visibility menu -->
+	<div class="menu" id="menu-columns" role="menu" aria-hidden="true">
+		<div class="row">
+			<input id="col-search" type="text" placeholder="Filter…" />
+			<div id="col-list" class="list" role="group" aria-label="Columns"></div>
+			<div class="actions">
+				<button id="btn-show-all">Show all</button>
+				<button id="btn-hide-all">Hide all</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Shortcuts menu -->
+	<div class="menu" id="menu-shortcuts" role="menu" aria-hidden="true">
+		<div class="row">
+			<div id="shortcuts-list" role="group" aria-label="Shortcuts"></div>
+		</div>
+	</div>
+
+	<!-- Discount menu -->
+	<div class="menu" id="menu-discount" role="menu" aria-hidden="true">
+		<div class="row">
+			<div class="discount-label">Enter discount percentage (0-100)</div>
+			<div class="discount-input">
+				<input id="discount-value" type="number" min="0" max="100" step="1" placeholder="e.g., 15" aria-label="Discount percentage" />
+				<span class="discount-unit">%</span>
+			</div>
+			<div class="actions">
+				<button id="btn-reset-discount">Reset</button>
+				<button id="btn-set-discount">Set</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Theme toggle (light default)
+		(function initTheme(){
+			const root = document.documentElement;
+			const btn = document.getElementById('btn-theme');
+			if(!btn) return; // safety
+			const stored = localStorage.getItem('priceExplorerTheme');
+			if (stored === 'dark') root.setAttribute('data-theme','dark');
+			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+			function updateBtn(){
+				const mode = currentMode();
+				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
+				btn.setAttribute('aria-pressed', mode==='dark');
+				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+			}
+			btn.addEventListener('click', ()=> {
+				const isDark = currentMode()==='dark';
+				if (isDark) root.removeAttribute('data-theme'); else root.setAttribute('data-theme','dark');
+				localStorage.setItem('priceExplorerTheme', isDark ? 'light':'dark');
+				updateBtn();
+			});
+			updateBtn();
+		})();
+
+		// Navigate to agent page, preserving theme as a query param
+		document.getElementById('btn-ai-summaries').addEventListener('click', () => {
+			const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+			const theme = isDark ? 'dark' : 'light';
+			// Prefer relative path to work on file:// and http(s)://
+			const dest = '../agent/?theme=' + encodeURIComponent(theme);
+			window.location.href = dest;
+		});
+
+		// Data & columns
+		let data = []; // filled asynchronously
+		const columns = [
+			{ key: 'productName', name: 'Product' },
+			{ key: 'meterName', name: 'Meter' },
+			{ key: 'retailPrice', name: 'Retail Price', format: n => formatUSD(n) },
+			{ key: 'unitPrice', name: 'Unit Price', format: n => formatUSD(n) },
+			{ key: 'currencyCode', name: 'Currency' },
+			{ key: 'unitOfMeasure', name: 'Unit' },
+			{ key: 'armRegionName', name: 'ARM Region' },
+			{ key: 'location', name: 'Location' },
+			{ key: 'serviceName', name: 'Service' },
+			{ key: 'serviceFamily', name: 'Family' },
+			{ key: 'tierMinimumUnits', name: 'Tier Min Units', format: n => formatNumber(n) },
+			{ key: 'effectiveStartDate', name: 'Start Date', format: d => d ? d.split('T')[0] : '' },
+			{ key: 'meterId', name: 'Meter Id' },
+			{ key: 'serviceId', name: 'Service Id' },
+			{ key: 'productId', name: 'Product Id' },
+			{ key: 'skuId', name: 'SKU Id' },
+			{ key: 'skuName', name: 'SKU Name' },
+			{ key: 'type', name: 'Type' },
+			{ key: 'isPrimaryMeterRegion', name: 'Primary Region', format: v => v ? 'Yes' : 'No' },
+			{ key: 'armSkuName', name: 'ARM SKU' }
+		];
+
+		// State
+		const state = {
+			visible: Object.fromEntries(columns.map(c => [
+				c.key,
+				!['retailPrice','location','serviceId','productId','skuId','skuName','isPrimaryMeterRegion','armSkuName','serviceName','serviceFamily','tierMinimumUnits','type'].includes(c.key)
+			])),
+			filters: {},
+			valueSelections: {},
+			page: 1,
+			pageSize: 20,
+			filteredRows: [],
+			sort: { key: 'unitPrice', dir: 'desc' }, // default sort highest unit price first
+			discount: 0, // discount percentage (0-100)
+		};
+
+		// Elements
+		const thead = document.getElementById('thead');
+		const tbody = document.getElementById('tbody');
+		const rowCount = document.getElementById('row-count');
+		const paginationEl = document.getElementById('pagination');
+		const pageInfo = document.getElementById('page-info');
+		const pageSizeSel = document.getElementById('page-size');
+		const loadingEl = document.getElementById('loading');
+
+		function formatNumber(n) {
+			if (n === null || n === undefined || n === '') return '';
+			if (typeof n === 'string') n = Number(n);
+			if (isNaN(n)) return '' + n;
+			if (Math.abs(n) > 1000) return n.toLocaleString(undefined, { maximumFractionDigits: 4 });
+			return n.toLocaleString(undefined, { maximumFractionDigits: 6 });
+		}
+
+		function formatUSD(n) {
+			if (n === null || n === undefined || n === '') return '';
+			if (typeof n === 'string') n = Number(n);
+			if (isNaN(n)) return '' + n;
+			// Apply discount if set
+			if (state.discount > 0) {
+				n = n * (1 - state.discount / 100);
+			}
+			return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 6 });
+		}
+
+		// Header
+		function renderHeader() {
+			thead.innerHTML = '';
+			const tr = document.createElement('tr');
+			for (const col of columns) {
+				if (!state.visible[col.key]) continue;
+				const th = document.createElement('th');
+				const wrap = document.createElement('span'); wrap.className = 'th-inner';
+				// Sort button
+				const sortBtn = document.createElement('button'); sortBtn.type='button'; sortBtn.className='col-sort'; sortBtn.title = 'Sort ' + col.name;
+				const isSorted = state.sort.key === col.key;
+				sortBtn.innerHTML = `<span>${col.name}</span>${isSorted?`<span class="icon" aria-label="sorted ${state.sort.dir}">${state.sort.dir==='asc'?'▲':'▼'}</span>`:''}`;
+				sortBtn.addEventListener('click', ()=> {
+					if (state.sort.key === col.key) {
+						state.sort.dir = state.sort.dir === 'asc' ? 'desc' : 'asc';
+					} else {
+						state.sort.key = col.key; state.sort.dir = 'asc';
+					}
+					applySort(); renderHeader(); renderRows();
+				});
+				wrap.appendChild(sortBtn);
+				// Filter button
+				const btn = document.createElement('button');
+				btn.type = 'button'; btn.className = 'btn-filter'; btn.innerHTML = '<i class="icon">🔽</i>'; btn.title = 'Filter ' + col.name;
+				btn.addEventListener('click', e => openFilterMenu(e.currentTarget, col));
+				wrap.appendChild(btn);
+				// active chips
+				const f = state.filters[col.key];
+				const s = state.valueSelections[col.key];
+				if ((f && f.value) || (s && s.size && s.size !== getDistinctValues(col.key).length)) {
+					const chip = document.createElement('span'); chip.className = 'chip';
+						let piece=[]; if (f && f.value) piece.push(`${f.op} "${f.value}"`); if (s) piece.push(`${s.size} sel`);
+						chip.textContent = piece.join(' · '); wrap.appendChild(chip);
+				}
+				th.appendChild(wrap); tr.appendChild(th);
+			}
+			thead.appendChild(tr);
+		}
+
+		function applyOp(cell, op, val) {
+			const c = (cell ?? '').toString().toLowerCase();
+			const v = (val ?? '').toString().toLowerCase();
+			switch (op) {
+				case 'contains': return c.includes(v);
+				case 'notcontains': return !c.includes(v);
+				case 'equals': return c === v;
+				case 'notequal': return c !== v;
+				case 'startswith': return c.startsWith(v);
+				case 'endswith': return c.endsWith(v);
+				default: return true;
+			}
+		}
+
+		function rowPassesFilters(row) {
+			for (const [key, f] of Object.entries(state.filters)) {
+				if (!f || f.value === '' || f.value == null) continue;
+				if (!applyOp(row[key], f.op, f.value)) return false;
+			}
+			for (const [key, set] of Object.entries(state.valueSelections)) {
+				if (!set) continue; const val = (row[key] ?? '').toString(); if (!set.has(val)) return false;
+			}
+			return true;
+		}
+
+		function computeFiltered() {
+			state.filteredRows = data.filter(rowPassesFilters);
+			state.page = 1; // reset on any re-compute
+			applySort();
+			updateCounts();
+		}
+
+		function applySort() {
+			const { key, dir } = state.sort;
+			if (!key) return;
+			const mult = dir === 'asc' ? 1 : -1;
+			state.filteredRows.sort((a,b)=>{
+				const av = a[key]; const bv = b[key];
+				if (av == null && bv == null) return 0; if (av == null) return 1; if (bv == null) return -1;
+				// Date detection for ISO strings
+				if (key === 'effectiveStartDate') {
+					const ad = Date.parse(av); const bd = Date.parse(bv);
+					if (!isNaN(ad) && !isNaN(bd)) return (ad - bd) * mult;
+				}
+				if (typeof av === 'number' && typeof bv === 'number') return (av - bv) * mult;
+				return av.toString().localeCompare(bv.toString(), undefined, { numeric:true, sensitivity:'base' }) * mult;
+			});
+		}
+
+		function updateCounts() {
+			rowCount.textContent = data.length ? `(${state.filteredRows.length.toLocaleString()} / ${data.length.toLocaleString()})` : '';
+		}
+
+		function renderRows() {
+			if (!state.filteredRows.length) {
+				tbody.innerHTML = `<tr><td class="empty" colspan="${Object.values(state.visible).filter(Boolean).length||1}">No rows match filters</td></tr>`;
+				pageInfo.textContent = 'Page 0 / 0';
+				return;
+			}
+			const totalPages = Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize));
+			if (state.page > totalPages) state.page = totalPages;
+			const start = (state.page - 1) * state.pageSize;
+			const slice = state.filteredRows.slice(start, start + state.pageSize);
+			tbody.innerHTML = '';
+			for (const row of slice) {
+				const tr = document.createElement('tr');
+				for (const col of columns) {
+					if (!state.visible[col.key]) continue;
+					const td = document.createElement('td');
+					const v = row[col.key];
+					td.textContent = col.format ? col.format(v) : (v ?? '').toString();
+					tr.appendChild(td);
+				}
+				tbody.appendChild(tr);
+			}
+			pageInfo.textContent = `Page ${state.page} / ${totalPages}`;
+		}
+
+		// Distinct
+		function getDistinctValues(key) {
+			const set = new Set();
+			for (const r of data) set.add((r[key] ?? '').toString());
+			return Array.from(set).sort((a,b)=>a.localeCompare(b));
+		}
+
+		// Filter menu logic
+		const menuFilter = document.getElementById('menu-filter');
+		const opSelect = document.getElementById('op-select');
+		const opValue = document.getElementById('op-value');
+		const filterColName = document.getElementById('filter-col-name');
+		const valueSearch = document.getElementById('value-search');
+		const valueList = document.getElementById('value-list');
+		const btnValueShowAll = document.getElementById('btn-value-show-all');
+		const btnValueHideAll = document.getElementById('btn-value-hide-all');
+		let currentFilterCol = null;
+
+		function openFilterMenu(anchor, col) {
+			currentFilterCol = col; filterColName.textContent = col.name;
+			const f = state.filters[col.key] || { op: 'contains', value: '' };
+			opSelect.value = f.op; opValue.value = f.value ?? '';
+			// Reset the value search box so it doesn't persist across columns
+			valueSearch.value = '';
+			positionMenu(anchor, menuFilter); openMenu(menuFilter);
+			setTimeout(()=> opValue.focus(), 0);
+			buildValueList(col, '');
+
+			// Live-apply top filter as user types or changes operator (debounced)
+			const applyTopFilterLive = debounce(() => {
+				if (!currentFilterCol) return;
+				const val = opValue.value;
+				const op = opSelect.value;
+				if (val == null || val === '') {
+					delete state.filters[currentFilterCol.key];
+				} else {
+					state.filters[currentFilterCol.key] = { op, value: val };
+				}
+				computeFiltered();
+				renderHeader();
+				renderRows();
+			}, 150);
+			// Ensure only one handler is active per open by assigning properties
+			opValue.oninput = () => applyTopFilterLive();
+			opSelect.onchange = () => applyTopFilterLive();
+		}
+		function openMenu(menu) {
+			menu.classList.add('open');
+			menu.setAttribute('aria-hidden', 'false');
+			// Update aria-expanded for Columns button when its menu opens
+			if (menu === document.getElementById('menu-columns')) {
+				document.getElementById('btn-columns')?.setAttribute('aria-expanded','true');
+			}
+			// Update aria-expanded for Favorites button when its menu opens
+			if (menu === document.getElementById('menu-shortcuts')) {
+				document.getElementById('btn-favorites')?.setAttribute('aria-expanded','true');
+			}
+		}
+		function closeMenus() {
+			document.querySelectorAll('.menu').forEach(m=>{m.classList.remove('open'); m.setAttribute('aria-hidden','true');});
+			// Clear the value search when menus close (clicking away)
+			if (valueSearch) valueSearch.value = '';
+			// Reset aria-expanded on Columns button when menus close
+			document.getElementById('btn-columns')?.setAttribute('aria-expanded','false');
+			// Reset aria-expanded on Favorites button when menus close
+			document.getElementById('btn-favorites')?.setAttribute('aria-expanded','false');
+		}
+
+		document.getElementById('btn-apply-filter').addEventListener('click', () => {
+			if (!currentFilterCol) return;
+			state.filters[currentFilterCol.key] = { op: opSelect.value, value: opValue.value };
+			computeFiltered(); renderHeader(); renderRows(); closeMenus();
+		});
+		document.getElementById('btn-clear-filter').addEventListener('click', () => {
+			if (!currentFilterCol) return; delete state.filters[currentFilterCol.key]; delete state.valueSelections[currentFilterCol.key];
+			opValue.value=''; computeFiltered(); renderHeader(); renderRows(); closeMenus();
+		});
+		opValue.addEventListener('keydown', e => { if (e.key==='Enter') document.getElementById('btn-apply-filter').click(); });
+
+		function buildValueList(col, query='') {
+			valueList.innerHTML='';
+			const values = getDistinctValues(col.key);
+			const q = (query||'').toLowerCase();
+			const selected = state.valueSelections[col.key] ?? new Set(values);
+			for (const v of values) {
+				if (q && !v.toLowerCase().includes(q)) continue;
+				const label = document.createElement('label');
+				const cb = document.createElement('input'); cb.type='checkbox'; cb.value=v; cb.checked=selected.has(v);
+				cb.addEventListener('change', ()=> { const set = state.valueSelections[col.key] ?? new Set(values); if (cb.checked) set.add(v); else set.delete(v); state.valueSelections[col.key]=set; computeFiltered(); renderHeader(); renderRows(); });
+				const span=document.createElement('span'); span.textContent = v || '(empty)';
+				label.append(cb, span); valueList.appendChild(label);
+			}
+			valueSearch.oninput = e => buildValueList(col, e.target.value);
+			btnValueShowAll.onclick = () => { state.valueSelections[col.key] = new Set(getDistinctValues(col.key)); computeFiltered(); buildValueList(col, valueSearch.value||''); renderHeader(); renderRows(); };
+			btnValueHideAll.onclick = () => { state.valueSelections[col.key] = new Set(); computeFiltered(); buildValueList(col, valueSearch.value||''); renderHeader(); renderRows(); };
+		}
+
+		// Column visibility menu
+		const btnColumns = document.getElementById('btn-columns');
+		const menuColumns = document.getElementById('menu-columns');
+		const colSearch = document.getElementById('col-search');
+		const colList = document.getElementById('col-list');
+		btnColumns.addEventListener('click', e => {
+			// Toggle: close if already open; otherwise build and open
+			if (menuColumns.classList.contains('open')) { closeMenus(); return; }
+			closeMenus(); // ensure other menus close first
+			buildColumnList();
+			positionMenu(e.currentTarget, menuColumns);
+			openMenu(menuColumns);
+			setTimeout(()=>colSearch.focus(),0);
+		});
+		function buildColumnList(filter='') {
+			colList.innerHTML=''; const q = filter.toLowerCase();
+			for (const col of columns) {
+				if (q && !col.name.toLowerCase().includes(q)) continue;
+				const label = document.createElement('label');
+				const cb = document.createElement('input'); cb.type='checkbox'; cb.checked=!!state.visible[col.key];
+				cb.addEventListener('change', ()=> { state.visible[col.key] = cb.checked; renderHeader(); renderRows(); });
+				const span = document.createElement('span'); span.textContent = col.name; label.append(cb, span); colList.appendChild(label);
+			}
+		}
+		colSearch.addEventListener('input', e => buildColumnList(e.target.value));
+		document.getElementById('btn-show-all').addEventListener('click', ()=> {
+			for (const c of columns) state.visible[c.key]=true;
+			renderHeader();
+			renderRows();
+			buildColumnList(colSearch.value||''); // refresh ticks
+		});
+		document.getElementById('btn-hide-all').addEventListener('click', ()=> {
+			for (const c of columns) state.visible[c.key]=false;
+			renderHeader();
+			renderRows();
+			buildColumnList(colSearch.value||''); // refresh ticks
+		});
+
+		// Shortcuts menu functionality
+		const menuShortcuts = document.getElementById('menu-shortcuts');
+		const shortcutsList = document.getElementById('shortcuts-list');
+		
+		// Define the shortcuts URLs
+		// Load shortcuts from external YAML file (favorites.yaml)
+		let shortcuts = [];
+
+		(async function loadShortcuts(){
+			try {
+				const txt = await fetch('../favorites.yaml').then(r => {
+					if (!r.ok) throw new Error(r.status + ' ' + r.statusText);
+					return r.text();
+				});
+				const lines = txt.split(/\r?\n/).map(l => l.trim());
+				let inList = false;
+				for (const line of lines) {
+					if (!line || line.startsWith('#')) continue;
+					if (!inList) {
+						if (/^shortcuts:\s*$/.test(line)) inList = true;
+						continue;
+					}
+					if (line.startsWith('- ')) {
+						let url = line.slice(2).trim();
+						if (
+							(url.startsWith('"') && url.endsWith('"')) ||
+							(url.startsWith("'") && url.endsWith("'"))
+						) {
+							url = url.slice(1, -1);
+						}
+						if (url) shortcuts.push(url);
+					} else {
+						// Reached a new key or end of list
+						break;
+					}
+				}
+			} catch (e) {
+				console.warn('Failed to load favorites.yaml', e);
+			}
+		})();
+
+		
+		function buildShortcutsList() {
+			shortcutsList.innerHTML = '';
+			for (const url of shortcuts) {
+				const link = document.createElement('a');
+				link.href = url;
+				link.className = 'shortcuts-link';
+				link.textContent = url;
+				shortcutsList.appendChild(link);
+			}
+		}
+
+		// CSV Export functionality
+		document.getElementById('btn-export-csv').addEventListener('click', exportToCSV);
+
+		// Share URL functionality
+		document.getElementById('btn-share-url').addEventListener('click', generateShareableURL);
+
+		function generateShareableURL() {
+			const url = new URL(window.location.href);
+			url.search = ''; // Clear existing query parameters
+			
+			// Encode filters: f_[columnKey]=[operator]:[value]
+			for (const [key, filter] of Object.entries(state.filters)) {
+				if (filter && filter.value && filter.value.trim() !== '') {
+					url.searchParams.set(`f_${key}`, `${filter.op}:${filter.value}`);
+				}
+			}
+			
+			// Encode value selections: s_[columnKey]=[value1,value2,...]
+			for (const [key, valueSet] of Object.entries(state.valueSelections)) {
+				if (valueSet && valueSet.size > 0) {
+					const allValues = getDistinctValues(key);
+					// Only encode if it's not "all values selected" (which is the default)
+					if (valueSet.size < allValues.length) {
+						const selectedValues = Array.from(valueSet).join(',');
+						url.searchParams.set(`s_${key}`, selectedValues);
+					}
+				}
+			}
+			
+			// Encode sorting: sort=[columnKey]:[direction]
+			if (state.sort && state.sort.key && state.sort.dir) {
+				// Only encode if it's not the default sort
+				if (!(state.sort.key === 'unitPrice' && state.sort.dir === 'desc')) {
+					url.searchParams.set('sort', `${state.sort.key}:${state.sort.dir}`);
+				}
+			}
+			
+			// Encode pagination: page and pageSize
+			if (state.page && state.page > 1) {
+				url.searchParams.set('page', state.page.toString());
+			}
+			if (state.pageSize && state.pageSize !== 20) { // 20 is default
+				url.searchParams.set('pageSize', state.pageSize.toString());
+			}
+			
+			// Encode hidden columns: hide=[col1,col2,...]
+			const hiddenColumns = [];
+			for (const [key, visible] of Object.entries(state.visible)) {
+				if (!visible) {
+					hiddenColumns.push(key);
+				}
+			}
+			if (hiddenColumns.length > 0) {
+				url.searchParams.set('hide', hiddenColumns.join(','));
+			}
+			
+			// Encode discount: discount=[percentage]
+			if (state.discount > 0) {
+				url.searchParams.set('discount', state.discount.toString());
+			}
+			
+			// Copy to clipboard and show feedback
+			const shareableURL = url.toString();
+			copyToClipboard(shareableURL);
+		}
+
+		async function copyToClipboard(text) {
+			try {
+				if (navigator.clipboard && window.isSecureContext) {
+					await navigator.clipboard.writeText(text);
+					showNotification('✅ Shareable URL copied to clipboard!', 'success');
+				} else {
+					// Fallback for older browsers or non-HTTPS contexts
+					const textArea = document.createElement('textarea');
+					textArea.value = text;
+					textArea.style.position = 'fixed';
+					textArea.style.left = '-999999px';
+					textArea.style.top = '-999999px';
+					document.body.appendChild(textArea);
+					textArea.focus();
+					textArea.select();
+					document.execCommand('copy');
+					textArea.remove();
+					showNotification('✅ Shareable URL copied to clipboard!', 'success');
+				}
+			} catch (err) {
+				console.warn('Failed to copy to clipboard:', err);
+				showNotification('❌ Failed to copy URL. Please copy manually from the address bar.', 'error');
+			}
+		}
+
+		function showNotification(message, type = 'info') {
+			// Remove existing notifications
+			const existing = document.querySelector('.notification');
+			if (existing) existing.remove();
+			
+			// Create notification element
+			const notification = document.createElement('div');
+			notification.className = `notification notification-${type}`;
+			notification.textContent = message;
+			
+			// Style the notification
+			Object.assign(notification.style, {
+				position: 'fixed',
+				top: '20px',
+				right: '20px',
+				background: type === 'success' ? 'var(--accent)' : type === 'error' ? '#dc2626' : 'var(--panel-2)',
+				color: type === 'success' || type === 'error' ? 'white' : 'var(--text)',
+				padding: '12px 16px',
+				borderRadius: '8px',
+				boxShadow: 'var(--shadow)',
+				border: '1px solid var(--border)',
+				zIndex: '1000',
+				fontSize: '14px',
+				maxWidth: '300px',
+				wordWrap: 'break-word'
+			});
+			
+			document.body.appendChild(notification);
+			
+			// Auto-remove after 4 seconds
+			setTimeout(() => {
+				if (notification.parentNode) {
+					notification.remove();
+				}
+			}, 4000);
+		}
+
+		function exportToCSV() {
+			// Get visible columns
+			const visibleColumns = columns.filter(col => state.visible[col.key]);
+			
+			if (visibleColumns.length === 0) {
+				alert('No columns are visible. Please make some columns visible before exporting.');
+				return;
+			}
+
+			// Create CSV header using original field keys (not friendly display names)
+			const headers = visibleColumns.map(col => col.key);
+			
+			// Create CSV rows from filtered data
+			const csvRows = [headers];
+			
+			for (const row of state.filteredRows) {
+				const csvRow = visibleColumns.map(col => {
+					const value = row[col.key];
+					let formattedValue = value;
+					
+					// Apply column formatting if available
+					if (col.format && value != null) {
+						formattedValue = col.format(value);
+					}
+					
+					// Handle null/undefined values
+					if (formattedValue == null) {
+						formattedValue = '';
+					}
+					
+					// Convert to string and escape CSV special characters
+					let stringValue = String(formattedValue);
+					
+					// If the value contains comma, quote, or newline, wrap in quotes and escape quotes
+					if (stringValue.includes(',') || stringValue.includes('"') || stringValue.includes('\n') || stringValue.includes('\r')) {
+						stringValue = '"' + stringValue.replace(/"/g, '""') + '"';
+					}
+					
+					return stringValue;
+				});
+				csvRows.push(csvRow);
+			}
+			
+			// Convert to CSV string
+			const csvContent = csvRows.map(row => row.join(',')).join('\n');
+			
+			// Create and download file
+			const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+			const link = document.createElement('a');
+			const url = URL.createObjectURL(blob);
+			link.setAttribute('href', url);
+			
+			// Generate filename with current date and filter info
+			const now = new Date();
+			const dateStr = now.toISOString().split('T')[0]; // YYYY-MM-DD format
+			const filename = `github-prices-${dateStr}-${state.filteredRows.length}-rows.csv`;
+			link.setAttribute('download', filename);
+			
+			// Trigger download
+			link.style.visibility = 'hidden';
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+			URL.revokeObjectURL(url);
+		}
+
+		// Favorites button functionality (repurposed from info button)
+		document.getElementById('btn-favorites').addEventListener('click', e => {
+			// Toggle: close if already open; otherwise build and open
+			if (menuShortcuts.classList.contains('open')) { closeMenus(); return; }
+			closeMenus(); // ensure other menus close first
+			buildShortcutsList();
+			positionMenu(e.currentTarget, menuShortcuts);
+			openMenu(menuShortcuts);
+		});
+
+		// Discount menu functionality
+		const menuDiscount = document.getElementById('menu-discount');
+		const discountValue = document.getElementById('discount-value');
+		const discountIndicator = document.getElementById('discount-indicator');
+
+		function updateDiscountIndicator() {
+			if (state.discount > 0) {
+				discountIndicator.innerHTML = `💲 ${state.discount}% discount applied to all prices - <a href="#" id="discount-reset-link">Reset</a>`;
+				discountIndicator.classList.add('active');
+				const resetLink = discountIndicator.querySelector('#discount-reset-link');
+				if (resetLink) {
+					resetLink.addEventListener('click', e => {
+						e.preventDefault();
+						resetDiscount();
+					});
+				}
+			} else {
+				discountIndicator.classList.remove('active');
+				discountIndicator.textContent = '';
+			}
+		}
+
+		function resetDiscount() {
+			state.discount = 0;
+			discountValue.value = '';
+			updateDiscountIndicator();
+			renderRows();
+			closeMenus();
+			showNotification('✅ Discount cleared', 'success');
+		}
+
+		document.getElementById('btn-discount').addEventListener('click', e => {
+			// Toggle: close if already open; otherwise build and open
+			if (menuDiscount.classList.contains('open')) { closeMenus(); return; }
+			closeMenus(); // ensure other menus close first
+			discountValue.value = state.discount > 0 ? state.discount : '';
+			positionMenu(e.currentTarget, menuDiscount);
+			openMenu(menuDiscount);
+			setTimeout(() => discountValue.focus(), 0);
+		});
+
+		document.getElementById('btn-set-discount').addEventListener('click', () => {
+			const val = parseFloat(discountValue.value);
+			if (isNaN(val) || val < 0 || val > 100) {
+				showNotification('❌ Please enter a valid discount between 0 and 100', 'error');
+				return;
+			}
+			state.discount = val;
+			if (val === 0) {
+				state.discount = 0; // Reset if 0%
+			}
+			updateDiscountIndicator();
+			renderRows(); // Re-render to apply discount
+			closeMenus();
+			showNotification(`✅ Discount ${val > 0 ? 'set to ' + val + '%' : 'cleared'}`, 'success');
+		});
+
+		document.getElementById('btn-reset-discount').addEventListener('click', () => {
+			resetDiscount();
+		});
+
+		// Allow Enter key to set discount
+		discountValue.addEventListener('keydown', e => {
+			if (e.key === 'Enter') document.getElementById('btn-set-discount').click();
+		});
+
+		// Load metadata and update info display
+		async function loadMetadata() {
+			try {
+				const res = await fetch('../metadata.json');
+				if (!res.ok) throw new Error('Metadata not available');
+				const metadata = await res.json();
+				
+				document.getElementById('last-updated').textContent = metadata.last_updated || 'Never';
+			} catch (e) {
+				console.warn('Could not load metadata:', e);
+				document.getElementById('last-updated').textContent = 'Unknown';
+			}
+		}
+
+		// Pagination controls
+		document.getElementById('btn-prev').addEventListener('click', ()=> { if (state.page>1){state.page--; renderRows();} });
+		document.getElementById('btn-next').addEventListener('click', ()=> { const totalPages = Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize)); if (state.page<totalPages){state.page++; renderRows();} });
+		document.getElementById('btn-first').addEventListener('click', ()=> { state.page=1; renderRows(); });
+		document.getElementById('btn-last').addEventListener('click', ()=> { state.page=Math.max(1, Math.ceil(state.filteredRows.length / state.pageSize)); renderRows(); });
+		pageSizeSel.addEventListener('change', ()=> {
+			const val = pageSizeSel.value;
+			if (val === '100000') {
+				state.pageSize = 100000; // show everything - use 100000 as the "all" value
+				state.page = 1;
+			} else {
+				state.pageSize = parseInt(val,10) || 20;
+				state.page = 1;
+			}
+			renderRows();
+		});
+
+		// Utilities
+		function debounce(fn, delay = 150) {
+			let t;
+			return function(...args) {
+				clearTimeout(t);
+				t = setTimeout(() => fn.apply(this, args), delay);
+			};
+		}
+		function positionMenu(anchor, menu) {
+			const anchorRect = anchor.getBoundingClientRect();
+			const container = document.querySelector('.table-wrap') || document.body;
+			const containerRect = container.getBoundingClientRect();
+			const scrollX = window.scrollX || window.pageXOffset;
+			const scrollY = window.scrollY || window.pageYOffset;
+			const top = anchorRect.bottom + scrollY + 6;
+
+			// Measure menu width even when hidden so clamping logic is accurate
+			let menuWidth = menu.offsetWidth;
+			if (!menuWidth) {
+				const prevVisibility = menu.style.visibility;
+				const prevDisplay = menu.style.display;
+				menu.style.visibility = 'hidden';
+				menu.style.display = 'block';
+				menuWidth = menu.offsetWidth;
+				menu.style.display = prevDisplay;
+				menu.style.visibility = prevVisibility;
+			}
+
+			const padding = 12;
+			const containerLeft = containerRect.left + scrollX;
+			const containerRight = containerRect.right + scrollX;
+			const proposedLeft = anchorRect.left + scrollX;
+			const maxLeft = containerRight - menuWidth - padding;
+			const minLeft = containerLeft + padding;
+			let left;
+			if (maxLeft < minLeft) {
+				left = containerLeft + padding;
+			} else {
+				left = Math.min(Math.max(proposedLeft, minLeft), maxLeft);
+			}
+
+			menu.style.top = top + 'px';
+			menu.style.left = left + 'px';
+			menu.style.right = 'auto';
+		}
+		document.addEventListener('click', e => { const anyMenu = e.target.closest('.menu'); const anyBtn = e.target.closest('button'); if (!anyMenu && !anyBtn) closeMenus(); });
+
+		// URL parameter parsing and state restoration
+		function parseURLParams() {
+			const urlParams = new URLSearchParams(window.location.search);
+			
+			// Parse filters: f_[columnKey]=[operator]:[value]
+			for (const [key, value] of urlParams.entries()) {
+				if (key.startsWith('f_')) {
+					const columnKey = key.substring(2);
+					const colonIndex = value.indexOf(':');
+					if (colonIndex > 0) {
+						const operator = value.substring(0, colonIndex);
+						const filterValue = value.substring(colonIndex + 1);
+						// Validate that this is a valid column
+						if (columns.some(col => col.key === columnKey)) {
+							state.filters[columnKey] = { op: operator, value: filterValue };
+						}
+					}
+				}
+			}
+			
+			// Parse value selections: s_[columnKey]=[value1,value2,...]
+			for (const [key, value] of urlParams.entries()) {
+				if (key.startsWith('s_')) {
+					const columnKey = key.substring(2);
+					// Validate that this is a valid column
+					if (columns.some(col => col.key === columnKey)) {
+						const selectedValues = value.split(',').filter(v => v.trim() !== '');
+						state.valueSelections[columnKey] = new Set(selectedValues);
+					}
+				}
+			}
+			
+			// Parse sorting: sort=[columnKey]:[direction]
+			const sortParam = urlParams.get('sort');
+			if (sortParam) {
+				const colonIndex = sortParam.indexOf(':');
+				if (colonIndex > 0) {
+					const sortKey = sortParam.substring(0, colonIndex);
+					const sortDir = sortParam.substring(colonIndex + 1);
+					// Validate column exists and direction is valid
+					if (columns.some(col => col.key === sortKey) && (sortDir === 'asc' || sortDir === 'desc')) {
+						state.sort = { key: sortKey, dir: sortDir };
+					}
+				}
+			}
+			
+			// Parse pagination
+			const pageParam = urlParams.get('page');
+			if (pageParam) {
+				const pageNum = parseInt(pageParam, 10);
+				if (pageNum > 0) {
+					state.page = pageNum;
+				}
+			}
+			
+			const pageSizeParam = urlParams.get('pageSize');
+			if (pageSizeParam) {
+				const pageSize = parseInt(pageSizeParam, 10);
+				if (pageSize > 0) {
+					state.pageSize = pageSize;
+				}
+			}
+			
+			// Parse hidden columns: hide=[col1,col2,...]
+			const hideParam = urlParams.get('hide');
+			if (hideParam) {
+				const hiddenColumns = hideParam.split(',').filter(col => col.trim() !== '');
+				for (const colKey of hiddenColumns) {
+					// Validate column exists
+					if (columns.some(col => col.key === colKey)) {
+						state.visible[colKey] = false;
+					}
+				}
+			}
+			
+			// Parse discount: discount=[percentage]
+			const discountParam = urlParams.get('discount');
+			if (discountParam) {
+				const discount = parseFloat(discountParam);
+				if (!isNaN(discount) && discount >= 0 && discount <= 100) {
+					state.discount = discount;
+				}
+			}
+		}
+
+		// Data loading from NDJSON (../prices-github.ndjson)
+		async function loadData() {
+			try {
+				const res = await fetch('../prices-github.ndjson');
+				if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+				const text = await res.text();
+				// Parse NDJSON: one JSON object per non-empty line
+				const lines = text.split(/\r?\n/);
+				const rows = [];
+				for (let i=0;i<lines.length;i++) {
+					const line = lines[i].trim();
+					if (!line) continue;
+					try { rows.push(JSON.parse(line)); }
+					catch (e) { console.warn('Skipping invalid NDJSON line', i+1, e); }
+				}
+				if (!rows.length) throw new Error('No valid NDJSON rows found');
+				data = rows;
+				
+				// Apply URL parameters to restore shared state
+				parseURLParams();
+				
+				// Update page size selector to match state
+				if (state.pageSize !== 20) {
+					const pageSizeSelect = document.getElementById('page-size');
+					// Handle "all" case - check for both the condition and the specific value 100000
+					if (state.pageSize >= data.length || state.pageSize === 100000) {
+						pageSizeSelect.value = '100000';
+					} else {
+						// Find closest matching option or add custom value if needed
+						const options = Array.from(pageSizeSelect.options).map(opt => opt.value);
+						if (options.includes(state.pageSize.toString())) {
+							pageSizeSelect.value = state.pageSize.toString();
+						} else {
+							// For custom page sizes, just use the value (browser will show it even if not in options)
+							pageSizeSelect.value = state.pageSize.toString();
+						}
+					}
+				}
+				
+				computeFiltered(); // includes applySort
+				renderHeader();
+				renderRows();
+				updateDiscountIndicator(); // Show discount indicator if discount was loaded from URL
+				paginationEl.style.display = 'flex';
+			} catch (err) {
+				tbody.innerHTML = `<tr><td class="empty">Error loading NDJSON: ${err.message}</td></tr>`;
+			} finally {
+				loadingEl.style.display = 'none';
+			}
+		}
+
+		// Initial static header (while loading)
+		renderHeader();
+		tbody.innerHTML = '<tr><td class="empty">Loading price data…</td></tr>';
+		loadData();
+		loadMetadata();
+
+		// Basic smoke tests (console)
+		(function tests(){
+			console.assert(applyOp('abc','contains','b')===true,'contains');
+			console.assert(applyOp('abc','equals','ABC')===true,'equals case');
+		})();
+	</script>
+</body>
+</html>
+
