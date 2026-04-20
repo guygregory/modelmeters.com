@@ -11,13 +11,14 @@ Key features:
  - Progress + basic metrics
 
 Usage examples:
-  python meter-download.py --output all-prices.json
-  python meter-download.py --ndjson all-prices.ndjson
+  python meter-download.py --output prices.json
+  python meter-download.py --ndjson prices.ndjson
   python meter-download.py --output all.json --ndjson all.ndjson
   python meter-download.py --max-pages 3 --ndjson sample.ndjson  (quick test)
   python meter-download.py --cognitive-services-only --ndjson cognitive.ndjson
   python meter-download.py --foundry-models-only --ndjson foundry-models.ndjson
   python meter-download.py --foundry-plus-cognitive --ndjson prices.ndjson
+  python meter-download.py --github --ndjson prices-github.ndjson
 
 Notes:
 Full dataset is large (hundreds of thousands of items). Writing a JSON array file may
@@ -115,6 +116,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 	)
 	service_group = p.add_mutually_exclusive_group()
 	service_group.add_argument(
+		"--github",
+		action="store_true",
+		help="Convenience flag: restrict to serviceName eq 'GitHub'. Can be combined with --filter (AND).",
+	)
+	service_group.add_argument(
 		"--cognitive-services-only",
 		action="store_true",
 		help="Convenience flag: restrict to serviceName eq 'Cognitive Services'. Can be combined with --filter (AND).",
@@ -170,7 +176,13 @@ def main(argv: list[str]) -> int:
 
 	# Build combined filter expression if a convenience service flag used
 	combined_filter: str | None = args.filter
-	if getattr(args, "cognitive_services_only", False):
+	if getattr(args, "github", False):
+		gh_filter = "serviceName eq 'GitHub'"
+		if combined_filter:
+			combined_filter = f"({gh_filter}) and ({combined_filter})"
+		else:
+			combined_filter = gh_filter
+	elif getattr(args, "cognitive_services_only", False):
 		cs_filter = "serviceName eq 'Cognitive Services'"
 		if combined_filter:
 			combined_filter = f"({cs_filter}) and ({combined_filter})"

@@ -29,10 +29,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install openai python-dotenv
           
-      - name: Download latest pricing data
+      - name: Download latest Foundry Models pricing data
         run: |
           python meter-download.py --foundry-models-only --ndjson prices.ndjson
-          
+      
+      - name: Download latest GitHub pricing data
+        run: |
+          python meter-download.py --github --ndjson prices-github.ndjson
+      
       - name: Split price file into monthly files
         run: |
           python split_into_monthly.py
@@ -77,7 +81,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add prices.ndjson metadata.json monthly/ agent/rss.xml
+          git add prices.ndjson prices-github.ndjson metadata.json monthly/ agent/rss.xml
           
           if git diff --staged --quiet; then
             echo "No changes to commit"
