@@ -1,0 +1,62 @@
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Outp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Outp FT DZ Tokens", "unitPrice": 0.000781, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT DZ Deployment Hosting Unit", "unitPrice": 0.01, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT DZ Deployment Hosting Unit", "unitPrice": 0.33, "unitOfMeasure": "1/Hour"}
+{"productName": "Qwen models", "meterName": "32b Outp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Qwen models", "meterName": "32b Outp FT DZ Tokens", "unitPrice": 0.00132, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Inp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Inp FT DZ Tokens", "unitPrice": 5.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Inp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Inp FT DZ Tokens", "unitPrice": 0.000781, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Inp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Inp FT DZ Tokens", "unitPrice": 7.7e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Outp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Outp FT DZ Tokens", "unitPrice": 0.00017, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b FT DZ Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
+{"productName": "Qwen models", "meterName": "32b Inp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Qwen models", "meterName": "32b Inp FT DZ Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Outp FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Outp FT DZ Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT regnl Deployment Hosting Unit", "unitPrice": 0.01, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT regnl Deployment Hosting Unit", "unitPrice": 0.33, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b FT DZ Deployment Hosting Unit", "unitPrice": 0.01, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b FT DZ Deployment Hosting Unit", "unitPrice": 0.33, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b FT DZ Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
+{"productName": "Qwen models", "meterName": "32b FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Qwen models", "meterName": "32b FT DZ Tokens", "unitPrice": 0.0035, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b FT DZ Deployment Hosting Unit", "unitPrice": 0.01, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b FT DZ Deployment Hosting Unit", "unitPrice": 0.715, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT DZ Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT DZ Tokens", "unitPrice": 0.00495, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Inp FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Inp FT regnl Tokens", "unitPrice": 8.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Qwen models", "meterName": "32b FT DZ Deployment Hosting Unit", "unitPrice": 0.01, "unitOfMeasure": "1/Hour"}
+{"productName": "Qwen models", "meterName": "32b FT DZ Deployment Hosting Unit", "unitPrice": 0.33, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b FT regnl Tokens", "unitPrice": 0.00495, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "20b FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "20b FT regnl Tokens", "unitPrice": 0.004, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Inp FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Inp FT regnl Tokens", "unitPrice": 5.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Outp FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Outp FT regnl Tokens", "unitPrice": 0.00017, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Ministral 3bFTregnl Deployment Hosting Unit", "unitPrice": 0.01, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Mistral Models", "meterName": "Ministral 3bFTregnl Deployment Hosting Unit", "unitPrice": 0.715, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Inp FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Inp FT regnl Tokens", "unitPrice": 0.000781, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Outp FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Outp FT regnl Tokens", "unitPrice": 0.000859, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Inp FT regnl Tokens", "unitPrice": 0.000859, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Inp FT regnl Tokens", "unitPrice": 7.7e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Outp FT regnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Outp FT regnl Tokens", "unitPrice": 0.00036, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Ministral 3bFTregnl Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Ministral 3bFTregnl Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Inp FT regnl Tokens", "unitPrice": 6e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Llama Models", "meterName": "3.3 70b Outp FT regnl Tokens", "unitPrice": 0.000781, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "OSS 20b Outp FT regnl Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Azure Mistral Models", "meterName": "Mnstrl 3b Outp FT regnl Tokens", "unitPrice": 0.00019, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "20b FT regnl Deployment Hosting Unit", "unitPrice": 0.01, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI OSS Models", "meterName": "20b FT regnl Deployment Hosting Unit", "unitPrice": 0.33, "unitOfMeasure": "1/Hour"}
