@@ -10,7 +10,6 @@
 {"productName": "Azure OpenAI Media", "meterName": "gpt img 1.5 in img DZ 1M Tokens", "unitPrice": 8.8, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt4o mn tts txt in gl 1215 1M Tokens", "unitPrice": 0.6, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt txt mn cd in gl 1215 1M Tokens", "unitPrice": 0.06, "unitOfMeasure": "1M"}
-{"productName": "Cohere Models", "meterName": "Rerank v4 Pro DZ Search", "unitPrice": 2.75, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt img mn in DZ 1215 1M Tokens", "unitPrice": 0.88, "unitOfMeasure": "1M"}
 {"productName": "Azure Mistral Models", "meterName": "Large 3 Outp glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4o 1120 Inp regnl Tokens", "unitPrice": 0.003025, "unitOfMeasure": "1K"}
@@ -78,7 +77,6 @@
 {"productName": "Azure OpenAI Media", "meterName": "gpt img 1.5 in img gl 1M Tokens", "unitPrice": 8.0, "unitOfMeasure": "1M"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flux 2 Pro MP Megapixel", "unitPrice": 0.018, "unitOfMeasure": "1"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.1 codex max inp Gl 1M Tokens", "unitPrice": 1.25, "unitOfMeasure": "1M"}
-{"productName": "Cohere Models", "meterName": "Rerank v4 Fast DZ Search", "unitPrice": 2.2, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 chat opt Dz 1M Tokens", "unitPrice": 15.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.1 codex max opt Gl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.2 opt Dz 1M Tokens", "unitPrice": 15.4, "unitOfMeasure": "1M"}

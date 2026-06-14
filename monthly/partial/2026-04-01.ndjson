@@ -1,10 +1,8 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "5 mini pp Inp Gl 1M Tokens", "unitPrice": 0.45, "unitOfMeasure": "1M"}
-{"productName": "Azure Fireworks Models", "meterName": "FW GLM 5.1 Outp DZ Tokens", "unitPrice": 0.00484, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI PP FT GPT4s", "meterName": "4.1 mini pp cd Inp Gl Tokens", "unitPrice": 0.000175, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Flux 2 Pro Ref Dzone Megapixel", "unitPrice": 0.0165, "unitOfMeasure": "1"}
 {"productName": "MAI Models", "meterName": "Image 2e Output glbl Tokens", "unitPrice": 0.0195, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 pro longco batch opt Gl 1M Tokens", "unitPrice": 135.0, "unitOfMeasure": "1M"}
-{"productName": "Azure Fireworks Models", "meterName": "FW GLM 5.1 Cache Inp DZ Tokens", "unitPrice": 0.000286, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 pro longco batch inp Dz 1M Tokens", "unitPrice": 33.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5 mini pp Opt Gl 1M Tokens", "unitPrice": 3.6, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI PP FT GPT4s", "meterName": "4.1 mini pp Opt Gl Tokens", "unitPrice": 0.0028, "unitOfMeasure": "1K"}
@@ -19,7 +17,6 @@
 {"productName": "MAI Models", "meterName": "Image 2 Text Input DZ Tokens", "unitPrice": 0.0055, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 mini pp Inp Dz 1M Tokens", "unitPrice": 1.65, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 longco batch cd inp Dz 1M Tokens", "unitPrice": 0.275, "unitOfMeasure": "1M"}
-{"productName": "Azure Fireworks Models", "meterName": "FW GLM 5.1 Inp DZ Tokens", "unitPrice": 0.00154, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 pro longco batch opt Dz 1M Tokens", "unitPrice": 148.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 mini pp cd Inp Gl 1M Tokens", "unitPrice": 0.15, "unitOfMeasure": "1M"}
 {"productName": "MAI Models", "meterName": "Image 2e Text Input glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
@@ -27,7 +24,6 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "5 mini pp cd Inp Gl 1M Tokens", "unitPrice": 0.045, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI PP FT GPT4s", "meterName": "4.1 mini pp cd Inp Dz Tokens", "unitPrice": 0.000193, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI PP FT GPT4s", "meterName": "4.1 mini pp Inp Gl Tokens", "unitPrice": 0.0007, "unitOfMeasure": "1K"}
-{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 2.7 Cache Inp DZ Tokens", "unitPrice": 6.6e-05, "unitOfMeasure": "1K"}
 {"productName": "MAI Models", "meterName": "Image 2 Text Input glbl Tokens", "unitPrice": 0.006, "unitOfMeasure": "1K"}
 {"productName": "MAI Models", "meterName": "Image 2 Text Input glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 mini pp cd Inp Dz 1M Tokens", "unitPrice": 0.165, "unitOfMeasure": "1M"}
@@ -36,13 +32,11 @@
 {"productName": "Azure Mistral Models", "meterName": "OCR 2512 Dzone Pages", "unitPrice": 2.2, "unitOfMeasure": "1K"}
 {"productName": "MAI Models", "meterName": "Image 2 Output glbl Tokens", "unitPrice": 0.033, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 mini pp Opt Gl 1M Tokens", "unitPrice": 9.0, "unitOfMeasure": "1M"}
-{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 2.7 Outp DZ Tokens", "unitPrice": 0.00132, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI PP FT GPT4s", "meterName": "4.1 mini pp Inp Dz Tokens", "unitPrice": 0.00077, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5 mini pp Inp Dz 1M Tokens", "unitPrice": 0.495, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 mini pp Inp Gl 1M Tokens", "unitPrice": 1.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 longco batch opt Dz 1M Tokens", "unitPrice": 12.375, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5 mini pp cd Inp Dz 1M Tokens", "unitPrice": 0.0495, "unitOfMeasure": "1M"}
-{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 2.7 Inp DZ Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
 {"productName": "MAI Models", "meterName": "Image 2e Text Input glbl Tokens", "unitPrice": 0.006, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "GPT 5.1 opt Dz 1M Tokens", "unitPrice": 13.75, "unitOfMeasure": "1M"}
 {"productName": "MAI Models", "meterName": "Image 2 Text Input DZ Tokens", "unitPrice": 0.0066, "unitOfMeasure": "1K"}
