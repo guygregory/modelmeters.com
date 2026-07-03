@@ -132,7 +132,6 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat cd inp Dz 1M Tokens", "unitPrice": 0.1925, "unitOfMeasure": "1M"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI 2512 glbl Pages", "unitPrice": 3.75, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.4 pp inp Dz 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
-{"productName": "Azure Fireworks Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Cohere Models", "meterName": "Rerank v4 Fast Glbl Search", "unitPrice": 2.5, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.3 chat opt Dz 1M Tokens", "unitPrice": 15.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI OSS Models", "meterName": "gpt-oss-120B Inp glbl Tokens", "unitPrice": 0.00019, "unitOfMeasure": "1K"}
