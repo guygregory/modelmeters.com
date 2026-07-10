@@ -168,7 +168,6 @@
 {"productName": "Azure OpenAI", "meterName": "Speech-Text to Speech HD-Regional Characters", "unitPrice": 36.3, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano Outp glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "Sora 1080p Sq 1-5s glbl Video", "unitPrice": 0.6, "unitOfMeasure": "1 Second"}
-{"productName": "Azure Grok Models", "meterName": "Code Fast 1 Outp DZone Tokens", "unitPrice": 0.0022, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt 4.1 cached Inp glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo16K-FT-Outp-regnl Tokens", "unitPrice": 0.001815, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-35-turbo4K-FT-Outp-regnl Tokens", "unitPrice": 0.001815, "unitOfMeasure": "1K"}
