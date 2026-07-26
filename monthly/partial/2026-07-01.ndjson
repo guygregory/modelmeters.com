@@ -19,7 +19,7 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp PP Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Opt PP Gl 1M Tokens", "unitPrice": 30.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
-{"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp Std DZ 1M Tokens", "unitPrice": 16.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp Std DZ 1M Tokens", "unitPrice": 2.75, "unitOfMeasure": "1M"}
 {"productName": "Azure Deepseek Models", "meterName": "V4 Pro cached glbl Tokens", "unitPrice": 0.000145, "unitOfMeasure": "1K"}
 {"productName": "Azure Kimi", "meterName": "K2.7 Code cached DZ Tokens", "unitPrice": 0.000209, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens", "unitPrice": 6.0, "unitOfMeasure": "1M"}
@@ -189,7 +189,7 @@
 {"productName": "MAI Models", "meterName": "Image 2 Text Input glbl Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
 {"productName": "Azure Deepseek Models", "meterName": "R1 Outp glbl Tokens", "unitPrice": 0.0054, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "4.3 Outp Glbl L Tokens", "unitPrice": 0.005, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Opt Std DZ 1M Tokens", "unitPrice": 2.75, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Opt Std DZ 1M Tokens", "unitPrice": 16.5, "unitOfMeasure": "1M"}
 {"productName": "Azure Grok Models", "meterName": "4.3 Inp Glbl L Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "Large 3 Outp glbl Tokens", "unitPrice": 0.0015, "unitOfMeasure": "1K"}
 {"productName": "Azure Kimi", "meterName": "K2.5 Thinking Inp glbl Tokens", "unitPrice": 0.0006, "unitOfMeasure": "1K"}
@@ -244,7 +244,7 @@
 {"productName": "Azure Mistral Models", "meterName": "Doc AI DZone 2505 Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "4.3 Outp Glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Azure BFL Flux Models", "meterName": "Kontext Pro glbl Images", "unitPrice": 40.0, "unitOfMeasure": "1K"}
-{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 2.7 Inp DZ Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 3 Inp DZ Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
 {"productName": "Azure Phi Models", "meterName": "Phi-4-reasoning-Input Tokens", "unitPrice": 0.000125, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "Grok-4 Outp glbl Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "Doc AI 2512 Dzone Pages", "unitPrice": 3.3, "unitOfMeasure": "1K"}
@@ -267,7 +267,7 @@
 {"productName": "Azure Fireworks Models", "meterName": "FW GPT OSS 120B Outp DZ Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
 {"productName": "Azure Fireworks Models", "meterName": "FW Kimi K2.5 Inp DZ Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
 {"productName": "Azure Phi Models", "meterName": "Phi-4-Mini-Output Tokens", "unitPrice": 0.0003, "unitOfMeasure": "1K"}
-{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 2.7 Cache Inp DZ Tokens", "unitPrice": 6.6e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 3 Cache Inp DZ Tokens", "unitPrice": 6.6e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure Grok Models", "meterName": "4.3 Inp Glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
 {"productName": "Azure Phi Models", "meterName": "Phi-4-Input Tokens", "unitPrice": 0.000125, "unitOfMeasure": "1K"}
 {"productName": "Azure Llama Models", "meterName": "Llama3.3 70b-IN-FT Tokens", "unitPrice": 0.00071, "unitOfMeasure": "1K"}
@@ -307,7 +307,7 @@
 {"productName": "Azure Deepseek Models", "meterName": "V4 Pro cached glbl Tokens", "unitPrice": 0.000181, "unitOfMeasure": "1K"}
 {"productName": "Azure Llama Models", "meterName": "Llama3.3-Out-FT Tokens", "unitPrice": 0.00071, "unitOfMeasure": "1K"}
 {"productName": "Azure Fireworks Models", "meterName": "FW Kimi K2.6 Outp DZ Tokens", "unitPrice": 0.0044, "unitOfMeasure": "1K"}
-{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 2.7 Outp DZ Tokens", "unitPrice": 0.00132, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW MiniMax 3 Outp DZ Tokens", "unitPrice": 0.00132, "unitOfMeasure": "1K"}
 {"productName": "Cohere Models", "meterName": "Command A Plus Outp DZ 1M Tokens", "unitPrice": 4.4, "unitOfMeasure": "1M"}
 {"productName": "Azure Fireworks Models", "meterName": "FW MiniMax M2.5 Outp DZ Tokens", "unitPrice": 0.00132, "unitOfMeasure": "1K"}
 {"productName": "Azure Mistral Models", "meterName": "OCR 2512 glbl Pages", "unitPrice": 2.0, "unitOfMeasure": "1K"}
