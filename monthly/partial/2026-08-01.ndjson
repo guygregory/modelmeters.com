@@ -1,56 +1,158 @@
+{"productName": "Azure OpenAI Media", "meterName": "gpt-live-transcribe Gl Unit", "unitPrice": 1.02, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Inp PP Gl 1M Tokens", "unitPrice": 0.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Wr PP Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "MAI-Cyber-1-Flash Inp glbl 1M Tokens", "unitPrice": 0.6, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Inp Std DZ 1M Tokens", "unitPrice": 0.44, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro cached DZ Tokens", "unitPrice": 0.00016, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "Image 2.5 Pro Text Input glbl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW NVIDIA Nemotron 3U Cd Inp DZ Tokens", "unitPrice": 0.00013, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 opt Gl 1M Tokens", "unitPrice": 30.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash cached DZ Tokens", "unitPrice": 3.1e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Inp DZ Tokens", "unitPrice": 0.0003, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Deepseek-v4-Flash Cd In DZ Tokens", "unitPrice": 3e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp PP Gl 1M Tokens", "unitPrice": 4.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Opt PP Gl 1M Tokens", "unitPrice": 24.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp Std Gl 1M Tokens", "unitPrice": 2.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 inp Dz 1M Tokens", "unitPrice": 6.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp Std DZ 1M Tokens", "unitPrice": 2.2, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Inp DZ Tokens", "unitPrice": 0.00021, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 07012026 inp Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro cached glbl Tokens", "unitPrice": 0.000145, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Opt Std Gl 1M Tokens", "unitPrice": 1.2, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Inp PP Gl 1M Tokens", "unitPrice": 0.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Inp PP Gl 1M Tokens", "unitPrice": 0.04, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "MAI-Cyber-1-Flash Opt glbl 1M Tokens", "unitPrice": 3.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Cd Wr Std Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW NVIDIA Nemotron 3.5 LN In DZ Tokens", "unitPrice": 6e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Inp Std DZ 1M Tokens", "unitPrice": 0.22, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "MAI-Thinking-1 Cd Inp glbl 1M Tokens", "unitPrice": 0.2, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 07012026 cd inp Gl 1M Tokens", "unitPrice": 0.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Wr PP DZ 1M Tokens", "unitPrice": 0.55, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Outp glbl Tokens", "unitPrice": 0.00132, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Opt PP DZ 1M Tokens", "unitPrice": 2.64, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.22, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Inp glbl Tokens", "unitPrice": 0.00174, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Inp glbl Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "Image 2.5 Pro Image Output glbl 1M Tokens", "unitPrice": 106.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Embedding", "meterName": "embedding-ada-glbl-new Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "MAI-Cyber-1-Flash Cd Inp glbl 1M Tokens", "unitPrice": 0.06, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Outp glbl Tokens", "unitPrice": 0.00051, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Cd Wr Std Gl 1M Tokens", "unitPrice": 0.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Cd Wr Std DZ 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Inp DZ Tokens", "unitPrice": 0.00191, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Wr Std DZ 1M Tokens", "unitPrice": 0.275, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI Media", "meterName": "gpt-transcribe Gl Unit", "unitPrice": 0.27, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure Fireworks Models", "meterName": "FW GLM 5.2 Fast Cache Inp DZ Tokens", "unitPrice": 0.000231, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Outp DZ Tokens", "unitPrice": 0.00383, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Opt Std Gl 1M Tokens", "unitPrice": 18.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Model 6 Outp glbl Tokens", "unitPrice": 0.01875, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 07012026 opt Gl 1M Tokens", "unitPrice": 30.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.44, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Opt Std DZ 1M Tokens", "unitPrice": 19.8, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Wr PP DZ 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Outp DZ Tokens", "unitPrice": 0.0165, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Inp DZ Tokens", "unitPrice": 0.000484, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Deepseek-v4-Flash Opt DZ Tokens", "unitPrice": 0.00031, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "MAI-Thinking-1 Opt glbl 1M Tokens", "unitPrice": 8.0, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "MAI-Thinking-1 Inp glbl 1M Tokens", "unitPrice": 2.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Outp DZ Tokens", "unitPrice": 0.00056, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Inp PP DZ 1M Tokens", "unitPrice": 0.44, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Inkling Opt DZ Tokens", "unitPrice": 0.00446, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW NVIDIA Nemotron 3.5 LN Opt DZ Tokens", "unitPrice": 0.00022, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Outp glbl Tokens", "unitPrice": 0.00348, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Inp glbl Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "Image 2.5 Pro Image Input glbl 1M Tokens", "unitPrice": 8.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Inp DZ Tokens", "unitPrice": 0.000375, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Inp PP DZ 1M Tokens", "unitPrice": 4.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 07012026 opt DZ 1M Tokens", "unitPrice": 33.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Inp Std Gl 1M Tokens", "unitPrice": 0.2, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 1.2, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Inp PP DZ 1M Tokens", "unitPrice": 0.44, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW GLM 5.2 Fast Inp DZ Tokens", "unitPrice": 0.00231, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Kimi K3 Cd Inp DZ Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 07012026 inp DZ 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Inp Std Gl 1M Tokens", "unitPrice": 0.2, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Wr PP Gl 1M Tokens", "unitPrice": 0.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Opt Std Gl 1M Tokens", "unitPrice": 12.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 inp Dz 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Cd Inp Std Gl 1M Tokens", "unitPrice": 0.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Cd Inp Std Gl 1M Tokens", "unitPrice": 0.04, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Inp glbl Tokens", "unitPrice": 0.00019, "unitOfMeasure": "1K"}
+{"productName": "Managed Compute", "meterName": "Mngd H200_141GB Gl", "unitPrice": 9.1, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Outp glbl Tokens", "unitPrice": 0.00033, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash cached glbl Tokens", "unitPrice": 2.8e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Opt PP Gl 1M Tokens", "unitPrice": 2.4, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 cd inp Dz 1M Tokens", "unitPrice": 0.6, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 cached DZ Tokens", "unitPrice": 1.5e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.022, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Outp DZ Tokens", "unitPrice": 0.00459, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Wr Std Gl 1M Tokens", "unitPrice": 0.25, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Inp Std Gl 1M Tokens", "unitPrice": 4.0, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Opt Std Gl 1M Tokens", "unitPrice": 1.8, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Deepseek-v4-Flash In DZ Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Inp PP DZ 1M Tokens", "unitPrice": 0.044, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Model 6 Outp glbl Tokens", "unitPrice": 0.015, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Kimi K3 Inp DZ Tokens", "unitPrice": 0.0033, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW GLM 5.2 Fast Outp DZ Tokens", "unitPrice": 0.00726, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Kimi K3 Opt DZ Tokens", "unitPrice": 0.0165, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Opt PP DZ 1M Tokens", "unitPrice": 26.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Inp Std Gl 1M Tokens", "unitPrice": 0.4, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW NVIDIA Nemotron 3.5 LN Cd In DZ Tokens", "unitPrice": 1e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 cached glbl Tokens", "unitPrice": 1.4e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Wr Std Gl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 cd inp Dz 1M Tokens", "unitPrice": 0.55, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.044, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW NVIDIA Nemotron 3U Inp DZ Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 inp Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Model 6 Outp DZ Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Inkling In DZ Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Opt Std DZ 1M Tokens", "unitPrice": 1.32, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Outp DZ Tokens", "unitPrice": 0.001452, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 07012026 cd inp DZ 1M Tokens", "unitPrice": 0.55, "unitOfMeasure": "1M"}
+{"productName": "Azure Fireworks Models", "meterName": "FW NVIDIA Nemotron 3U Opt DZ Tokens", "unitPrice": 0.00264, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Media", "meterName": "gpt-transcribe Dz Unit", "unitPrice": 0.297, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 opt Dz 1M Tokens", "unitPrice": 33.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash cached glbl Tokens", "unitPrice": 3.5e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 cached glbl Tokens", "unitPrice": 1.8e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Fireworks Models", "meterName": "FW Inkling Cd In DZ Tokens", "unitPrice": 0.00019, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 cd inp Gl 1M Tokens", "unitPrice": 0.5, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Cd Inp Std Gl 1M Tokens", "unitPrice": 0.02, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Cd Wr Std DZ 1M Tokens", "unitPrice": 2.75, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra LongCo Inp Std DZ 1M Tokens", "unitPrice": 4.4, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Opt Std DZ 1M Tokens", "unitPrice": 1.98, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Outp DZ Tokens", "unitPrice": 0.00067, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Outp glbl Tokens", "unitPrice": 0.00061, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 terra ShortCo Opt Std DZ 1M Tokens", "unitPrice": 13.2, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Inp DZ Tokens", "unitPrice": 0.00025, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro cached DZ Tokens", "unitPrice": 0.000199, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Cd Wr Std DZ 1M Tokens", "unitPrice": 0.55, "unitOfMeasure": "1M"}
-{"productName": "Foundry Local Azure Open AI", "meterName": "Provisioned Managed Unit", "unitPrice": 17.167, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 opt Dz 1M Tokens", "unitPrice": 36.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Outp DZ Tokens", "unitPrice": 0.001815, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Media", "meterName": "gpt-transcribe Dz Unit", "unitPrice": 0.324, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure OpenAI Media", "meterName": "gpt-live-transcribe Dz Unit", "unitPrice": 1.224, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash cached DZ Tokens", "unitPrice": 3.9e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI Media", "meterName": "gpt-live-transcribe Dz Unit", "unitPrice": 1.122, "unitOfMeasure": "1 Hour"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Inp DZ Tokens", "unitPrice": 0.0023, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Outp glbl Tokens", "unitPrice": 0.000413, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Inp glbl Tokens", "unitPrice": 0.004125, "unitOfMeasure": "1K"}
+{"productName": "Foundry Local Azure Open AI", "meterName": "Provisioned Managed Unit", "unitPrice": 0.6922, "unitOfMeasure": "1/Hour"}
+{"productName": "MAI Models", "meterName": "MAI-Cyber-1-Flash Opt glbl 1M Tokens", "unitPrice": 4.375, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "MAI-Thinking-1 Cd Inp glbl 1M Tokens", "unitPrice": 0.25, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 cached DZ Tokens", "unitPrice": 1.9e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Outp glbl Tokens", "unitPrice": 0.00418, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash Inp glbl Tokens", "unitPrice": 0.00023, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro Inp glbl Tokens", "unitPrice": 0.00209, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Inp glbl Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "Image 2.5 Pro Image Input glbl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "Image 2.5 Pro Text Input glbl 1M Tokens", "unitPrice": 6.25, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "MAI-Thinking-1 Opt glbl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Model 7 Outp DZ Tokens", "unitPrice": 0.020625, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "MAI-Thinking-1 Inp glbl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Inp DZ Tokens", "unitPrice": 0.000605, "unitOfMeasure": "1K"}
+{"productName": "Azure Kimi", "meterName": "Model 6 Outp DZ Tokens", "unitPrice": 0.00375, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Outp glbl Tokens", "unitPrice": 0.00165, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "MAI-Cyber-1-Flash Cd Inp glbl 1M Tokens", "unitPrice": 0.08, "unitOfMeasure": "1M"}
+{"productName": "MAI Models", "meterName": "Image 2.5 Pro Image Output glbl 1M Tokens", "unitPrice": 132.5, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4 Pro cached glbl Tokens", "unitPrice": 0.000181, "unitOfMeasure": "1K"}
+{"productName": "MAI Models", "meterName": "MAI-Cyber-1-Flash Inp glbl 1M Tokens", "unitPrice": 0.75, "unitOfMeasure": "1M"}
