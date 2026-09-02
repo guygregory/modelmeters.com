@@ -60,8 +60,6 @@
 {"productName": "Azure Phi Models", "meterName": "Phi-4-reasoning-Input Tokens", "unitPrice": 0.000125, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft hosting regional Unit", "unitPrice": 1.7, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft output regional Tokens", "unitPrice": 0.005324, "unitOfMeasure": "1K"}
-{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 260.0, "unitOfMeasure": "1/Hour"}
-{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 2652.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4.1-nano-ft output regional Tokens", "unitPrice": 0.000484, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini RFT Training regional Unit", "unitPrice": 121.0, "unitOfMeasure": "1 Hour"}
 {"productName": "Azure OpenAI Reasoning", "meterName": "o4-mini-ft input regional Tokens", "unitPrice": 0.001331, "unitOfMeasure": "1K"}
