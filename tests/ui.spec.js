@@ -258,6 +258,27 @@ test(`${route} keeps loading and failure states usable`, async ({ page }) => {
 }
 
 for (const route of ['/agent/', '/monthly/']) {
+test(`${route} centers desktop disclaimer and preserves mobile alignment`, async ({ page }) => {
+	test.skip(route !== '/agent/', 'Disclaimer is specific to AI Summaries');
+	await page.goto(new URL(route, baseURL).href);
+	await expect(page.locator('.markdown-body').first()).toBeVisible({ timeout: 30000 });
+	for (const width of [1440, 1024, 390, 320]) {
+		await page.setViewportSize({ width, height: 960 });
+		const textBounds = await page.locator('.summary-disclaimer > span').evaluate(element => {
+			const range = document.createRange();
+			range.selectNodeContents(element);
+			const bounds = range.getBoundingClientRect();
+			return { left: bounds.left, right: bounds.right };
+		});
+		if (width > 700) {
+			expect((textBounds.left + textBounds.right) / 2).toBeCloseTo(width / 2, 0);
+		} else {
+			await expect(page.locator('.summary-disclaimer')).toHaveCSS('text-align', 'left');
+			expect(textBounds.left).toBeCloseTo((await page.locator('.markdown-body').first().boundingBox()).x, 0);
+		}
+	}
+});
+
 test(`${route} retains summaries, deep links and responsive reading`, async ({ page }, testInfo) => {
 	const errors = [];
 	page.on('pageerror', error => errors.push(error.message));
@@ -274,6 +295,22 @@ test(`${route} retains summaries, deep links and responsive reading`, async ({ p
 		await expect(heading).toHaveCSS('justify-content', 'flex-start');
 		await expect(heading).toHaveCSS('text-align', 'left');
 		await expect(article.locator('.markdown-body')).toHaveCSS('text-align', 'left');
+		await expect(article.locator('.markdown-body > :first-child')).toHaveCSS('margin-top', '0px');
+		const monthText = await heading.locator('h2').boundingBox();
+		const summaryStart = await article.locator('.markdown-body > :first-child').boundingBox();
+		expect(summaryStart.y - (monthText.y + monthText.height)).toBeLessThanOrEqual(24);
+		const disclaimer = page.locator('.summary-disclaimer');
+		await expect(disclaimer).toHaveText('AI-generated content may be incorrect. Always check live pricing.');
+		await expect(disclaimer.locator('a')).toHaveAttribute('href', 'https://learn.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices');
+		await expect(disclaimer.locator('a')).toHaveAttribute('target', '_blank');
+		await expect(disclaimer.locator('a')).toHaveAttribute('rel', 'noopener noreferrer');
+		expect((await disclaimer.boundingBox()).height).toBeLessThanOrEqual(32);
+		await page.evaluate(() => scrollTo(0, 600));
+		await expect(disclaimer).toBeInViewport({ ratio: 1 });
+		const topbar = await page.locator('.card-hd').boundingBox();
+		expect(topbar.y).toBe(0);
+		expect((await disclaimer.boundingBox()).y).toBe(topbar.y + topbar.height);
+		await page.evaluate(() => scrollTo(0, 0));
 	}
 	await heading.click();
 	await expect(article).toHaveClass(/collapsed/);
@@ -295,6 +332,8 @@ test(`${route} retains summaries, deep links and responsive reading`, async ({ p
 				await expect(page.locator(`.card-hd #${id}`)).toBeInViewport();
 			}
 			await expect(article.locator('.markdown-body')).toHaveCSS('text-align', 'left');
+			await page.evaluate(() => scrollTo(0, 600));
+			await expect(page.locator('.summary-disclaimer')).toBeInViewport({ ratio: 1 });
 		}
 	}
 	await page.evaluate(() => scrollTo(0, 0));

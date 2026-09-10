@@ -179,9 +179,17 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 .summary-page .card { min-height: 100dvh; }
 .summary-page .workspace-heading { padding-block: 28px; }
 .summary-page .content { max-width: 1180px; margin: 0 auto; padding: 12px 36px 48px; }
+.ai-summary-page .summary-header { position: sticky; top: 0; z-index: 10; background: var(--panel); }
+.summary-disclaimer { margin: 0; padding: 6px 0; border-bottom: 1px solid var(--border); background: var(--panel-2); color: var(--muted); font-size: 12px; text-align: left; }
+.summary-disclaimer > span { display: block; max-width: 1180px; margin: 0 auto; padding-inline: 36px; }
+@media (min-width: 701px) {
+	.summary-disclaimer { text-align: center; }
+}
+.ai-summary-page .article { scroll-margin-top: calc(var(--topbar-offset) + 16px); }
 .ai-summary-page .month-title { justify-content: flex-start; text-align: left; }
 .ai-summary-page .month-details { padding-left: 0; }
 .ai-summary-page .markdown-body { text-align: left; }
+.ai-summary-page .markdown-body > :first-child { margin-top: 0; }
 .articles { min-width: 0; }
 .article { border-bottom: 1px solid var(--border); scroll-margin-top: 16px; }
 .month-title { cursor: pointer; display: flex; align-items: center; gap: 12px; min-height: 76px; padding: 22px 0; margin: 0; user-select: none; }
@@ -253,6 +261,7 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 	.menu label { min-height: 40px; }
 	.summary-page .workspace-heading { padding-block: 20px; }
 	.summary-page .content { padding: 4px 20px 28px; }
+	.summary-disclaimer > span { padding-inline: 20px; }
 	.summary-page .toolbar { display: flex; }
 	.month-title { min-height: 68px; padding-block: 18px; }
 	.month-title h2, .markdown-body .month-title { font-size: 18px; }

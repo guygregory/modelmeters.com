@@ -15,6 +15,7 @@
 <body class="summary-page ai-summary-page">
 	<div class="container">
 		<div class="card">
+			<header class="summary-header">
 			<div class="card-hd">
 				<div class="title"><a href="../index.html" class="brand">Model Meters</a></div>
 				<nav class="workspace-nav" aria-label="Main navigation">
@@ -28,6 +29,8 @@
 					<button id="btn-theme" class="icon-button" title="Toggle light/dark mode" aria-label="Toggle light/dark mode"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
 				</div>
 			</div>
+			<p class="summary-disclaimer"><span>AI-generated content may be incorrect. Always check <a href="https://learn.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices" target="_blank" rel="noopener noreferrer">live pricing.</a></span></p>
+			</header>
 			<div class="content">
 				<section class="articles" id="articles">
 					<div id="status" class="footer" style="border:none;">Loading monthly summaries…</div>
@@ -38,6 +41,10 @@
 	</div>
 
 	<script>
+		new ResizeObserver(([entry]) => {
+			document.documentElement.style.setProperty('--topbar-offset', `${entry.target.getBoundingClientRect().height}px`);
+		}).observe(document.querySelector('.summary-header'));
+
 		// Theme support (preserves and allows switching)
 		(() => {
 			const root = document.documentElement;
