@@ -23,6 +23,22 @@ test('archive generation retains the shared layout and rendered content', async 
 });
 
 for (const route of ['/', '/github/']) {
+test(`${route} fits 20 desktop rows without shrinking text`, async ({ page }, testInfo) => {
+	await page.setViewportSize({ width: 1440, height: 900 });
+	await page.goto(new URL(route, baseURL).href);
+	await expect(page.locator('#tbody tr')).toHaveCount(20);
+	await expect(page.locator('#tbody td[data-column="productName"]').first()).toHaveCSS('font-size', '13px');
+	const tableViewport = await page.locator('.table-wrap').evaluate(element => {
+		const bounds = element.getBoundingClientRect();
+		return { top: bounds.top, bottom: bounds.top + element.clientHeight };
+	});
+	const firstRow = await page.locator('#tbody tr').first().boundingBox();
+	const lastRow = await page.locator('#tbody tr').last().boundingBox();
+	expect(firstRow.y).toBeGreaterThanOrEqual(tableViewport.top);
+	expect(lastRow.y + lastRow.height).toBeLessThanOrEqual(tableViewport.bottom);
+	await page.screenshot({ path: testInfo.outputPath('compact-desktop.png') });
+});
+
 test(`${route} mobile footer information toggles without changing desktop`, async ({ page }, testInfo) => {
 	await page.setViewportSize({ width: 1440, height: 900 });
 	await page.goto(new URL(route, baseURL).href);

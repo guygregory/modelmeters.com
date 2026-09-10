@@ -111,7 +111,7 @@ button, a, input, select { -webkit-tap-highlight-color: transparent; }
 .table-wrap { flex: 1; min-height: 0; overflow: auto; scrollbar-color: var(--border) var(--panel); }
 #grid { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; line-height: 1.4; }
 #grid thead th { position: sticky; top: 0; z-index: 2; background: var(--panel-2); color: var(--muted); text-align: left; padding: 9px 16px; border-block: 1px solid var(--border); font-size: 12px; font-weight: 500; white-space: nowrap; }
-#grid tbody td { padding: 11px 16px; border-bottom: 1px solid var(--border-soft); white-space: nowrap; font-variant-numeric: tabular-nums; }
+#grid tbody td { padding: 8px 16px; border-bottom: 1px solid var(--border-soft); white-space: nowrap; font-variant-numeric: tabular-nums; }
 #grid tbody tr:nth-child(even) { background: color-mix(in srgb, var(--panel-2) 45%, var(--panel)); }
 #grid tbody tr:hover { background: var(--accent-soft); }
 #grid [data-column="unitPrice"], #grid [data-column="retailPrice"], #grid [data-column="tierMinimumUnits"] { text-align: right; }
