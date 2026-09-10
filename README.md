@@ -1,8 +1,8 @@
-# Model Meters - Azure AI Foundry Pricing Explorer
+# Model Meters - Microsoft Foundry Pricing Explorer
 
 [modelmeters.com](https://modelmeters.com) provides a simple front-end to the [Azure Retail Prices API](https://docs.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices), automatically downloading and enriching Azure AI pricing data with AI-generated summaries and insights.
 
-<img width="1280" height="640" alt="socialpreview" src="https://github.com/user-attachments/assets/3cb11499-770f-4e87-818a-af22979e5595" />
+<img width="1280" height="640" alt="Model Meters Microsoft Foundry pricing explorer" src="img/socialpreview.png" />
 
 ## Cloud Champion overview session and slides (Microsoft Partners)
 
@@ -18,7 +18,7 @@ Model Meters combines several Azure and GitHub services to create an automated p
 
 1. **Daily Data Collection**: GitHub Actions automatically downloads the latest Azure pricing data using the Azure Retail Prices API
 2. **Data Processing**: The raw pricing data is split into segments based on the pricing `startDate` value
-3. **AI Enhancement**: Azure OpenAI (via Azure AI Foundry) generates intelligent summaries of the latest pricing changes, using Model Context Protocol (MCP) to include Microsoft Learn documentation
+3. **AI Enhancement**: Foundry models generate intelligent summaries of the latest pricing changes, using Model Context Protocol (MCP) to include Microsoft Learn documentation
 4. **Web Deployment**: The processed data and summaries are automatically deployed to Azure Static Web Apps using GitHub Actions
 5. **User Interface**: A responsive web interface allows users to explore pricing data and AI-generated insights
 
@@ -29,14 +29,14 @@ Model Meters combines several Azure and GitHub services to create an automated p
 - **Documentation Integration**: Uses [Microsoft Learn MCP Server](https://github.com/microsoftdocs/mcp) to automatically include relevant documentation links
 - **Human-in-the-loop**: As AI summaries are stored in markdown format, this allows for quick and easy human review (and potentially AI agent review)
 
-<img width="1531" height="700" alt="image" src="https://github.com/user-attachments/assets/aabbf3c8-14cb-488a-a49c-cca6440bb33d" />
+<img width="1531" height="700" alt="Model Meters AI Summaries with an expanded monthly pricing summary" src="img/ai-summaries.png" />
 
 ## Who Would Benefit From This?
 
 This sample is designed to help Microsoft partners (and their customers) understand how they can:
 
 - **Use GitHub and GitHub Copilot** to rapidly build a simple AI agent for data processing
-- **Combine GitHub Actions with Azure AI Foundry** to automate repeatable tasks at scale
+- **Combine GitHub Actions with Microsoft Foundry** to automate repeatable tasks at scale
 - **Use LLMs to enrich frequently updated structured data**, such as price lists, inventory, or sales data
 - **Incorporate the use of Model Context Protocol (MCP)** within their solutions for enhanced AI capabilities
 - **Build cost-effective monitoring solutions** for tracking Azure service pricing changes
@@ -48,7 +48,7 @@ This sample is designed to help Microsoft partners (and their customers) underst
 - **[GitHub Copilot](https://github.com/features/copilot)** - AI-powered code completion and development assistance
 - **[GitHub Actions](https://github.com/features/actions)** - CI/CD automation and workflow orchestration
 - **[Azure Static Web Apps](https://azure.microsoft.com/services/app-service/static/)** - Static site hosting with integrated CI/CD
-- **[Azure AI Foundry](https://azure.microsoft.com/products/ai-foundry/)** - AI model deployment and management platform
+- **[Microsoft Foundry](https://azure.microsoft.com/products/ai-foundry/)** - AI model deployment and management platform
 - **[Model Context Protocol (MCP)](https://modelcontextprotocol.io/)** - Protocol for AI model context sharing
 
 ### Development Stack
@@ -79,7 +79,7 @@ The minimal solution takes advantage of free tiers where available, and has been
 | Component | Minimal demo | Advanced demo | Notes |
 |-----------|----------------------|------------------------|-------|
 | **Azure Static Web Apps** | $0/month | $9/month (Standard) | Free tier includes 100GB bandwidth, 0.5GB storage |
-| **Azure AI Foundry - OpenAI** | ~$5-20/month | ~$50-100/month | Price varies based on token usage |
+| **Microsoft Foundry - OpenAI** | ~$5-20/month | ~$50-100/month | Price varies based on token usage |
 | **Azure Retail Prices API** | $0/month | $0/month | Free public API with rate limits |
 | **GitHub Actions** | $0/month | $4/month (Team plan) | 2000 minutes/month free, then $0.008/minute |
 | **GitHub Repository** | $0/month | $4/month (Team plan) | Public and private repos free, additional features in Team plan |
@@ -152,6 +152,23 @@ The minimal solution takes advantage of free tiers where available, and has been
    python -m http.server 8000
    # Visit http://localhost:8000
    ```
+
+### UI Development and Checks
+
+The pricing explorers and summary pages share [site.css](site.css). The IBM Plex Sans font and Lucide icons are served locally from [img/fonts](img/fonts) and [img/icons](img/icons), with their license files. No application build step is required.
+
+With the local Python server running in another terminal, run the browser regression suite:
+
+```bash
+cd tests
+npm ci
+npx playwright install --with-deps chromium
+npm test
+```
+
+Set `MODELMETERS_URL` to test another server origin. The suite checks both pricing explorers, summary navigation, filtering, sorting, pagination, column visibility, discounts, CSV exports, shared URLs, themes, and desktop/mobile layouts. Screenshots are written to the ignored `tests/test-results/` directory. The summary pages retain their existing dependency on the marked.js CDN.
+
+When changing the monthly archive layout, update [consolidate-ai-summaries.py](consolidate-ai-summaries.py) as well as [monthly/index.html](monthly/index.html) so regeneration preserves the presentation.
 
 ### Deployment
 
@@ -253,7 +270,7 @@ response = client.responses.create(
 ## Support and Resources
 
 - **Azure Pricing Documentation**: https://docs.microsoft.com/azure/cost-management-billing/
-- **Azure AI Foundry**: https://docs.microsoft.com/azure/ai-foundry/
+- **Microsoft Foundry**: https://docs.microsoft.com/azure/ai-foundry/
 - **GitHub Actions**: https://docs.github.com/en/actions
 - **Azure Static Web Apps**: https://docs.microsoft.com/azure/static-web-apps/
 - **Microsoft Learn MCP Server**: [https://github.com/microsoftdocs/mcp](https://github.com/microsoftdocs/mcp)

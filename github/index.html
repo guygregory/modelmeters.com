@@ -5,91 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Model Meters - GitHub</title>
 	<link rel="icon" type="image/png" href="../img/favicon.png">
-	<style>
-		/* Light theme (default) */
-		:root {
-			--bg:#f5f7fa; --bg-alt:#e9eef2; --panel:#ffffff; --panel-2:#f0f3f7; --text:#1b242b; --muted:#5d6b76; --accent:#2563eb; --border:#d0d7de; --ring:#3b82f680; --shadow:0 6px 18px rgba(0,0,0,.08);
-		}
-		/* Dark theme */
-		:root[data-theme="dark"] {
-			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
-		}
-		html, body { height: 100%; }
-		body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); overflow:hidden; }
-		/* Full-height flex layout so only the table region scrolls (single scrollbar) */
-		.container { height:100%; display:flex; flex-direction:column; padding:12px 12px 16px; box-sizing:border-box; }
-		.card { background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow: var(--shadow); flex:1; display:flex; flex-direction:column; min-height:0; }
-		.card-hd { display:flex; gap:12px; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
-		.title { font-size:18px; font-weight:650; letter-spacing:.2px; }
-		.toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; flex:1; min-width:0; justify-content:flex-end; margin-left:auto; }
-		button, select, input[type="text"] { background:var(--panel-2); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:8px 10px; font-size:14px; line-height:1; outline:none; }
-		button { cursor:pointer; }
-		button:hover { border-color:#374151; }
-		button:focus, select:focus, input:focus { box-shadow:0 0 0 4px var(--ring); border-color:var(--accent); }
-		.table-wrap { flex:1; min-height:0; overflow:auto; border-radius:0 0 16px 16px; }
-		table { width:100%; border-collapse:collapse; font-size:13px; }
-		thead th { position:sticky; top:0; background:var(--panel-2); z-index:2; text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); }
-		tbody td { padding:6px 10px; border-top:1px solid var(--border); white-space:nowrap; }
-		tbody tr:hover { background:var(--panel-2); }
-		.th-inner { display:inline-flex; gap:6px; align-items:center; }
-		.icon { font-style:normal; opacity:.8; }
-		/* Menus must float above sticky headers and other UI (z-index > thead th z-index=2) */
-		.menu { position:absolute; background:var(--panel-2); border:1px solid var(--border); border-radius:12px; padding:8px; display:none; min-width:260px; box-shadow:0 24px 48px rgba(0,0,0,.5); z-index: 2000; }
-		/* Columns menu should always be above filter menu if both are open */
-		#menu-columns { z-index: 2100; }
-		/* Shortcuts menu should have a z-index between filter and columns */
-		#menu-shortcuts { z-index: 2050; }
-		.menu.open { display:block; }
-		.menu .row { display:grid; grid-template-columns:1fr; gap:8px; }
-		.menu .row-inline { display:flex; gap:8px; }
-		.menu .muted { color:var(--muted); font-size:12px; }
-		.discount-label { font-size:13px; color:var(--text); }
-		.menu .list { max-height:260px; overflow:auto; border:1px solid var(--border); border-radius:10px; }
-		.menu label { display:flex; gap:10px; align-items:center; padding:6px 10px; border-bottom:1px solid var(--border); font-size:12px; }
-		.menu label:last-child { border-bottom:0; }
-		.menu .actions { display:flex; justify-content:flex-end; gap:8px; }
-		/* Shortcuts menu specific styles */
-		.menu .shortcuts-link { display:block; padding:6px 10px; border-bottom:1px solid var(--border); font-size:13px; color:var(--text); text-decoration:none; }
-		.menu .shortcuts-link:hover { background:var(--panel); }
-		.menu .shortcuts-link:last-child { border-bottom:0; }
-		.chip { background:var(--panel-2); border:1px solid var(--border); border-radius:999px; padding:3px 8px; font-size:11px; color:var(--muted); max-width:180px; overflow:hidden; text-overflow:ellipsis; }
-		.kbd { font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size:11px; padding:2px 6px; border-radius:6px; border:1px solid var(--border); background:var(--panel-2); color:var(--muted); }
-		.empty { color:var(--muted); padding:24px; text-align:center; }
-		.pagination { display:flex; gap:6px; align-items:center; font-size:12px; }
-		.pagination button { padding:6px 8px; font-size:12px; }
-		.loading { font-size:12px; color: var(--muted); display:flex; align-items:center; gap:6px; }
-		.spinner { width:12px; height:12px; border:2px solid var(--border); border-top-color: var(--accent); border-radius:50%; animation: spin 0.8s linear infinite; }
-		@keyframes spin { to { transform: rotate(360deg); } }
-		.count-chip { font-size:11px; opacity:.75; }
-		.col-sort { background:none; border:0; padding:0; margin:0; font:inherit; color:inherit; cursor:pointer; display:inline-flex; align-items:center; gap:4px; }
-		.col-sort:focus { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; }
-		.info-container { background:var(--panel-2); border-bottom:1px solid var(--border); padding:12px 16px; }
-		.info-content { display:flex; gap:24px; font-size:13px; }
-		.info-row { display:flex; align-items:center; gap:6px; }
-	.info-right { margin-left:auto; text-align:right; }
-		.discount-indicator { background:#7c3aed; color:white; padding:8px 16px; text-align:center; font-weight:600; font-size:14px; border-bottom:1px solid var(--border); display:none; }
-		.discount-indicator a { color:white; text-decoration:underline; }
-		#discount-value { width:25%; min-width:80px; text-align:right; }
-		.discount-input { display:flex; align-items:center; gap:6px; }
-		.discount-input .discount-unit { font-size:13px; color:var(--text); }
-		.discount-indicator.active { display:block; }
-		/* Prevent mobile text inflation and allow wrapping on small screens */
-		html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-		@media (max-width: 768px) {
-			/* Let long cell content wrap to avoid per-cell font inflation on mobile */
-			tbody td { white-space: normal; word-break: break-word; }
-			/* Prevent button wrapping on mobile - keep buttons horizontal */
-			.card-hd { flex-wrap: nowrap; }
-			.toolbar { flex-wrap: nowrap; overflow-x: auto; }
-		}
-	</style>
+	<link rel="stylesheet" href="../site.css">
+	<link rel="preload" href="../img/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 </head>
-<body>
+<body class="explorer-page">
 	<div class="container">
 		<div class="card" id="card">
 			<div class="discount-indicator" id="discount-indicator"></div>
 			<div class="card-hd">
-				<div class="title"><a href="/" id="home-link" style="all:unset;cursor:pointer;display:inline;">Model Meters - GitHub</a> <span id="row-count" class="count-chip"></span></div>
+				<div class="title"><a href="/" id="home-link" class="brand">Model Meters</a></div>
 <script>
 // Make the home link work on any path or subdirectory, without hard-coding
 document.addEventListener('DOMContentLoaded', function() {
@@ -103,58 +27,57 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 });
 </script>
+				<nav class="workspace-nav" aria-label="Main navigation">
+					<a href="../index.html">Microsoft Foundry</a>
+					<a href="index.html" aria-current="page">GitHub Meters</a>
+					<button id="btn-ai-summaries" title="View AI monthly summaries"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>AI Summaries</button>
+				</nav>
 				<div class="toolbar">
-					<button id="btn-favorites" title="Show favorites menu" aria-haspopup="menu" aria-controls="menu-shortcuts">⭐ Favorites</button>
-					<button id="btn-export-csv" title="Export to CSV">📥 Export CSV</button>
-					<button id="btn-share-url" title="Generate shareable URL">🔗 Share URL</button>
-					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns">☰ Columns</button>
-					<div class="pagination" id="pagination" style="display:none">
-						<button id="btn-first" title="First page">⏮</button>
-						<button id="btn-prev" title="Previous page">◀</button>
-						<span id="page-info">Page 1 / 1</span>
-						<button id="btn-next" title="Next page">▶</button>
-						<button id="btn-last" title="Last page">⏭</button>
-						<select id="page-size" title="Rows per page">
-							<option value="15">15</option>
-							<option value="20" selected>20</option>
-							<option value="25">25</option>
-							<option value="30">30</option>
-							<option value="50">50</option>
-							<option value="100">100</option>
-							<option value="1000">1000</option>
-							<option value="100000">All</option>
-						</select>
-					</div>
-					<div id="loading" class="loading"><div class="spinner"></div><span>Loading data…</span></div>
-					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
-					<button id="btn-ai-summaries" title="View AI monthly summaries">✨AI Summaries</button>
+					<button id="btn-favorites" title="Show favorites menu" aria-haspopup="menu" aria-controls="menu-shortcuts"><span class="ui-icon icon-star" aria-hidden="true"></span>Favorites</button>
+					<button id="btn-export-csv" title="Export to CSV"><span class="ui-icon icon-download" aria-hidden="true"></span>Export CSV</button>
+					<button id="btn-share-url" title="Generate shareable URL"><span class="ui-icon icon-link" aria-hidden="true"></span>Share URL</button>
+					<button id="btn-columns" title="Show/Hide columns" aria-haspopup="menu" aria-controls="menu-columns"><span class="ui-icon icon-columns" aria-hidden="true"></span>Columns</button>
+					<button id="btn-discount" title="Set pricing discount" aria-haspopup="menu" aria-controls="menu-discount"><span class="ui-icon icon-percent" aria-hidden="true"></span>Discount</button>
+					<button id="btn-theme" class="icon-button" title="Toggle light/dark mode" aria-label="Toggle light/dark mode"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
 				</div>
 			</div>
-			<div id="info-container" class="info-container">
-				<div class="info-content">
-					<div class="info-row">
-						<strong>Last updated:</strong> <span id="last-updated">Never</span>
-					</div>
-					<div class="info-row info-right">
-						<span>
-							Created by <a href="https://github.com/guygregory" target="_blank" rel="noopener noreferrer">Guy Gregory</a> +
-							<a href="https://github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a>
-							&nbsp; | &nbsp;
-							<a href="../index.html">Foundry Models</a>
-							&nbsp; | &nbsp;
-							<button id="btn-discount" style="all:unset;cursor:pointer;color:blue;text-decoration:underline;" title="Set pricing discount">Discount</button>
-							&nbsp; | &nbsp;
-							<a href="https://github.com/guygregory/modelmeters.com?tab=readme-ov-file#disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a>
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="table-wrap">
+			<div class="table-wrap" tabindex="0" role="region" aria-label="Pricing table">
 				<table id="grid" aria-describedby="grid-caption">
 					<caption id="grid-caption" style="display:none">Filterable, paginated table built from GitHub retail prices (local file)</caption>
 					<thead id="thead"></thead>
 					<tbody id="tbody"></tbody>
 				</table>
+			</div>
+			<div class="table-footer">
+				<button id="btn-footer-info" class="footer-info-toggle" type="button" title="Show pricing information" aria-label="Pricing information" aria-expanded="false" aria-controls="meter-info info-container">i</button>
+				<div class="row-total" id="meter-info"><span>Meters</span><span id="row-count" class="count-chip" aria-live="polite"></span><div id="loading" class="loading" role="status"><div class="spinner"></div><span>Loading data…</span></div></div>
+				<div id="info-container" class="info-container">
+					<div class="info-content">
+						<div class="info-row"><strong>Last updated:</strong> <span id="last-updated">Never</span></div>
+						<div class="info-row info-right">
+							<span class="attribution">Created by <a href="https://github.com/guygregory" target="_blank" rel="noopener noreferrer">Guy Gregory</a> + <a href="https://github.com/copilot" target="_blank" rel="noopener noreferrer">GitHub Copilot</a></span>
+							<a href="https://github.com/guygregory/modelmeters.com?tab=readme-ov-file#disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a>
+						</div>
+					</div>
+				</div>
+				<div class="pagination" id="pagination" style="display:none">
+					<button id="btn-first" title="First page" aria-label="First page"><span class="ui-icon icon-first" aria-hidden="true"></span></button>
+					<button id="btn-prev" title="Previous page" aria-label="Previous page"><span class="ui-icon icon-prev" aria-hidden="true"></span></button>
+					<span id="page-info" aria-live="polite">Page 1 / 1</span>
+					<button id="btn-next" title="Next page" aria-label="Next page"><span class="ui-icon icon-next" aria-hidden="true"></span></button>
+					<button id="btn-last" title="Last page" aria-label="Last page"><span class="ui-icon icon-last" aria-hidden="true"></span></button>
+					<label for="page-size" class="page-size-label">Rows per page</label>
+					<select id="page-size" title="Rows per page" aria-label="Rows per page">
+						<option value="15">15</option>
+						<option value="20" selected>20</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+						<option value="50">50</option>
+						<option value="100">100</option>
+						<option value="1000">1000</option>
+						<option value="100000">All</option>
+					</select>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -224,6 +147,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	</div>
 
 	<script>
+		document.getElementById('btn-footer-info').addEventListener('click', event => {
+			const button = event.currentTarget;
+			const expanded = button.getAttribute('aria-expanded') !== 'true';
+			button.setAttribute('aria-expanded', String(expanded));
+			button.title = expanded ? 'Hide pricing information' : 'Show pricing information';
+		});
+
 		// Theme toggle (light default)
 		(function initTheme(){
 			const root = document.documentElement;
@@ -234,9 +164,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			function currentMode(){ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
 			function updateBtn(){
 				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
+				btn.innerHTML = `<span class="ui-icon icon-${mode === 'dark' ? 'sun' : 'moon'}" aria-hidden="true"></span>`;
 				btn.setAttribute('aria-pressed', mode==='dark');
 				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				btn.setAttribute('aria-label', btn.title);
 			}
 			btn.addEventListener('click', ()=> {
 				const isDark = currentMode()==='dark';
@@ -331,11 +262,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			for (const col of columns) {
 				if (!state.visible[col.key]) continue;
 				const th = document.createElement('th');
+				th.dataset.column = col.key;
 				const wrap = document.createElement('span'); wrap.className = 'th-inner';
 				// Sort button
 				const sortBtn = document.createElement('button'); sortBtn.type='button'; sortBtn.className='col-sort'; sortBtn.title = 'Sort ' + col.name;
 				const isSorted = state.sort.key === col.key;
-				sortBtn.innerHTML = `<span>${col.name}</span>${isSorted?`<span class="icon" aria-label="sorted ${state.sort.dir}">${state.sort.dir==='asc'?'▲':'▼'}</span>`:''}`;
+				th.setAttribute('aria-sort', isSorted ? (state.sort.dir === 'asc' ? 'ascending' : 'descending') : 'none');
+				sortBtn.innerHTML = `<span>${col.name}</span>${isSorted ? `<span class="ui-icon icon-arrow-${state.sort.dir === 'asc' ? 'up' : 'down'}" aria-hidden="true"></span>` : ''}`;
 				sortBtn.addEventListener('click', ()=> {
 					if (state.sort.key === col.key) {
 						state.sort.dir = state.sort.dir === 'asc' ? 'desc' : 'asc';
@@ -347,7 +280,8 @@ document.addEventListener('DOMContentLoaded', function() {
 				wrap.appendChild(sortBtn);
 				// Filter button
 				const btn = document.createElement('button');
-				btn.type = 'button'; btn.className = 'btn-filter'; btn.innerHTML = '<i class="icon">🔽</i>'; btn.title = 'Filter ' + col.name;
+				btn.type = 'button'; btn.className = 'btn-filter'; btn.innerHTML = '<span class="ui-icon icon-filter" aria-hidden="true"></span>'; btn.title = 'Filter ' + col.name;
+				btn.setAttribute('aria-label', btn.title);
 				btn.addEventListener('click', e => openFilterMenu(e.currentTarget, col));
 				wrap.appendChild(btn);
 				// active chips
@@ -432,6 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				for (const col of columns) {
 					if (!state.visible[col.key]) continue;
 					const td = document.createElement('td');
+					td.dataset.column = col.key;
 					const v = row[col.key];
 					td.textContent = col.format ? col.format(v) : (v ?? '').toString();
 					tr.appendChild(td);
@@ -940,41 +875,18 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 		function positionMenu(anchor, menu) {
 			const anchorRect = anchor.getBoundingClientRect();
-			const container = document.querySelector('.table-wrap') || document.body;
-			const containerRect = container.getBoundingClientRect();
-			const scrollX = window.scrollX || window.pageXOffset;
-			const scrollY = window.scrollY || window.pageYOffset;
-			const top = anchorRect.bottom + scrollY + 6;
-
-			// Measure menu width even when hidden so clamping logic is accurate
-			let menuWidth = menu.offsetWidth;
-			if (!menuWidth) {
-				const prevVisibility = menu.style.visibility;
-				const prevDisplay = menu.style.display;
-				menu.style.visibility = 'hidden';
-				menu.style.display = 'block';
-				menuWidth = menu.offsetWidth;
-				menu.style.display = prevDisplay;
-				menu.style.visibility = prevVisibility;
-			}
-
 			const padding = 12;
-			const containerLeft = containerRect.left + scrollX;
-			const containerRight = containerRect.right + scrollX;
-			const proposedLeft = anchorRect.left + scrollX;
-			const maxLeft = containerRight - menuWidth - padding;
-			const minLeft = containerLeft + padding;
-			let left;
-			if (maxLeft < minLeft) {
-				left = containerLeft + padding;
-			} else {
-				left = Math.min(Math.max(proposedLeft, minLeft), maxLeft);
-			}
-
+			const menuWidth = Math.min(340, window.innerWidth - padding * 2);
+			const top = Math.max(padding, Math.min(anchorRect.bottom + 6, window.innerHeight - 440 - padding));
+			const left = Math.max(padding, Math.min(anchorRect.left, window.innerWidth - menuWidth - padding));
+			menu.style.position = 'fixed';
+			menu.style.maxHeight = (window.innerHeight - top - padding) + 'px';
 			menu.style.top = top + 'px';
 			menu.style.left = left + 'px';
 			menu.style.right = 'auto';
 		}
+		window.addEventListener('resize', closeMenus);
+		document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenus(); });
 		document.addEventListener('click', e => { const anyMenu = e.target.closest('.menu'); const anyBtn = e.target.closest('button'); if (!anyMenu && !anyBtn) closeMenus(); });
 
 		// URL parameter parsing and state restoration

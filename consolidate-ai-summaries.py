@@ -64,68 +64,30 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>{html.escape(TITLE)}</title>
-	<style>
-		/* Light theme (default) */
-		:root {{
-			--bg:#f5f7fa; --bg-alt:#e9eef2; --panel:#ffffff; --panel-2:#f0f3f7; --text:#1b242b; --muted:#5d6b76; --accent:#2563eb; --border:#d0d7de; --ring:#3b82f680; --shadow:0 6px 18px rgba(0,0,0,.08);
-			--topbar-offset: 0px; /* header not sticky on monthly page */
-		}}
-		/* Dark theme */
-		:root[data-theme="dark"] {{
-			--bg:#0b0c10; --bg-alt:#0e1116; --panel:#14161a; --panel-2:#1b1f24; --text:#e8eef3; --muted:#a8b3bd; --accent:#3da9fc; --border:#2a2f36; --ring:#7cc4ff80; --shadow:0 10px 24px rgba(0,0,0,.35);
-		}}
-	html, body {{ min-height: 100%; }}
-	html {{ scroll-padding-top: calc(var(--topbar-offset) + 16px); }}
-		body {{ margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; background: linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%); color: var(--text); }}
-	.container {{ min-height:100dvh; padding:12px 12px 16px; box-sizing:border-box; }}
-	.card {{ background: var(--panel); border:1px solid var(--border); border-radius:16px; box-shadow: var(--shadow); overflow:hidden; position:relative; clip-path: inset(0 round 16px); }}
-	/* Ensure the sticky header respects the rounded top corners */
-	.card-hd {{ position:relative; background:var(--panel); display:flex; gap:12px; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }}
-		.title {{ font-size:18px; font-weight:650; letter-spacing:.2px; }}
-		.toolbar {{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }}
-		button {{ background:var(--panel-2); color:var(--text); border:1px solid var(--border); border-radius:10px; padding:8px 10px; font-size:14px; line-height:1; outline:none; cursor:pointer; }}
-		button:hover {{ border-color:#374151; }}
-		button:focus {{ box-shadow:0 0 0 4px var(--ring); border-color:var(--accent); }}
-
-		/* Content layout inside the card */
-	.content {{ display:grid; grid-template-columns: 1fr; gap:16px; padding:16px; }}
-		.articles {{ min-width:0; }}
-	.article {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px; margin-bottom:12px; box-shadow: var(--shadow); scroll-margin-top: calc(var(--topbar-offset) + 16px); }}
-	.article:target::before {{ content: ""; display:block; height: calc(var(--topbar-offset) + 16px); margin-top: calc(-1 * (var(--topbar-offset) + 16px)); }}
-
-		/* Minimal markdown styles tuned to tokens */
-		.markdown-body h1, .markdown-body h2, .markdown-body h3 {{ border-bottom:1px solid var(--border); padding-bottom:4px; }}
-		.markdown-body pre {{ background: var(--panel-2); border:1px solid var(--border); padding:12px; border-radius:10px; overflow:auto; }}
-		.markdown-body code {{ background: var(--panel-2); border:1px solid var(--border); padding:2px 6px; border-radius:8px; }}
-		.markdown-body table {{ border-collapse: collapse; width: 100%; }}
-		.markdown-body th, .markdown-body td {{ border: 1px solid var(--border); padding: 6px 8px; }}
-
-		/* Collapsible sections */
-		.month-title {{ cursor: pointer; display:flex; align-items:center; gap:8px; }}
-		.article.collapsed .month-details {{ display:none; }}
-
-		.footer {{ color: var(--muted); text-align:center; padding: 12px 16px; border-top:1px solid var(--border); }}
-		@media (max-width: 900px) {{ .content {{ grid-template-columns: 1fr; }} }}
-	</style>
+	<link rel="stylesheet" href="../site.css">
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-	<style>
-		/* Prevent mobile text inflation */
-		html {{ -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }}
-	</style>
 	<base target="_self">
 	<meta name="color-scheme" content="light dark">
-	<meta name="theme-color" content="#2563eb">
-	<link rel="icon" href="data:,">
+	<meta name="theme-color" content="#087f6b">
+	<link rel="icon" type="image/png" href="../img/favicon.png">
     
 </head>
-<body>
+<body class="summary-page archive-page">
 	<div class="container">
 		<div class="card">
 			<div class="card-hd">
-				<div class="title">{html.escape(TITLE)}</div>
+				<div class="title"><a href="../index.html" class="brand">Model Meters</a></div>
+				<nav class="workspace-nav" aria-label="Main navigation">
+					<a href="../index.html">Microsoft Foundry</a>
+					<a href="../github/index.html">GitHub Meters</a>
+					<a href="../agent/" aria-current="page"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>AI Summaries</a>
+				</nav>
+				<button id="btn-theme" class="icon-button" title="Toggle light/dark mode" aria-label="Toggle light/dark mode"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
+			</div>
+			<div class="workspace-heading">
+				<div><span class="eyebrow">Pricing intelligence</span><h1>Monthly summary archive</h1></div>
 				<div class="toolbar">
-					<button id="btn-theme" title="Toggle light/dark mode">🌗 Theme</button>
-					<button id="btn-back" title="Back to Model Meters">↩️Model Meters</button>
+					<button id="btn-back" title="Back to Model Meters"><span class="ui-icon icon-back" aria-hidden="true"></span>Model Meters</button>
 				</div>
 			</div>
 			<div class="content">
@@ -155,9 +117,10 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 			function currentMode(){{ return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }}
 			function updateBtn(){{
 				const mode = currentMode();
-				btn.textContent = mode==='dark' ? '☀️ Light' : '🌙 Dark';
+				btn.innerHTML = `<span class="ui-icon icon-${{mode === 'dark' ? 'sun' : 'moon'}}" aria-hidden="true"></span>`;
 				btn.setAttribute('aria-pressed', mode==='dark');
 				btn.title = 'Switch to ' + (mode==='dark' ? 'light' : 'dark') + ' mode';
+				btn.setAttribute('aria-label', btn.title);
 			}}
 			btn.addEventListener('click', ()=> {{
 				const isDark = currentMode()==='dark';

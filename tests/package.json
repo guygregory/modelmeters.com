@@ -1,0 +1,12 @@
+{
+  "name": "modelmeters-ui",
+  "private": true,
+  "scripts": {
+    "test": "playwright test ui.spec.js --workers=1"
+  },
+  "devDependencies": {
+    "@fontsource-variable/ibm-plex-sans": "^5.3.0",
+    "@playwright/test": "^1.63.0",
+    "lucide-static": "^1.44.0"
+  }
+}
