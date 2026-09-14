@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Model Meters - Regions</title>
+	<meta name="description" content="Explore Microsoft Foundry price meters by Azure region and Product.">
+	<link rel="icon" type="image/png" href="../img/favicon.png">
+	<link rel="stylesheet" href="../site.css">
+	<link rel="stylesheet" href="regions.css">
+	<link rel="preload" href="../img/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<script type="module" src="index.mjs"></script>
+</head>
+<body class="regions-page">
+	<header class="card-hd">
+		<div class="title"><a href="../index.html" class="brand">Model Meters</a></div>
+		<nav class="workspace-nav" aria-label="Main navigation">
+			<a href="../index.html">Microsoft Foundry</a>
+			<a href="../github/index.html">GitHub Meters</a>
+			<a href="../agent/"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>AI Summaries</a>
+			<a href="index.html" aria-current="page">Regions</a>
+		</nav>
+		<button id="btn-theme" class="icon-button" title="Switch to dark mode" aria-label="Switch to dark mode"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
+	</header>
+	<main>
+		<section class="region-filters" aria-label="Region filters">
+			<div class="region-heading"><span class="eyebrow">Microsoft Foundry</span><h1>Regions</h1></div>
+			<div class="meter-filter">
+				<label for="meter-search">Meter name</label>
+				<div class="meter-search-controls">
+					<input id="meter-search" type="search" list="meter-names" placeholder="All meter names" autocomplete="off" disabled>
+					<datalist id="meter-names"></datalist>
+					<select id="meter-match" aria-label="Meter name match" disabled><option value="contains">Contains</option><option value="exact">Exact name</option></select>
+					<button id="clear-search" class="icon-button" title="Clear meter filter" aria-label="Clear meter filter" disabled><span class="ui-icon icon-close" aria-hidden="true"></span></button>
+				</div>
+			</div>
+			<div class="region-totals" id="region-totals" role="status" aria-live="polite">
+				<div><strong id="mapped-count">0</strong><span>Mapped regions</span></div>
+				<div title="Distinct meter IDs, counted separately in each region"><strong id="meter-count">0</strong><span>Region meters</span></div>
+			</div>
+		</section>
+		<div class="regions-workspace">
+			<aside class="region-directory" aria-label="Regions with matching price meters">
+				<div class="directory-heading"><h2>ARM regions</h2><span>Meter count</span></div>
+				<div class="directory-scroll" tabindex="0" aria-label="Scrollable region list">
+					<p id="directory-status" role="status">Loading price meters...</p>
+					<ul id="region-list" class="region-list"></ul>
+					<section id="unmapped-section" hidden>
+						<div class="directory-heading"><h2>Not mapped</h2><span id="unmapped-count"></span></div>
+						<ul id="unmapped-list" class="region-list"></ul>
+					</section>
+				</div>
+			</aside>
+			<section class="globe-stage" aria-label="Azure region globe">
+				<div id="globe"></div>
+				<div class="map-controls" aria-label="Map controls">
+					<button id="zoom-in" class="icon-button" title="Zoom in" aria-label="Zoom in" disabled><span class="ui-icon icon-plus" aria-hidden="true"></span></button>
+					<button id="zoom-out" class="icon-button" title="Zoom out" aria-label="Zoom out" disabled><span class="ui-icon icon-minus" aria-hidden="true"></span></button>
+					<button id="reset-view" class="icon-button" title="Reset globe view" aria-label="Reset globe view" disabled><span class="ui-icon icon-reset" aria-hidden="true"></span></button>
+				</div>
+				<div id="map-status" class="map-status" role="status"><span class="spinner" aria-hidden="true"></span><span id="map-status-text">Loading globe...</span><button id="retry" hidden>Retry</button></div>
+				<p id="map-empty" class="map-empty" hidden>No mapped regions match this meter name.</p>
+				<div class="map-key" aria-label="Region marker meter-count scale"><span>Meter count</span><div id="marker-scale"></div></div>
+				<div class="map-attribution"><a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth</a><span>&middot;</span><a href="vendor/LICENSES.txt" target="_blank" rel="noopener noreferrer">Map licenses</a></div>
+				<aside id="region-flyout" class="region-flyout" role="dialog" aria-modal="false" aria-labelledby="region-title" tabindex="-1" hidden>
+					<div class="flyout-heading"><div><span class="eyebrow">ARM region</span><h2 id="region-title"></h2></div><button id="close-region" class="icon-button" title="Close region summary" aria-label="Close region summary"><span class="ui-icon icon-close" aria-hidden="true"></span></button></div>
+					<div class="flyout-body">
+						<code id="region-code"></code>
+						<p id="region-place"></p>
+						<p id="region-filter" hidden></p>
+						<dl class="flyout-totals"><div><dt>Price meters</dt><dd id="region-meter-count"></dd></div><div><dt>Products</dt><dd id="region-product-count"></dd></div></dl>
+						<table class="product-counts"><caption>Meters by Product</caption><thead><tr><th scope="col">Product</th><th scope="col">Meters</th></tr></thead><tbody id="product-counts"></tbody></table>
+					</div>
+				</aside>
+			</section>
+		</div>
+	</main>
+	<footer class="regions-footer">
+		<p>Price meters do not imply model availability or capacity. Check <a href="https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability" target="_blank" rel="noopener noreferrer">Microsoft's model availability by region</a>.</p>
+		<div><span>Approximate <a href="https://learn.microsoft.com/azure/reliability/regions-list" target="_blank" rel="noopener noreferrer">Azure region locations</a>, not individual datacenters.</span><span>Last updated: <span id="last-updated">Loading...</span></span></div>
+	</footer>
+	<noscript><p class="noscript-message">JavaScript is required for the interactive map. <a href="../prices.ndjson">Download the price meters</a>.</p></noscript>
+</body>
+</html>

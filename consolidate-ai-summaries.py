@@ -81,6 +81,7 @@ def build_html(sections: list[tuple[str, str]]) -> str:
 					<a href="../index.html">Microsoft Foundry</a>
 					<a href="../github/index.html">GitHub Meters</a>
 					<a href="../agent/" aria-current="page"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>AI Summaries</a>
+					<a href="../regions/index.html">Regions</a>
 				</nav>
 				<button id="btn-theme" class="icon-button" title="Toggle light/dark mode" aria-label="Toggle light/dark mode"><span class="ui-icon icon-moon" aria-hidden="true"></span></button>
 			</div>

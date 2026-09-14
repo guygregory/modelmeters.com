@@ -170,6 +170,24 @@ Set `MODELMETERS_URL` to test another server origin. The suite checks both prici
 
 When changing the monthly archive layout, update [consolidate-ai-summaries.py](consolidate-ai-summaries.py) as well as [monthly/index.html](monthly/index.html) so regeneration preserves the presentation.
 
+### Regions Globe
+
+[Regions](regions/index.html) reads the current [prices.ndjson](prices.ndjson) in the browser, with no separate pricing snapshot to regenerate. It supports drag rotation, wheel/pinch zoom, keyboard rotation and zoom, partial or exact meter-name filtering, and a Product-count flyout. The region directory provides a keyboard-accessible alternative to the map, including when WebGL is unavailable. Filter and region selections are retained in the URL.
+
+Counts are distinct `meterId` values within each ARM region and within each Product, not price rows; tier or historical-price rows for the same meter do not inflate the count. The header sums these per-region counts, so a meter listed in two regions counts once in each. Marker radius follows a square-root count scale with a minimum visible size; the reference maximum stays fixed when filtering. Matches indicate recorded pricing only, never model availability or capacity. Consult [Microsoft's model availability documentation](https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure-region-availability).
+
+[locations.json](regions/locations.json) contains approximate regional latitude/longitude reference points based on the cities or states in [Microsoft's Azure regions list](https://learn.microsoft.com/azure/reliability/regions-list) and [Azure Government geography](https://learn.microsoft.com/azure/azure-government/compare-azure-government-global-azure). These are geographic facts, not datacenter addresses or a licensed map dataset. Some regions share a reference location. `Global`, `US Gov`, blank ARM regions, and any newly encountered region without coordinates are explicitly listed under **Not mapped**; they are never assigned invented map positions. Add a verified reference point when a new geographic ARM region appears. The tests flag geographic coverage gaps in the current pricing file.
+
+The map uses the public-domain [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) 1:110m boundaries distributed by `world-atlas`, with Three.js/OrbitControls (MIT), D3 Geo and its dependencies (ISC), TopoJSON Client (ISC), and Lucide (ISC). Boundaries are generalized cartography and do not express a position on disputed borders. All runtime libraries, geometry, icons, and [license notices](regions/vendor/LICENSES.txt) are served locally. No CDN or map API key is needed.
+
+Generated vendor assets are checked in, so deployment needs no new build step. After changing their pinned dependencies or the vendor entry point, rebuild them with:
+
+```bash
+npm --prefix tests ci
+npm --prefix tests run build:regions
+npm --prefix tests test -- --grep Regions
+```
+
 ### Deployment
 
 The project automatically deploys to Azure Static Web Apps via GitHub Actions when changes are pushed to the main branch.
@@ -179,6 +197,7 @@ The project automatically deploys to Azure Static Web Apps via GitHub Actions wh
 ```
 ├── index.html              # Main pricing data explorer
 ├── agent/                  # AI summary interface
+├── regions/                # Interactive globe and regional meter summaries
 ├── monthly/                # Monthly pricing data and summaries
 │   ├── full/              # Complete monthly data files
 │   ├── partial/           # Filtered monthly data files
