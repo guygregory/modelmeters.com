@@ -144,7 +144,7 @@ The minimal solution takes advantage of free tiers where available, and has been
 
 3. **Generate AI summaries**:
    ```bash
-   python create-ai-summaries.py
+   python ai-summary.py --date YYYY-MM-DD
    ```
 
 4. **Serve locally**:
