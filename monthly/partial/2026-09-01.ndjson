@@ -290,6 +290,8 @@
 {"productName": "Azure Deepseek Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.28, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure Deepseek Models", "meterName": "MAI-DS-R1 Outp Dzone Tokens", "unitPrice": 0.00594, "unitOfMeasure": "1K"}
 {"productName": "Azure Deepseek Models", "meterName": "V4 Flash cached glbl Tokens", "unitPrice": 2.8e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 286.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Data Zone Unit", "unitPrice": 2916.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure Deepseek Models", "meterName": "V4 Pro cached glbl Tokens", "unitPrice": 0.000145, "unitOfMeasure": "1K"}
 {"productName": "Azure Deepseek Models", "meterName": "V3 Outp glbl Tokens", "unitPrice": 0.00456, "unitOfMeasure": "1K"}
 {"productName": "MAI Models", "meterName": "Image 2.6 Text Input Glbl 1M Tokens", "unitPrice": 6.25, "unitOfMeasure": "1M"}
