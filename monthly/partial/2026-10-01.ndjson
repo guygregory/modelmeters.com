@@ -1,0 +1,67 @@
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Input Glbl 1M Tokens", "unitPrice": 0.3, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash cached Glbl 1M Tokens", "unitPrice": 0.006, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Cd Wr Std DZ 1M Tokens", "unitPrice": 3.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Input DZ 1M Tokens", "unitPrice": 0.33, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Cd Wr Std Gl 1M Tokens", "unitPrice": 2.5, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Output Glbl 1M Tokens", "unitPrice": 1.2, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Opt Std DZ 1M Tokens", "unitPrice": 16.5, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Img Glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Opt Std Gl 1M Tokens", "unitPrice": 15.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Input DZ 1M Tokens", "unitPrice": 0.36, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash cached DZ 1M Tokens", "unitPrice": 0.0066, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Cd Inp Std Gl 1M Tokens", "unitPrice": 0.2, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Img DZ Tokens", "unitPrice": 0.00048, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Txt Glbl Tokens", "unitPrice": 0.00012, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Inp Std Gl 1M Tokens", "unitPrice": 4.0, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Opt Std DZ 1M Tokens", "unitPrice": 11.0, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Img Glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Cd Wr Std DZ 1M Tokens", "unitPrice": 6.0, "unitOfMeasure": "1M"}
+{"productName": "Microsoft Decision Models", "meterName": "Microsoft Decision 1 1M Tokens", "unitPrice": 0.042, "unitOfMeasure": "1M"}
+{"productName": "Azure Baseten Models", "meterName": "Provisioned Managed Global Unit", "unitPrice": 1.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.11, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Cd Inp Std Gl 1M Tokens", "unitPrice": 0.1, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Opt Std DZ 1M Tokens", "unitPrice": 18.0, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Txt DZ Tokens", "unitPrice": 0.000144, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Opt Std Gl 1M Tokens", "unitPrice": 10.0, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Img Glbl Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Output DZ 1M Tokens", "unitPrice": 1.65, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Img DZ Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Cd Wr Std Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Img DZ Tokens", "unitPrice": 0.00044, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Output DZ 1M Tokens", "unitPrice": 1.44, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Txt DZ Tokens", "unitPrice": 0.000132, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash cached DZ 1M Tokens", "unitPrice": 0.0072, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Txt Glbl Tokens", "unitPrice": 8e-05, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Txt DZ Tokens", "unitPrice": 8.8e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Inp Std Gl 1M Tokens", "unitPrice": 2.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Baseten Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.22, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Txt Glbl Tokens", "unitPrice": 0.0001, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash cached Glbl 1M Tokens", "unitPrice": 0.0075, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Img DZ Tokens", "unitPrice": 0.00048, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.24, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Cd Wr Std DZ 1M Tokens", "unitPrice": 5.5, "unitOfMeasure": "1M"}
+{"productName": "Azure Baseten Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.36, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash cached DZ 1M Tokens", "unitPrice": 0.00825, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Cd Wr Std DZ 1M Tokens", "unitPrice": 2.75, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Opt Std DZ 1M Tokens", "unitPrice": 12.0, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Input Glbl 1M Tokens", "unitPrice": 0.375, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Inp Std DZ 1M Tokens", "unitPrice": 2.4, "unitOfMeasure": "1M"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Output Glbl 1M Tokens", "unitPrice": 1.5, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Inp Std DZ 1M Tokens", "unitPrice": 4.4, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Txt DZ Tokens", "unitPrice": 0.000165, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol LongCo Inp Std DZ 1M Tokens", "unitPrice": 4.8, "unitOfMeasure": "1M"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Inp Std DZ 1M Tokens", "unitPrice": 2.2, "unitOfMeasure": "1M"}
+{"productName": "Azure Baseten Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.72, "unitOfMeasure": "1/Hour"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Img Glbl Tokens", "unitPrice": 0.0005, "unitOfMeasure": "1K"}
+{"productName": "Azure Baseten Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.54, "unitOfMeasure": "1/Hour"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Txt DZ Tokens", "unitPrice": 9.6e-05, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Output DZ 1M Tokens", "unitPrice": 1.32, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Img DZ Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Azure Deepseek Models", "meterName": "V4.1 Flash Input DZ 1M Tokens", "unitPrice": 0.4125, "unitOfMeasure": "1M"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Pro Txt Glbl Tokens", "unitPrice": 0.00015, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Img DZ Tokens", "unitPrice": 0.00055, "unitOfMeasure": "1K"}
+{"productName": "Cohere Models", "meterName": "Embed V5 Fast Txt DZ Tokens", "unitPrice": 0.00011, "unitOfMeasure": "1K"}
+{"productName": "Azure Baseten Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.28, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure OpenAI GPT6", "meterName": "6.1-sol ShortCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.12, "unitOfMeasure": "1M"}
+{"productName": "Azure Baseten Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.46, "unitOfMeasure": "1/Hour"}
