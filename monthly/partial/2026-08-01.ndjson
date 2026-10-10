@@ -102,8 +102,8 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 cd inp Dz 1M Tokens", "unitPrice": 0.55, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna LongCo Cd Inp Std DZ 1M Tokens", "unitPrice": 0.044, "unitOfMeasure": "1M"}
 {"productName": "Azure Fireworks Models", "meterName": "FW NVIDIA Nemotron 3U Inp DZ Tokens", "unitPrice": 0.00066, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 inp Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
 {"productName": "Azure Kimi", "meterName": "Model 6 Outp DZ Tokens", "unitPrice": 0.003, "unitOfMeasure": "1K"}
+{"productName": "Azure OpenAI GPT5", "meterName": "chat-latest 08062026 inp Gl 1M Tokens", "unitPrice": 5.0, "unitOfMeasure": "1M"}
 {"productName": "Azure Fireworks Models", "meterName": "FW Inkling In DZ Tokens", "unitPrice": 0.0011, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.6 luna ShortCo Opt Std DZ 1M Tokens", "unitPrice": 1.32, "unitOfMeasure": "1M"}
 {"productName": "Azure Deepseek Models", "meterName": "V4 Flash 0731 Outp DZ Tokens", "unitPrice": 0.001452, "unitOfMeasure": "1K"}

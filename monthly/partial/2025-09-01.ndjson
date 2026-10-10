@@ -57,7 +57,6 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "gpt-5-codex-inp-glbl Tokens", "unitPrice": 0.00125, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Code-Interpreter-regnl EP Session", "unitPrice": 0.0396, "unitOfMeasure": "1"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt aud 0828 txt Inp glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI Media", "meterName": "Sora 720p 6-10s glbl Video", "unitPrice": 0.5, "unitOfMeasure": "1 Second"}
 {"productName": "Azure BFL Flux Models", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 2.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure OpenAI Media", "meterName": "Sora 480p Sq 1-20s glbl Video", "unitPrice": 0.15, "unitOfMeasure": "1 Second"}
 {"productName": "Azure OpenAI", "meterName": "Image-Dall-E-3 Std HighRes-regnl EP Images", "unitPrice": 9.68, "unitOfMeasure": "100"}
