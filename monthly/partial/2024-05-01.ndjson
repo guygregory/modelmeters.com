@@ -50,7 +50,6 @@
 {"productName": "Azure OpenAI", "meterName": "Az-Babbage-002 Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Az-Babbage-002-Fine Tuned-Output Tokens", "unitPrice": 0.0004, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Az-Davinci-002-Fine Tuned-Output Tokens", "unitPrice": 0.002, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "Az-GPT4-Turbo-Vision-128K Input Tokens", "unitPrice": 0.01, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Az-GPT4-Turbo-Vision-128K Output Tokens", "unitPrice": 0.03, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Az-Davinci-002-Fine Tuned-Input Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "Az-GPT4-Turbo-Vision-128K Output Tokens", "unitPrice": 0.0375, "unitOfMeasure": "1K"}

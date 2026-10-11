@@ -662,9 +662,6 @@
 {"productName": "Azure OpenAI GPT5", "meterName": "5.5 ShortCo PP inp Dz 1M Tokens", "unitPrice": 13.75, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt rt aud mini cchd Inp rgnl Tokens", "unitPrice": 0.000396, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI GPT5", "meterName": "5.1 codex max cd inp Dz 1M Tokens", "unitPrice": 0.1375, "unitOfMeasure": "1M"}
-{"productName": "Azure OpenAI", "meterName": "o1-pro Batch Outp Data Zone Tokens", "unitPrice": 0.33, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI Media", "meterName": "gpt rt txt mini Inp regnl Tokens", "unitPrice": 0.000792, "unitOfMeasure": "1K"}
-{"productName": "Azure OpenAI", "meterName": "gpt 4.1 nano cached Inp DZone Tokens", "unitPrice": 2.8e-05, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI", "meterName": "gpt-4o-transcribe-txt-inp-dz Tokens", "unitPrice": 0.00275, "unitOfMeasure": "1K"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt img 1.5 in cd txt gl 1M Tokens", "unitPrice": 1.25, "unitOfMeasure": "1M"}
 {"productName": "Azure OpenAI Media", "meterName": "gpt img 1 mini inp img glbl Tokens", "unitPrice": 0.0025, "unitOfMeasure": "1K"}
