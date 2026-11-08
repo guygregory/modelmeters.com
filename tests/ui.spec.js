@@ -228,6 +228,7 @@ test(`${route} retains columns, value selection, favorites, discount, CSV and sh
 	await expect(page.locator('.notification')).toContainText('copied to clipboard');
 	const shared = await page.evaluate(() => navigator.clipboard.readText());
 	const sharedURL = new URL(shared);
+	expect(sharedURL.searchParams.get('sort')).toBeNull();
 	expect(sharedURL.searchParams.get('discount')).toBe('25');
 	expect(sharedURL.searchParams.get('f_meterId')).toBe(`equals:${sample.meterId}`);
 	expect(sharedURL.searchParams.get('pageSize')).toBe('15');
