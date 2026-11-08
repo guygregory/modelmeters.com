@@ -2,9 +2,13 @@
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast Glbl 1M Tokens", "unitPrice": 0.02, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro DZ 1M Tokens", "unitPrice": 0.06, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro DZ 1M Tokens", "unitPrice": 0.055, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Global Unit", "unitPrice": 260.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Global Unit", "unitPrice": 2652.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast DZ 1M Tokens", "unitPrice": 0.024, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast DZ 1M Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast Glbl 1M Tokens", "unitPrice": 0.025, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast DZ 1M Tokens", "unitPrice": 0.022, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro DZ 1M Tokens", "unitPrice": 0.06875, "unitOfMeasure": "1M"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 363.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 3708.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro Glbl 1M Tokens", "unitPrice": 0.0625, "unitOfMeasure": "1M"}
