@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			page: 1,
 			pageSize: 20,
 			filteredRows: [],
-			sort: { key: 'unitPrice', dir: 'desc' }, // default sort highest unit price first
+			sort: { key: 'effectiveStartDate', dir: 'desc' }, // default sort newest first
 			discount: 0, // discount percentage (0-100)
 		};
 
@@ -596,7 +596,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			// Encode sorting: sort=[columnKey]:[direction]
 			if (state.sort && state.sort.key && state.sort.dir) {
 				// Only encode if it's not the default sort
-				if (!(state.sort.key === 'unitPrice' && state.sort.dir === 'desc')) {
+				if (!(state.sort.key === 'effectiveStartDate' && state.sort.dir === 'desc')) {
 					url.searchParams.set('sort', `${state.sort.key}:${state.sort.dir}`);
 				}
 			}
@@ -1039,4 +1039,3 @@ document.addEventListener('DOMContentLoaded', function() {
 	</script>
 </body>
 </html>
-
