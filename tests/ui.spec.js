@@ -101,8 +101,10 @@ test(`${route} preserves interactions and fits desktop/mobile`, async ({ page },
 	await expect(page.locator('.table-footer a').filter({ hasText: 'Disclaimer' })).toBeVisible();
 	expect((await page.locator('.card-hd').boundingBox()).height).toBeLessThanOrEqual(60);
 	expect((await page.locator('.table-wrap').boundingBox()).y).toBeLessThanOrEqual(60);
-	const expectedSort = route === '/' ? 'effectiveStartDate' : 'unitPrice';
+	const expectedSort = 'effectiveStartDate';
 	await expect(page.locator(`th[data-column="${expectedSort}"]`)).toHaveAttribute('aria-sort', 'descending');
+	const startDates = await page.locator('#tbody td[data-column="effectiveStartDate"]').allTextContents();
+	expect(startDates.slice(1).every((date, index) => Date.parse(startDates[index]) >= Date.parse(date))).toBe(true);
 	await page.locator('#btn-next').click();
 	await expect(page.locator('#page-info')).toContainText('Page 2 /');
 	await page.locator('#btn-prev').click();
@@ -226,6 +228,7 @@ test(`${route} retains columns, value selection, favorites, discount, CSV and sh
 	await expect(page.locator('.notification')).toContainText('copied to clipboard');
 	const shared = await page.evaluate(() => navigator.clipboard.readText());
 	const sharedURL = new URL(shared);
+	expect(sharedURL.searchParams.get('sort')).toBeNull();
 	expect(sharedURL.searchParams.get('discount')).toBe('25');
 	expect(sharedURL.searchParams.get('f_meterId')).toBe(`equals:${sample.meterId}`);
 	expect(sharedURL.searchParams.get('pageSize')).toBe('15');
