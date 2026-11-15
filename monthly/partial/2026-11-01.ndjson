@@ -1,13 +1,31 @@
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro Glbl 1M Tokens", "unitPrice": 0.05, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Cached Inp Glbl 1M Tokens", "unitPrice": 0.23, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast Glbl 1M Tokens", "unitPrice": 0.02, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Inp Glbl 1M Tokens", "unitPrice": 2.3, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro DZ 1M Tokens", "unitPrice": 0.06, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Outp DZ 1M Tokens", "unitPrice": 13.8, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Outp Glbl 1M Tokens", "unitPrice": 11.5, "unitOfMeasure": "1M"}
+{"productName": "Microsoft Decision Models", "meterName": "Decision 1.1 Gl 1M Tokens", "unitPrice": 0.042, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro DZ 1M Tokens", "unitPrice": 0.055, "unitOfMeasure": "1M"}
+{"productName": "Microsoft Decision Models", "meterName": "Decision 1.1 DZ 1M Tokens", "unitPrice": 0.05, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Inp DZ 1M Tokens", "unitPrice": 2.53, "unitOfMeasure": "1M"}
 {"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Global Unit", "unitPrice": 260.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Global Unit", "unitPrice": 2652.0, "unitOfMeasure": "1/Hour"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Inp Glbl 1M Tokens", "unitPrice": 2.875, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Inp DZ 1M Tokens", "unitPrice": 2.76, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast DZ 1M Tokens", "unitPrice": 0.024, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Cached DZ 1M Tokens", "unitPrice": 0.253, "unitOfMeasure": "1M"}
+{"productName": "Microsoft Decision Models", "meterName": "Decision 1.1 DZ 1M Tokens", "unitPrice": 0.046, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Cached DZ 1M Tokens", "unitPrice": 0.276, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Outp DZ 1M Tokens", "unitPrice": 12.65, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast DZ 1M Tokens", "unitPrice": 0.0275, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Outp Glbl 1M Tokens", "unitPrice": 14.375, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Cached Inp Glbl 1M Tokens", "unitPrice": 0.2875, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Outp DZ 1M Tokens", "unitPrice": 15.8125, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Inp DZ 1M Tokens", "unitPrice": 3.1625, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast Glbl 1M Tokens", "unitPrice": 0.025, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Fast DZ 1M Tokens", "unitPrice": 0.022, "unitOfMeasure": "1M"}
+{"productName": "Azure Kimi", "meterName": "Kimi 3.1 Pro Cached DZ 1M Tokens", "unitPrice": 0.31625, "unitOfMeasure": "1M"}
 {"productName": "Cohere Models", "meterName": "Rerank V5 Pro DZ 1M Tokens", "unitPrice": 0.06875, "unitOfMeasure": "1M"}
 {"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 363.0, "unitOfMeasure": "1/Hour"}
 {"productName": "Azure AI Foundry Provisioned Throughput Reservation", "meterName": "Provisioned Managed Regional Unit", "unitPrice": 3708.0, "unitOfMeasure": "1/Hour"}
