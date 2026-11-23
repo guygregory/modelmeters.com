@@ -1,6 +1,6 @@
 # Model Meters - Microsoft Foundry Pricing Explorer
 
-[modelmeters.com](https://modelmeters.com) provides a simple front-end to the [Azure Retail Prices API](https://docs.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices), automatically downloading and enriching Azure AI pricing data with AI-generated summaries and insights.
+[modelmeters.com](https://modelmeters.com) is a static pricing explorer backed by data downloaded from the [Azure Retail Prices API](https://docs.microsoft.com/rest/api/cost-management/retail-prices/azure-retail-prices). It presents Microsoft Foundry and GitHub meters alongside AI-generated summaries of Foundry pricing data.
 
 <img width="1280" height="640" alt="Model Meters Microsoft Foundry pricing explorer" src="img/socialpreview.png" />
 
@@ -12,20 +12,16 @@ To watch the November 2025 Cloud Champion session associated with this tool, ple
 
 ## Solution Overview
 
-Model Meters combines several Azure and GitHub services to create an automated pricing intelligence solution:
-
-### Architecture Flow
-
-1. **Daily Data Collection**: GitHub Actions automatically downloads the latest Azure pricing data using the Azure Retail Prices API
-2. **Data Processing**: The raw pricing data is split into segments based on the pricing `startDate` value
-3. **AI Enhancement**: Foundry models generate intelligent summaries of the latest pricing changes, using Model Context Protocol (MCP) to include Microsoft Learn documentation
-4. **Web Deployment**: The processed data and summaries are automatically deployed to Azure Static Web Apps using GitHub Actions
-5. **User Interface**: A responsive web interface allows users to explore pricing data and AI-generated insights
+1. A daily GitHub Actions workflow downloads Foundry Models and GitHub pricing into separate NDJSON files.
+2. The Foundry data is grouped by the date in `effectiveStartDate`; a smaller, deduplicated version of each group is prepared for summarization.
+3. Missing summaries are generated with Azure OpenAI and Microsoft Learn MCP, then indexed for the summaries page and RSS feed.
+4. The workflow commits generated files and requests an Azure Static Web Apps deployment when the commit contains changes.
+5. Static browser pages display the downloaded prices and stored summaries; they do not query the pricing API live.
 
 ### Key Agentic AI Features
 
-- **GitHub Actions Workflow**: Runs daily at midnight UTC to check for pricing updates
-- **AI-Powered Summaries**: Leverages Azure OpenAI to generate concise, factual summaries of pricing changes grouped by model provider
+- **GitHub Actions Workflow**: Runs daily at midnight UTC to refresh pricing data
+- **AI-Powered Summaries**: Uses Azure OpenAI to summarize date-grouped Foundry meters by model provider
 - **Documentation Integration**: Uses [Microsoft Learn MCP Server](https://github.com/microsoftdocs/mcp) to automatically include relevant documentation links
 - **Human-in-the-loop**: As AI summaries are stored in markdown format, this allows for quick and easy human review (and potentially AI agent review)
 
@@ -53,7 +49,7 @@ This sample is designed to help Microsoft partners (and their customers) underst
 
 ### Development Stack
 - **HTML/CSS/JavaScript** - Frontend web interface
-- **Python 3.1x** - Backend data processing and AI integration
+- **Python 3.11** - Data processing and AI integration
 - **OpenAI Python SDK** - AI model interaction
 - **JSON/NDJSON** - Data storage and interchange formats
 
@@ -70,42 +66,20 @@ This sample is designed to help Microsoft partners (and their customers) underst
 
 ### GitHub Services
 - **[GitHub Actions](https://docs.github.com/en/actions)** - Workflow automation and CI/CD
-- **[GitHub Models](https://github.com/marketplace/models)** - Alternative AI model access (fallback option, especially for simpler, smaller demos)
+- **[GitHub Models](https://github.com/marketplace/models)** - Alternative AI model access through a separate script
 
-## Cost Breakdown
+## Costs
 
-The minimal solution takes advantage of free tiers where available, and has been designed to be deployed on a Visual Studio Subscription, or an Azure Free account. The Advanced demo could be deployed on Azure Bulk Credit, or on a commercial Azure subscription (CSP, PAYG, MCA-E, etc.).
-
-| Component | Minimal demo | Advanced demo | Notes |
-|-----------|----------------------|------------------------|-------|
-| **Azure Static Web Apps** | $0/month | $9/month (Standard) | Free tier includes 100GB bandwidth, 0.5GB storage |
-| **Microsoft Foundry - OpenAI** | ~$5-20/month | ~$50-100/month | Price varies based on token usage |
-| **Azure Retail Prices API** | $0/month | $0/month | Free public API with rate limits |
-| **GitHub Actions** | $0/month | $4/month (Team plan) | 2000 minutes/month free, then $0.008/minute |
-| **GitHub Repository** | $0/month | $4/month (Team plan) | Public and private repos free, additional features in Team plan |
-| **Domain/Custom DNS** | Optional $15/year | Optional $15/year | Optional custom domain, via third-party domain registrar |
-| **Monitoring/Analytics** | $0/month | $10-25/month | Optional Application Insights, etc. |
-| **Storage (backup/logs)** | $0-2/month | $5-15/month | Azure Storage for additional data retention |
-| **Azure AI Search** | Optional (Free tier) | Optional \~\$75/month (Basic tier) | Free tier includes up to 3 indexes, 50MB storage; Basic tier allows larger workloads |
-| **Microsoft Fabric** | N/A | Optional \~\$262/month (F2 capacity) | Based on Fabric F2 capacity |
-| **Total Monthly Cost** | **$5-10/month** | **$100-500/month** |  |
-
-> **Pricing Disclaimer**: Costs are approximate, correct at time of writing (August 2025), and may vary based on:
-> - Actual usage patterns and data volumes
-> - Regional pricing differences
-> - Azure service tier selections
-> - Token consumption for AI summaries
-> - Additional monitoring or storage requirements
-> 
-> Other costs may be incurred depending on specific implementation choices and usage patterns.
+Running the static site locally does not require an Azure subscription. Generating summaries can incur model usage charges; hosting and GitHub Actions usage may also incur charges depending on your plan and usage. Check current provider pricing before deploying or generating summaries.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Azure subscription with AI Foundry access
-- GitHub repository
-- Python 3.11+ for local development
+- Python 3.11 for the documented scripts and local server
+- Node.js and npm for the optional browser tests
+- Network access to download fresh prices; an Azure OpenAI endpoint, key, and compatible model deployment are needed only to generate summaries
+- An Azure Static Web Apps resource and GitHub repository are needed only for deployment
 
 ### Environment Setup
 
@@ -115,26 +89,37 @@ The minimal solution takes advantage of free tiers where available, and has been
    cd modelmeters.com
    ```
 
-2. **Configure Azure OpenAI** (for AI summaries):
+2. **Install Python dependencies** for summary generation:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   python -m pip install -r requirements.txt
+   ```
+   On Windows, activate the virtual environment with `.venv\Scripts\activate` instead.
+
+3. **Configure Azure OpenAI** only if generating summaries:
    ```bash
    # Set environment variables
    export AZURE_OPENAI_API_KEY="your-api-key"
    export AZURE_OPENAI_V1_API_ENDPOINT="https://your-resource.openai.azure.com/openai/v1/"
-   export AZURE_OPENAI_API_MODEL="gpt-4"
+   export AZURE_OPENAI_API_MODEL="your-deployment-name"
    ```
-
-3. **Configure GitHub Token** (for GitHub Models fallback):
-   ```bash
-   export GITHUB_TOKEN="your-github-token"
-   ```
+   Alternatively, place these values in an untracked `.env` file. Use a deployment that supports the Responses API and MCP tools. Keep credentials out of commits.
 
 ### Local Development
 
-1. **Download pricing data**:
+The checked-in data is sufficient to browse the site. From the repository root, serve it with:
+```bash
+python -m http.server 8000
+```
+Open `http://localhost:8000/` for Foundry prices, `/github/` for GitHub prices, or `/agent/` for summaries.
+
+To refresh the generated data, run these steps from the repository root:
+
+1. **Download pricing data** (this overwrites the two checked-in datasets):
    ```bash
-   python meter-download.py --github --ndjson github.ndjson
-   python meter-download.py --cognitive-services-only --ndjson prices.ndjson
    python meter-download.py --foundry-models-only --ndjson prices.ndjson
+   python meter-download.py --github --ndjson prices-github.ndjson
    ```
 
 2. **Process monthly data**:
@@ -142,16 +127,20 @@ The minimal solution takes advantage of free tiers where available, and has been
    python split_into_monthly.py
    ```
 
-3. **Generate AI summaries**:
+   This groups Foundry records by `effectiveStartDate` into `monthly/full/` and produces deduplicated, reduced-field files in `monthly/partial/`. It does not process the GitHub dataset or remove old date files.
+
+3. **Generate missing AI summaries** (requires the Azure configuration above):
    ```bash
    python create-ai-summaries.py
    ```
+   Existing summaries are skipped even when their input changes. To regenerate a specific summary, use `python ai-summary.py --date YYYY-MM-DD --force`; `python create-ai-summaries.py --force` overwrites all summaries and may incur substantial API costs. The separate `ai-summary-github-models.py --date YYYY-MM-DD` script uses `GITHUB_TOKEN` and skips existing summaries; it is not an automatic fallback for the daily workflow.
 
-4. **Serve locally**:
+4. **Refresh the summary index and RSS feed**:
    ```bash
-   python -m http.server 8000
-   # Visit http://localhost:8000
+   python monthly/generate-index.py array
+   python generate-rss.py
    ```
+   To regenerate the static archive at `monthly/index.html`, run `python consolidate-ai-summaries.py`. This is not part of the daily workflow.
 
 ### UI Development and Checks
 
@@ -172,23 +161,28 @@ When changing the monthly archive layout, update [consolidate-ai-summaries.py](c
 
 ### Deployment
 
-The project automatically deploys to Azure Static Web Apps via GitHub Actions when changes are pushed to the main branch.
+See the [deployment guide](.github/DEPLOYMENT.md) for workflow triggers, required secrets, and manual runs.
 
 ## Project Structure
 
 ```
-├── index.html              # Main pricing data explorer
-├── agent/                  # AI summary interface
-├── monthly/                # Monthly pricing data and summaries
-│   ├── full/              # Complete monthly data files
-│   ├── partial/           # Filtered monthly data files
-│   └── aisummary/         # AI-generated summaries
-├── .github/workflows/     # GitHub Actions automation
-├── ai-summary.py          # Azure OpenAI summary generation
-├── ai-summary-github-models.py # GitHub Models fallback
-├── meter-download.py      # Azure pricing data downloader
-├── split_into_monthly.py  # Data processing utilities
-└── prices.ndjson         # Latest pricing data
+├── index.html                  # Foundry pricing explorer
+├── github/index.html           # GitHub pricing explorer
+├── agent/                      # Summary page and RSS feed
+├── monthly/
+│   ├── full/                   # Foundry records grouped by effective date
+│   ├── partial/                # Reduced, deduplicated summary inputs
+│   └── aisummary/              # Markdown summaries and index.json
+├── .github/workflows/          # Update, indexing, review, and deployment workflows
+├── meter-download.py           # Azure Retail Prices API downloader
+├── split_into_monthly.py       # Generate full and partial date groups
+├── create-ai-summaries.py      # Generate missing summaries in bulk
+├── ai-summary.py               # Azure OpenAI summary generation
+├── ai-summary-github-models.py # Separate GitHub Models summary generator
+├── consolidate-ai-summaries.py # Generate the static monthly archive
+├── generate-rss.py             # Generate agent/rss.xml
+├── prices.ndjson               # Foundry pricing data
+└── prices-github.ndjson        # GitHub pricing data
 ```
 
 ## Features
@@ -200,53 +194,15 @@ The project automatically deploys to Azure Static Web Apps via GitHub Actions wh
 - Responsive design for mobile and desktop
 
 ### 🤖 **AI-Powered Insights**
-- Daily automated summaries of pricing changes
+- Summaries of Foundry meters grouped by effective date
 - Model provider groupings and comparisons  
 - Integration with Microsoft Learn documentation
 - Contextual links to relevant resources
 
 ### ⚡ **Automated Updates**
 - Daily data refresh via GitHub Actions
-- Intelligent change detection to minimize costs
-- Automatic deployment on data changes
-- Comprehensive error handling and retry logic
-
-## API Usage Examples
-
-### Azure Retail Prices API
-```python
-# Basic pricing data retrieval
-import requests
-
-response = requests.get(
-    "https://prices.azure.com/api/retail/prices",
-    params={"$filter": "serviceName eq 'Cognitive Services'"}
-)
-pricing_data = response.json()
-```
-
-### AI Summary Generation
-```python
-# Generate AI summary using Azure OpenAI
-from openai import OpenAI
-
-client = OpenAI(
-    api_key="your-api-key",
-    base_url="https://your-resource.openai.azure.com/openai/v1/",
-    default_query={"api-version": "preview"}
-)
-
-response = client.responses.create(
-    model="gpt-4",
-    instructions="Summarize Azure pricing changes...",
-    tools=[{
-        "type": "mcp",
-        "server_label": "MicrosoftLearn",
-        "server_url": "https://learn.microsoft.com/api/mcp"
-    }],
-    input=pricing_data
-)
-```
+- Existing summaries are skipped by default to avoid repeated model calls
+- Automatic deployment after an update commit
 
 ## Contributing
 
@@ -274,7 +230,3 @@ response = client.responses.create(
 - **GitHub Actions**: https://docs.github.com/en/actions
 - **Azure Static Web Apps**: https://docs.microsoft.com/azure/static-web-apps/
 - **Microsoft Learn MCP Server**: [https://github.com/microsoftdocs/mcp](https://github.com/microsoftdocs/mcp)
-
-## License
-
-This project is provided under the MIT License. See LICENSE file for details.
