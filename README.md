@@ -36,7 +36,7 @@ This sample is designed to help Microsoft partners (and their customers) underst
 - **Use LLMs to enrich frequently updated structured data**, such as price lists, inventory, or sales data
 - **Incorporate the use of Model Context Protocol (MCP)** within their solutions for enhanced AI capabilities
 - **Build cost-effective monitoring solutions** for tracking Azure service pricing changes
-- **Create automated reporting systems** that combine real-time data with AI-generated insights
+- **Create automated reporting systems** that combine periodically refreshed data with AI-generated insights
 
 ## Technologies Used
 
